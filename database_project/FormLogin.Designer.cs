@@ -90,7 +90,7 @@
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(901, 472);
+            this.buttonLogin.Location = new System.Drawing.Point(904, 499);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(138, 50);
@@ -102,12 +102,12 @@
             // 
             this.linkLabelCreateAnAccount.AutoSize = true;
             this.linkLabelCreateAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(845, 562);
+            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(740, 575);
             this.linkLabelCreateAnAccount.Name = "linkLabelCreateAnAccount";
-            this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(251, 32);
+            this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(457, 32);
             this.linkLabelCreateAnAccount.TabIndex = 8;
             this.linkLabelCreateAnAccount.TabStop = true;
-            this.linkLabelCreateAnAccount.Text = "Create An Account";
+            this.linkLabelCreateAnAccount.Text = "Don\'t Have An Account? Click Here";
             this.linkLabelCreateAnAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCreateAnAccount_LinkClicked);
             // 
             // FormLogin
