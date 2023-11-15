@@ -22,6 +22,7 @@ namespace database_project
         {
             FormLogin formLogin = new FormLogin();
             formLogin.Owner = this;
+            this.Visible = false;
             formLogin.ShowDialog();
         }
     }

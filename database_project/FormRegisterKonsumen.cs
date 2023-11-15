@@ -18,13 +18,19 @@ namespace database_project
             StartPosition = FormStartPosition.CenterScreen;
         }
 
+        FormMenu formMenu;
+
+        private void FormRegisterKonsumen_Load(object sender, EventArgs e)
+        {
+            
+        }
+
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormLogin formLogin = new FormLogin();
             formLogin.Owner = this;
+            this.Visible = false;
             formLogin.ShowDialog();
-
-            this.Close();
         }
     }
 }

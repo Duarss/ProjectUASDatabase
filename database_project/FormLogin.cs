@@ -18,23 +18,17 @@ namespace database_project
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void labelCreateAnAccount_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormRegisterKonsumen formRegisterKonsumen = new FormRegisterKonsumen();
             formRegisterKonsumen.Owner = this;
+            this.Visible = false;
             formRegisterKonsumen.ShowDialog();
-
-            this.Close();
         }
     }
 }
