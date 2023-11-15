@@ -78,7 +78,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(424, 40);
             this.label3.TabIndex = 6;
-            this.label3.Text = "LOGIN";
+            this.label3.Text = "LOGIN.";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormLogin
