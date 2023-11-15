@@ -15,6 +15,16 @@ namespace database_project
         public FormRegisterKonsumen()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Owner = this;
+            formLogin.ShowDialog();
+
+            this.Close();
         }
     }
 }

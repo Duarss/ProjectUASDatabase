@@ -30,112 +30,124 @@
         {
             this.textBoxPasswordRegister = new System.Windows.Forms.TextBox();
             this.textBoxUsernameRegister = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelUsername = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
+            this.labelNoTelp = new System.Windows.Forms.Label();
             this.buttonRegister = new System.Windows.Forms.Button();
+            this.linkLabelAlreadyHaveAnAccount = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // textBoxPasswordRegister
             // 
-            this.textBoxPasswordRegister.Location = new System.Drawing.Point(265, 243);
+            this.textBoxPasswordRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPasswordRegister.Location = new System.Drawing.Point(333, 321);
+            this.textBoxPasswordRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordRegister.Name = "textBoxPasswordRegister";
-            this.textBoxPasswordRegister.Size = new System.Drawing.Size(234, 22);
+            this.textBoxPasswordRegister.Size = new System.Drawing.Size(322, 39);
             this.textBoxPasswordRegister.TabIndex = 10;
             // 
             // textBoxUsernameRegister
             // 
-            this.textBoxUsernameRegister.Location = new System.Drawing.Point(265, 200);
+            this.textBoxUsernameRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsernameRegister.Location = new System.Drawing.Point(333, 245);
+            this.textBoxUsernameRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsernameRegister.Name = "textBoxUsernameRegister";
-            this.textBoxUsernameRegister.Size = new System.Drawing.Size(234, 22);
+            this.textBoxUsernameRegister.Size = new System.Drawing.Size(322, 39);
             this.textBoxUsernameRegister.TabIndex = 9;
             // 
-            // label2
+            // labelPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(129, 236);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 29);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Password:";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(84, 324);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(146, 32);
+            this.labelPassword.TabIndex = 8;
+            this.labelPassword.Text = "Password:";
             // 
-            // label4
+            // labelUsername
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(129, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 29);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Username:";
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(78, 248);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(152, 32);
+            this.labelUsername.TabIndex = 7;
+            this.labelUsername.Text = "Username:";
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.IndianRed;
             this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(575, -7);
+            this.label3.Location = new System.Drawing.Point(743, -9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(598, 583);
+            this.label3.Size = new System.Drawing.Size(577, 729);
             this.label3.TabIndex = 11;
-            this.label3.Text = "LOGIN";
+            this.label3.Text = "REGISTER";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // textBoxConfirmPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(265, 287);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 22);
-            this.textBox1.TabIndex = 13;
+            this.textBoxConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(333, 402);
+            this.textBoxConfirmPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(322, 39);
+            this.textBoxConfirmPassword.TabIndex = 13;
             // 
-            // label1
+            // labelNoTelp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 280);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 29);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Confirm Password:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(211, 381);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 21);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "already have an account";
-            this.button1.UseVisualStyleBackColor = true;
+            this.labelNoTelp.AutoSize = true;
+            this.labelNoTelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoTelp.Location = new System.Drawing.Point(84, 405);
+            this.labelNoTelp.Name = "labelNoTelp";
+            this.labelNoTelp.Size = new System.Drawing.Size(116, 32);
+            this.labelNoTelp.TabIndex = 12;
+            this.labelNoTelp.Text = "No. Hp :";
             // 
             // buttonRegister
             // 
-            this.buttonRegister.Location = new System.Drawing.Point(243, 342);
+            this.buttonRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegister.Location = new System.Drawing.Point(268, 513);
+            this.buttonRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(75, 23);
+            this.buttonRegister.Size = new System.Drawing.Size(182, 56);
             this.buttonRegister.TabIndex = 14;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = true;
             // 
+            // linkLabelAlreadyHaveAnAccount
+            // 
+            this.linkLabelAlreadyHaveAnAccount.AutoSize = true;
+            this.linkLabelAlreadyHaveAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelAlreadyHaveAnAccount.Location = new System.Drawing.Point(109, 599);
+            this.linkLabelAlreadyHaveAnAccount.Name = "linkLabelAlreadyHaveAnAccount";
+            this.linkLabelAlreadyHaveAnAccount.Size = new System.Drawing.Size(489, 32);
+            this.linkLabelAlreadyHaveAnAccount.TabIndex = 15;
+            this.linkLabelAlreadyHaveAnAccount.TabStop = true;
+            this.linkLabelAlreadyHaveAnAccount.Text = "Already Have An Account? Click Here";
+            this.linkLabelAlreadyHaveAnAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAlreadyHaveAnAccount_LinkClicked);
+            // 
             // FormRegisterKonsumen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1170, 564);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1316, 705);
+            this.Controls.Add(this.linkLabelAlreadyHaveAnAccount);
             this.Controls.Add(this.buttonRegister);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxConfirmPassword);
+            this.Controls.Add(this.labelNoTelp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxPasswordRegister);
             this.Controls.Add(this.textBoxUsernameRegister);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelUsername);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormRegisterKonsumen";
-            this.Text = "FormRegister";
+            this.Text = "REGISTER";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,12 +156,12 @@
         #endregion
         private System.Windows.Forms.TextBox textBoxPasswordRegister;
         private System.Windows.Forms.TextBox textBoxUsernameRegister;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxConfirmPassword;
+        private System.Windows.Forms.Label labelNoTelp;
         private System.Windows.Forms.Button buttonRegister;
+        private System.Windows.Forms.LinkLabel linkLabelAlreadyHaveAnAccount;
     }
 }

@@ -15,6 +15,7 @@ namespace database_project
         public FormLogin()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void labelCreateAnAccount_Click(object sender, EventArgs e)

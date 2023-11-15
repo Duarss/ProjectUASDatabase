@@ -15,11 +15,14 @@ namespace database_project
         public FormMenu()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            FormLogin formLogin = new FormLogin();
+            formLogin.Owner = this;
+            formLogin.ShowDialog();
         }
     }
 }
