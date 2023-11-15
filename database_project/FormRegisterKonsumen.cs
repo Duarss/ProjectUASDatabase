@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace database_project
 {
-    public partial class FormRegisterKonsumer : Form
+    public partial class FormRegisterKonsumen : Form
     {
-        public FormRegisterKonsumer()
+        public FormRegisterKonsumen()
         {
             InitializeComponent();
         }

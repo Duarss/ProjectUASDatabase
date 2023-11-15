@@ -58,11 +58,11 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegisterKonsumer.cs">
+    <Compile Include="FormRegisterKonsumen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegisterKonsumer.Designer.cs">
-      <DependentUpon>FormRegisterKonsumer.cs</DependentUpon>
+    <Compile Include="FormRegisterKonsumen.Designer.cs">
+      <DependentUpon>FormRegisterKonsumen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

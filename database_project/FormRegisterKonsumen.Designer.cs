@@ -1,6 +1,6 @@
 ﻿namespace database_project
 {
-    partial class FormRegisterKonsumer
+    partial class FormRegisterKonsumen
     {
         /// <summary>
         /// Required designer variable.
