@@ -16,5 +16,15 @@ namespace database_project
         {
             InitializeComponent();
         }
+
+        private void labelCreateAnAccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            labelCreateAnAccount.Font = new Font(labelCreateAnAccount.Font, FontStyle.Underline);
+        }
     }
 }
