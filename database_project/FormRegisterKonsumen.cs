@@ -18,11 +18,11 @@ namespace database_project
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        FormMenu formMenu;
+        FormLogin formLogin;
 
         private void FormRegisterKonsumen_Load(object sender, EventArgs e)
         {
-            
+            formLogin = (FormLogin)this.Owner;
         }
 
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -31,6 +31,12 @@ namespace database_project
             formLogin.Owner = this;
             this.Visible = false;
             formLogin.ShowDialog();
+        }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            formLogin.Visible = true;
+            this.Close();
         }
     }
 }
