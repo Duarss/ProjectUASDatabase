@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace database_project
+namespace Celikoor_Tixycket
 {
     public partial class FormRegisterKonsumen : Form
     {
@@ -17,7 +17,6 @@ namespace database_project
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-
         FormLogin formLogin;
 
         private void FormRegisterKonsumen_Load(object sender, EventArgs e)
@@ -27,16 +26,14 @@ namespace database_project
 
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormLogin formLogin = new FormLogin();
-            formLogin.Owner = this;
+            formLogin.Visible = true;
             this.Visible = false;
-            formLogin.ShowDialog();
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             formLogin.Visible = true;
-            this.Close();
+            this.Visible = false;
         }
     }
 }

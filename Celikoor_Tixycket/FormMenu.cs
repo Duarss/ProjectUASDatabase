@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace database_project
+namespace Celikoor_Tixycket
 {
     public partial class FormMenu : Form
     {
@@ -23,6 +23,9 @@ namespace database_project
             FormLogin formLogin = new FormLogin();
             formLogin.Owner = this;
             this.Visible = false;
+            FormRegisterKonsumen formRegister = new FormRegisterKonsumen();
+            formRegister.Owner = this;
+            formRegister.Visible = false;
             formLogin.ShowDialog();
         }
     }

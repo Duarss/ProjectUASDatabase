@@ -1,4 +1,4 @@
-﻿namespace database_project
+﻿namespace Celikoor_Tixycket
 {
     partial class FormLogin
     {
