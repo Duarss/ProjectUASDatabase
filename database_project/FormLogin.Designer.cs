@@ -34,14 +34,14 @@
             this.textBoxPasswordLogin = new System.Windows.Forms.TextBox();
             this.labelLoginPanel = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.labelCreateAnAccount = new System.Windows.Forms.Label();
+            this.linkLabelCreateAnAccount = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(719, 270);
+            this.labelUsername.Location = new System.Drawing.Point(740, 270);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(152, 32);
             this.labelUsername.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(725, 352);
+            this.labelPassword.Location = new System.Drawing.Point(740, 356);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(146, 32);
             this.labelPassword.TabIndex = 1;
@@ -60,7 +60,7 @@
             // textBoxUsernameLogin
             // 
             this.textBoxUsernameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsernameLogin.Location = new System.Drawing.Point(931, 267);
+            this.textBoxUsernameLogin.Location = new System.Drawing.Point(948, 267);
             this.textBoxUsernameLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsernameLogin.Name = "textBoxUsernameLogin";
             this.textBoxUsernameLogin.Size = new System.Drawing.Size(263, 39);
@@ -69,7 +69,7 @@
             // textBoxPasswordLogin
             // 
             this.textBoxPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPasswordLogin.Location = new System.Drawing.Point(931, 349);
+            this.textBoxPasswordLogin.Location = new System.Drawing.Point(948, 349);
             this.textBoxPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordLogin.Name = "textBoxPasswordLogin";
             this.textBoxPasswordLogin.Size = new System.Drawing.Size(263, 39);
@@ -90,7 +90,7 @@
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(878, 457);
+            this.buttonLogin.Location = new System.Drawing.Point(901, 472);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(138, 50);
@@ -98,23 +98,24 @@
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
             // 
-            // labelCreateAnAccount
+            // linkLabelCreateAnAccount
             // 
-            this.labelCreateAnAccount.AutoSize = true;
-            this.labelCreateAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCreateAnAccount.Location = new System.Drawing.Point(820, 543);
-            this.labelCreateAnAccount.Name = "labelCreateAnAccount";
-            this.labelCreateAnAccount.Size = new System.Drawing.Size(251, 32);
-            this.labelCreateAnAccount.TabIndex = 8;
-            this.labelCreateAnAccount.Text = "Create An Account";
-            this.labelCreateAnAccount.Click += new System.EventHandler(this.labelCreateAnAccount_Click);
+            this.linkLabelCreateAnAccount.AutoSize = true;
+            this.linkLabelCreateAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(845, 562);
+            this.linkLabelCreateAnAccount.Name = "linkLabelCreateAnAccount";
+            this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(251, 32);
+            this.linkLabelCreateAnAccount.TabIndex = 8;
+            this.linkLabelCreateAnAccount.TabStop = true;
+            this.linkLabelCreateAnAccount.Text = "Create An Account";
+            this.linkLabelCreateAnAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCreateAnAccount_LinkClicked);
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1289, 675);
-            this.Controls.Add(this.labelCreateAnAccount);
+            this.Controls.Add(this.linkLabelCreateAnAccount);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.labelLoginPanel);
             this.Controls.Add(this.textBoxPasswordLogin);
@@ -138,6 +139,6 @@
         private System.Windows.Forms.TextBox textBoxPasswordLogin;
         private System.Windows.Forms.Label labelLoginPanel;
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.Label labelCreateAnAccount;
+        private System.Windows.Forms.LinkLabel linkLabelCreateAnAccount;
     }
 }

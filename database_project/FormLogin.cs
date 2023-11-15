@@ -24,7 +24,16 @@ namespace database_project
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            labelCreateAnAccount.Font = new Font(labelCreateAnAccount.Font, FontStyle.Underline);
+
+        }
+
+        private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormRegisterKonsumen formRegisterKonsumen = new FormRegisterKonsumen();
+            formRegisterKonsumen.Owner = this;
+            formRegisterKonsumen.ShowDialog();
+
+            this.Close();
         }
     }
 }
