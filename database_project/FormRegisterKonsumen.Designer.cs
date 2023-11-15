@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxPasswordLogin = new System.Windows.Forms.TextBox();
-            this.textBoxUsernameLogin = new System.Windows.Forms.TextBox();
+            this.textBoxPasswordRegister = new System.Windows.Forms.TextBox();
+            this.textBoxUsernameRegister = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -47,19 +47,19 @@
             this.label3.Text = "REGISTER";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxPasswordLogin
+            // textBoxPasswordRegister
             // 
-            this.textBoxPasswordLogin.Location = new System.Drawing.Point(167, 180);
-            this.textBoxPasswordLogin.Name = "textBoxPasswordLogin";
-            this.textBoxPasswordLogin.Size = new System.Drawing.Size(234, 22);
-            this.textBoxPasswordLogin.TabIndex = 10;
+            this.textBoxPasswordRegister.Location = new System.Drawing.Point(167, 180);
+            this.textBoxPasswordRegister.Name = "textBoxPasswordRegister";
+            this.textBoxPasswordRegister.Size = new System.Drawing.Size(234, 22);
+            this.textBoxPasswordRegister.TabIndex = 10;
             // 
-            // textBoxUsernameLogin
+            // textBoxUsernameRegister
             // 
-            this.textBoxUsernameLogin.Location = new System.Drawing.Point(167, 137);
-            this.textBoxUsernameLogin.Name = "textBoxUsernameLogin";
-            this.textBoxUsernameLogin.Size = new System.Drawing.Size(234, 22);
-            this.textBoxUsernameLogin.TabIndex = 9;
+            this.textBoxUsernameRegister.Location = new System.Drawing.Point(167, 137);
+            this.textBoxUsernameRegister.Name = "textBoxUsernameRegister";
+            this.textBoxUsernameRegister.Size = new System.Drawing.Size(234, 22);
+            this.textBoxUsernameRegister.TabIndex = 9;
             // 
             // label2
             // 
@@ -87,8 +87,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 244);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxPasswordLogin);
-            this.Controls.Add(this.textBoxUsernameLogin);
+            this.Controls.Add(this.textBoxPasswordRegister);
+            this.Controls.Add(this.textBoxUsernameRegister);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Name = "FormRegisterKonsumen";
@@ -101,8 +101,8 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxPasswordLogin;
-        private System.Windows.Forms.TextBox textBoxUsernameLogin;
+        private System.Windows.Forms.TextBox textBoxPasswordRegister;
+        private System.Windows.Forms.TextBox textBoxUsernameRegister;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
     }
