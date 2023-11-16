@@ -8,25 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Celikoor_Tixycket
+namespace database_project
 {
-    public partial class FormMenu : Form
+    public partial class FormUtama : Form
     {
-        public FormMenu()
+        public FormUtama()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void FormMenu_Load(object sender, EventArgs e)
+        private void FormUtama_Load(object sender, EventArgs e)
         {
-            FormLoginKonsumen formLogin = new FormLoginKonsumen();
-            formLogin.Owner = this;
-            this.Visible = false;
-            FormRegisterKonsumen formRegister = new FormRegisterKonsumen();
-            formRegister.Owner = this;
-            formRegister.Visible = false;
-            formLogin.ShowDialog();
+            
         }
     }
 }

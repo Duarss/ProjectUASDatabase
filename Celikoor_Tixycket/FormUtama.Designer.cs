@@ -1,6 +1,6 @@
-﻿namespace Celikoor_Tixycket
+﻿namespace database_project
 {
-    partial class FormMenu
+    partial class FormUtama
     {
         /// <summary>
         /// Required designer variable.
@@ -28,133 +28,243 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuStripFormMenu = new System.Windows.Forms.MenuStrip();
-            this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.konsumenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.operatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
-            this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filmToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripFormUtama = new System.Windows.Forms.MenuStrip();
+            this.mASTERToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kONSUMENToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tRANSAKSIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jENISSTUDIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gENREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kELOMPOKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.karyawanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pesanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aktorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStripFormMenu.SuspendLayout();
+            this.sTUDIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aKTORSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pEGAWAIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kONSUMENToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pENJADWALANFILMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pENJADWALANFILMToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pENCATATANKEDATANGANToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lAPORANToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fILMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.buttonLogInOut = new System.Windows.Forms.Button();
+            this.labelLogInSebagai = new System.Windows.Forms.Label();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripFormUtama.SuspendLayout();
             this.SuspendLayout();
             // 
-            // contextMenuStrip1
+            // menuStripFormUtama
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.menuStripFormUtama.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStripFormUtama.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStripFormUtama.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStripFormUtama.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem6,
+            this.mASTERToolStripMenuItem,
+            this.toolStripMenuItem4,
+            this.tRANSAKSIToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.pENJADWALANFILMToolStripMenuItem,
+            this.toolStripMenuItem5});
+            this.menuStripFormUtama.Location = new System.Drawing.Point(0, 0);
+            this.menuStripFormUtama.Name = "menuStripFormUtama";
+            this.menuStripFormUtama.Size = new System.Drawing.Size(1632, 42);
+            this.menuStripFormUtama.TabIndex = 0;
+            this.menuStripFormUtama.Text = "menuStrip1";
             // 
-            // menuStripFormMenu
+            // mASTERToolStripMenuItem
             // 
-            this.menuStripFormMenu.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStripFormMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStripFormMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStripFormMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.masterToolStripMenuItem,
-            this.pesanToolStripMenuItem});
-            this.menuStripFormMenu.Location = new System.Drawing.Point(0, 0);
-            this.menuStripFormMenu.Name = "menuStripFormMenu";
-            this.menuStripFormMenu.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStripFormMenu.Size = new System.Drawing.Size(1125, 46);
-            this.menuStripFormMenu.TabIndex = 1;
-            this.menuStripFormMenu.Text = "menuStrip1";
-            // 
-            // masterToolStripMenuItem
-            // 
-            this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.konsumenToolStripMenuItem,
-            this.operatorToolStripMenuItem,
-            this.genreToolStripMenuItem,
-            this.filmToolStripMenuItem,
-            this.filmToolStripMenuItem1,
-            this.aktorToolStripMenuItem1,
-            this.aktorToolStripMenuItem,
+            this.mASTERToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kONSUMENToolStripMenuItem,
+            this.sTUDIOToolStripMenuItem,
+            this.jENISSTUDIOToolStripMenuItem,
+            this.pEGAWAIToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.karyawanToolStripMenuItem});
-            this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(118, 42);
-            this.masterToolStripMenuItem.Text = "Master";
+            this.gENREToolStripMenuItem,
+            this.fILMToolStripMenuItem,
+            this.aKTORSToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.kONSUMENToolStripMenuItem1,
+            this.kELOMPOKToolStripMenuItem});
+            this.mASTERToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mASTERToolStripMenuItem.Name = "mASTERToolStripMenuItem";
+            this.mASTERToolStripMenuItem.Size = new System.Drawing.Size(256, 38);
+            this.mASTERToolStripMenuItem.Text = "MASTER DATA";
             // 
-            // konsumenToolStripMenuItem
+            // kONSUMENToolStripMenuItem
             // 
-            this.konsumenToolStripMenuItem.Name = "konsumenToolStripMenuItem";
-            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(254, 46);
-            this.konsumenToolStripMenuItem.Text = "Konsumen";
+            this.kONSUMENToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kONSUMENToolStripMenuItem.Name = "kONSUMENToolStripMenuItem";
+            this.kONSUMENToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.kONSUMENToolStripMenuItem.Text = "CINEMA";
             // 
-            // operatorToolStripMenuItem
+            // tRANSAKSIToolStripMenuItem
             // 
-            this.operatorToolStripMenuItem.Name = "operatorToolStripMenuItem";
-            this.operatorToolStripMenuItem.Size = new System.Drawing.Size(254, 46);
-            this.operatorToolStripMenuItem.Text = "Cinema";
+            this.tRANSAKSIToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tRANSAKSIToolStripMenuItem.Name = "tRANSAKSIToolStripMenuItem";
+            this.tRANSAKSIToolStripMenuItem.Size = new System.Drawing.Size(217, 38);
+            this.tRANSAKSIToolStripMenuItem.Text = "TRANSAKSI";
             // 
-            // genreToolStripMenuItem
+            // jENISSTUDIOToolStripMenuItem
             // 
-            this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(251, 6);
+            this.jENISSTUDIOToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jENISSTUDIOToolStripMenuItem.Name = "jENISSTUDIOToolStripMenuItem";
+            this.jENISSTUDIOToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.jENISSTUDIOToolStripMenuItem.Text = "JENIS STUDIO";
             // 
-            // filmToolStripMenuItem
+            // gENREToolStripMenuItem
             // 
-            this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
-            this.filmToolStripMenuItem.Size = new System.Drawing.Size(254, 46);
-            this.filmToolStripMenuItem.Text = "Genre";
+            this.gENREToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gENREToolStripMenuItem.Name = "gENREToolStripMenuItem";
+            this.gENREToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.gENREToolStripMenuItem.Text = "GENRE";
             // 
-            // filmToolStripMenuItem1
+            // kELOMPOKToolStripMenuItem
             // 
-            this.filmToolStripMenuItem1.Name = "filmToolStripMenuItem1";
-            this.filmToolStripMenuItem1.Size = new System.Drawing.Size(270, 46);
-            this.filmToolStripMenuItem1.Text = "Kelompok";
-            // 
-            // aktorToolStripMenuItem
-            // 
-            this.aktorToolStripMenuItem.Name = "aktorToolStripMenuItem";
-            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(254, 46);
-            this.aktorToolStripMenuItem.Text = "Aktor";
+            this.kELOMPOKToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kELOMPOKToolStripMenuItem.Name = "kELOMPOKToolStripMenuItem";
+            this.kELOMPOKToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.kELOMPOKToolStripMenuItem.Text = "KELOMPOK";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(251, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(290, 6);
             // 
-            // karyawanToolStripMenuItem
+            // sTUDIOToolStripMenuItem
             // 
-            this.karyawanToolStripMenuItem.Name = "karyawanToolStripMenuItem";
-            this.karyawanToolStripMenuItem.Size = new System.Drawing.Size(270, 46);
-            this.karyawanToolStripMenuItem.Text = "Karyawan";
+            this.sTUDIOToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sTUDIOToolStripMenuItem.Name = "sTUDIOToolStripMenuItem";
+            this.sTUDIOToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.sTUDIOToolStripMenuItem.Text = "STUDIO";
             // 
-            // pesanToolStripMenuItem
+            // aKTORSToolStripMenuItem
             // 
-            this.pesanToolStripMenuItem.Name = "pesanToolStripMenuItem";
-            this.pesanToolStripMenuItem.Size = new System.Drawing.Size(145, 42);
-            this.pesanToolStripMenuItem.Text = "Transaksi";
+            this.aKTORSToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aKTORSToolStripMenuItem.Name = "aKTORSToolStripMenuItem";
+            this.aKTORSToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.aKTORSToolStripMenuItem.Text = "AKTORS";
             // 
-            // aktorToolStripMenuItem1
+            // pEGAWAIToolStripMenuItem
             // 
-            this.aktorToolStripMenuItem1.Name = "aktorToolStripMenuItem1";
-            this.aktorToolStripMenuItem1.Size = new System.Drawing.Size(270, 46);
-            this.aktorToolStripMenuItem1.Text = "Film";
+            this.pEGAWAIToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pEGAWAIToolStripMenuItem.Name = "pEGAWAIToolStripMenuItem";
+            this.pEGAWAIToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.pEGAWAIToolStripMenuItem.Text = "KARYAWAN";
             // 
-            // FormMenu
+            // kONSUMENToolStripMenuItem1
+            // 
+            this.kONSUMENToolStripMenuItem1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kONSUMENToolStripMenuItem1.Name = "kONSUMENToolStripMenuItem1";
+            this.kONSUMENToolStripMenuItem1.Size = new System.Drawing.Size(293, 38);
+            this.kONSUMENToolStripMenuItem1.Text = "KONSUMEN";
+            // 
+            // pENJADWALANFILMToolStripMenuItem
+            // 
+            this.pENJADWALANFILMToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pENJADWALANFILMToolStripMenuItem1,
+            this.pENCATATANKEDATANGANToolStripMenuItem,
+            this.lAPORANToolStripMenuItem});
+            this.pENJADWALANFILMToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pENJADWALANFILMToolStripMenuItem.Name = "pENJADWALANFILMToolStripMenuItem";
+            this.pENJADWALANFILMToolStripMenuItem.Size = new System.Drawing.Size(151, 38);
+            this.pENJADWALANFILMToolStripMenuItem.Text = "SISTEM";
+            // 
+            // pENJADWALANFILMToolStripMenuItem1
+            // 
+            this.pENJADWALANFILMToolStripMenuItem1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pENJADWALANFILMToolStripMenuItem1.Name = "pENJADWALANFILMToolStripMenuItem1";
+            this.pENJADWALANFILMToolStripMenuItem1.Size = new System.Drawing.Size(449, 38);
+            this.pENJADWALANFILMToolStripMenuItem1.Text = "PENJADWALAN FILM";
+            // 
+            // pENCATATANKEDATANGANToolStripMenuItem
+            // 
+            this.pENCATATANKEDATANGANToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pENCATATANKEDATANGANToolStripMenuItem.Name = "pENCATATANKEDATANGANToolStripMenuItem";
+            this.pENCATATANKEDATANGANToolStripMenuItem.Size = new System.Drawing.Size(449, 38);
+            this.pENCATATANKEDATANGANToolStripMenuItem.Text = "PENCATATAN KEDATANGAN";
+            // 
+            // lAPORANToolStripMenuItem
+            // 
+            this.lAPORANToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lAPORANToolStripMenuItem.Name = "lAPORANToolStripMenuItem";
+            this.lAPORANToolStripMenuItem.Size = new System.Drawing.Size(449, 38);
+            this.lAPORANToolStripMenuItem.Text = "LAPORAN";
+            // 
+            // fILMToolStripMenuItem
+            // 
+            this.fILMToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fILMToolStripMenuItem.Name = "fILMToolStripMenuItem";
+            this.fILMToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.fILMToolStripMenuItem.Text = "FILM";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(290, 6);
+            // 
+            // buttonLogInOut
+            // 
+            this.buttonLogInOut.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogInOut.Location = new System.Drawing.Point(1448, 0);
+            this.buttonLogInOut.Name = "buttonLogInOut";
+            this.buttonLogInOut.Size = new System.Drawing.Size(172, 42);
+            this.buttonLogInOut.TabIndex = 1;
+            this.buttonLogInOut.Text = "Log In";
+            this.buttonLogInOut.UseVisualStyleBackColor = true;
+            // 
+            // labelLogInSebagai
+            // 
+            this.labelLogInSebagai.AutoSize = true;
+            this.labelLogInSebagai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelLogInSebagai.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogInSebagai.Location = new System.Drawing.Point(966, 4);
+            this.labelLogInSebagai.Name = "labelLogInSebagai";
+            this.labelLogInSebagai.Size = new System.Drawing.Size(400, 34);
+            this.labelLogInSebagai.TabIndex = 2;
+            this.labelLogInSebagai.Text = "Anda Login Sebagai : None";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(46, 38);
+            this.toolStripMenuItem3.Text = "|";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(46, 38);
+            this.toolStripMenuItem4.Text = "|";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(46, 38);
+            this.toolStripMenuItem5.Text = "|";
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(46, 38);
+            this.toolStripMenuItem6.Text = "|";
+            // 
+            // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1125, 714);
-            this.Controls.Add(this.menuStripFormMenu);
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStripFormMenu;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FormMenu";
-            this.Text = "Menu";
-            this.Load += new System.EventHandler(this.FormMenu_Load);
-            this.menuStripFormMenu.ResumeLayout(false);
-            this.menuStripFormMenu.PerformLayout();
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(1632, 1570);
+            this.Controls.Add(this.labelLogInSebagai);
+            this.Controls.Add(this.buttonLogInOut);
+            this.Controls.Add(this.menuStripFormUtama);
+            this.MainMenuStrip = this.menuStripFormUtama;
+            this.Name = "FormUtama";
+            this.Text = "MENU UTAMA";
+            this.Load += new System.EventHandler(this.FormUtama_Load);
+            this.menuStripFormUtama.ResumeLayout(false);
+            this.menuStripFormUtama.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,19 +272,29 @@
 
         #endregion
 
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.MenuStrip menuStripFormMenu;
-        private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem konsumenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem operatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator genreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filmToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem aktorToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStripFormUtama;
+        private System.Windows.Forms.ToolStripMenuItem mASTERToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tRANSAKSIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kONSUMENToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jENISSTUDIOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gENREToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kELOMPOKToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem karyawanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pesanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aktorToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sTUDIOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aKTORSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pEGAWAIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kONSUMENToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pENJADWALANFILMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pENJADWALANFILMToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pENCATATANKEDATANGANToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lAPORANToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fILMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.Button buttonLogInOut;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.Label labelLogInSebagai;
     }
 }
-
