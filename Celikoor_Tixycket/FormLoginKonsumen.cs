@@ -18,12 +18,20 @@ namespace Celikoor_Tixycket
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        FormUtama formMenu;
+        FormUtama formUtama;
         FormRegisterKonsumen formRegisterKonsumen;
+        FormLoginAs formLoginAs;
 
-        private void FormLogin_Load(object sender, EventArgs e)
+        private void FormLoginKonsumen_Load(object sender, EventArgs e)
         {
-            formMenu = (FormUtama)this.Owner;
+            formLoginAs = (FormLoginAs)this.Owner;
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            formUtama.Visible = true;
+            formRegisterKonsumen.Close();
+            this.Close();
         }
 
         private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -32,38 +40,6 @@ namespace Celikoor_Tixycket
             formRegisterKonsumen.Owner = this;
             this.Visible = false;
             formRegisterKonsumen.ShowDialog();
-        }
-
-        private void buttonLogin_Click(object sender, EventArgs e)
-        {
-            formMenu.Visible = true;
-            formRegisterKonsumen.Close();
-            this.Close();
-        }
-
-        private void labelLoginPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelUsername_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxUsernameLogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPasswordLogin_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

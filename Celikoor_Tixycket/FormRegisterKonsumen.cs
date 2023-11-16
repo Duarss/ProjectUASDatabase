@@ -17,22 +17,22 @@ namespace Celikoor_Tixycket
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-        FormLoginKonsumen formLogin;
+        FormLoginKonsumen formLoginKonsumen;
 
         private void FormRegisterKonsumen_Load(object sender, EventArgs e)
         {
-            formLogin = (FormLoginKonsumen)this.Owner;
+            formLoginKonsumen = (FormLoginKonsumen)this.Owner;
         }
 
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formLogin.Visible = true;
+            formLoginKonsumen.Visible = true;
             this.Visible = false;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            formLogin.Visible = true;
+            formLoginKonsumen.Visible = true;
             this.Visible = false;
         }
     }

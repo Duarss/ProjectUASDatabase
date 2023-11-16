@@ -48,7 +48,6 @@
             this.labelLoginPanel.TabIndex = 6;
             this.labelLoginPanel.Text = "LOGIN";
             this.labelLoginPanel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelLoginPanel.Click += new System.EventHandler(this.labelLoginPanel_Click);
             // 
             // linkLabelCreateAnAccount
             // 
@@ -61,6 +60,7 @@
             this.linkLabelCreateAnAccount.TabIndex = 21;
             this.linkLabelCreateAnAccount.TabStop = true;
             this.linkLabelCreateAnAccount.Text = "New User? Click Here";
+            this.linkLabelCreateAnAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCreateAnAccount_LinkClicked);
             // 
             // buttonLogin
             // 
@@ -133,7 +133,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormLoginKonsumen";
             this.Text = "LOGIN KONSUMEN";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.Load += new System.EventHandler(this.FormLoginKonsumen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

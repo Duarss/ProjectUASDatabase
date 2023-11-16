@@ -33,13 +33,12 @@
             this.labelPINPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelRegister = new System.Windows.Forms.Label();
-            this.labelGender = new System.Windows.Forms.Label();
+            this.labelTglLahir = new System.Windows.Forms.Label();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.linkLabelAlreadyHaveAnAccount = new System.Windows.Forms.LinkLabel();
             this.labelEmail = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
+            this.dateTimePickerTglLahir = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // textBoxPasswordRegister
@@ -49,7 +48,7 @@
             this.textBoxPasswordRegister.Location = new System.Drawing.Point(380, 385);
             this.textBoxPasswordRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordRegister.Name = "textBoxPasswordRegister";
-            this.textBoxPasswordRegister.Size = new System.Drawing.Size(372, 39);
+            this.textBoxPasswordRegister.Size = new System.Drawing.Size(456, 39);
             this.textBoxPasswordRegister.TabIndex = 10;
             // 
             // textBoxUsernameRegister
@@ -59,7 +58,7 @@
             this.textBoxUsernameRegister.Location = new System.Drawing.Point(380, 307);
             this.textBoxUsernameRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsernameRegister.Name = "textBoxUsernameRegister";
-            this.textBoxUsernameRegister.Size = new System.Drawing.Size(372, 39);
+            this.textBoxUsernameRegister.Size = new System.Drawing.Size(456, 39);
             this.textBoxUsernameRegister.TabIndex = 9;
             // 
             // labelPINPassword
@@ -89,30 +88,30 @@
             this.labelRegister.BackColor = System.Drawing.Color.DarkBlue;
             this.labelRegister.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelRegister.Location = new System.Drawing.Point(833, -3);
+            this.labelRegister.Location = new System.Drawing.Point(933, -3);
             this.labelRegister.Name = "labelRegister";
-            this.labelRegister.Size = new System.Drawing.Size(603, 773);
+            this.labelRegister.Size = new System.Drawing.Size(611, 773);
             this.labelRegister.TabIndex = 11;
             this.labelRegister.Text = "REGISTER";
             this.labelRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // labelGender
+            // labelTglLahir
             // 
-            this.labelGender.AutoSize = true;
-            this.labelGender.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGender.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelGender.Location = new System.Drawing.Point(78, 466);
-            this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(151, 34);
-            this.labelGender.TabIndex = 12;
-            this.labelGender.Text = "Gender :";
+            this.labelTglLahir.AutoSize = true;
+            this.labelTglLahir.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTglLahir.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.labelTglLahir.Location = new System.Drawing.Point(78, 471);
+            this.labelTglLahir.Name = "labelTglLahir";
+            this.labelTglLahir.Size = new System.Drawing.Size(176, 34);
+            this.labelTglLahir.TabIndex = 12;
+            this.labelTglLahir.Text = "Tgl Lahir :";
             // 
             // buttonRegister
             // 
             this.buttonRegister.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonRegister.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.Color.Azure;
-            this.buttonRegister.Location = new System.Drawing.Point(312, 595);
+            this.buttonRegister.Location = new System.Drawing.Point(370, 599);
             this.buttonRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(182, 56);
@@ -126,7 +125,7 @@
             this.linkLabelAlreadyHaveAnAccount.AutoSize = true;
             this.linkLabelAlreadyHaveAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelAlreadyHaveAnAccount.LinkColor = System.Drawing.Color.BlueViolet;
-            this.linkLabelAlreadyHaveAnAccount.Location = new System.Drawing.Point(209, 671);
+            this.linkLabelAlreadyHaveAnAccount.Location = new System.Drawing.Point(266, 669);
             this.linkLabelAlreadyHaveAnAccount.Name = "linkLabelAlreadyHaveAnAccount";
             this.linkLabelAlreadyHaveAnAccount.Size = new System.Drawing.Size(385, 32);
             this.linkLabelAlreadyHaveAnAccount.TabIndex = 15;
@@ -152,48 +151,32 @@
             this.textBoxEmail.Location = new System.Drawing.Point(380, 229);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(372, 39);
+            this.textBoxEmail.Size = new System.Drawing.Size(456, 39);
             this.textBoxEmail.TabIndex = 17;
             // 
-            // radioButtonMale
+            // dateTimePickerTglLahir
             // 
-            this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonMale.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.radioButtonMale.Location = new System.Drawing.Point(380, 466);
-            this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(106, 38);
-            this.radioButtonMale.TabIndex = 18;
-            this.radioButtonMale.TabStop = true;
-            this.radioButtonMale.Text = "Male";
-            this.radioButtonMale.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonFemale
-            // 
-            this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonFemale.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.radioButtonFemale.Location = new System.Drawing.Point(610, 466);
-            this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(142, 38);
-            this.radioButtonFemale.TabIndex = 19;
-            this.radioButtonFemale.TabStop = true;
-            this.radioButtonFemale.Text = "Female";
-            this.radioButtonFemale.UseVisualStyleBackColor = true;
+            this.dateTimePickerTglLahir.CalendarFont = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTglLahir.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimePickerTglLahir.CalendarTitleBackColor = System.Drawing.Color.SeaShell;
+            this.dateTimePickerTglLahir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerTglLahir.Location = new System.Drawing.Point(380, 469);
+            this.dateTimePickerTglLahir.Name = "dateTimePickerTglLahir";
+            this.dateTimePickerTglLahir.Size = new System.Drawing.Size(456, 37);
+            this.dateTimePickerTglLahir.TabIndex = 18;
             // 
             // FormRegisterKonsumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1435, 764);
-            this.Controls.Add(this.radioButtonFemale);
-            this.Controls.Add(this.radioButtonMale);
+            this.ClientSize = new System.Drawing.Size(1543, 764);
+            this.Controls.Add(this.dateTimePickerTglLahir);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.linkLabelAlreadyHaveAnAccount);
             this.Controls.Add(this.buttonRegister);
-            this.Controls.Add(this.labelGender);
+            this.Controls.Add(this.labelTglLahir);
             this.Controls.Add(this.labelRegister);
             this.Controls.Add(this.textBoxPasswordRegister);
             this.Controls.Add(this.textBoxUsernameRegister);
@@ -215,12 +198,11 @@
         private System.Windows.Forms.Label labelPINPassword;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelRegister;
-        private System.Windows.Forms.Label labelGender;
+        private System.Windows.Forms.Label labelTglLahir;
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.LinkLabel linkLabelAlreadyHaveAnAccount;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.RadioButton radioButtonMale;
-        private System.Windows.Forms.RadioButton radioButtonFemale;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTglLahir;
     }
 }

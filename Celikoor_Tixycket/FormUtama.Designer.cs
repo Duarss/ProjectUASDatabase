@@ -50,8 +50,8 @@
             this.pENCATATANKEDATANGANToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lAPORANToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonLogInOut = new System.Windows.Forms.Button();
             this.labelLogInSebagai = new System.Windows.Forms.Label();
+            this.buttonLogInOut = new System.Windows.Forms.Button();
             this.menuStripFormUtama.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             this.toolStripMenuItem5});
             this.menuStripFormUtama.Location = new System.Drawing.Point(0, 0);
             this.menuStripFormUtama.Name = "menuStripFormUtama";
-            this.menuStripFormUtama.Size = new System.Drawing.Size(1621, 42);
+            this.menuStripFormUtama.Size = new System.Drawing.Size(1817, 42);
             this.menuStripFormUtama.TabIndex = 0;
             this.menuStripFormUtama.Text = "menuStrip1";
             // 
@@ -229,37 +229,38 @@
             this.toolStripMenuItem5.Size = new System.Drawing.Size(46, 38);
             this.toolStripMenuItem5.Text = "|";
             // 
-            // buttonLogInOut
-            // 
-            this.buttonLogInOut.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogInOut.Location = new System.Drawing.Point(1448, 0);
-            this.buttonLogInOut.Name = "buttonLogInOut";
-            this.buttonLogInOut.Size = new System.Drawing.Size(172, 42);
-            this.buttonLogInOut.TabIndex = 1;
-            this.buttonLogInOut.Text = "Log In";
-            this.buttonLogInOut.UseVisualStyleBackColor = true;
-            this.buttonLogInOut.Click += new System.EventHandler(this.buttonLogInOut_Click);
-            // 
             // labelLogInSebagai
             // 
             this.labelLogInSebagai.AutoSize = true;
             this.labelLogInSebagai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelLogInSebagai.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogInSebagai.Location = new System.Drawing.Point(966, 4);
+            this.labelLogInSebagai.Location = new System.Drawing.Point(1145, 3);
             this.labelLogInSebagai.Name = "labelLogInSebagai";
             this.labelLogInSebagai.Size = new System.Drawing.Size(400, 34);
             this.labelLogInSebagai.TabIndex = 2;
             this.labelLogInSebagai.Text = "Anda Login Sebagai : None";
+            // 
+            // buttonLogInOut
+            // 
+            this.buttonLogInOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogInOut.Location = new System.Drawing.Point(1630, 0);
+            this.buttonLogInOut.Name = "buttonLogInOut";
+            this.buttonLogInOut.Size = new System.Drawing.Size(133, 41);
+            this.buttonLogInOut.TabIndex = 5;
+            this.buttonLogInOut.Text = "Log In";
+            this.buttonLogInOut.UseVisualStyleBackColor = true;
+            this.buttonLogInOut.Click += new System.EventHandler(this.buttonLogInOut_Click);
             // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1621, 1570);
-            this.Controls.Add(this.labelLogInSebagai);
+            this.ClientSize = new System.Drawing.Size(1817, 1570);
             this.Controls.Add(this.buttonLogInOut);
+            this.Controls.Add(this.labelLogInSebagai);
             this.Controls.Add(this.menuStripFormUtama);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripFormUtama;
             this.Name = "FormUtama";
             this.Text = "MENU UTAMA";
@@ -291,11 +292,11 @@
         private System.Windows.Forms.ToolStripMenuItem lAPORANToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fILMToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.Button buttonLogInOut;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.Label labelLogInSebagai;
+        private System.Windows.Forms.Button buttonLogInOut;
     }
 }
