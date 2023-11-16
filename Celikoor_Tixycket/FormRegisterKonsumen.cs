@@ -18,21 +18,25 @@ namespace Celikoor_Tixycket
             StartPosition = FormStartPosition.CenterScreen;
         }
         FormLoginKonsumen formLoginKonsumen;
+        //test
+        FormUtama formUtama;
+        //
 
         private void FormRegisterKonsumen_Load(object sender, EventArgs e)
         {
-            formLoginKonsumen = (FormLoginKonsumen)this.Owner;
+            //formLoginKonsumen = (FormLoginKonsumen)this.Owner;
+            formUtama = (FormUtama)this.MdiParent;
         }
 
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formLoginKonsumen.Visible = true;
+            formUtama.formLoginKonsumen.Visible = true;
             this.Visible = false;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            formLoginKonsumen.Visible = true;
+            formUtama.formLoginKonsumen.Visible = true;
             this.Visible = false;
         }
     }

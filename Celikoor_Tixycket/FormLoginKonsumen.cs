@@ -19,35 +19,31 @@ namespace Celikoor_Tixycket
         }
 
         FormUtama formUtama;
-        FormRegisterKonsumen formRegisterKonsumen;
-        FormLoginAs formLoginAs;
 
         private void FormLoginKonsumen_Load(object sender, EventArgs e)
         {
-            formLoginAs = (FormLoginAs)this.Owner;
+            //formLoginAs = (FormLoginAs)this.Owner;
+            formUtama = (FormUtama)this.MdiParent;
+        }
+
+        private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //formRegisterKonsumen = new FormRegisterKonsumen();
+            //formRegisterKonsumen.Owner = this;
+            this.Visible = false;
+            //formRegisterKonsumen.ShowDialog();
+            formUtama.formRegisterKonsumen.Visible = true;
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             formUtama.Visible = true;
-            formRegisterKonsumen.Close();
+            //formRegisterKonsumen.Close();
+            //test
+            formUtama.formRegisterKonsumen.Close();
+            formUtama.formLoginEmployee.Close();
+            //
             this.Close();
-        }
-
-        private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            formRegisterKonsumen = new FormRegisterKonsumen();
-            formRegisterKonsumen.Owner = this;
-            this.Visible = false;
-            formRegisterKonsumen.ShowDialog();
-        }
-
-        private void buttonLogin_Click_1(object sender, EventArgs e)
-        {
-            string username = textBoxUsernameLogin.Text;
-            string password = textBoxPasswordLogin.Text;
-
-
         }
     }
 }

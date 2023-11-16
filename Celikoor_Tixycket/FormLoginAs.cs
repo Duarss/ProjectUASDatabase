@@ -18,6 +18,8 @@ namespace Celikoor_Tixycket
             StartPosition = FormStartPosition.CenterScreen;
         }
 
+        FormUtama formUtama;
+
         private void radioButtonKonsumen_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonKonsumen.Checked)
@@ -27,11 +29,13 @@ namespace Celikoor_Tixycket
                 if (confirm == DialogResult.OK)
                 {
                     this.Visible = false;
-                    FormLoginKonsumen formLoginKonsumen = new FormLoginKonsumen();
-                    formLoginKonsumen.Owner = this;
-                    formLoginKonsumen.ShowDialog();
+                    //FormLoginKonsumen formLoginKonsumen = new FormLoginKonsumen();
+                    //formLoginKonsumen.Owner = this;
+                    //formLoginKonsumen.ShowDialog();
 
-                    formLoginKonsumen.StartPosition = FormStartPosition.CenterScreen;
+                    //formLoginKonsumen.StartPosition = FormStartPosition.CenterScreen;
+                    formUtama.formLoginKonsumen.Visible = true;
+                    formUtama.formLoginKonsumen.StartPosition = FormStartPosition.CenterScreen;
                 }
 
                 radioButtonKonsumen.Checked = false;
@@ -47,11 +51,14 @@ namespace Celikoor_Tixycket
                 if (confirm == DialogResult.OK)
                 {
                     this.Visible = false;
-                    FormLoginEmployee formLoginEmployee = new FormLoginEmployee();
-                    formLoginEmployee.Owner = this;
-                    formLoginEmployee.ShowDialog();
+                    //FormLoginEmployee formLoginEmployee = new FormLoginEmployee();
+                    //formLoginEmployee.Owner = this;
+                    //formLoginEmployee.ShowDialog();
 
-                    formLoginEmployee.StartPosition = FormStartPosition.CenterScreen;
+                    //formLoginEmployee.StartPosition = FormStartPosition.CenterScreen;
+                    formUtama.formLoginEmployee.Visible = true;
+                    formUtama.formLoginEmployee.StartPosition = FormStartPosition.CenterScreen;
+
                 }
 
                 radioButtonPegawai.Checked = false;        
@@ -60,7 +67,15 @@ namespace Celikoor_Tixycket
 
         private void FormLoginAs_Load(object sender, EventArgs e)
         {
-            
+            formUtama = (FormUtama)this.MdiParent;
+        }
+
+        private void FormLoginAs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //clean memory
+            formUtama.formLoginEmployee.Close();
+            formUtama.formLoginKonsumen.Close();
+            formUtama.formRegisterKonsumen.Close();
         }
     }
 }

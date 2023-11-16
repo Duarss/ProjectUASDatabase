@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Celikoor_LIB;
 
 namespace Celikoor_Tixycket
 {
@@ -20,13 +21,40 @@ namespace Celikoor_Tixycket
             this.WindowState = FormWindowState.Maximized;
         }
 
+        //global variable
+        public FormRegisterKonsumen formRegisterKonsumen;
+        public FormLoginKonsumen formLoginKonsumen;
+        public FormLoginEmployee formLoginEmployee;
+
         private void FormUtama_Load(object sender, EventArgs e)
         {
-            
+            try
+            {
+                string server = db.Default.dbServer;
+                string dbname = db.Default.dbName;
+                string uid = db.Default.dbUsername;
+                string pwd = db.Default.dbPassword;
+                Koneksi k = new Koneksi(server, dbname, uid, pwd);
+
+                MessageBox.Show("Status: Koneksi Berhasil!\n");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Status: Koneksi Gagal! error: " + ex.Message + "\n");
+            }
         }
 
         private void buttonLogInOut_Click(object sender, EventArgs e)
         {
+            formRegisterKonsumen = new FormRegisterKonsumen(); //test
+            formRegisterKonsumen.MdiParent = this;
+
+            formLoginEmployee = new FormLoginEmployee();
+            formLoginEmployee.MdiParent = this;
+
+            formLoginKonsumen = new FormLoginKonsumen();
+            formLoginKonsumen.MdiParent = this;
+
             Form form = Application.OpenForms["FormLoginAs"];
 
             if (form == null)
