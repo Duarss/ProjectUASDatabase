@@ -33,12 +33,13 @@
             this.labelPINPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelRegister = new System.Windows.Forms.Label();
-            this.textBoxNoHp = new System.Windows.Forms.TextBox();
-            this.labelNoTelp = new System.Windows.Forms.Label();
+            this.labelGender = new System.Windows.Forms.Label();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.linkLabelAlreadyHaveAnAccount = new System.Windows.Forms.LinkLabel();
             this.labelEmail = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.radioButtonMale = new System.Windows.Forms.RadioButton();
+            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // textBoxPasswordRegister
@@ -65,6 +66,7 @@
             // 
             this.labelPINPassword.AutoSize = true;
             this.labelPINPassword.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPINPassword.ForeColor = System.Drawing.Color.LightSlateGray;
             this.labelPINPassword.Location = new System.Drawing.Point(78, 386);
             this.labelPINPassword.Name = "labelPINPassword";
             this.labelPINPassword.Size = new System.Drawing.Size(259, 34);
@@ -75,6 +77,7 @@
             // 
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.ForeColor = System.Drawing.Color.LightSlateGray;
             this.labelUsername.Location = new System.Drawing.Point(78, 308);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(187, 34);
@@ -93,30 +96,21 @@
             this.labelRegister.Text = "REGISTER";
             this.labelRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBoxNoHp
+            // labelGender
             // 
-            this.textBoxNoHp.BackColor = System.Drawing.Color.SeaShell;
-            this.textBoxNoHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNoHp.Location = new System.Drawing.Point(380, 465);
-            this.textBoxNoHp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxNoHp.Name = "textBoxNoHp";
-            this.textBoxNoHp.Size = new System.Drawing.Size(372, 39);
-            this.textBoxNoHp.TabIndex = 13;
-            // 
-            // labelNoTelp
-            // 
-            this.labelNoTelp.AutoSize = true;
-            this.labelNoTelp.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoTelp.Location = new System.Drawing.Point(78, 466);
-            this.labelNoTelp.Name = "labelNoTelp";
-            this.labelNoTelp.Size = new System.Drawing.Size(142, 34);
-            this.labelNoTelp.TabIndex = 12;
-            this.labelNoTelp.Text = "No. Hp :";
+            this.labelGender.AutoSize = true;
+            this.labelGender.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGender.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.labelGender.Location = new System.Drawing.Point(78, 466);
+            this.labelGender.Name = "labelGender";
+            this.labelGender.Size = new System.Drawing.Size(151, 34);
+            this.labelGender.TabIndex = 12;
+            this.labelGender.Text = "Gender :";
             // 
             // buttonRegister
             // 
             this.buttonRegister.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegister.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.Color.Azure;
             this.buttonRegister.Location = new System.Drawing.Point(312, 595);
             this.buttonRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -144,6 +138,7 @@
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.ForeColor = System.Drawing.Color.LightSlateGray;
             this.labelEmail.Location = new System.Drawing.Point(78, 230);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(124, 34);
@@ -160,18 +155,45 @@
             this.textBoxEmail.Size = new System.Drawing.Size(372, 39);
             this.textBoxEmail.TabIndex = 17;
             // 
+            // radioButtonMale
+            // 
+            this.radioButtonMale.AutoSize = true;
+            this.radioButtonMale.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMale.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.radioButtonMale.Location = new System.Drawing.Point(380, 466);
+            this.radioButtonMale.Name = "radioButtonMale";
+            this.radioButtonMale.Size = new System.Drawing.Size(106, 38);
+            this.radioButtonMale.TabIndex = 18;
+            this.radioButtonMale.TabStop = true;
+            this.radioButtonMale.Text = "Male";
+            this.radioButtonMale.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonFemale
+            // 
+            this.radioButtonFemale.AutoSize = true;
+            this.radioButtonFemale.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonFemale.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.radioButtonFemale.Location = new System.Drawing.Point(610, 466);
+            this.radioButtonFemale.Name = "radioButtonFemale";
+            this.radioButtonFemale.Size = new System.Drawing.Size(142, 38);
+            this.radioButtonFemale.TabIndex = 19;
+            this.radioButtonFemale.TabStop = true;
+            this.radioButtonFemale.Text = "Female";
+            this.radioButtonFemale.UseVisualStyleBackColor = true;
+            // 
             // FormRegisterKonsumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1435, 764);
+            this.Controls.Add(this.radioButtonFemale);
+            this.Controls.Add(this.radioButtonMale);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.linkLabelAlreadyHaveAnAccount);
             this.Controls.Add(this.buttonRegister);
-            this.Controls.Add(this.textBoxNoHp);
-            this.Controls.Add(this.labelNoTelp);
+            this.Controls.Add(this.labelGender);
             this.Controls.Add(this.labelRegister);
             this.Controls.Add(this.textBoxPasswordRegister);
             this.Controls.Add(this.textBoxUsernameRegister);
@@ -193,11 +215,12 @@
         private System.Windows.Forms.Label labelPINPassword;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelRegister;
-        private System.Windows.Forms.TextBox textBoxNoHp;
-        private System.Windows.Forms.Label labelNoTelp;
+        private System.Windows.Forms.Label labelGender;
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.LinkLabel linkLabelAlreadyHaveAnAccount;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.RadioButton radioButtonMale;
+        private System.Windows.Forms.RadioButton radioButtonFemale;
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace database_project
+namespace Celikoor_Tixycket
 {
     public partial class FormLoginEmployee : Form
     {

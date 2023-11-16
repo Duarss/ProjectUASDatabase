@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace database_project
+namespace Celikoor_Tixycket
 {
     public partial class FormUtama : Form
     {
@@ -21,6 +21,14 @@ namespace database_project
         private void FormUtama_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void buttonLogInOut_Click(object sender, EventArgs e)
+        {
+            FormLoginEmployee formLoginEmployee = new FormLoginEmployee();
+            formLoginEmployee.MdiParent = this;
+            formLoginEmployee.Show();
+            formLoginEmployee.StartPosition = FormStartPosition.CenterParent;
         }
     }
 }

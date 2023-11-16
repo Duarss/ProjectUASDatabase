@@ -1,4 +1,4 @@
-﻿namespace database_project
+﻿namespace Celikoor_Tixycket
 {
     partial class FormLoginEmployee
     {
@@ -42,7 +42,7 @@
             this.linkLabelCreateAnAccount.AutoSize = true;
             this.linkLabelCreateAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelCreateAnAccount.LinkColor = System.Drawing.Color.BlueViolet;
-            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(784, 580);
+            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(784, 575);
             this.linkLabelCreateAnAccount.Name = "linkLabelCreateAnAccount";
             this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(289, 32);
             this.linkLabelCreateAnAccount.TabIndex = 15;
@@ -52,9 +52,9 @@
             // buttonLogin
             // 
             this.buttonLogin.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonLogin.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Azure;
-            this.buttonLogin.Location = new System.Drawing.Point(861, 507);
+            this.buttonLogin.Location = new System.Drawing.Point(861, 502);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(138, 50);
@@ -78,7 +78,7 @@
             // 
             this.textBoxPasswordLogin.BackColor = System.Drawing.Color.SeaShell;
             this.textBoxPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPasswordLogin.Location = new System.Drawing.Point(861, 352);
+            this.textBoxPasswordLogin.Location = new System.Drawing.Point(861, 347);
             this.textBoxPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordLogin.Name = "textBoxPasswordLogin";
             this.textBoxPasswordLogin.Size = new System.Drawing.Size(351, 39);
@@ -88,7 +88,7 @@
             // 
             this.textBoxUsernameLogin.BackColor = System.Drawing.Color.SeaShell;
             this.textBoxUsernameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsernameLogin.Location = new System.Drawing.Point(861, 270);
+            this.textBoxUsernameLogin.Location = new System.Drawing.Point(861, 265);
             this.textBoxUsernameLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsernameLogin.Name = "textBoxUsernameLogin";
             this.textBoxUsernameLogin.Size = new System.Drawing.Size(351, 39);
@@ -98,8 +98,8 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.labelPassword.Location = new System.Drawing.Point(622, 353);
+            this.labelPassword.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.labelPassword.Location = new System.Drawing.Point(622, 348);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(180, 34);
             this.labelPassword.TabIndex = 10;
@@ -109,8 +109,8 @@
             // 
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.labelUsername.Location = new System.Drawing.Point(622, 271);
+            this.labelUsername.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.labelUsername.Location = new System.Drawing.Point(622, 266);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(187, 34);
             this.labelUsername.TabIndex = 9;
@@ -130,7 +130,7 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
             this.Name = "FormLoginEmployee";
-            this.Text = "FormLoginEmployee";
+            this.Text = "LOGIN EMPLOYEE";
             this.ResumeLayout(false);
             this.PerformLayout();
 
