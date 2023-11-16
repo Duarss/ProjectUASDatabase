@@ -42,7 +42,7 @@
             this.linkLabelCreateAnAccount.AutoSize = true;
             this.linkLabelCreateAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelCreateAnAccount.LinkColor = System.Drawing.Color.LightSeaGreen;
-            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(784, 570);
+            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(787, 567);
             this.linkLabelCreateAnAccount.Name = "linkLabelCreateAnAccount";
             this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(289, 32);
             this.linkLabelCreateAnAccount.TabIndex = 15;
@@ -54,7 +54,7 @@
             this.buttonLogin.BackColor = System.Drawing.Color.MediumAquamarine;
             this.buttonLogin.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Honeydew;
-            this.buttonLogin.Location = new System.Drawing.Point(861, 497);
+            this.buttonLogin.Location = new System.Drawing.Point(864, 494);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(138, 50);
@@ -78,7 +78,7 @@
             // 
             this.textBoxPasswordLogin.BackColor = System.Drawing.Color.SeaShell;
             this.textBoxPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPasswordLogin.Location = new System.Drawing.Point(861, 342);
+            this.textBoxPasswordLogin.Location = new System.Drawing.Point(864, 339);
             this.textBoxPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordLogin.Name = "textBoxPasswordLogin";
             this.textBoxPasswordLogin.Size = new System.Drawing.Size(351, 39);
@@ -88,7 +88,7 @@
             // 
             this.textBoxUsernameLogin.BackColor = System.Drawing.Color.SeaShell;
             this.textBoxUsernameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsernameLogin.Location = new System.Drawing.Point(861, 260);
+            this.textBoxUsernameLogin.Location = new System.Drawing.Point(864, 257);
             this.textBoxUsernameLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsernameLogin.Name = "textBoxUsernameLogin";
             this.textBoxUsernameLogin.Size = new System.Drawing.Size(351, 39);
@@ -99,7 +99,7 @@
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.OliveDrab;
-            this.labelPassword.Location = new System.Drawing.Point(622, 343);
+            this.labelPassword.Location = new System.Drawing.Point(625, 340);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(180, 34);
             this.labelPassword.TabIndex = 10;
@@ -110,7 +110,7 @@
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.ForeColor = System.Drawing.Color.OliveDrab;
-            this.labelUsername.Location = new System.Drawing.Point(622, 261);
+            this.labelUsername.Location = new System.Drawing.Point(625, 258);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(187, 34);
             this.labelUsername.TabIndex = 9;

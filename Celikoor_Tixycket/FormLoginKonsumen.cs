@@ -41,5 +41,13 @@ namespace Celikoor_Tixycket
             this.Visible = false;
             formRegisterKonsumen.ShowDialog();
         }
+
+        private void buttonLogin_Click_1(object sender, EventArgs e)
+        {
+            string username = textBoxUsernameLogin.Text;
+            string password = textBoxPasswordLogin.Text;
+
+
+        }
     }
 }
