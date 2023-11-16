@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace Celikoor_Tixycket
 {
-    public partial class FormLogin : Form
+    public partial class FormLoginKonsumen : Form
     {
-        public FormLogin()
+        public FormLoginKonsumen()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        FormMenu formMenu;
+        FormUtama formMenu;
         FormRegisterKonsumen formRegisterKonsumen;
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            formMenu = (FormMenu)this.Owner;
+            formMenu = (FormUtama)this.Owner;
         }
 
         private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -39,6 +39,31 @@ namespace Celikoor_Tixycket
             formMenu.Visible = true;
             formRegisterKonsumen.Close();
             this.Close();
+        }
+
+        private void labelLoginPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUsernameLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPasswordLogin_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

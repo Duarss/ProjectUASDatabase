@@ -16,7 +16,7 @@ namespace Celikoor_Tixycket
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenu());
+            Application.Run(new FormUtama());
         }
     }
 }

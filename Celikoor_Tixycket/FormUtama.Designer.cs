@@ -34,12 +34,14 @@
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.konsumenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.genreToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.filmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filmToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.karyawanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aktorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.karyawanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pesanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aktorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripFormMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +57,8 @@
             this.menuStripFormMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStripFormMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripFormMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.masterToolStripMenuItem});
+            this.masterToolStripMenuItem,
+            this.pesanToolStripMenuItem});
             this.menuStripFormMenu.Location = new System.Drawing.Point(0, 0);
             this.menuStripFormMenu.Name = "menuStripFormMenu";
             this.menuStripFormMenu.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -71,6 +74,7 @@
             this.genreToolStripMenuItem,
             this.filmToolStripMenuItem,
             this.filmToolStripMenuItem1,
+            this.aktorToolStripMenuItem1,
             this.aktorToolStripMenuItem,
             this.toolStripMenuItem1,
             this.karyawanToolStripMenuItem});
@@ -81,36 +85,42 @@
             // konsumenToolStripMenuItem
             // 
             this.konsumenToolStripMenuItem.Name = "konsumenToolStripMenuItem";
-            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(270, 46);
+            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(254, 46);
             this.konsumenToolStripMenuItem.Text = "Konsumen";
             // 
             // operatorToolStripMenuItem
             // 
             this.operatorToolStripMenuItem.Name = "operatorToolStripMenuItem";
-            this.operatorToolStripMenuItem.Size = new System.Drawing.Size(270, 46);
+            this.operatorToolStripMenuItem.Size = new System.Drawing.Size(254, 46);
             this.operatorToolStripMenuItem.Text = "Cinema";
-            // 
-            // filmToolStripMenuItem
-            // 
-            this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
-            this.filmToolStripMenuItem.Size = new System.Drawing.Size(270, 46);
-            this.filmToolStripMenuItem.Text = "Genre";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(267, 6);
             // 
             // genreToolStripMenuItem
             // 
             this.genreToolStripMenuItem.Name = "genreToolStripMenuItem";
-            this.genreToolStripMenuItem.Size = new System.Drawing.Size(267, 6);
+            this.genreToolStripMenuItem.Size = new System.Drawing.Size(251, 6);
+            // 
+            // filmToolStripMenuItem
+            // 
+            this.filmToolStripMenuItem.Name = "filmToolStripMenuItem";
+            this.filmToolStripMenuItem.Size = new System.Drawing.Size(254, 46);
+            this.filmToolStripMenuItem.Text = "Genre";
             // 
             // filmToolStripMenuItem1
             // 
             this.filmToolStripMenuItem1.Name = "filmToolStripMenuItem1";
             this.filmToolStripMenuItem1.Size = new System.Drawing.Size(270, 46);
-            this.filmToolStripMenuItem1.Text = "Film";
+            this.filmToolStripMenuItem1.Text = "Kelompok";
+            // 
+            // aktorToolStripMenuItem
+            // 
+            this.aktorToolStripMenuItem.Name = "aktorToolStripMenuItem";
+            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(254, 46);
+            this.aktorToolStripMenuItem.Text = "Aktor";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(251, 6);
             // 
             // karyawanToolStripMenuItem
             // 
@@ -118,16 +128,23 @@
             this.karyawanToolStripMenuItem.Size = new System.Drawing.Size(270, 46);
             this.karyawanToolStripMenuItem.Text = "Karyawan";
             // 
-            // aktorToolStripMenuItem
+            // pesanToolStripMenuItem
             // 
-            this.aktorToolStripMenuItem.Name = "aktorToolStripMenuItem";
-            this.aktorToolStripMenuItem.Size = new System.Drawing.Size(270, 46);
-            this.aktorToolStripMenuItem.Text = "Aktor";
+            this.pesanToolStripMenuItem.Name = "pesanToolStripMenuItem";
+            this.pesanToolStripMenuItem.Size = new System.Drawing.Size(145, 42);
+            this.pesanToolStripMenuItem.Text = "Transaksi";
+            // 
+            // aktorToolStripMenuItem1
+            // 
+            this.aktorToolStripMenuItem1.Name = "aktorToolStripMenuItem1";
+            this.aktorToolStripMenuItem1.Size = new System.Drawing.Size(270, 46);
+            this.aktorToolStripMenuItem1.Text = "Film";
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1125, 714);
             this.Controls.Add(this.menuStripFormMenu);
             this.IsMdiContainer = true;
@@ -156,6 +173,8 @@
         private System.Windows.Forms.ToolStripMenuItem aktorToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem karyawanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pesanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aktorToolStripMenuItem1;
     }
 }
 

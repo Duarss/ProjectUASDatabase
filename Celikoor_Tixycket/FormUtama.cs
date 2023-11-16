@@ -20,7 +20,7 @@ namespace Celikoor_Tixycket
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            FormLogin formLogin = new FormLogin();
+            FormLoginKonsumen formLogin = new FormLoginKonsumen();
             formLogin.Owner = this;
             this.Visible = false;
             FormRegisterKonsumen formRegister = new FormRegisterKonsumen();

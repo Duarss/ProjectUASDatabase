@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="FormLoginEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="FormLoginEmployee.Designer.cs">
+      <DependentUpon>FormLoginEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginKonsumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginKonsumen.Designer.cs">
+      <DependentUpon>FormLoginKonsumen.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
@@ -66,8 +72,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FormLoginEmployee.resx">
+      <DependentUpon>FormLoginEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginKonsumen.resx">
+      <DependentUpon>FormLoginKonsumen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
