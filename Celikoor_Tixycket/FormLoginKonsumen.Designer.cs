@@ -50,9 +50,9 @@
             this.linkLabelCreateAnAccount.AutoSize = true;
             this.linkLabelCreateAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelCreateAnAccount.LinkColor = System.Drawing.Color.BlueViolet;
-            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(770, 537);
+            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(848, 671);
             this.linkLabelCreateAnAccount.Name = "linkLabelCreateAnAccount";
-            this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(223, 25);
+            this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(270, 29);
             this.linkLabelCreateAnAccount.TabIndex = 21;
             this.linkLabelCreateAnAccount.TabStop = true;
             this.linkLabelCreateAnAccount.Text = "New User? Click Here";
@@ -63,9 +63,10 @@
             this.buttonLogin.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonLogin.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Azure;
-            this.buttonLogin.Location = new System.Drawing.Point(711, 476);
+            this.buttonLogin.Location = new System.Drawing.Point(800, 595);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(312, 40);
+            this.buttonLogin.Size = new System.Drawing.Size(351, 50);
             this.buttonLogin.TabIndex = 20;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -76,9 +77,10 @@
             this.textBoxPasswordLogin.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPasswordLogin.ForeColor = System.Drawing.Color.Silver;
-            this.textBoxPasswordLogin.Location = new System.Drawing.Point(711, 365);
+            this.textBoxPasswordLogin.Location = new System.Drawing.Point(800, 456);
+            this.textBoxPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordLogin.Name = "textBoxPasswordLogin";
-            this.textBoxPasswordLogin.Size = new System.Drawing.Size(312, 30);
+            this.textBoxPasswordLogin.Size = new System.Drawing.Size(350, 35);
             this.textBoxPasswordLogin.TabIndex = 19;
             this.textBoxPasswordLogin.Text = "Password";
             this.textBoxPasswordLogin.Click += new System.EventHandler(this.textBoxPasswordLogin_Click);
@@ -88,9 +90,10 @@
             this.textBoxUsernameLogin.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxUsernameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsernameLogin.ForeColor = System.Drawing.Color.Silver;
-            this.textBoxUsernameLogin.Location = new System.Drawing.Point(711, 282);
+            this.textBoxUsernameLogin.Location = new System.Drawing.Point(800, 352);
+            this.textBoxUsernameLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsernameLogin.Name = "textBoxUsernameLogin";
-            this.textBoxUsernameLogin.Size = new System.Drawing.Size(312, 30);
+            this.textBoxUsernameLogin.Size = new System.Drawing.Size(350, 35);
             this.textBoxUsernameLogin.TabIndex = 18;
             this.textBoxUsernameLogin.Text = "Username";
             this.textBoxUsernameLogin.Click += new System.EventHandler(this.textBoxUsernameLogin_Click);
@@ -100,9 +103,9 @@
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelPassword.Location = new System.Drawing.Point(706, 327);
+            this.labelPassword.Location = new System.Drawing.Point(794, 409);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(122, 25);
+            this.labelPassword.Size = new System.Drawing.Size(144, 29);
             this.labelPassword.TabIndex = 17;
             this.labelPassword.Text = "Password";
             // 
@@ -111,9 +114,9 @@
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelUsername.Location = new System.Drawing.Point(706, 244);
+            this.labelUsername.Location = new System.Drawing.Point(794, 305);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(124, 25);
+            this.labelUsername.Size = new System.Drawing.Size(148, 29);
             this.labelUsername.TabIndex = 16;
             this.labelUsername.Text = "Username";
             // 
@@ -122,9 +125,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Tan;
-            this.label1.Location = new System.Drawing.Point(734, 85);
+            this.label1.Location = new System.Drawing.Point(826, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 34);
+            this.label1.Size = new System.Drawing.Size(315, 40);
             this.label1.TabIndex = 22;
             this.label1.Text = "WELCOME BACK";
             // 
@@ -133,9 +136,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Tan;
-            this.label2.Location = new System.Drawing.Point(845, 119);
+            this.label2.Location = new System.Drawing.Point(951, 149);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 22);
+            this.label2.Size = new System.Drawing.Size(37, 26);
             this.label2.TabIndex = 23;
             this.label2.Text = "to";
             // 
@@ -144,8 +147,9 @@
             this.panelImage.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.poster1;
             this.panelImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelImage.Location = new System.Drawing.Point(0, 0);
+            this.panelImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelImage.Name = "panelImage";
-            this.panelImage.Size = new System.Drawing.Size(574, 657);
+            this.panelImage.Size = new System.Drawing.Size(646, 821);
             this.panelImage.TabIndex = 25;
             // 
             // timerImageMoving
@@ -159,9 +163,10 @@
             this.checkBoxRememberMe.AutoSize = true;
             this.checkBoxRememberMe.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxRememberMe.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.checkBoxRememberMe.Location = new System.Drawing.Point(711, 419);
+            this.checkBoxRememberMe.Location = new System.Drawing.Point(800, 524);
+            this.checkBoxRememberMe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBoxRememberMe.Name = "checkBoxRememberMe";
-            this.checkBoxRememberMe.Size = new System.Drawing.Size(131, 20);
+            this.checkBoxRememberMe.Size = new System.Drawing.Size(155, 23);
             this.checkBoxRememberMe.TabIndex = 26;
             this.checkBoxRememberMe.Text = "Remember me?";
             this.checkBoxRememberMe.UseVisualStyleBackColor = true;
@@ -171,9 +176,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.title;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(726, 132);
+            this.pictureBox1.Location = new System.Drawing.Point(817, 165);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(286, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(322, 100);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
@@ -182,18 +188,18 @@
             this.ForgotPassword.AutoSize = true;
             this.ForgotPassword.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForgotPassword.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.ForgotPassword.Location = new System.Drawing.Point(891, 420);
+            this.ForgotPassword.Location = new System.Drawing.Point(1002, 525);
             this.ForgotPassword.Name = "ForgotPassword";
-            this.ForgotPassword.Size = new System.Drawing.Size(121, 16);
+            this.ForgotPassword.Size = new System.Drawing.Size(151, 19);
             this.ForgotPassword.TabIndex = 27;
             this.ForgotPassword.Text = "Forgot Password?";
             // 
             // FormLoginKonsumen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1146, 651);
+            this.ClientSize = new System.Drawing.Size(1289, 814);
             this.Controls.Add(this.ForgotPassword);
             this.Controls.Add(this.checkBoxRememberMe);
             this.Controls.Add(this.panelImage);
@@ -206,6 +212,8 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "FormLoginKonsumen";
             this.Text = "LOGIN KONSUMEN";
             this.Load += new System.EventHandler(this.FormLoginKonsumen_Load);

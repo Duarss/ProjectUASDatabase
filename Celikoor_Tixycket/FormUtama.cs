@@ -63,8 +63,12 @@ namespace Celikoor_Tixycket
 
             else
             {
-
+                form.Show();
+                form.BringToFront();
             }
+
+            buttonLogInOut.Enabled = false;
+            buttonLogInOut.Text = "In Progress";
         }
     }
 }

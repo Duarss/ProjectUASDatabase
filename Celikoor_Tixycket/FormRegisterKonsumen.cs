@@ -17,7 +17,6 @@ namespace Celikoor_Tixycket
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-        FormLoginKonsumen formLoginKonsumen;
         //test
         FormUtama formUtama;
         //

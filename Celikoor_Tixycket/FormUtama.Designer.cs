@@ -70,7 +70,7 @@
             this.toolStripMenuItem5});
             this.menuStripFormUtama.Location = new System.Drawing.Point(0, 0);
             this.menuStripFormUtama.Name = "menuStripFormUtama";
-            this.menuStripFormUtama.Size = new System.Drawing.Size(1817, 42);
+            this.menuStripFormUtama.Size = new System.Drawing.Size(2230, 42);
             this.menuStripFormUtama.TabIndex = 0;
             this.menuStripFormUtama.Text = "menuStrip1";
             // 
@@ -234,7 +234,7 @@
             this.labelLogInSebagai.AutoSize = true;
             this.labelLogInSebagai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelLogInSebagai.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogInSebagai.Location = new System.Drawing.Point(1145, 3);
+            this.labelLogInSebagai.Location = new System.Drawing.Point(1509, 3);
             this.labelLogInSebagai.Name = "labelLogInSebagai";
             this.labelLogInSebagai.Size = new System.Drawing.Size(400, 34);
             this.labelLogInSebagai.TabIndex = 2;
@@ -243,9 +243,9 @@
             // buttonLogInOut
             // 
             this.buttonLogInOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogInOut.Location = new System.Drawing.Point(1630, 0);
+            this.buttonLogInOut.Location = new System.Drawing.Point(1951, 0);
             this.buttonLogInOut.Name = "buttonLogInOut";
-            this.buttonLogInOut.Size = new System.Drawing.Size(133, 41);
+            this.buttonLogInOut.Size = new System.Drawing.Size(254, 41);
             this.buttonLogInOut.TabIndex = 5;
             this.buttonLogInOut.Text = "Log In";
             this.buttonLogInOut.UseVisualStyleBackColor = true;
@@ -256,12 +256,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1817, 1570);
+            this.ClientSize = new System.Drawing.Size(2230, 1570);
             this.Controls.Add(this.buttonLogInOut);
             this.Controls.Add(this.labelLogInSebagai);
             this.Controls.Add(this.menuStripFormUtama);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripFormUtama;
+            this.MaximizeBox = false;
             this.Name = "FormUtama";
             this.Text = "MENU UTAMA";
             this.Load += new System.EventHandler(this.FormUtama_Load);
