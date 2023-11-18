@@ -41,7 +41,6 @@ namespace Celikoor_Tixycket
             //formRegisterKonsumen.Close();
             //test
             formUtama.formRegisterKonsumen.Close();
-            formUtama.formLoginEmployee.Close();
             //
             this.Close();
         }
