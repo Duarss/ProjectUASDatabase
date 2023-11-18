@@ -20,11 +20,19 @@ namespace Celikoor_Tixycket
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
-
-        //global variable
+        #region Global Variable
         public FormRegisterKonsumen formRegisterKonsumen;
         public FormLoginKonsumen formLoginKonsumen;
-
+        public bool loginStatus = false;
+        #endregion
+        #region Methods
+        public void ButtonLoginEnabler(bool status, string text)
+        {
+            buttonLogInOut.Enabled = status;
+            buttonLogInOut.Text = text;
+        }
+        #endregion
+        #region Events
         private void FormUtama_Load(object sender, EventArgs e)
         {
             try
@@ -45,30 +53,39 @@ namespace Celikoor_Tixycket
 
         private void buttonLogInOut_Click(object sender, EventArgs e)
         {
-            formRegisterKonsumen = new FormRegisterKonsumen(); //test
-            formRegisterKonsumen.MdiParent = this;
-
-            formLoginKonsumen = new FormLoginKonsumen();
-            formLoginKonsumen.MdiParent = this;
-
-            Form form = Application.OpenForms["FormLoginAs"];
-
-            if (form == null)
+            if (loginStatus == false)
             {
-                FormLoginAs formLoginAs = new FormLoginAs();
-                formLoginAs.MdiParent = this;
-                formLoginAs.Show();
-                formLoginAs.StartPosition = FormStartPosition.CenterScreen;
-            }
+                Form form = Application.OpenForms["FormLoginKonsumen"];
 
+                if (form == null)
+                {
+                    formLoginKonsumen = new FormLoginKonsumen();
+                    formLoginKonsumen.MdiParent = this;
+
+                    formRegisterKonsumen = new FormRegisterKonsumen();
+                    formRegisterKonsumen.MdiParent = this;
+
+                    formLoginKonsumen.Show();
+                    formLoginKonsumen.StartPosition = FormStartPosition.CenterScreen;
+                }
+
+                else
+                {
+                    form.Show();
+                    form.BringToFront();
+                }
+
+                buttonLogInOut.Enabled = false;
+                buttonLogInOut.Text = "In Progress";
+            }
             else
             {
-                form.Show();
-                form.BringToFront();
+                loginStatus = false;
+                buttonLogInOut.Text = "Log in";
+                //code
             }
 
-            buttonLogInOut.Enabled = false;
-            buttonLogInOut.Text = "In Progress";
         }
+        #endregion
     }
 }

@@ -17,13 +17,12 @@ namespace Celikoor_Tixycket
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-        //test
+        #region Global Variable
         FormUtama formUtama;
-        //
-
+        #endregion
+        #region Events
         private void FormRegisterKonsumen_Load(object sender, EventArgs e)
         {
-            //formLoginKonsumen = (FormLoginKonsumen)this.Owner;
             formUtama = (FormUtama)this.MdiParent;
         }
 
@@ -38,5 +37,12 @@ namespace Celikoor_Tixycket
             formUtama.formLoginKonsumen.Visible = true;
             this.Visible = false;
         }
+
+        private void FormRegisterKonsumen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            formUtama.formLoginKonsumen.Close();
+            formUtama.ButtonLoginEnabler(true, "Log in");
+        }
+        #endregion
     }
 }

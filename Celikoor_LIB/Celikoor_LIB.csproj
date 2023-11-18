@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\Semester 3\Database\Week Setelah UTS\JualBeli_LIB\bin\Debug\MySql.Data.dll</HintPath>
+      <HintPath>..\..\databaseQuery\test1\JualBeli_LIB\bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

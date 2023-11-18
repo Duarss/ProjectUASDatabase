@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Celikoor_LIB">
-      <HintPath>..\Celikoor_LIB\bin\Debug\Celikoor_LIB.dll</HintPath>
+      <HintPath>..\..\Tahap1_Celikoor_Tixycket\Celikoor_LIB\bin\Debug\Celikoor_LIB.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,34 +19,31 @@ namespace Celikoor_Tixycket
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-
-        //Global Variable
+        #region Global Variable
         List<Image> posterList = new List<Image> { Resources.poster1, Resources.poster2, Resources.poster3 };
         FormUtama formUtama;
-        int indexImg = 0;
-
+        int indexImg = 0; //untuk ganti poster
+        bool loginStatus = false; //ganti nama button di formutama
+        #endregion
+        #region Events
         private void FormLoginKonsumen_Load(object sender, EventArgs e)
         {
-            //formLoginAs = (FormLoginAs)this.Owner;
             formUtama = (FormUtama)this.MdiParent;
         }
 
         private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //formRegisterKonsumen = new FormRegisterKonsumen();
-            //formRegisterKonsumen.Owner = this;
             this.Visible = false;
-            //formRegisterKonsumen.ShowDialog();
             formUtama.formRegisterKonsumen.Visible = true;
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            //if login berhasil ---
             formUtama.Visible = true;
-            //formRegisterKonsumen.Close();
-            //test
+            formUtama.loginStatus = true;
             formUtama.formRegisterKonsumen.Close();
-            //
+            loginStatus = true;
             this.Close();
         }
 
@@ -56,7 +54,7 @@ namespace Celikoor_Tixycket
                 textBoxUsernameLogin.Text = "Username";
                 textBoxUsernameLogin.ForeColor = Color.Silver;
             }
-            if(textBoxPasswordLogin.ForeColor == Color.Silver)
+            if (textBoxPasswordLogin.ForeColor == Color.Silver)
             {
                 textBoxPasswordLogin.Text = "";
                 textBoxPasswordLogin.UseSystemPasswordChar = true;
@@ -66,13 +64,13 @@ namespace Celikoor_Tixycket
 
         private void textBoxUsernameLogin_Click(object sender, EventArgs e)
         {
-            if(textBoxPasswordLogin.Text == "")
+            if (textBoxPasswordLogin.Text == "")
             {
                 textBoxPasswordLogin.Text = "Password";
                 textBoxPasswordLogin.UseSystemPasswordChar = false;
                 textBoxPasswordLogin.ForeColor = Color.Silver;
             }
-            if(textBoxUsernameLogin.ForeColor == Color.Silver)
+            if (textBoxUsernameLogin.ForeColor == Color.Silver)
             {
                 textBoxUsernameLogin.Text = "";
                 textBoxUsernameLogin.ForeColor = Color.Black;
@@ -81,12 +79,26 @@ namespace Celikoor_Tixycket
 
         private void timerImageMoving_Tick(object sender, EventArgs e)
         {
-            if(indexImg > 2)
+            if (indexImg > 2)
             {
                 indexImg = 0;
             }
             panelImage.BackgroundImage = posterList[indexImg];
             indexImg++;
         }
+
+        private void FormLoginKonsumen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (loginStatus)
+            {
+                formUtama.ButtonLoginEnabler(true, "Log out");
+            }
+            else
+            {
+                formUtama.ButtonLoginEnabler(true, "Log in");
+            }
+            formUtama.formRegisterKonsumen.Close();
+        }
+        #endregion
     }
 }
