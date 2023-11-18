@@ -56,9 +56,6 @@ namespace Celikoor_Tixycket
                     //formLoginEmployee.ShowDialog();
 
                     //formLoginEmployee.StartPosition = FormStartPosition.CenterScreen;
-                    formUtama.formLoginEmployee.Visible = true;
-                    formUtama.formLoginEmployee.StartPosition = FormStartPosition.CenterScreen;
-
                 }
 
                 radioButtonPegawai.Checked = false;        
@@ -73,7 +70,6 @@ namespace Celikoor_Tixycket
         private void FormLoginAs_FormClosing(object sender, FormClosingEventArgs e)
         {
             //clean memory
-            formUtama.formLoginEmployee.Close();
             formUtama.formLoginKonsumen.Close();
             formUtama.formRegisterKonsumen.Close();
         }

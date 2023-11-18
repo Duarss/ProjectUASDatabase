@@ -24,7 +24,6 @@ namespace Celikoor_Tixycket
         //global variable
         public FormRegisterKonsumen formRegisterKonsumen;
         public FormLoginKonsumen formLoginKonsumen;
-        public FormLoginEmployee formLoginEmployee;
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
@@ -49,9 +48,6 @@ namespace Celikoor_Tixycket
             formRegisterKonsumen = new FormRegisterKonsumen(); //test
             formRegisterKonsumen.MdiParent = this;
 
-            formLoginEmployee = new FormLoginEmployee();
-            formLoginEmployee.MdiParent = this;
-
             formLoginKonsumen = new FormLoginKonsumen();
             formLoginKonsumen.MdiParent = this;
 
@@ -67,8 +63,7 @@ namespace Celikoor_Tixycket
 
             else
             {
-                form.Show();
-                form.BringToFront();
+
             }
         }
     }

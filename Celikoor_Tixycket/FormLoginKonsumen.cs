@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Celikoor_Tixycket.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,10 @@ namespace Celikoor_Tixycket
             StartPosition = FormStartPosition.CenterScreen;
         }
 
+        //Global Variable
+        List<Image> posterList = new List<Image> { Resources.poster1, Resources.poster2, Resources.poster3 };
         FormUtama formUtama;
+        int indexImg = 0;
 
         private void FormLoginKonsumen_Load(object sender, EventArgs e)
         {
@@ -43,6 +47,46 @@ namespace Celikoor_Tixycket
             formUtama.formRegisterKonsumen.Close();
             //
             this.Close();
+        }
+
+        private void textBoxPasswordLogin_Click(object sender, EventArgs e)
+        {
+            if (textBoxUsernameLogin.Text == "")
+            {
+                textBoxUsernameLogin.Text = "Username";
+                textBoxUsernameLogin.ForeColor = Color.Silver;
+            }
+            if(textBoxPasswordLogin.ForeColor == Color.Silver)
+            {
+                textBoxPasswordLogin.Text = "";
+                textBoxPasswordLogin.UseSystemPasswordChar = true;
+                textBoxPasswordLogin.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxUsernameLogin_Click(object sender, EventArgs e)
+        {
+            if(textBoxPasswordLogin.Text == "")
+            {
+                textBoxPasswordLogin.Text = "Password";
+                textBoxPasswordLogin.UseSystemPasswordChar = false;
+                textBoxPasswordLogin.ForeColor = Color.Silver;
+            }
+            if(textBoxUsernameLogin.ForeColor == Color.Silver)
+            {
+                textBoxUsernameLogin.Text = "";
+                textBoxUsernameLogin.ForeColor = Color.Black;
+            }
+        }
+
+        private void timerImageMoving_Tick(object sender, EventArgs e)
+        {
+            if(indexImg > 2)
+            {
+                indexImg = 0;
+            }
+            panelImage.BackgroundImage = posterList[indexImg];
+            indexImg++;
         }
     }
 }

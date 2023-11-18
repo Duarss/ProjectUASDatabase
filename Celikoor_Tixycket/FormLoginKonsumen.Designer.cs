@@ -28,35 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelLoginPanel = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.linkLabelCreateAnAccount = new System.Windows.Forms.LinkLabel();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPasswordLogin = new System.Windows.Forms.TextBox();
             this.textBoxUsernameLogin = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelImage = new System.Windows.Forms.Panel();
+            this.timerImageMoving = new System.Windows.Forms.Timer(this.components);
+            this.checkBoxRememberMe = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ForgotPassword = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelLoginPanel
-            // 
-            this.labelLoginPanel.BackColor = System.Drawing.Color.DarkBlue;
-            this.labelLoginPanel.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoginPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelLoginPanel.Location = new System.Drawing.Point(0, -4);
-            this.labelLoginPanel.Name = "labelLoginPanel";
-            this.labelLoginPanel.Size = new System.Drawing.Size(476, 548);
-            this.labelLoginPanel.TabIndex = 6;
-            this.labelLoginPanel.Text = "LOGIN\r\nCONSUMEN\r\n";
-            this.labelLoginPanel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // linkLabelCreateAnAccount
             // 
             this.linkLabelCreateAnAccount.AutoSize = true;
-            this.linkLabelCreateAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelCreateAnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelCreateAnAccount.LinkColor = System.Drawing.Color.BlueViolet;
-            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(700, 455);
+            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(770, 537);
             this.linkLabelCreateAnAccount.Name = "linkLabelCreateAnAccount";
-            this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(250, 29);
+            this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(223, 25);
             this.linkLabelCreateAnAccount.TabIndex = 21;
             this.linkLabelCreateAnAccount.TabStop = true;
             this.linkLabelCreateAnAccount.Text = "New User? Click Here";
@@ -67,9 +63,9 @@
             this.buttonLogin.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonLogin.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Azure;
-            this.buttonLogin.Location = new System.Drawing.Point(769, 397);
+            this.buttonLogin.Location = new System.Drawing.Point(711, 476);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(123, 40);
+            this.buttonLogin.Size = new System.Drawing.Size(312, 40);
             this.buttonLogin.TabIndex = 20;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -77,72 +73,161 @@
             // 
             // textBoxPasswordLogin
             // 
-            this.textBoxPasswordLogin.BackColor = System.Drawing.Color.SeaShell;
-            this.textBoxPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPasswordLogin.Location = new System.Drawing.Point(769, 273);
+            this.textBoxPasswordLogin.BackColor = System.Drawing.Color.FloralWhite;
+            this.textBoxPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPasswordLogin.ForeColor = System.Drawing.Color.Silver;
+            this.textBoxPasswordLogin.Location = new System.Drawing.Point(711, 365);
             this.textBoxPasswordLogin.Name = "textBoxPasswordLogin";
-            this.textBoxPasswordLogin.Size = new System.Drawing.Size(312, 34);
+            this.textBoxPasswordLogin.Size = new System.Drawing.Size(312, 30);
             this.textBoxPasswordLogin.TabIndex = 19;
+            this.textBoxPasswordLogin.Text = "Password";
+            this.textBoxPasswordLogin.Click += new System.EventHandler(this.textBoxPasswordLogin_Click);
             // 
             // textBoxUsernameLogin
             // 
-            this.textBoxUsernameLogin.BackColor = System.Drawing.Color.SeaShell;
-            this.textBoxUsernameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsernameLogin.Location = new System.Drawing.Point(769, 207);
+            this.textBoxUsernameLogin.BackColor = System.Drawing.Color.FloralWhite;
+            this.textBoxUsernameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsernameLogin.ForeColor = System.Drawing.Color.Silver;
+            this.textBoxUsernameLogin.Location = new System.Drawing.Point(711, 282);
             this.textBoxUsernameLogin.Name = "textBoxUsernameLogin";
-            this.textBoxUsernameLogin.Size = new System.Drawing.Size(312, 34);
+            this.textBoxUsernameLogin.Size = new System.Drawing.Size(312, 30);
             this.textBoxUsernameLogin.TabIndex = 18;
+            this.textBoxUsernameLogin.Text = "Username";
+            this.textBoxUsernameLogin.Click += new System.EventHandler(this.textBoxUsernameLogin_Click);
             // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelPassword.Location = new System.Drawing.Point(556, 274);
+            this.labelPassword.Location = new System.Drawing.Point(706, 327);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(154, 29);
+            this.labelPassword.Size = new System.Drawing.Size(122, 25);
             this.labelPassword.TabIndex = 17;
-            this.labelPassword.Text = "Password:";
+            this.labelPassword.Text = "Password";
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
-            this.labelUsername.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelUsername.Location = new System.Drawing.Point(556, 208);
+            this.labelUsername.Location = new System.Drawing.Point(706, 244);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(158, 29);
+            this.labelUsername.Size = new System.Drawing.Size(124, 25);
             this.labelUsername.TabIndex = 16;
-            this.labelUsername.Text = "Username:";
+            this.labelUsername.Text = "Username";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Tan;
+            this.label1.Location = new System.Drawing.Point(734, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 34);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "WELCOME BACK";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Tan;
+            this.label2.Location = new System.Drawing.Point(845, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 22);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "to";
+            // 
+            // panelImage
+            // 
+            this.panelImage.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.poster1;
+            this.panelImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImage.Location = new System.Drawing.Point(0, 0);
+            this.panelImage.Name = "panelImage";
+            this.panelImage.Size = new System.Drawing.Size(574, 657);
+            this.panelImage.TabIndex = 25;
+            // 
+            // timerImageMoving
+            // 
+            this.timerImageMoving.Enabled = true;
+            this.timerImageMoving.Interval = 5000;
+            this.timerImageMoving.Tick += new System.EventHandler(this.timerImageMoving_Tick);
+            // 
+            // checkBoxRememberMe
+            // 
+            this.checkBoxRememberMe.AutoSize = true;
+            this.checkBoxRememberMe.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxRememberMe.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.checkBoxRememberMe.Location = new System.Drawing.Point(711, 419);
+            this.checkBoxRememberMe.Name = "checkBoxRememberMe";
+            this.checkBoxRememberMe.Size = new System.Drawing.Size(131, 20);
+            this.checkBoxRememberMe.TabIndex = 26;
+            this.checkBoxRememberMe.Text = "Remember me?";
+            this.checkBoxRememberMe.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.title;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(726, 132);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(286, 80);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ForgotPassword
+            // 
+            this.ForgotPassword.AutoSize = true;
+            this.ForgotPassword.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForgotPassword.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.ForgotPassword.Location = new System.Drawing.Point(891, 420);
+            this.ForgotPassword.Name = "ForgotPassword";
+            this.ForgotPassword.Size = new System.Drawing.Size(121, 16);
+            this.ForgotPassword.TabIndex = 27;
+            this.ForgotPassword.Text = "Forgot Password?";
             // 
             // FormLoginKonsumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1146, 540);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(1146, 651);
+            this.Controls.Add(this.ForgotPassword);
+            this.Controls.Add(this.checkBoxRememberMe);
+            this.Controls.Add(this.panelImage);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabelCreateAnAccount);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPasswordLogin);
             this.Controls.Add(this.textBoxUsernameLogin);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
-            this.Controls.Add(this.labelLoginPanel);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "FormLoginKonsumen";
             this.Text = "LOGIN KONSUMEN";
             this.Load += new System.EventHandler(this.FormLoginKonsumen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label labelLoginPanel;
         private System.Windows.Forms.LinkLabel linkLabelCreateAnAccount;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.TextBox textBoxPasswordLogin;
         private System.Windows.Forms.TextBox textBoxUsernameLogin;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelImage;
+        private System.Windows.Forms.Timer timerImageMoving;
+        private System.Windows.Forms.CheckBox checkBoxRememberMe;
+        private System.Windows.Forms.Label ForgotPassword;
     }
 }

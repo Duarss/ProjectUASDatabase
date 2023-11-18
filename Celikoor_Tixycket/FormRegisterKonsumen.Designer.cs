@@ -51,6 +51,7 @@
             this.textBoxPasswordRegister.Name = "textBoxPasswordRegister";
             this.textBoxPasswordRegister.Size = new System.Drawing.Size(406, 34);
             this.textBoxPasswordRegister.TabIndex = 10;
+            this.textBoxPasswordRegister.UseSystemPasswordChar = true;
             // 
             // textBoxUsernameRegister
             // 
@@ -93,7 +94,7 @@
             this.labelRegister.Size = new System.Drawing.Size(543, 618);
             this.labelRegister.TabIndex = 11;
             this.labelRegister.Text = "REGISTER";
-            this.labelRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelTglLahir
             // 

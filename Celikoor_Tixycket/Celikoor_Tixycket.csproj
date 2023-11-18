@@ -63,12 +63,6 @@
     <Compile Include="FormLoginAs.Designer.cs">
       <DependentUpon>FormLoginAs.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLoginEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLoginEmployee.Designer.cs">
-      <DependentUpon>FormLoginEmployee.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLoginKonsumen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,9 +85,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormLoginAs.resx">
       <DependentUpon>FormLoginAs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLoginEmployee.resx">
-      <DependentUpon>FormLoginEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoginKonsumen.resx">
       <DependentUpon>FormLoginKonsumen.cs</DependentUpon>
@@ -130,6 +121,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brown Mystery Movie Poster .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimal Romance Movie Poster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimal Wild Forest Movie Poster.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
