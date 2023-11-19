@@ -140,5 +140,11 @@
   <ItemGroup>
     <None Include="Resources\Minimal Wild Forest Movie Poster.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

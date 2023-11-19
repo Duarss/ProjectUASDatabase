@@ -20,7 +20,7 @@ namespace Celikoor_Tixycket
             StartPosition = FormStartPosition.CenterScreen;
         }
         #region Global Variable
-        List<Image> posterList = new List<Image> { Resources.poster1, Resources.poster2, Resources.poster3 };
+        List<Image> brandingList = new List<Image> { Resources.Page1, Resources.Page2, Resources.poster1, Resources.poster3};
         FormUtama formUtama;
         int indexImg = 0; //untuk ganti poster
         bool loginStatus = false; //ganti nama button di formutama
@@ -29,10 +29,12 @@ namespace Celikoor_Tixycket
         private void FormLoginKonsumen_Load(object sender, EventArgs e)
         {
             formUtama = (FormUtama)this.MdiParent;
+            this.ActiveControl = null;
         }
 
         private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.ActiveControl = null;
             this.Visible = false;
             formUtama.formRegisterKonsumen.Visible = true;
         }
@@ -49,11 +51,7 @@ namespace Celikoor_Tixycket
 
         private void textBoxPasswordLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxUsernameLogin.Text == "")
-            {
-                textBoxUsernameLogin.Text = "Username";
-                textBoxUsernameLogin.ForeColor = Color.Silver;
-            }
+            TextboxDefault();
             if (textBoxPasswordLogin.ForeColor == Color.Silver)
             {
                 textBoxPasswordLogin.Text = "";
@@ -64,12 +62,8 @@ namespace Celikoor_Tixycket
 
         private void textBoxUsernameLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxPasswordLogin.Text == "")
-            {
-                textBoxPasswordLogin.Text = "Password";
-                textBoxPasswordLogin.UseSystemPasswordChar = false;
-                textBoxPasswordLogin.ForeColor = Color.Silver;
-            }
+            this.ActiveControl = null;
+            TextboxDefault();
             if (textBoxUsernameLogin.ForeColor == Color.Silver)
             {
                 textBoxUsernameLogin.Text = "";
@@ -79,11 +73,37 @@ namespace Celikoor_Tixycket
 
         private void timerImageMoving_Tick(object sender, EventArgs e)
         {
-            if (indexImg > 2)
+            if (indexImg > 3) // diubah berdasarkan jumlah gambar
             {
                 indexImg = 0;
             }
-            panelImage.BackgroundImage = posterList[indexImg];
+            if (indexImg == 0)
+            {
+                pageIndicator1.ForeColor = Color.DarkOrange;
+                pageIndicator1.BackColor = Color.DarkOrange;
+                pageIndicator4.ForeColor = Color.AntiqueWhite;
+                pageIndicator4.BackColor = Color.AntiqueWhite;
+            }
+            else if(indexImg == 1)
+            {
+                pageIndicator2.ForeColor = Color.DarkOrange;
+                pageIndicator2.BackColor = Color.DarkOrange;
+                pageIndicator1.ForeColor = Color.AntiqueWhite;
+                pageIndicator1.BackColor = Color.AntiqueWhite;
+            }else if (indexImg == 2)
+            {
+                pageIndicator3.ForeColor = Color.DarkOrange;
+                pageIndicator3.BackColor = Color.DarkOrange;
+                pageIndicator2.ForeColor = Color.AntiqueWhite;
+                pageIndicator2.BackColor = Color.AntiqueWhite;
+            }else if (indexImg == 3)
+            {
+                pageIndicator4.ForeColor = Color.DarkOrange;
+                pageIndicator4.BackColor = Color.DarkOrange;
+                pageIndicator3.ForeColor = Color.AntiqueWhite;
+                pageIndicator3.BackColor = Color.AntiqueWhite;
+            }
+            panelImage.BackgroundImage = brandingList[indexImg];
             indexImg++;
         }
 
@@ -100,5 +120,38 @@ namespace Celikoor_Tixycket
             formUtama.formRegisterKonsumen.Close();
         }
         #endregion
+
+        private void checkBoxRememberMe_Click(object sender, EventArgs e)
+        {
+            TextboxDefault();
+            this.ActiveControl = null;
+        }
+        private void TextboxDefault()
+        {
+            if (textBoxUsernameLogin.Text == "")
+            {
+                textBoxUsernameLogin.Text = "Username";
+                textBoxUsernameLogin.ForeColor = Color.Silver;
+            }
+            if (textBoxPasswordLogin.Text == "")
+            {
+                textBoxPasswordLogin.Text = "Password";
+                textBoxPasswordLogin.UseSystemPasswordChar = false;
+                textBoxPasswordLogin.ForeColor = Color.Silver;
+            }
+            //this.ActiveControl = null; // to unfocus the textbox
+        }
+
+        private void FormLoginKonsumen_Click(object sender, EventArgs e)
+        {
+            TextboxDefault();
+            this.ActiveControl = null;
+        }
+
+        private void panelImage_Click(object sender, EventArgs e)
+        {
+            TextboxDefault();
+            this.ActiveControl = null;
+        }
     }
 }
