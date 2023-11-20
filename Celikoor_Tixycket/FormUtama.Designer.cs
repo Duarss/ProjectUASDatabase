@@ -34,10 +34,8 @@
             this.kONSUMENToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sTUDIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jENISSTUDIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pEGAWAIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.gENREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fILMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aKTORSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.kONSUMENToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +50,7 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.labelLogInSebagai = new System.Windows.Forms.Label();
             this.buttonLogInOut = new System.Windows.Forms.Button();
+            this.pEGAWAIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripFormUtama.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,13 +85,12 @@
             this.kONSUMENToolStripMenuItem,
             this.sTUDIOToolStripMenuItem,
             this.jENISSTUDIOToolStripMenuItem,
-            this.pEGAWAIToolStripMenuItem,
             this.toolStripMenuItem1,
             this.gENREToolStripMenuItem,
-            this.fILMToolStripMenuItem,
             this.aKTORSToolStripMenuItem,
             this.toolStripMenuItem2,
             this.kONSUMENToolStripMenuItem1,
+            this.pEGAWAIToolStripMenuItem,
             this.kELOMPOKToolStripMenuItem});
             this.mASTERToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mASTERToolStripMenuItem.Name = "mASTERToolStripMenuItem";
@@ -120,13 +118,6 @@
             this.jENISSTUDIOToolStripMenuItem.Size = new System.Drawing.Size(245, 30);
             this.jENISSTUDIOToolStripMenuItem.Text = "JENIS STUDIO";
             // 
-            // pEGAWAIToolStripMenuItem
-            // 
-            this.pEGAWAIToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pEGAWAIToolStripMenuItem.Name = "pEGAWAIToolStripMenuItem";
-            this.pEGAWAIToolStripMenuItem.Size = new System.Drawing.Size(245, 30);
-            this.pEGAWAIToolStripMenuItem.Text = "KARYAWAN";
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -138,13 +129,6 @@
             this.gENREToolStripMenuItem.Name = "gENREToolStripMenuItem";
             this.gENREToolStripMenuItem.Size = new System.Drawing.Size(245, 30);
             this.gENREToolStripMenuItem.Text = "GENRE";
-            // 
-            // fILMToolStripMenuItem
-            // 
-            this.fILMToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fILMToolStripMenuItem.Name = "fILMToolStripMenuItem";
-            this.fILMToolStripMenuItem.Size = new System.Drawing.Size(245, 30);
-            this.fILMToolStripMenuItem.Text = "FILM";
             // 
             // aKTORSToolStripMenuItem
             // 
@@ -252,6 +236,13 @@
             this.buttonLogInOut.UseVisualStyleBackColor = true;
             this.buttonLogInOut.Click += new System.EventHandler(this.buttonLogInOut_Click);
             // 
+            // pEGAWAIToolStripMenuItem
+            // 
+            this.pEGAWAIToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pEGAWAIToolStripMenuItem.Name = "pEGAWAIToolStripMenuItem";
+            this.pEGAWAIToolStripMenuItem.Size = new System.Drawing.Size(245, 30);
+            this.pEGAWAIToolStripMenuItem.Text = "PEGAWAI";
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,13 +278,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sTUDIOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aKTORSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pEGAWAIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kONSUMENToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pENJADWALANFILMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pENJADWALANFILMToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pENCATATANKEDATANGANToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lAPORANToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fILMToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
@@ -301,5 +290,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.Label labelLogInSebagai;
         internal System.Windows.Forms.Button buttonLogInOut;
+        private System.Windows.Forms.ToolStripMenuItem pEGAWAIToolStripMenuItem;
     }
 }

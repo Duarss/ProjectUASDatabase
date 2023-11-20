@@ -1,4 +1,5 @@
-﻿using Celikoor_Tixycket.Properties;
+﻿using Celikoor_LIB;
+using Celikoor_Tixycket.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,28 +21,28 @@ namespace Celikoor_Tixycket
             StartPosition = FormStartPosition.CenterScreen;
         }
         #region Global Variable
-        List<Image> imageList = new List<Image> { Resources.Page1, Resources.Page2, Resources.poster1, Resources.poster3};
+        List<Image> imageList = new List<Image> { Resources.poster1, Resources.poster3};
         FormUtama formUtama;
         int indexImg = 0; //untuk ganti poster
         bool loginStatus = false; //ganti nama button di formutama
         #endregion
         #region Methods
-        /*
+        
         private void TextboxDefault()
         {
             if (textBoxUsernameLogin.Text == "")
             {
-                textBoxUsernameLogin.Text = "Username";
+                textBoxUsernameLogin.Text = "Enter your username";
                 textBoxUsernameLogin.ForeColor = Color.Silver;
             }
             if (textBoxPasswordLogin.Text == "")
             {
-                textBoxPasswordLogin.Text = "Password";
+                textBoxPasswordLogin.Text = "Enter your password";
                 textBoxPasswordLogin.UseSystemPasswordChar = false;
                 textBoxPasswordLogin.ForeColor = Color.Silver;
             }
         }
-        */
+        
         #endregion
         #region Events
         private void FormLoginKonsumen_Load(object sender, EventArgs e)
@@ -65,33 +66,41 @@ namespace Celikoor_Tixycket
             formUtama.loginStatus = true;
             formUtama.formRegisterKonsumen.Close();
             loginStatus = true;
+            string id = textBoxUsernameLogin.Text;
+            string pwd = textBoxPasswordLogin.Text;
+            formUtama.konsumenLogin = Konsumen.CekLogin(id, pwd);
+            formUtama.pegawaiLogin = Pegawai.CekLogin(id, pwd);
+            if(formUtama.konsumenLogin == null && formUtama.pegawaiLogin == null)
+            {
+                MessageBox.Show("Salah username atau password");
+            }
             this.Close();
         }
 
         private void textBoxPasswordLogin_Click(object sender, EventArgs e)
         {
-            /*TextboxDefault();
+            TextboxDefault();
             if (textBoxPasswordLogin.ForeColor == Color.Silver)
             {
                 textBoxPasswordLogin.Text = "";
                 textBoxPasswordLogin.UseSystemPasswordChar = true;
                 textBoxPasswordLogin.ForeColor = Color.Black;
-            }*/
+            }
         }
 
         private void textBoxUsernameLogin_Click(object sender, EventArgs e)
         {
-            /*TextboxDefault();
+            TextboxDefault();
             if (textBoxUsernameLogin.ForeColor == Color.Silver)
             {
                 textBoxUsernameLogin.Text = "";
                 textBoxUsernameLogin.ForeColor = Color.Black;
-            }*/
+            }
         }
 
         private void timerImageMoving_Tick(object sender, EventArgs e)
         {
-            if (indexImg > 3) // diubah berdasarkan jumlah gambar
+            if (indexImg > 1) // diubah berdasarkan jumlah gambar
             {
                 indexImg = 0;
             }
@@ -139,18 +148,18 @@ namespace Celikoor_Tixycket
         }
         private void FormLoginKonsumen_Click(object sender, EventArgs e)
         {
-            //TextboxDefault();
+            TextboxDefault();
             this.ActiveControl = null;
         }
 
         private void panelImage_Click(object sender, EventArgs e)
         {
-            //TextboxDefault();
+            TextboxDefault();
             this.ActiveControl = null;
         }
         private void checkBoxRememberMe_Click(object sender, EventArgs e)
         {
-            //TextboxDefault();
+            TextboxDefault();
             this.ActiveControl = null;
         }
         #endregion

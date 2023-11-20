@@ -21,6 +21,8 @@ namespace Celikoor_Tixycket
             this.WindowState = FormWindowState.Maximized;
         }
         #region Global Variable
+        public Konsumen konsumenLogin;
+        public Pegawai pegawaiLogin;
         public FormRegisterKonsumen formRegisterKonsumen;
         public FormLoginKonsumen formLoginKonsumen;
         public bool loginStatus = false;
@@ -35,20 +37,7 @@ namespace Celikoor_Tixycket
         #region Events
         private void FormUtama_Load(object sender, EventArgs e)
         {
-            try
-            {
-                string server = db.Default.dbServer;
-                string dbname = db.Default.dbName;
-                string uid = db.Default.dbUsername;
-                string pwd = db.Default.dbPassword;
-                Koneksi k = new Koneksi(server, dbname, uid, pwd);
-
-                MessageBox.Show("Status: Koneksi Berhasil!\n");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Status: Koneksi Gagal! error: " + ex.Message + "\n");
-            }
+            
         }
 
         private void buttonLogInOut_Click(object sender, EventArgs e)

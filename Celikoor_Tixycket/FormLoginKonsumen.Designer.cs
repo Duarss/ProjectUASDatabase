@@ -45,11 +45,11 @@ namespace Celikoor_Tixycket
             this.pageIndicator3 = new System.Windows.Forms.Button();
             this.pageIndicator2 = new System.Windows.Forms.Button();
             this.pageIndicator1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxUsernameLogin = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,8 +58,8 @@ namespace Celikoor_Tixycket
             // 
             this.linkLabelCreateAnAccount.AutoSize = true;
             this.linkLabelCreateAnAccount.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelCreateAnAccount.LinkColor = System.Drawing.Color.Tan;
-            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(865, 567);
+            this.linkLabelCreateAnAccount.LinkColor = System.Drawing.Color.Peru;
+            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(861, 551);
             this.linkLabelCreateAnAccount.Name = "linkLabelCreateAnAccount";
             this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(71, 20);
             this.linkLabelCreateAnAccount.TabIndex = 21;
@@ -73,7 +73,7 @@ namespace Celikoor_Tixycket
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Azure;
-            this.buttonLogin.Location = new System.Drawing.Point(635, 503);
+            this.buttonLogin.Location = new System.Drawing.Point(635, 494);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(339, 39);
@@ -86,13 +86,13 @@ namespace Celikoor_Tixycket
             // 
             this.textBoxPasswordLogin.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPasswordLogin.ForeColor = System.Drawing.Color.Black;
+            this.textBoxPasswordLogin.ForeColor = System.Drawing.Color.Silver;
             this.textBoxPasswordLogin.Location = new System.Drawing.Point(635, 370);
             this.textBoxPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordLogin.Name = "textBoxPasswordLogin";
             this.textBoxPasswordLogin.Size = new System.Drawing.Size(337, 30);
             this.textBoxPasswordLogin.TabIndex = 12;
-            this.textBoxPasswordLogin.UseSystemPasswordChar = true;
+            this.textBoxPasswordLogin.Text = "Enter your password";
             this.textBoxPasswordLogin.WordWrap = false;
             this.textBoxPasswordLogin.Click += new System.EventHandler(this.textBoxPasswordLogin_Click);
             // 
@@ -156,7 +156,7 @@ namespace Celikoor_Tixycket
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label2.Location = new System.Drawing.Point(680, 570);
+            this.label2.Location = new System.Drawing.Point(680, 554);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 16);
             this.label2.TabIndex = 28;
@@ -164,7 +164,6 @@ namespace Celikoor_Tixycket
             // 
             // panelImage
             // 
-            this.panelImage.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.Page1;
             this.panelImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelImage.Controls.Add(this.pageIndicator4);
             this.panelImage.Controls.Add(this.pageIndicator3);
@@ -233,29 +232,19 @@ namespace Celikoor_Tixycket
             this.pageIndicator1.TabIndex = 29;
             this.pageIndicator1.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.title;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Location = new System.Drawing.Point(659, 128);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(287, 80);
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
             // textBoxUsernameLogin
             // 
+            this.textBoxUsernameLogin.AccessibleDescription = "";
+            this.textBoxUsernameLogin.AccessibleName = "";
             this.textBoxUsernameLogin.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxUsernameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsernameLogin.ForeColor = System.Drawing.Color.Black;
+            this.textBoxUsernameLogin.ForeColor = System.Drawing.Color.Silver;
             this.textBoxUsernameLogin.Location = new System.Drawing.Point(635, 291);
             this.textBoxUsernameLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsernameLogin.Name = "textBoxUsernameLogin";
             this.textBoxUsernameLogin.Size = new System.Drawing.Size(337, 30);
             this.textBoxUsernameLogin.TabIndex = 1;
+            this.textBoxUsernameLogin.Text = "Enter your username";
             this.textBoxUsernameLogin.Click += new System.EventHandler(this.textBoxUsernameLogin_Click);
             // 
             // timer1
@@ -284,6 +273,19 @@ namespace Celikoor_Tixycket
             this.labelUsername.Size = new System.Drawing.Size(104, 20);
             this.labelUsername.TabIndex = 16;
             this.labelUsername.Text = "Username";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.title;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Location = new System.Drawing.Point(659, 128);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(287, 80);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // FormLoginKonsumen
             // 
