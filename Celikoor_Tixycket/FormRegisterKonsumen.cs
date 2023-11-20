@@ -34,8 +34,7 @@ namespace Celikoor_Tixycket
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            formUtama.formLoginKonsumen.Visible = true;
-            this.Visible = false;
+            
         }
 
         private void FormRegisterKonsumen_FormClosing(object sender, FormClosingEventArgs e)
@@ -44,5 +43,21 @@ namespace Celikoor_Tixycket
             formUtama.ButtonLoginEnabler(true, "Log in");
         }
         #endregion
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            formUtama.formLoginKonsumen.Visible = true;
+            this.Visible = false;
+        }
+
+        private void labelPINPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

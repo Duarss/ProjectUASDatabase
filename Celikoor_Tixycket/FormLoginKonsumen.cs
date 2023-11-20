@@ -26,6 +26,7 @@ namespace Celikoor_Tixycket
         bool loginStatus = false; //ganti nama button di formutama
         #endregion
         #region Methods
+        /*
         private void TextboxDefault()
         {
             if (textBoxUsernameLogin.Text == "")
@@ -40,6 +41,7 @@ namespace Celikoor_Tixycket
                 textBoxPasswordLogin.ForeColor = Color.Silver;
             }
         }
+        */
         #endregion
         #region Events
         private void FormLoginKonsumen_Load(object sender, EventArgs e)
@@ -68,23 +70,23 @@ namespace Celikoor_Tixycket
 
         private void textBoxPasswordLogin_Click(object sender, EventArgs e)
         {
-            TextboxDefault();
+            /*TextboxDefault();
             if (textBoxPasswordLogin.ForeColor == Color.Silver)
             {
                 textBoxPasswordLogin.Text = "";
                 textBoxPasswordLogin.UseSystemPasswordChar = true;
                 textBoxPasswordLogin.ForeColor = Color.Black;
-            }
+            }*/
         }
 
         private void textBoxUsernameLogin_Click(object sender, EventArgs e)
         {
-            TextboxDefault();
+            /*TextboxDefault();
             if (textBoxUsernameLogin.ForeColor == Color.Silver)
             {
                 textBoxUsernameLogin.Text = "";
                 textBoxUsernameLogin.ForeColor = Color.Black;
-            }
+            }*/
         }
 
         private void timerImageMoving_Tick(object sender, EventArgs e)
@@ -137,18 +139,18 @@ namespace Celikoor_Tixycket
         }
         private void FormLoginKonsumen_Click(object sender, EventArgs e)
         {
-            TextboxDefault();
+            //TextboxDefault();
             this.ActiveControl = null;
         }
 
         private void panelImage_Click(object sender, EventArgs e)
         {
-            TextboxDefault();
+            //TextboxDefault();
             this.ActiveControl = null;
         }
         private void checkBoxRememberMe_Click(object sender, EventArgs e)
         {
-            TextboxDefault();
+            //TextboxDefault();
             this.ActiveControl = null;
         }
         #endregion
