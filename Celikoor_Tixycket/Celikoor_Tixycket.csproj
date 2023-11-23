@@ -70,11 +70,65 @@
     <Compile Include="FormLoginKonsumen.Designer.cs">
       <DependentUpon>FormLoginKonsumen.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMasterAktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterAktor.Designer.cs">
+      <DependentUpon>FormMasterAktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterCinema.Designer.cs">
+      <DependentUpon>FormMasterCinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterGenre.Designer.cs">
+      <DependentUpon>FormMasterGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterJenisStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterJenisStudio.Designer.cs">
+      <DependentUpon>FormMasterJenisStudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterKelompok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterKelompok.Designer.cs">
+      <DependentUpon>FormMasterKelompok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterKonsumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterKonsumen.Designer.cs">
+      <DependentUpon>FormMasterKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterPegawai.Designer.cs">
+      <DependentUpon>FormMasterPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterStudio.Designer.cs">
+      <DependentUpon>FormMasterStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegisterKonsumen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegisterKonsumen.Designer.cs">
       <DependentUpon>FormRegisterKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStudio.Designer.cs">
+      <DependentUpon>FormStudio.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>

@@ -7,39 +7,26 @@ using System.Threading.Tasks;
 
 namespace Celikoor_LIB
 {
-    public class Pegawai
+    public class Jenis_studio
     {
-        private int id;
-        private string nama;
-        private string email;
-        private string username;
-        private string password;
-        private string role;
+        int id;
+        string nama;
+        string deskripsi;
 
-        public Pegawai()
+        public Jenis_studio()
         {
-            Nama = "";
-            Email = "";
-            Username = "";
-            Password = "";
-            Role = "";
+
         }
-        public Pegawai(int id, string nama, string email, string username, string password, string role)
+        public Jenis_studio(int id, string nama, string deskripsi)
         {
             Id = id;
             Nama = nama;
-            Email = email;
-            Username = username;
-            Password = password;
-            Role = role;
+            Deskripsi = deskripsi;
         }
 
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
-        public string Email { get => email; set => email = value; }
-        public string Username { get => username; set => username = value; }
-        public string Password { get => password; set => password = value; }
-        public string Role { get => role; set => role = value; }
+        public string Deskripsi { get => deskripsi; set => deskripsi = value; }
 
         public static void TambahData(Pegawai k)
         {
@@ -85,25 +72,6 @@ namespace Celikoor_LIB
             }
             //kirim list ke pemanggilnya
             return ListData;
-        }
-        public static Pegawai CekLogin(string id, string pwd)
-        {
-            string perintah = "SELECT * from pegawais p where p.id='"
-                    + id + "' and p.password = '" + pwd + "'";
-            //eksekusi perintah di atas
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            //selama masih ada data yang dapat dibaca dari datareader
-            if (hasil.Read() == true)
-            {
-                Pegawai tampung = new Pegawai();
-                tampung.Id = int.Parse(hasil.GetValue(0).ToString());
-                tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.Email = hasil.GetValue(2).ToString();
-                tampung.Username = hasil.GetValue(3).ToString();
-                tampung.Role = hasil.GetValue(5).ToString();
-                return tampung;
-            }
-            else return null;
         }
     }
 }

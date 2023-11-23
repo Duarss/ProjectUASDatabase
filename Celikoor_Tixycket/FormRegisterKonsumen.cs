@@ -23,7 +23,7 @@ namespace Celikoor_Tixycket
         #region Events
         private void FormRegisterKonsumen_Load(object sender, EventArgs e)
         {
-            formUtama = (FormUtama)this.MdiParent;
+            formUtama = (FormUtama)this.Owner;
         }
 
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -40,7 +40,7 @@ namespace Celikoor_Tixycket
         private void FormRegisterKonsumen_FormClosing(object sender, FormClosingEventArgs e)
         {
             formUtama.formLoginKonsumen.Close();
-            formUtama.ButtonLoginEnabler(true, "Log in");
+            formUtama.LoginConstraint(true, "Log in");
         }
         #endregion
 
@@ -56,6 +56,11 @@ namespace Celikoor_Tixycket
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

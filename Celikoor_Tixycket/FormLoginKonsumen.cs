@@ -24,7 +24,8 @@ namespace Celikoor_Tixycket
         List<Image> imageList = new List<Image> { Resources.poster1, Resources.poster3};
         FormUtama formUtama;
         int indexImg = 0; //untuk ganti poster
-        bool loginStatus = false; //ganti nama button di formutama
+        bool loginStatus = false; //ganti nama button di formutama. Ada di formClosing
+        string loginAs;
         #endregion
         #region Methods
         
@@ -47,7 +48,7 @@ namespace Celikoor_Tixycket
         #region Events
         private void FormLoginKonsumen_Load(object sender, EventArgs e)
         {
-            formUtama = (FormUtama)this.MdiParent;
+            formUtama = (FormUtama)this.Owner;
             panelImage.Select();//to prevent textbox from being selected when a form load
         }
 
@@ -60,22 +61,52 @@ namespace Celikoor_Tixycket
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            this.ActiveControl = null;
-            //if login berhasil ---
-            formUtama.Visible = true;
-            formUtama.loginStatus = true;
-            formUtama.formRegisterKonsumen.Close();
-            loginStatus = true;
-
-            string id = textBoxUsernameLogin.Text;
-            string pwd = textBoxPasswordLogin.Text;
-            formUtama.konsumenLogin = Konsumen.CekLogin(id, pwd);
-            formUtama.pegawaiLogin = Pegawai.CekLogin(id, pwd);
-            if(formUtama.konsumenLogin == null && formUtama.pegawaiLogin == null)
+            try
             {
-                MessageBox.Show("Salah username atau password");
+                this.ActiveControl = null;
+                string id = textBoxUsernameLogin.Text;
+                string pwd = textBoxPasswordLogin.Text;
+                if(textBoxUsernameLogin.ForeColor == Color.Black && textBoxPasswordLogin.ForeColor == Color.Black){
+                    //untuk menentukan siapa yang login
+                    if(loginAs != null)
+                    {
+                        if (loginAs == "Konsumen")
+                        {
+                            formUtama.konsumenLogin = Konsumen.CekLogin(id, pwd);
+                        }
+                        else if (loginAs == "Pegawai")
+                        {
+                            formUtama.pegawaiLogin = Pegawai.CekLogin(id, pwd);
+                        }
+                        //cek apakah ada yang berhasil login
+                        if (formUtama.konsumenLogin == null && formUtama.pegawaiLogin == null) //jik tidak berhasil
+                        {
+                            MessageBox.Show("Username atau password salah");
+                        }
+                        else //jika berhasil
+                        {
+                            formUtama.loginStatus = true;
+                            formUtama.Visible = true;
+                            loginStatus = true;
+                            loginAs = null;
+                            formUtama.formRegisterKonsumen.Close();
+                            this.Close();
+                        }
+                    }
+                    else //jika radiobutton tidak diisi
+                    {
+                        MessageBox.Show("Login as harus diisi");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Username atau password harus diisi");
+                }
             }
-            this.Close();
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
         }
 
         private void textBoxPasswordLogin_Click(object sender, EventArgs e)
@@ -139,11 +170,11 @@ namespace Celikoor_Tixycket
         {
             if (loginStatus)
             {
-                formUtama.ButtonLoginEnabler(true, "Log out");
+                formUtama.LoginConstraint(true, "Log out");
             }
             else
             {
-                formUtama.ButtonLoginEnabler(true, "Log in");
+                formUtama.LoginConstraint(true, "Log in");
             }
             formUtama.formRegisterKonsumen.Close();
         }
@@ -164,5 +195,15 @@ namespace Celikoor_Tixycket
             this.ActiveControl = null;
         }
         #endregion
+
+        private void radioButtonKonsumen_CheckedChanged(object sender, EventArgs e)
+        {
+            loginAs = "Konsumen";
+        }
+
+        private void radioButtonPegawai_CheckedChanged(object sender, EventArgs e)
+        {
+            loginAs = "Pegawai";
+        }
     }
 }

@@ -28,16 +28,54 @@ namespace Celikoor_Tixycket
         public bool loginStatus = false;
         #endregion
         #region Methods
-        public void ButtonLoginEnabler(bool status, string text)
+        public void LoginConstraint(bool status, string text)
         {
             buttonLogInOut.Enabled = status;
             buttonLogInOut.Text = text;
+            masterToolStripMenuItem.Enabled = status;
+            sistemToolStripMenuItem.Enabled = status;
+            transaksiToolStripMenuItem.Enabled = status;
+        }
+        private void AturMenuAfterLogout()
+        {
+            masterToolStripMenuItem.Visible = false;
+            transaksiToolStripMenuItem.Visible = false;
+            sistemToolStripMenuItem.Visible = false;
+            penjadwalanFilmToolStripMenuItem.Visible = false;
+            laporanToolStripMenuItem.Visible = false;
+            pencatatanKedatanganToolStripMenuItem.Visible = false;
+        }
+        private void AturMenuAfterLogin()
+        {
+            if(pegawaiLogin != null)
+            {
+                if (pegawaiLogin.Role == "ADMIN")
+                {
+                    masterToolStripMenuItem.Visible = true;
+                    transaksiToolStripMenuItem.Visible = true;
+                    sistemToolStripMenuItem.Visible = true;
+                }
+                else if (pegawaiLogin.Role == "OPERATOR")
+                {
+                    sistemToolStripMenuItem.Visible = true;
+                    pencatatanKedatanganToolStripMenuItem.Visible = true;
+                }
+                else if (pegawaiLogin.Role == "KASIR")
+                {
+                    sistemToolStripMenuItem.Visible= true;
+                    laporanToolStripMenuItem.Visible = true;
+                }
+            }
+            if(konsumenLogin != null)
+            {
+                transaksiToolStripMenuItem.Visible = true;
+            }
         }
         #endregion
         #region Events
         private void FormUtama_Load(object sender, EventArgs e)
         {
-            
+            AturMenuAfterLogout();
         }
 
         private void buttonLogInOut_Click(object sender, EventArgs e)
@@ -45,16 +83,17 @@ namespace Celikoor_Tixycket
             if (loginStatus == false)
             {
                 Form form = Application.OpenForms["FormLoginKonsumen"];
+                LoginConstraint(false, "In Progress");
 
                 if (form == null)
                 {
                     formLoginKonsumen = new FormLoginKonsumen();
-                    formLoginKonsumen.MdiParent = this;
+                    formLoginKonsumen.Owner = this;
 
                     formRegisterKonsumen = new FormRegisterKonsumen();
-                    formRegisterKonsumen.MdiParent = this;
+                    formRegisterKonsumen.Owner = this;
 
-                    formLoginKonsumen.Show();
+                    formLoginKonsumen.ShowDialog();
                     formLoginKonsumen.StartPosition = FormStartPosition.CenterScreen;
                 }
 
@@ -63,9 +102,16 @@ namespace Celikoor_Tixycket
                     form.Show();
                     form.BringToFront();
                 }
+                if(konsumenLogin != null)
+                {
+                    labelLogInSebagai.Text = "Anda Login Sebagai : " + konsumenLogin.Nama;
 
-                buttonLogInOut.Enabled = false;
-                buttonLogInOut.Text = "In Progress";
+                }
+                else if(pegawaiLogin != null)
+                {
+                    labelLogInSebagai.Text = "Anda Login Sebagai : " + pegawaiLogin.Nama;
+                }
+                AturMenuAfterLogin();
             }
             else
             {
@@ -73,10 +119,15 @@ namespace Celikoor_Tixycket
                 buttonLogInOut.Text = "Log in";
                 konsumenLogin = null;
                 pegawaiLogin = null;
-                //code
+                AturMenuAfterLogout();
             }
 
         }
         #endregion
+
+        private void sistemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
