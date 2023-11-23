@@ -71,6 +71,8 @@ namespace Celikoor_Tixycket
             {
                 loginStatus = false;
                 buttonLogInOut.Text = "Log in";
+                konsumenLogin = null;
+                pegawaiLogin = null;
                 //code
             }
 

@@ -14,7 +14,7 @@ namespace Celikoor_LIB
         private string email;
         private string username;
         private string password;
-        private char role;
+        private string role;
 
         public Pegawai()
         {
@@ -22,8 +22,9 @@ namespace Celikoor_LIB
             Email = "";
             Username = "";
             Password = "";
+            Role = "";
         }
-        public Pegawai(int id, string nama, string email, string username, string password, char role)
+        public Pegawai(int id, string nama, string email, string username, string password, string role)
         {
             Id = id;
             Nama = nama;
@@ -38,7 +39,7 @@ namespace Celikoor_LIB
         public string Email { get => email; set => email = value; }
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
-        public char Role { get => role; set => role = value; }
+        public string Role { get => role; set => role = value; }
 
         public static void TambahData(Pegawai k)
         {
@@ -106,7 +107,7 @@ namespace Celikoor_LIB
                 tampung.Nama = hasil.GetValue(1).ToString();
                 tampung.Email = hasil.GetValue(2).ToString();
                 tampung.Username = hasil.GetValue(3).ToString();
-                tampung.Role = Convert.ToChar(hasil.GetValue(6).ToString()); //password tidak boleh diakses oleh siapapun kecuali pemiliknya
+                tampung.Role = hasil.GetValue(5).ToString(); //password tidak boleh diakses oleh siapapun kecuali pemiliknya
                 return tampung;
             }
             else return null;

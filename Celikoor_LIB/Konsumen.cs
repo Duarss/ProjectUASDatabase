@@ -13,7 +13,7 @@ namespace Celikoor_LIB
         private string nama;
         private string email;
         private string noHp;
-        //private enum gender;
+        private string gender;
         private DateTime tglLahir;
         private double saldo;
         private string username;
@@ -24,20 +24,20 @@ namespace Celikoor_LIB
             Nama = "";
             Email = "";
             NoHp = "";
-           // Gender = 'N';
+            Gender = "";
             TglLahir = DateTime.Now;
             Saldo = 0;
             Username = "";
             Password = "";
         }
 
-        public Konsumen(int id, string nama, string email, string noHp, char gender, DateTime tglLahir, double saldo, string username, string password)
+        public Konsumen(int id, string nama, string email, string noHp, string gender, DateTime tglLahir, double saldo, string username, string password)
         {
             Id = id;
             Nama = nama;
             Email = email;
             NoHp = noHp;
-            //Gender = gender;
+            Gender = gender;
             TglLahir = tglLahir;
             Saldo = saldo;
             Username = username;
@@ -47,7 +47,7 @@ namespace Celikoor_LIB
         public string Nama { get => nama; set => nama = value; }
         public string Email { get => email; set => email = value; }
         public string NoHp { get => noHp; set => noHp = value; }
-       // public char Gender { get => gender; set => gender = value; }
+        public string Gender { get => gender; set => gender = value; }
         public DateTime TglLahir { get => tglLahir; set => tglLahir = value; }
         public double Saldo { get => saldo; set => saldo = value; }
         public string Username { get => username; set => username = value; }
@@ -120,7 +120,7 @@ namespace Celikoor_LIB
                 tampung.Nama = hasil.GetValue(1).ToString();
                 tampung.Email = hasil.GetValue(2).ToString();
                 tampung.NoHp = hasil.GetValue(3).ToString();
-                //tampung.Gender = (char)hasil.GetValue(5); //password tidak boleh diakses oleh siapapun kecuali pemiliknya
+                tampung.Gender = hasil.GetValue(5).ToString(); //password tidak boleh diakses oleh siapapun kecuali pemiliknya
                 tampung.TglLahir = (DateTime)hasil.GetValue(5);
                 tampung.Saldo = double.Parse(hasil.GetValue(6).ToString());
                 tampung.Username = hasil.GetValue(7).ToString();

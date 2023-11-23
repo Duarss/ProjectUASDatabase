@@ -66,6 +66,7 @@ namespace Celikoor_Tixycket
             formUtama.loginStatus = true;
             formUtama.formRegisterKonsumen.Close();
             loginStatus = true;
+
             string id = textBoxUsernameLogin.Text;
             string pwd = textBoxPasswordLogin.Text;
             formUtama.konsumenLogin = Konsumen.CekLogin(id, pwd);
