@@ -57,7 +57,9 @@ namespace Celikoor_LIB
         public static void TambahData(Konsumen k)
         {
             //susun perintah query
-            string perintah = " INSERT INTO ;";
+            string perintah = " INSERT INTO konsumen " + " (Nama, Email, NoHp, Gender, TglLahir, Saldo, Username, Password) VALUES " + "('"
+                + k.Nama + "', '" + k.Email + "', '" + k.NoHp.ToString() + "', '" + k.Gender + "', '" + k.TglLahir.ToString("yyyy-MM-dd")
+                + k.Saldo.ToString() + "', '" + "', '" + k.Username + "', '" + k.Password.ToString() + "');";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 

@@ -44,14 +44,16 @@ namespace Celikoor_LIB
         public static void TambahData(Pegawai k)
         {
             //susun perintah query
-            string perintah = " INSERT INTO ;";
+            string perintah = " INSERT INTO pegawai " + " (IdPegawai, Nama, Email, Username, Password) VALUES " + "('"
+                + k.Id.ToString() + "', '" + k.Nama + "', '" + k.Email + "', '" + k.Username.ToString() + "', '"
+                + k.Password.ToString() + "');";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
         public static void UbahData(Pegawai k)
         {
             //susun perintah query
-            string perintah = "update kategori set;";
+            string perintah = " update kategori set Nama='" + k.Nama.Replace("'", "\\'") + "' where Id='" + k.Id + "'";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
