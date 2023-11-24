@@ -49,7 +49,7 @@ namespace Celikoor_LIB
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static List<Kelompok> BacaData(string id="", string nama="")
+        public static List<Kelompok> BacaData(string id="")
         {
             //susun perintah query
             string perintah;
@@ -61,7 +61,7 @@ namespace Celikoor_LIB
 
             else
             {
-                perintah = $"SELECT * FROM kelompoks WHERE '{id}' like '%{nama}%'";
+                perintah = $"SELECT * FROM kelompoks WHERE id ='{id}'";
             }
 
             //eksekusi perintah di atas
