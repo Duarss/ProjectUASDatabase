@@ -65,6 +65,7 @@ namespace Celikoor_LIB
         #endregion
 
         #region METHODS
+        //! METHOD CREATE C
         public static void TambahData(Film film)
         {
             string perintah = $"INSERT INTO films (id, judul, sinopsis, tahun, durasi, kelompoks_id, bahasa, is_sub_indo, coverimage, diskon_nominal)" +
@@ -73,6 +74,7 @@ namespace Celikoor_LIB
             Koneksi.JalankanPerintahQuery(perintah);
         }
 
+        //! METHOD UPDATE U
         public static void UbahData(Film film)
         {
             string perintah = $"UPDATE films SET judul= '{film.Judul}', sinopsis='{film.Sinopsis}', tahun='{film.Tahun}', durasi='{film.Durasi}', kelompoks_id='{film.KelompokUsia.Nama}', '{film.Bahasa}', '{film.Is_sub_indo}', '{film.CoverImage}', '{film.Diskon}'" +
@@ -81,13 +83,15 @@ namespace Celikoor_LIB
             Koneksi.JalankanPerintahQuery(perintah);
         }
 
+        //! METHOD DELETE D
         public static void HapusData(string idHapus)
         {
-            string perintah = $"DELETE FROM films WHERE id = '{idHapus}'";
+            string perintah = $"DELETE FROM films WHERE id = '{idHapus}';";
 
             Koneksi.JalankanPerintahQuery(perintah);
         }
 
+        //! METHOD RETRIEVE R dan FILTER F
         public static List<Film> BacaData(string id="", string judul="")
         {
             string perintah;

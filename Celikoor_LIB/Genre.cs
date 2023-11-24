@@ -9,13 +9,18 @@ namespace Celikoor_LIB
 {
     public class Genre
     {
+        #region FIELDS
         int id;
         string nama;
         string deskripsi;
+        #endregion
 
+        #region CONSTRUCTORS
         public Genre()
         {
-
+            Id = 0;
+            Nama = "";
+            Deskripsi = "";
         }
         public Genre(int id, string nama, string deskripsi)
         {
@@ -23,55 +28,63 @@ namespace Celikoor_LIB
             Nama = nama;
             Deskripsi = deskripsi;
         }
+        #endregion
 
+        #region PROPERTIES
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
         public string Deskripsi { get => deskripsi; set => deskripsi = value; }
+        #endregion
 
-        public static void TambahData(Pegawai k)
+        #region METHODS
+        //! METHOD CREATE C
+        public static void TambahData(Genre genre)
         {
-            //susun perintah query
-            string perintah = " INSERT INTO pegawai " + " (IdPegawai, Nama, Email, Username, Password) VALUES " + "('"
-                + k.Id.ToString() + "', '" + k.Nama + "', '" + k.Email + "', '" + k.Username.ToString() + "', '"
-                + k.Password.ToString() + "');";
+            string perintah = $"INSERT INTO genres (id, nama, deskripsi) VALUES ('{genre.Id}', '{genre.Nama}', '{genre.Deskripsi}');";
+
+            Koneksi.JalankanPerintahQuery(perintah);
+        }
+
+        //! METHOD DELETE D
+        public static void HapusData(string idHapus)
+        {
+            string perintah = $"DELETE FROM genres WHERE id='{idHapus}';";
+
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static void HapusData(string kodeHapus)
+        //! METHOD RETRIEVE R
+        public static List<Genre> BacaData(string id="")
         {
-            //susun perintah query
-            string perintah = "delete from kategori where kodekategori='" + kodeHapus + "';";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
-        }
-
-        public static List<Pegawai> BacaData(string filter = "", string nilai = "")
-        {
-            //susun perintah query
             string perintah;
-            if (filter == "")
+
+            if (id == "")
             {
-                perintah = "select * from pegawai";
+                perintah = $"SELECT * FROM genres";
             }
+
             else
             {
-                perintah = "select * from kategori where " + filter + " like '%" + nilai + "%'";
+                perintah = $"SELECT * FROM genres WHERE id='{id}'";
             }
             //eksekusi perintah di atas
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            List<Pegawai> ListData = new List<Pegawai>();
+
+            List<Genre> listGenre = new List<Genre>();
 
             //selama masih ada data yang dapat dibaca dari datareader
             while (hasil.Read() == true)
-            {   //ambil isi datareader
-                string tampungKode = hasil.GetValue(0).ToString(); //kolom pertama
-                string tampungNama = hasil.GetValue(1).ToString(); //kolom kedua
-                //tampung ke sebuah objek kategori
-                Pegawai tampung = new Pegawai();
-                //tambahkan ke list
-                ListData.Add(tampung);
+            {
+                Genre tampung = new Genre();
+                tampung.Id = hasil.GetInt32(0);
+                tampung.Nama = hasil.GetValue(1).ToString();
+                tampung.Deskripsi = hasil.GetValue(2).ToString();
+
+                listGenre.Add(tampung);
             }
-            //kirim list ke pemanggilnya
-            return ListData;
+
+            return listGenre;
         }
+        #endregion
     }
 }

@@ -33,6 +33,7 @@ namespace Celikoor_LIB
         #endregion
 
         #region METHODS
+        //! METHOD CREATE C
         public static void TambahData(Kelompok kelompok)
         {
             //susun perintah query
@@ -41,6 +42,7 @@ namespace Celikoor_LIB
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
+        //! METHOD DELETE D
         public static void HapusData(string idHapus)
         {
             //susun perintah query
@@ -49,6 +51,7 @@ namespace Celikoor_LIB
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
+        //! METHOD RETRIEVE R
         public static List<Kelompok> BacaData(string id="")
         {
             //susun perintah query
