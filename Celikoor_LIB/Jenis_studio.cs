@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 
 namespace Celikoor_LIB
 {
-    public class Jenis_studio
+    public class Jenis_Studio
     {
         int id;
         string nama;
         string deskripsi;
 
-        public Jenis_studio()
+        public Jenis_Studio()
         {
-
+            Id = 0;
+            Nama = "";
+            Deskripsi = "";
         }
-        public Jenis_studio(int id, string nama, string deskripsi)
+
+        public Jenis_Studio(int id, string nama, string deskripsi)
         {
             Id = id;
             Nama = nama;
@@ -28,50 +31,52 @@ namespace Celikoor_LIB
         public string Nama { get => nama; set => nama = value; }
         public string Deskripsi { get => deskripsi; set => deskripsi = value; }
 
-        public static void TambahData(Pegawai k)
+        //! METHOD CREATE C
+        public static void TambahData(Jenis_Studio jenisStudio)
         {
-            //susun perintah query
-            string perintah = " INSERT INTO pegawai " + " (IdPegawai, Nama, Email, Username, Password) VALUES " + "('"
-                + k.Id.ToString() + "', '" + k.Nama + "', '" + k.Email + "', '" + k.Username.ToString() + "', '"
-                + k.Password.ToString() + "');";
+            string perintah = $"INSERT INTO jenis_studios (id, nama, deskripsi) VALUES ('{jenisStudio.Id}', '{jenisStudio.Nama}', '{jenisStudio.Deskripsi}');";
+
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static void HapusData(string kodeHapus)
+        //! METHOD DELETE D
+        public static void HapusData(string idHapus)
         {
             //susun perintah query
-            string perintah = "delete from kategori where kodekategori='" + kodeHapus + "';";
+            string perintah = $"DELETE FROM jenis_studios WHERE id='{idHapus}';";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static List<Pegawai> BacaData(string filter = "", string nilai = "")
+        //! METHOD RETRIEVE R
+        public static List<Jenis_Studio> BacaData(string id="")
         {
-            //susun perintah query
             string perintah;
-            if (filter == "")
+
+            if (id == "")
             {
-                perintah = "select * from pegawai";
+                perintah = $"SELECT * FROM jenis_studios";
             }
+
             else
             {
-                perintah = "select * from kategori where " + filter + " like '%" + nilai + "%'";
+                perintah = $"SELECT * FROM jenis_studios WHERE id='{id}'";
             }
-            //eksekusi perintah di atas
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            List<Pegawai> ListData = new List<Pegawai>();
 
-            //selama masih ada data yang dapat dibaca dari datareader
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            List<Jenis_Studio> listJenisStudio = new List<Jenis_Studio>();
+
             while (hasil.Read() == true)
-            {   //ambil isi datareader
-                string tampungKode = hasil.GetValue(0).ToString(); //kolom pertama
-                string tampungNama = hasil.GetValue(1).ToString(); //kolom kedua
-                //tampung ke sebuah objek kategori
-                Pegawai tampung = new Pegawai();
-                //tambahkan ke list
-                ListData.Add(tampung);
+            {   
+                Jenis_Studio tampung = new Jenis_Studio();
+                tampung.Id = hasil.GetInt32(0);
+                tampung.Nama = hasil.GetValue(1).ToString();
+                tampung.Deskripsi = hasil.GetValue(2).ToString();
+
+                listJenisStudio.Add(tampung);
             }
-            //kirim list ke pemanggilnya
-            return ListData;
+
+            return listJenisStudio;
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Celikoor_LIB
 {
@@ -12,22 +13,29 @@ namespace Celikoor_LIB
         int id;
         string nama;
         int kapasitas;
-        Jenis_studio jenis_studio_id;
-        Cinema cinema_id;
+        Jenis_Studio jenisStudio;
+        Cinema cinema;
         int harga_weekday;
         int harga_weekend;
 
         public Studio()
         {
-
+            Id = 0;
+            Nama = "";
+            Kapasitas = 0;
+            JenisStudio = new Jenis_Studio();
+            Cinema = new Cinema();
+            Harga_weekday = 0;
+            Harga_weekend = 0;
         }
-        public Studio(int id, string nama, int kapasitas, Jenis_studio jenis_studio_id, Cinema cinema_id, int harga_weekday, int harga_weekend)
+
+        public Studio(int id, string nama, int kapasitas, Jenis_Studio jenisStudio, Cinema cinema, int harga_weekday, int harga_weekend)
         {
             Id = id;
             Nama = nama;
             Kapasitas = kapasitas;
-            Jenis_studio_id = jenis_studio_id;
-            Cinema_id = cinema_id;
+            JenisStudio = jenisStudio;
+            Cinema = cinema;
             Harga_weekday = harga_weekday;
             Harga_weekend = harga_weekend;
         }
@@ -35,62 +43,81 @@ namespace Celikoor_LIB
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
         public int Kapasitas { get => kapasitas; set => kapasitas = value; }
-        public Jenis_studio Jenis_studio_id { get => jenis_studio_id; set => jenis_studio_id = value; }
-        public Cinema Cinema_id { get => cinema_id; set => cinema_id = value; }
+        public Jenis_Studio JenisStudio { get => jenisStudio; set => jenisStudio = value; }
+        public Cinema Cinema { get => cinema; set => cinema = value; }
         public int Harga_weekday { get => harga_weekday; set => harga_weekday = value; }
         public int Harga_weekend { get => harga_weekend; set => harga_weekend = value; }
 
-        public static void TambahData(Pegawai k)
+        //! METHOD CREATE C
+        public static void TambahData(Studio studio)
         {
-            //susun perintah query
-            string perintah = " INSERT INTO pegawai " + " (IdPegawai, Nama, Email, Username, Password) VALUES " + "('"
-                + k.Id.ToString() + "', '" + k.Nama + "', '" + k.Email + "', '" + k.Username.ToString() + "', '"
-                + k.Password.ToString() + "');";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            string perintah = $"INSERT INTO studios (id, nama, kapasitas, jenis_studios_id, cinemas_id, harga_weekday, harga_weekend)" +
+                $"VALUES ('{studio.Id}', '{studio.Nama}', '{studio.Kapasitas}', '{studio.JenisStudio.Nama}', '{studio.Cinema.Nama_cabang}'" +
+                $", '{studio.Harga_weekday}', '{studio.Harga_weekend}');";
+
+            Koneksi.JalankanPerintahQuery(perintah);
         }
 
-        public static void UbahData(Pegawai k)
+        //! METHOD UPDATE U
+        public static void UbahData(Studio studio)
         {
-            //susun perintah query
-            string perintah = " update kategori set Nama='" + k.Nama.Replace("'", "\\'") + "' where Id='" + k.Id + "'";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            string perintah = $"UPDATE studios SET nama='{studio.Nama}', kapasitas='{studio.Kapasitas}'" +
+                $", jenis_studio_id='{studio.JenisStudio.Nama}', cinemas_id='{studio.Cinema.Nama_cabang}'" +
+                $", harga_weekday='{studio.Harga_weekday}', harga_weekend='{studio.Harga_weekend}' WHERE id='{studio.Id}';";
+
+            Koneksi.JalankanPerintahQuery(perintah);
         }
 
-        public static void HapusData(string kodeHapus)
+        //! METHOD DELETE D
+        public static void HapusData(string idHapus)
         {
-            //susun perintah query
-            string perintah = "delete from kategori where kodekategori='" + kodeHapus + "';";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            string perintah = $"DELETE FROM studios WHERE id='{idHapus}';";
+
+            Koneksi.JalankanPerintahQuery(perintah);
         }
 
-        public static List<Pegawai> BacaData(string filter = "", string nilai = "")
+        public static List<Studio> BacaData(string id="", string nama="")
         {
-            //susun perintah query
             string perintah;
-            if (filter == "")
+
+            if (id == "")
             {
-                perintah = "select * from pegawai";
+                perintah = $"SELECT * FROM studios";
             }
+
             else
             {
-                perintah = "select * from kategori where " + filter + " like '%" + nilai + "%'";
+                perintah = $"SELECT * FROM studios WHERE '{id}' like '%{nama}%'";
             }
-            //eksekusi perintah di atas
+
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            List<Pegawai> ListData = new List<Pegawai>();
+
+            List<Studio> listStudio = new List<Studio>();
 
             //selama masih ada data yang dapat dibaca dari datareader
             while (hasil.Read() == true)
-            {   //ambil isi datareader
-                string tampungKode = hasil.GetValue(0).ToString(); //kolom pertama
-                string tampungNama = hasil.GetValue(1).ToString(); //kolom kedua
-                //tampung ke sebuah objek kategori
-                Pegawai tampung = new Pegawai();
-                //tambahkan ke list
-                ListData.Add(tampung);
+            {   
+                Studio tampung = new Studio();
+
+                tampung.Id = hasil.GetInt32(0);
+                tampung.Nama = hasil.GetValue(1).ToString();
+                tampung.Kapasitas = int.Parse(hasil.GetValue(2).ToString());
+                Jenis_Studio tampungJenisStudio = new Jenis_Studio();
+                tampungJenisStudio.Id = hasil.GetInt32(3);
+                Cinema tampungCinema = new Cinema();
+                tampungCinema.Id = hasil.GetInt32(4);
+                tampung.Harga_weekday = int.Parse(hasil.GetValue(5).ToString());
+                tampung.Harga_weekend = int.Parse(hasil.GetValue(6).ToString());
+                tampungJenisStudio.Nama = hasil.GetValue(7).ToString();
+                tampungCinema.Nama_cabang = hasil.GetValue(8).ToString();
+
+                tampung.JenisStudio = tampungJenisStudio;
+                tampung.Cinema = tampungCinema;
+
+                listStudio.Add(tampung);
             }
-            //kirim list ke pemanggilnya
-            return ListData;
+
+            return listStudio;
         }
     }
 }

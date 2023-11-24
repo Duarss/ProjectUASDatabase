@@ -56,7 +56,7 @@
     <Compile Include="Genre.cs" />
     <Compile Include="Genre_film.cs" />
     <Compile Include="Invoices.cs" />
-    <Compile Include="Jenis_studio.cs" />
+    <Compile Include="Jenis_Studio.cs" />
     <Compile Include="Kelompok.cs" />
     <Compile Include="Koneksi.cs" />
     <Compile Include="Konsumen.cs" />
