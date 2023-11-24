@@ -9,66 +9,78 @@ namespace Celikoor_LIB
 {
     public class Kelompok
     {
+        #region FIELDS
         int id;
         string nama;
+        #endregion
 
+        #region CONSTRUCTORS
         public Kelompok()
         {
-
+            Id = 0;
+            Nama = "";
         }
         public Kelompok(int id, string nama)
         {
             Id = id;
             Nama = nama;
         }
+        #endregion
 
+        #region PROPERTIES
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
+        #endregion
 
-        public static void TambahData(Pegawai k)
+        #region METHODS
+        public static void TambahData(Kelompok kelompok)
         {
             //susun perintah query
-            string perintah = " INSERT INTO pegawai " + " (IdPegawai, Nama, Email, Username, Password) VALUES " + "('"
-                + k.Id.ToString() + "', '" + k.Nama + "', '" + k.Email + "', '" + k.Username.ToString() + "', '"
-                + k.Password.ToString() + "');";
+            string perintah = $"INSERT INTO kelompoks (id, nama) VALUES ('{kelompok.Id}', '{kelompok.Nama}');"; 
+
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static void HapusData(string kodeHapus)
+        public static void HapusData(string idHapus)
         {
             //susun perintah query
-            string perintah = "delete from kategori where kodekategori='" + kodeHapus + "';";
+            string perintah = $"DELETE FROM kelompoks WHERE id='{idHapus}';";
+
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static List<Pegawai> BacaData(string filter = "", string nilai = "")
+        public static List<Kelompok> BacaData(string id="", string nama="")
         {
             //susun perintah query
             string perintah;
-            if (filter == "")
+
+            if (id == "")
             {
-                perintah = "select * from pegawai";
+                perintah = $"SELECT * FROM kelompoks";
             }
+
             else
             {
-                perintah = "select * from kategori where " + filter + " like '%" + nilai + "%'";
+                perintah = $"SELECT * FROM kelompoks WHERE '{id}' like '%{nama}%'";
             }
+
             //eksekusi perintah di atas
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            List<Pegawai> ListData = new List<Pegawai>();
+
+            List<Kelompok> listKelompok = new List<Kelompok>();
 
             //selama masih ada data yang dapat dibaca dari datareader
             while (hasil.Read() == true)
-            {   //ambil isi datareader
-                string tampungKode = hasil.GetValue(0).ToString(); //kolom pertama
-                string tampungNama = hasil.GetValue(1).ToString(); //kolom kedua
-                //tampung ke sebuah objek kategori
-                Pegawai tampung = new Pegawai();
-                //tambahkan ke list
-                ListData.Add(tampung);
+            { 
+                Kelompok tampung = new Kelompok();
+                tampung.Id = int.Parse(hasil.GetValue(0).ToString()); //kolom pertama
+                tampung.Nama = hasil.GetValue(1).ToString(); //kolom kedua
+
+                listKelompok.Add(tampung);
             }
-            //kirim list ke pemanggilnya
-            return ListData;
+
+            return listKelompok;
         }
+        #endregion
     }
 }
