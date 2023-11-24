@@ -36,8 +36,7 @@
     <StartupObject>Celikoor_Tixycket.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Celikoor_LIB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Celikoor_LIB">
       <HintPath>..\Celikoor_LIB\bin\Debug\Celikoor_LIB.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -57,6 +56,12 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahCinema.Designer.cs">
+      <DependentUpon>FormTambahCinema.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLoginAs.cs">
       <SubType>Form</SubType>
@@ -130,6 +135,36 @@
     <Compile Include="FormStudio.Designer.cs">
       <DependentUpon>FormStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahAktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahAktor.Designer.cs">
+      <DependentUpon>FormTambahAktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahGenre.Designer.cs">
+      <DependentUpon>FormTambahGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahKelompok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahKelompok.Designer.cs">
+      <DependentUpon>FormTambahKelompok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahKonsumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahKonsumen.Designer.cs">
+      <DependentUpon>FormTambahKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahPegawai.Designer.cs">
+      <DependentUpon>FormTambahPegawai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +181,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterKonsumen.resx">
       <DependentUpon>FormRegisterKonsumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahAktor.resx">
+      <DependentUpon>FormTambahAktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahCinema.resx">
+      <DependentUpon>FormTambahCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahGenre.resx">
+      <DependentUpon>FormTambahGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahKelompok.resx">
+      <DependentUpon>FormTambahKelompok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahKonsumen.resx">
+      <DependentUpon>FormTambahKonsumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahPegawai.resx">
+      <DependentUpon>FormTambahPegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

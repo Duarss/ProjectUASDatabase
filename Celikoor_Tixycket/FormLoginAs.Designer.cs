@@ -68,7 +68,7 @@
             this.radioButtonPegawai.Name = "radioButtonPegawai";
             this.radioButtonPegawai.Size = new System.Drawing.Size(175, 38);
             this.radioButtonPegawai.TabIndex = 2;
-            this.radioButtonPegawai.Text = "Pegawai";
+            this.radioButtonPegawai.Text = "Aktor";
             this.radioButtonPegawai.UseVisualStyleBackColor = true;
             this.radioButtonPegawai.CheckedChanged += new System.EventHandler(this.radioButtonPegawai_CheckedChanged);
             // 

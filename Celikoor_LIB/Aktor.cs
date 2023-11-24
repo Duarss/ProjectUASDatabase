@@ -9,6 +9,7 @@ namespace Celikoor_LIB
 {
     public class Aktor
     {
+        int id;
         string nama;
         DateTime tglLahir;
         string gender;
@@ -18,39 +19,42 @@ namespace Celikoor_LIB
         {
 
         }
-        public Aktor(string nama, DateTime tglLahir, string gender, string negaraAsal)
+        public Aktor(int id, string nama, DateTime tglLahir, string gender, string negaraAsal)
         {
+            Id = id;
             Nama = nama;
             TglLahir = tglLahir;
             Gender = gender;
             NegaraAsal = negaraAsal;
         }
 
+        public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
         public DateTime TglLahir { get => tglLahir; set => tglLahir = value; }
         public string Gender { get => gender; set => gender = value; }
         public string NegaraAsal { get => negaraAsal; set => negaraAsal = value; }
 
-        public static void TambahData(Pegawai k)
+        public static void TambahData(Aktor a)
         {
             //susun perintah query
-            string perintah = " INSERT INTO pegawai " + " (IdPegawai, Nama, Email, Username, Password) VALUES " + "('"
-                + k.Id.ToString() + "', '" + k.Nama + "', '" + k.Email + "', '" + k.Username.ToString() + "', '"
-                + k.Password.ToString() + "');";
+            string perintah = " INSERT INTO aktors " + " (Nama, TglLahir, Gender, NegaraAsal) VALUES " + "('"
+                + a.Nama + "', '" + a.TglLahir.ToString("yyyy-MM-dd") + "', '" + a.Gender + "', '"
+                + a.NegaraAsal + "');";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static void UbahData(Pegawai k)
+        public static void UbahData(Aktor a)
         {
             //susun perintah query
-            string perintah = " update kategori set Nama='" + k.Nama.Replace("'", "\\'") + "' where Id='" + k.Id + "'";
+            string perintah = "update aktors set nama='" + a.Nama + " 'where id='"
+                + a.Id + "';";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static void HapusData(string kodeHapus)
+        public static void HapusData(int idHapus)
         {
             //susun perintah query
-            string perintah = "delete from kategori where kodekategori='" + kodeHapus + "';";
+            string perintah = "delete from kategori where kodekategori='" + idHapus + "';";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 

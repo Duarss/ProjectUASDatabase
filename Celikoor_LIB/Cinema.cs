@@ -34,19 +34,19 @@ namespace Celikoor_LIB
         public DateTime TglDibuka { get => tglDibuka; set => tglDibuka = value; }
         public string Kota { get => kota; set => kota = value; }
 
-        public static void TambahData(Pegawai k)
+        public static void TambahData(Cinema k)
         {
             //susun perintah query
-            string perintah = " INSERT INTO pegawai " + " (IdPegawai, Nama, Email, Username, Password) VALUES " + "('"
-                + k.Id.ToString() + "', '" + k.Nama + "', '" + k.Email + "', '" + k.Username.ToString() + "', '"
-                + k.Password.ToString() + "');";
+            string perintah = " INSERT INTO cinema " + " (Id, Nama_cabang, Alamat, TglDibuka, Kota) VALUES " + "('"
+                + k.Id.ToString() + "', '" + k.Nama_cabang + "', '" + k.Alamat + "', '" + k.TglDibuka.ToString("yyyy-MM-dd") + "', '"
+                + k.Kota + "');";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static void HapusData(string kodeHapus)
+        public static void HapusData(int idHapus)
         {
             //susun perintah query
-            string perintah = "delete from kategori where kodekategori='" + kodeHapus + "';";
+            string perintah = "delete from cinema where id='" + idHapus + "';";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
@@ -56,11 +56,11 @@ namespace Celikoor_LIB
             string perintah;
             if (filter == "")
             {
-                perintah = "select * from pegawai";
+                perintah = "select * from cinema";
             }
             else
             {
-                perintah = "select * from kategori where " + filter + " like '%" + nilai + "%'";
+                perintah = "select * from cinema where " + filter + " like '%" + nilai + "%'";
             }
             //eksekusi perintah di atas
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);

@@ -69,7 +69,7 @@ namespace Celikoor_LIB
         }
 
         //! METHOD DELETE D
-        public static void HapusData(string idHapus)
+        public static void HapusData(int idHapus)
         {
             string perintah = $"DELETE FROM studios WHERE id='{idHapus}';";
 

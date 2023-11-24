@@ -41,19 +41,19 @@ namespace Celikoor_LIB
         public string Password { get => password; set => password = value; }
         public string Role { get => role; set => role = value; }
 
-        public static void TambahData(Pegawai k)
+        public static void TambahData(Pegawai p)
         {
             //susun perintah query
-            string perintah = " INSERT INTO pegawai " + " (IdPegawai, Nama, Email, Username, Password) VALUES " + "('"
-                + k.Id.ToString() + "', '" + k.Nama + "', '" + k.Email + "', '" + k.Username.ToString() + "', '"
-                + k.Password.ToString() + "');";
+            string perintah = " INSERT INTO pegawais " + " (id, nama, email, username, password) VALUES " + "('"
+                + p.Id.ToString() + "', '" + p.Nama + "', '" + p.Email + "', '" + p.Username.ToString() + "', '"
+                + p.Password.ToString() + "');";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static void HapusData(string kodeHapus)
+        public static void HapusData(int idHapus)
         {
             //susun perintah query
-            string perintah = "delete from kategori where kodekategori='" + kodeHapus + "';";
+            string perintah = "delete from pegawais where id='" + idHapus + "';";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
@@ -63,11 +63,11 @@ namespace Celikoor_LIB
             string perintah;
             if (filter == "")
             {
-                perintah = "select * from pegawai";
+                perintah = "select * from pegawais";
             }
             else
             {
-                perintah = "select * from kategori where " + filter + " like '%" + nilai + "%'";
+                perintah = "select * from pegawais where " + filter + " like '%" + nilai + "%'";
             }
             //eksekusi perintah di atas
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);

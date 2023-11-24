@@ -57,7 +57,7 @@ namespace Celikoor_LIB
         public static void TambahData(Konsumen k)
         {
             //susun perintah query
-            string perintah = " INSERT INTO konsumen " + " (Nama, Email, NoHp, Gender, TglLahir, Saldo, Username, Password) VALUES " + "('"
+            string perintah = " INSERT INTO konsumens " + " (Nama, Email, NoHp, Gender, TglLahir, Saldo, Username, Password) VALUES " + "('"
                 + k.Nama + "', '" + k.Email + "', '" + k.NoHp.ToString() + "', '" + k.Gender + "', '" + k.TglLahir.ToString("yyyy-MM-dd")
                 + k.Saldo.ToString() + "', '" + "', '" + k.Username + "', '" + k.Password.ToString() + "');";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
@@ -66,14 +66,14 @@ namespace Celikoor_LIB
         public static void UbahData(Konsumen k)
         {
             //susun perintah query
-            string perintah = "update kategori set;";
+            string perintah = "update konsumens set;";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
-        public static void HapusData(string kodeHapus)
+        public static void HapusData(int idHapus)
         {
             //susun perintah query
-            string perintah = "delete from kategori where kodekategori='" + kodeHapus + "';";
+            string perintah = "delete from konsumens where id='" + idHapus + "';";
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }
 
@@ -83,11 +83,11 @@ namespace Celikoor_LIB
             string perintah;
             if (filter == "")
             {
-                perintah = "select * from kategori";
+                perintah = "select * from konsumens";
             }
             else
             {
-                perintah = "select * from kategori where " + filter + " like '%" + nilai + "%'";
+                perintah = "select * from konsumens where " + filter + " like '%" + nilai + "%'";
             }
             //eksekusi perintah di atas
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
