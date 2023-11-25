@@ -128,8 +128,73 @@ namespace Celikoor_Tixycket
 
         }
         #endregion
+        private void cinemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMasterCinema frmCinema = new FormMasterCinema();
+            frmCinema.MdiParent = this;
+            frmCinema.Show();
+        }
 
-        private void sistemToolStripMenuItem_Click(object sender, EventArgs e)
+        private void studioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMasterStudio frmStudio = new FormMasterStudio();
+            frmStudio.MdiParent = this;
+            frmStudio.Show();
+        }
+
+        private void jenisStudioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMasterJenisStudio frmJenisStudio = new FormMasterJenisStudio();
+            frmJenisStudio.MdiParent = this;
+            frmJenisStudio.Show();
+        }
+
+        private void genreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMasterGenre frmGenre = new FormMasterGenre();
+            frmGenre.MdiParent = this;
+            frmGenre.Show();
+        }
+
+        private void aktorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMasterAktor frmAktor = new FormMasterAktor();
+            frmAktor.MdiParent = this;
+            frmAktor.Show();
+        }
+
+        private void konsumenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMasterKonsumen frmKonsumen = new FormMasterKonsumen();
+            frmKonsumen.MdiParent = this;
+            frmKonsumen.Show();
+        }
+
+        private void pegawaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMasterPegawai frmPegawai = new FormMasterPegawai();
+            frmPegawai.MdiParent = this;
+            frmPegawai.Show();
+        }
+
+        private void kelompokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMasterKelompok frmKelompok = new FormMasterKelompok();
+            frmKelompok.MdiParent = this;
+            frmKelompok.Show();
+        }
+
+        private void penjadwalanFilmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pencatatanKedatanganToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
