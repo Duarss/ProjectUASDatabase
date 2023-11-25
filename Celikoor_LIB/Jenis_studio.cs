@@ -9,10 +9,13 @@ namespace Celikoor_LIB
 {
     public class Jenis_Studio
     {
+        #region FIELDS
         int id;
         string nama;
         string deskripsi;
+        #endregion
 
+        #region CONSTRUCTORS
         public Jenis_Studio()
         {
             Id = 0;
@@ -26,11 +29,15 @@ namespace Celikoor_LIB
             Nama = nama;
             Deskripsi = deskripsi;
         }
+        #endregion
 
+        #region PROPERTIES
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
         public string Deskripsi { get => deskripsi; set => deskripsi = value; }
+        #endregion
 
+        #region METHODS
         //! METHOD CREATE C
         public static void TambahData(Jenis_Studio jenisStudio)
         {
@@ -78,5 +85,6 @@ namespace Celikoor_LIB
 
             return listJenisStudio;
         }
+        #endregion
     }
 }

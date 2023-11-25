@@ -8,7 +8,6 @@ namespace Celikoor_LIB
 {
     public class Aktor_film
     {
-        int id;
-        string nama;
+        
     }
 }

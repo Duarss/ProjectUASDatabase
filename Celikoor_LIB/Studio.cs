@@ -10,6 +10,7 @@ namespace Celikoor_LIB
 {
     public class Studio
     {
+        #region FIELDS
         int id;
         string nama;
         int kapasitas;
@@ -17,7 +18,9 @@ namespace Celikoor_LIB
         Cinema cinema;
         int harga_weekday;
         int harga_weekend;
+        #endregion
 
+        #region CONSTRUCTORS
         public Studio()
         {
             Id = 0;
@@ -39,7 +42,9 @@ namespace Celikoor_LIB
             Harga_weekday = harga_weekday;
             Harga_weekend = harga_weekend;
         }
+        #endregion
 
+        #region PROPERTIES
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
         public int Kapasitas { get => kapasitas; set => kapasitas = value; }
@@ -47,7 +52,9 @@ namespace Celikoor_LIB
         public Cinema Cinema { get => cinema; set => cinema = value; }
         public int Harga_weekday { get => harga_weekday; set => harga_weekday = value; }
         public int Harga_weekend { get => harga_weekend; set => harga_weekend = value; }
+        #endregion
 
+        #region METHODS
         //! METHOD CREATE C
         public static void TambahData(Studio studio)
         {
@@ -76,6 +83,7 @@ namespace Celikoor_LIB
             Koneksi.JalankanPerintahQuery(perintah);
         }
 
+        //! METHOD RETRIEVE R dan FILTER F
         public static List<Studio> BacaData(string id="", string nama="")
         {
             string perintah;
@@ -119,5 +127,6 @@ namespace Celikoor_LIB
 
             return listStudio;
         }
+        #endregion
     }
 }

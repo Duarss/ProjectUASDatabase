@@ -9,16 +9,24 @@ namespace Celikoor_LIB
 {
     public class Cinema
     {
+        #region FIELDS
         int id;
         string nama_cabang;
         string alamat;
         DateTime tglDibuka;
         string kota;
+        #endregion
 
+        #region CONSTRUCTORS
         public Cinema()
         {
-
+            Id = 0;
+            Nama_cabang = "";
+            Alamat = "";
+            TglDibuka = DateTime.Now;
+            Kota = "";
         }
+
         public Cinema(int id, string nama_cabang, string alamat, DateTime tglDibuka, string kota)
         {
             Id = id;
@@ -27,57 +35,68 @@ namespace Celikoor_LIB
             TglDibuka = tglDibuka;
             Kota = kota;
         }
+        #endregion
 
+        #region PROPERTIES
         public int Id { get => id; set => id = value; }
         public string Nama_cabang { get => nama_cabang; set => nama_cabang = value; }
         public string Alamat { get => alamat; set => alamat = value; }
         public DateTime TglDibuka { get => tglDibuka; set => tglDibuka = value; }
         public string Kota { get => kota; set => kota = value; }
+        #endregion
 
-        public static void TambahData(Cinema k)
+        #region METHODS
+        //! METHOD CREATE C
+        public static void TambahData(Cinema cinema)
         {
-            //susun perintah query
-            string perintah = " INSERT INTO cinema " + " (Id, Nama_cabang, Alamat, TglDibuka, Kota) VALUES " + "('"
-                + k.Id.ToString() + "', '" + k.Nama_cabang + "', '" + k.Alamat + "', '" + k.TglDibuka.ToString("yyyy-MM-dd") + "', '"
-                + k.Kota + "');";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            string perintah = $"INSERT INTO cinemas (id, nama_cabang, alamat, tgl_dibuka, kota) " +
+                $"VALUES ('{cinema.Id}', '{cinema.Nama_cabang}', '{cinema.Alamat}', '{cinema.TglDibuka.ToShortDateString()}'" +
+                $", '{cinema.Kota}');";
+
+            Koneksi.JalankanPerintahQuery(perintah);
         }
 
-        public static void HapusData(int idHapus)
+        //! METHOD DELETE D
+        public static void HapusData(string idHapus)
         {
-            //susun perintah query
-            string perintah = "delete from cinema where id='" + idHapus + "';";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            string perintah = $"DELETE FROM cinemas WHERE id='{idHapus}'";
+
+            Koneksi.JalankanPerintahQuery(perintah);
         }
 
-        public static List<Pegawai> BacaData(string filter = "", string nilai = "")
+        //! METHOD RETRIEVE R
+        public static List<Cinema> BacaData(string id="")
         {
             //susun perintah query
             string perintah;
-            if (filter == "")
+
+            if (id == "")
             {
-                perintah = "select * from cinema";
+                perintah = $"SELECT * FROM cinemas";
             }
             else
             {
-                perintah = "select * from cinema where " + filter + " like '%" + nilai + "%'";
+                perintah = $"SELECT * FROM cinemas WHERE id='{id}'";
             }
-            //eksekusi perintah di atas
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            List<Pegawai> ListData = new List<Pegawai>();
 
-            //selama masih ada data yang dapat dibaca dari datareader
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            List<Cinema> listCinema = new List<Cinema>();
+
             while (hasil.Read() == true)
-            {   //ambil isi datareader
-                string tampungKode = hasil.GetValue(0).ToString(); //kolom pertama
-                string tampungNama = hasil.GetValue(1).ToString(); //kolom kedua
-                //tampung ke sebuah objek kategori
-                Pegawai tampung = new Pegawai();
-                //tambahkan ke list
-                ListData.Add(tampung);
+            {   
+                Cinema tampung = new Cinema();
+                tampung.Id = hasil.GetInt32(0);
+                tampung.Nama_cabang = hasil.GetValue(1).ToString();
+                tampung.Alamat = hasil.GetValue(2).ToString();
+                tampung.TglDibuka = (DateTime)hasil.GetValue(3);
+                tampung.Kota = hasil.GetValue(4).ToString();
+
+                listCinema.Add(tampung);
             }
             //kirim list ke pemanggilnya
-            return ListData;
+            return listCinema;
         }
+        #endregion
     }
 }
