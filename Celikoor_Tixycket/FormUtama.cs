@@ -24,7 +24,7 @@ namespace Celikoor_Tixycket
         public Konsumen konsumenLogin;
         public Pegawai pegawaiLogin;
         public FormRegisterKonsumen formRegisterKonsumen;
-        public FormLoginKonsumen formLoginKonsumen;
+        public FormLogin formLoginKonsumen;
         public bool loginStatus = false;
         #endregion
         #region Methods
@@ -87,7 +87,7 @@ namespace Celikoor_Tixycket
 
                 if (form == null)
                 {
-                    formLoginKonsumen = new FormLoginKonsumen();
+                    formLoginKonsumen = new FormLogin();
                     formLoginKonsumen.Owner = this;
 
                     formRegisterKonsumen = new FormRegisterKonsumen();

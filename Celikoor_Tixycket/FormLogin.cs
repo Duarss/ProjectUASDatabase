@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Celikoor_Tixycket
 {
-    public partial class FormLoginKonsumen : Form
+    public partial class FormLogin : Form
     {
-        public FormLoginKonsumen()
+        public FormLogin()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;

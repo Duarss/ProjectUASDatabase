@@ -2,7 +2,7 @@
 
 namespace Celikoor_Tixycket
 {
-    partial class FormLoginKonsumen
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@ namespace Celikoor_Tixycket
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.linkLabelCreateAnAccount = new System.Windows.Forms.LinkLabel();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxPasswordLogin = new System.Windows.Forms.TextBox();
@@ -333,7 +334,7 @@ namespace Celikoor_Tixycket
             this.radioButtonPegawai.UseVisualStyleBackColor = false;
             this.radioButtonPegawai.CheckedChanged += new System.EventHandler(this.radioButtonPegawai_CheckedChanged);
             // 
-            // FormLoginKonsumen
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -355,10 +356,11 @@ namespace Celikoor_Tixycket
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
-            this.Name = "FormLoginKonsumen";
-            this.Text = "LOGIN";
+            this.Name = "FormLogin";
+            this.Text = "TIXIE";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLoginKonsumen_FormClosing);
             this.Load += new System.EventHandler(this.FormLoginKonsumen_Load);
             this.Click += new System.EventHandler(this.FormLoginKonsumen_Click);
