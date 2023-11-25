@@ -57,7 +57,7 @@
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(721, 586);
+            this.buttonKeluar.Location = new System.Drawing.Point(830, 586);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(182, 55);
@@ -71,7 +71,7 @@
             this.buttonKosongi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKosongi.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.White;
-            this.buttonKosongi.Location = new System.Drawing.Point(382, 586);
+            this.buttonKosongi.Location = new System.Drawing.Point(450, 586);
             this.buttonKosongi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKosongi.Name = "buttonKosongi";
             this.buttonKosongi.Size = new System.Drawing.Size(182, 55);
@@ -97,17 +97,17 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox3.Location = new System.Drawing.Point(44, 552);
+            this.pictureBox3.Location = new System.Drawing.Point(44, 553);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(860, 12);
+            this.pictureBox3.Size = new System.Drawing.Size(968, 12);
             this.pictureBox3.TabIndex = 49;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox2.Location = new System.Drawing.Point(892, 41);
+            this.pictureBox2.Location = new System.Drawing.Point(1001, 40);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(11, 524);
@@ -133,7 +133,7 @@
             this.label3.Location = new System.Drawing.Point(44, 41);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(860, 62);
+            this.label3.Size = new System.Drawing.Size(968, 62);
             this.label3.TabIndex = 46;
             this.label3.Text = "TAMBAH CINEMA";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,7 +165,7 @@
             this.dateTimePickerTglDibukaCInema.Location = new System.Drawing.Point(450, 406);
             this.dateTimePickerTglDibukaCInema.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePickerTglDibukaCInema.Name = "dateTimePickerTglDibukaCInema";
-            this.dateTimePickerTglDibukaCInema.Size = new System.Drawing.Size(298, 36);
+            this.dateTimePickerTglDibukaCInema.Size = new System.Drawing.Size(418, 36);
             this.dateTimePickerTglDibukaCInema.TabIndex = 57;
             // 
             // textBoxKotaCinema
@@ -174,7 +174,7 @@
             this.textBoxKotaCinema.Location = new System.Drawing.Point(450, 479);
             this.textBoxKotaCinema.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxKotaCinema.Name = "textBoxKotaCinema";
-            this.textBoxKotaCinema.Size = new System.Drawing.Size(263, 36);
+            this.textBoxKotaCinema.Size = new System.Drawing.Size(385, 36);
             this.textBoxKotaCinema.TabIndex = 56;
             // 
             // labelPassword
@@ -205,7 +205,7 @@
             this.textBoxIdCinema.Location = new System.Drawing.Point(450, 134);
             this.textBoxIdCinema.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxIdCinema.Name = "textBoxIdCinema";
-            this.textBoxIdCinema.Size = new System.Drawing.Size(102, 36);
+            this.textBoxIdCinema.Size = new System.Drawing.Size(182, 36);
             this.textBoxIdCinema.TabIndex = 53;
             // 
             // labelId
@@ -225,7 +225,7 @@
             this.textBoxNamaCabang.Location = new System.Drawing.Point(450, 199);
             this.textBoxNamaCabang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxNamaCabang.Name = "textBoxNamaCabang";
-            this.textBoxNamaCabang.Size = new System.Drawing.Size(253, 36);
+            this.textBoxNamaCabang.Size = new System.Drawing.Size(385, 36);
             this.textBoxNamaCabang.TabIndex = 51;
             // 
             // labelCari
@@ -243,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 662);
+            this.ClientSize = new System.Drawing.Size(1060, 662);
             this.Controls.Add(this.textBoxAlamatCinema);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePickerTglDibukaCInema);

@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 548);
+            this.ClientSize = new System.Drawing.Size(996, 548);
             this.Controls.Add(this.textBoxDeskripsiGenre);
             this.Controls.Add(this.labelDeskripsi);
             this.Controls.Add(this.textBoxIdGenre);
