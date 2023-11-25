@@ -9,8 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Celikoor_LIB;
-
 namespace Celikoor_Tixycket
 {
     public partial class FormTambahKonsumen : Form
