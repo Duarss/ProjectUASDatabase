@@ -9,6 +9,7 @@ namespace Celikoor_LIB
 {
     public class Konsumen
     {
+        #region FIELDS
         private int id;
         private string nama;
         private string email;
@@ -18,9 +19,12 @@ namespace Celikoor_LIB
         private double saldo;
         private string username;
         private string password;
+        #endregion
 
+        #region CONSTRUCTORS
         public Konsumen()
         {
+            Id = 0;
             Nama = "";
             Email = "";
             NoHp = "";
@@ -43,7 +47,10 @@ namespace Celikoor_LIB
             Username = username;
             Password = password;
         }
+        #endregion
 
+        #region PROPERTIES
+        public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
         public string Email { get => email; set => email = value; }
         public string NoHp { get => noHp; set => noHp = value; }
@@ -52,72 +59,87 @@ namespace Celikoor_LIB
         public double Saldo { get => saldo; set => saldo = value; }
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
-        public int Id { get => id; set => id = value; }
+        #endregion
 
-        public static void TambahData(Konsumen k)
+        #region METHODS
+        //! METHOD CREATE C
+        public static void TambahData(Konsumen konsumen)
         {
-            //susun perintah query
-            string perintah = " INSERT INTO konsumens " + " (Nama, Email, NoHp, Gender, TglLahir, Saldo, Username, Password) VALUES " + "('"
-                + k.Nama + "', '" + k.Email + "', '" + k.NoHp.ToString() + "', '" + k.Gender + "', '" + k.TglLahir.ToString("yyyy-MM-dd")
-                + k.Saldo.ToString() + "', '" + "', '" + k.Username + "', '" + k.Password.ToString() + "');";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            string perintah = $"INSERT INTO konsumens (id, nama, email, no_hp, gender, tgl_lahir, saldo, username, password) " +
+                $"VALUES ('{konsumen.Id}', '{konsumen.Nama}', '{konsumen.Email}', '{konsumen.NoHp}', '{konsumen.Gender}'" +
+                $", '{konsumen.TglLahir.ToShortDateString()}', '{konsumen.Saldo}', '{konsumen.Username}', '{konsumen.Password}');";
+
+            Koneksi.JalankanPerintahQuery(perintah);
         }
 
-        public static void UbahData(Konsumen k)
+        //! METHOD UPDATE U
+        public static void UbahData(Konsumen konsumen)
         {
-            //susun perintah query
-            string perintah = "update konsumens set;";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            string perintah = $"UPDATE konsumens SET nama='{konsumen.Nama}', email='{konsumen.Email}', no_hp='{konsumen.NoHp}'" +
+                $", gender='{konsumen.Gender}', tgl_lahir='{konsumen.TglLahir.ToShortDateString()}', saldo='{konsumen.Saldo}'" +
+                $", username='{konsumen.Username}', password='{konsumen.Password}' WHERE id='{konsumen.Id}'";
+
+            Koneksi.JalankanPerintahQuery(perintah);
         }
 
-        public static void HapusData(int idHapus)
+        //! METHOD DELETE D
+        public static void HapusData(string idHapus)
         {
-            //susun perintah query
-            string perintah = "delete from konsumens where id='" + idHapus + "';";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            string perintah = $"DELETE FROM konsumens WHERE id='{idHapus}';";
+
+            Koneksi.JalankanPerintahQuery(perintah);
         }
 
-        public static List<Konsumen> BacaData(string filter = "", string nilai = "")
+        //! METHOD RETRIEVE R dan FILTER F
+        public static List<Konsumen> BacaData(string id="", string nama="")
         {
-            //susun perintah query
             string perintah;
-            if (filter == "")
+
+            if (id == "")
             {
-                perintah = "select * from konsumens";
+                perintah = $"SELECT * FROM konsumens";
             }
+
             else
             {
-                perintah = "select * from konsumens where " + filter + " like '%" + nilai + "%'";
+                perintah = $"SELECT * FROM konsumens WHERE '{id}' like '%{nama}%'";
             }
-            //eksekusi perintah di atas
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            List<Konsumen> ListData = new List<Konsumen>();
 
-            //selama masih ada data yang dapat dibaca dari datareader
-            while (hasil.Read() == true)
-            {   //ambil isi datareader
-                string tampungKode = hasil.GetValue(0).ToString(); //kolom pertama
-                string tampungNama = hasil.GetValue(1).ToString(); //kolom kedua
-                //tampung ke sebuah objek kategori
-                Konsumen tampung = new Konsumen();
-                //tambahkan ke list
-                ListData.Add(tampung);
-            }
-            //kirim list ke pemanggilnya
-            return ListData;
-        }
-        public static Konsumen CekLogin(string username, string pwd)
-        {
-            string perintah = "SELECT * from konsumens k where k.username='"
-                    + username + "' and k.password = '" + pwd + "'";
-            //eksekusi perintah di atas
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-            //selama masih ada data yang dapat dibaca dari datareader
+
+            List<Konsumen> listKonsumen = new List<Konsumen>();
+
+            while (hasil.Read() == true)
+            {
+                Konsumen tampung = new Konsumen();
+
+                tampung.Id = hasil.GetInt32(0);
+                tampung.Nama = hasil.GetValue(1).ToString();
+                tampung.Email = hasil.GetValue(2).ToString();
+                tampung.NoHp = hasil.GetValue(3).ToString();
+                tampung.Gender = hasil.GetValue(4).ToString();
+                tampung.TglLahir = (DateTime)hasil.GetValue(5);
+                tampung.Saldo = double.Parse(hasil.GetValue(6).ToString());
+                tampung.Username = hasil.GetValue(7).ToString();
+                tampung.Password = hasil.GetValue(8).ToString();
+
+                listKonsumen.Add(tampung);
+            }
+
+            return listKonsumen;
+        }
+
+        //! METHOD CEK LOGIN KONSUMEN
+        public static Konsumen CekLogin(string username, string pswd)
+        {
+            string perintah = $"SELECT * FROM konsumens k WHERE k.username='{username}' and k.password = '{pswd}'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
             if (hasil.Read() == true)
             {
                 Konsumen tampung = new Konsumen();
-                //tampung ke sebuah objek kategori
-                //urutan kolom sesuaikan dengan hasil query
+
                 tampung.Id= int.Parse(hasil.GetValue(0).ToString());
                 tampung.Nama = hasil.GetValue(1).ToString();
                 tampung.Email = hasil.GetValue(2).ToString();
@@ -127,9 +149,12 @@ namespace Celikoor_LIB
                 tampung.Saldo = double.Parse(hasil.GetValue(6).ToString());
                 tampung.Username = hasil.GetValue(7).ToString();
                 tampung.Password = hasil.GetValue(8).ToString();
+
                 return tampung;
             }
+
             else return null;
         }
+        #endregion
     }
 }
