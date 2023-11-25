@@ -102,15 +102,18 @@ namespace Celikoor_Tixycket
                     form.Show();
                     form.BringToFront();
                 }
-                if(konsumenLogin != null)
+
+                if (konsumenLogin != null)
                 {
-                    labelLogInSebagai.Text = "Anda Login Sebagai : " + konsumenLogin.Nama;
+                    labelLogInSebagai.Text = "Logged In as : " + konsumenLogin.Nama;
 
                 }
-                else if(pegawaiLogin != null)
+
+                else if (pegawaiLogin != null)
                 {
-                    labelLogInSebagai.Text = "Anda Login Sebagai : " + pegawaiLogin.Nama;
+                    labelLogInSebagai.Text = "Logged In as : " + pegawaiLogin.Nama;
                 }
+
                 AturMenuAfterLogin();
             }
             else
@@ -119,6 +122,7 @@ namespace Celikoor_Tixycket
                 buttonLogInOut.Text = "Log in";
                 konsumenLogin = null;
                 pegawaiLogin = null;
+                MessageBox.Show("Anda Berhasil Log Out!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AturMenuAfterLogout();
             }
 
@@ -126,6 +130,11 @@ namespace Celikoor_Tixycket
         #endregion
 
         private void sistemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void transaksiToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

@@ -176,7 +176,8 @@ namespace Celikoor_Tixycket
             {
                 formUtama.LoginConstraint(true, "Log in");
             }
-            formUtama.formRegisterKonsumen.Close();
+
+            formUtama.formRegisterKonsumen.Visible = false;
         }
         private void FormLoginKonsumen_Click(object sender, EventArgs e)
         {

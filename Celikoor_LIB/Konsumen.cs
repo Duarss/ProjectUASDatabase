@@ -106,10 +106,10 @@ namespace Celikoor_LIB
             //kirim list ke pemanggilnya
             return ListData;
         }
-        public static Konsumen CekLogin(string id, string pwd)
+        public static Konsumen CekLogin(string username, string pwd)
         {
-            string perintah = "SELECT * from konsumens k where k.id='"
-                    + id + "' and k.password = '" + pwd + "'";
+            string perintah = "SELECT * from konsumens k where k.username='"
+                    + username + "' and k.password = '" + pwd + "'";
             //eksekusi perintah di atas
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
             //selama masih ada data yang dapat dibaca dari datareader
@@ -126,6 +126,7 @@ namespace Celikoor_LIB
                 tampung.TglLahir = (DateTime)hasil.GetValue(5);
                 tampung.Saldo = double.Parse(hasil.GetValue(6).ToString());
                 tampung.Username = hasil.GetValue(7).ToString();
+                tampung.Password = hasil.GetValue(8).ToString();
                 return tampung;
             }
             else return null;
