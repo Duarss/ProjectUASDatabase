@@ -12,8 +12,8 @@ namespace Celikoor_LIB
         DateTime tanggal;
         double grand_total;
         double diskon_nominal;
-        Konsumen konsumen_id;
-        Pegawai kasir_id;
+        Konsumen penonton;
+        Pegawai kasir;
         string status;
     }
 }
