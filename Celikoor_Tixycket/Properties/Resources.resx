@@ -136,4 +136,10 @@
   <data name="title_verti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\title_verti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_Tixie_Gold_Gradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon Tixie Gold Gradient.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Text_Tixie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Text Tixie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

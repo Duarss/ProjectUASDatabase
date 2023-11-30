@@ -61,6 +61,16 @@ namespace Celikoor_Tixycket.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Icon_Tixie_Gold_Gradient {
+            get {
+                object obj = ResourceManager.GetObject("Icon_Tixie_Gold_Gradient", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap poster1 {
@@ -96,6 +106,16 @@ namespace Celikoor_Tixycket.Properties {
         internal static System.Drawing.Bitmap templateRegistration {
             get {
                 object obj = ResourceManager.GetObject("templateRegistration", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Text_Tixie {
+            get {
+                object obj = ResourceManager.GetObject("Text_Tixie", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -288,5 +288,11 @@
   <ItemGroup>
     <None Include="Resources\title_verti.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon Tixie Gold Gradient.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Tixie.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
