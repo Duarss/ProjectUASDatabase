@@ -26,14 +26,6 @@ namespace Celikoor_LIB
             Gender = "";
             NegaraAsal = "";
         }
-        public Aktor(int id, string nama, DateTime tglLahir, string gender, string negaraAsal)
-        {
-            Id = id;
-            Nama = nama;
-            TglLahir = tglLahir;
-            Gender = gender;
-            NegaraAsal = negaraAsal;
-        }
         #endregion
 
         #region PROPERTIES

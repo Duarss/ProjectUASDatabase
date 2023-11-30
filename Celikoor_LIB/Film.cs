@@ -36,19 +36,6 @@ namespace Celikoor_LIB
             CoverImage = "";
             Diskon = 0;
         }
-        public Film(int id, string judul, string sinopsis, int tahun, int durasi, Kelompok kelompokUsia, string bahasa, int is_sub_indo, string coverImage, double diskon)
-        {
-            Id = id;
-            Judul = judul;
-            Sinopsis = sinopsis;
-            Tahun = tahun;
-            Durasi = durasi;
-            KelompokUsia = kelompokUsia;
-            Bahasa = bahasa;
-            Is_sub_indo = is_sub_indo;
-            CoverImage = coverImage;
-            Diskon = diskon;
-        }
         #endregion
 
         #region PROPERTIES

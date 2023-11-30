@@ -26,15 +26,6 @@ namespace Celikoor_LIB
             TglDibuka = DateTime.Now;
             Kota = "";
         }
-
-        public Cinema(int id, string nama_cabang, string alamat, DateTime tglDibuka, string kota)
-        {
-            Id = id;
-            Nama_cabang = nama_cabang;
-            Alamat = alamat;
-            TglDibuka = tglDibuka;
-            Kota = kota;
-        }
         #endregion
 
         #region PROPERTIES

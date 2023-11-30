@@ -20,11 +20,6 @@ namespace Celikoor_LIB
             Id = 0;
             Nama = "";
         }
-        public Kelompok(int id, string nama)
-        {
-            Id = id;
-            Nama = nama;
-        }
         #endregion
 
         #region PROPERTIES

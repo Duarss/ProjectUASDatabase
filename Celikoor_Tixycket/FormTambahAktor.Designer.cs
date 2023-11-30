@@ -108,10 +108,10 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox2.Location = new System.Drawing.Point(902, 43);
+            this.pictureBox2.Location = new System.Drawing.Point(902, 44);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(11, 458);
+            this.pictureBox2.Size = new System.Drawing.Size(11, 457);
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
             // 
@@ -121,7 +121,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(38, 44);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(11, 458);
+            this.pictureBox1.Size = new System.Drawing.Size(11, 457);
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
             // 

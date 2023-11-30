@@ -22,13 +22,6 @@ namespace Celikoor_LIB
             Nama = "";
             Deskripsi = "";
         }
-
-        public Jenis_Studio(int id, string nama, string deskripsi)
-        {
-            Id = id;
-            Nama = nama;
-            Deskripsi = deskripsi;
-        }
         #endregion
 
         #region PROPERTIES

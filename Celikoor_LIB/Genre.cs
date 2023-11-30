@@ -22,12 +22,6 @@ namespace Celikoor_LIB
             Nama = "";
             Deskripsi = "";
         }
-        public Genre(int id, string nama, string deskripsi)
-        {
-            Id = id;
-            Nama = nama;
-            Deskripsi = deskripsi;
-        }
         #endregion
 
         #region PROPERTIES

@@ -122,6 +122,7 @@ namespace Celikoor_Tixycket
                 buttonLogInOut.Text = "Log in";
                 konsumenLogin = null;
                 pegawaiLogin = null;
+                labelLogInSebagai.Text = "Logged In as : ";
                 MessageBox.Show("Anda Berhasil Log Out!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AturMenuAfterLogout();
             }

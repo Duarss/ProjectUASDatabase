@@ -22,13 +22,6 @@ namespace Celikoor_LIB
             Tanggal = DateTime.Now;
             Jam_pemutaran = "";
         }
-
-        public Jadwal_film(int id, DateTime tanggal, string jam_pemutaran)
-        {
-            Id = id;
-            Tanggal = tanggal;
-            Jam_pemutaran = jam_pemutaran;
-        }
         #endregion
 
         #region PROPERTIES
