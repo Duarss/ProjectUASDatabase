@@ -74,7 +74,7 @@
             this.buttonKeluar.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
             this.buttonKeluar.Location = new System.Drawing.Point(814, 592);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(182, 56);
             this.buttonKeluar.TabIndex = 34;
@@ -88,7 +88,7 @@
             this.buttonKosongi.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKosongi.ForeColor = System.Drawing.Color.White;
             this.buttonKosongi.Location = new System.Drawing.Point(469, 592);
-            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKosongi.Name = "buttonKosongi";
             this.buttonKosongi.Size = new System.Drawing.Size(182, 56);
             this.buttonKosongi.TabIndex = 35;
@@ -102,7 +102,7 @@
             this.buttonSimpan.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
             this.buttonSimpan.Location = new System.Drawing.Point(137, 592);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(182, 56);
             this.buttonSimpan.TabIndex = 33;
@@ -125,7 +125,7 @@
             // 
             this.textBoxNamaPegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNamaPegawai.Location = new System.Drawing.Point(529, 208);
-            this.textBoxNamaPegawai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNamaPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNamaPegawai.Name = "textBoxNamaPegawai";
             this.textBoxNamaPegawai.Size = new System.Drawing.Size(302, 36);
             this.textBoxNamaPegawai.TabIndex = 20;
@@ -145,7 +145,7 @@
             // 
             this.textBoxIdPegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIdPegawai.Location = new System.Drawing.Point(529, 140);
-            this.textBoxIdPegawai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIdPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIdPegawai.Name = "textBoxIdPegawai";
             this.textBoxIdPegawai.Size = new System.Drawing.Size(104, 36);
             this.textBoxIdPegawai.TabIndex = 22;
@@ -176,7 +176,7 @@
             // 
             this.textBoxUsernamePegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsernamePegawai.Location = new System.Drawing.Point(529, 344);
-            this.textBoxUsernamePegawai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxUsernamePegawai.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUsernamePegawai.Name = "textBoxUsernamePegawai";
             this.textBoxUsernamePegawai.Size = new System.Drawing.Size(302, 36);
             this.textBoxUsernamePegawai.TabIndex = 30;
@@ -196,7 +196,7 @@
             // 
             this.textBoxPasswordPegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPasswordPegawai.Location = new System.Drawing.Point(529, 411);
-            this.textBoxPasswordPegawai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPasswordPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPasswordPegawai.Name = "textBoxPasswordPegawai";
             this.textBoxPasswordPegawai.Size = new System.Drawing.Size(302, 36);
             this.textBoxPasswordPegawai.TabIndex = 32;
@@ -222,7 +222,7 @@
             "Operator",
             "Kasir"});
             this.comboBoxRolePegawai.Location = new System.Drawing.Point(529, 474);
-            this.comboBoxRolePegawai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxRolePegawai.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxRolePegawai.Name = "comboBoxRolePegawai";
             this.comboBoxRolePegawai.Size = new System.Drawing.Size(302, 37);
             this.comboBoxRolePegawai.TabIndex = 36;
@@ -231,7 +231,7 @@
             // 
             this.textBoxEmailPegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmailPegawai.Location = new System.Drawing.Point(529, 278);
-            this.textBoxEmailPegawai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxEmailPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEmailPegawai.Name = "textBoxEmailPegawai";
             this.textBoxEmailPegawai.Size = new System.Drawing.Size(302, 36);
             this.textBoxEmailPegawai.TabIndex = 38;
