@@ -41,7 +41,7 @@ namespace Celikoor_LIB
         //! METHOD CREATE C
         public static void TambahData(Jadwal_film jadwalFilm)
         {
-            string perintah = $"INSERT INTO jadwal_films (id, tanggal, jam_pemutaran) VALUES ('{jadwalFilm.Id}', '{jadwalFilm.Tanggal.ToShortDateString()}', '{jadwalFilm.Jam_pemutaran}');";
+            string perintah = $"INSERT INTO jadwal_films (tanggal, jam_pemutaran) VALUES ('{jadwalFilm.Tanggal.ToShortDateString()}', '{jadwalFilm.Jam_pemutaran}');";
 
             Koneksi.JalankanPerintahQuery(perintah);
         }

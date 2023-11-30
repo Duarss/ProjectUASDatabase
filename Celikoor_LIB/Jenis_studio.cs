@@ -41,7 +41,7 @@ namespace Celikoor_LIB
         //! METHOD CREATE C
         public static void TambahData(Jenis_Studio jenisStudio)
         {
-            string perintah = $"INSERT INTO jenis_studios (id, nama, deskripsi) VALUES ('{jenisStudio.Id}', '{jenisStudio.Nama}', '{jenisStudio.Deskripsi}');";
+            string perintah = $"INSERT INTO jenis_studios (nama, deskripsi) VALUES ('{jenisStudio.Nama}', '{jenisStudio.Deskripsi}');";
 
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }

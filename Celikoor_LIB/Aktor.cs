@@ -48,8 +48,8 @@ namespace Celikoor_LIB
         //! METHOD CREATE C
         public static void TambahData(Aktor aktor)
         {
-            string perintah = $"INSERT INTO aktors (id, nama, tgl_lahir, gender, negara_asal) " +
-                $"VALUES ('{aktor.Id}', '{aktor.Nama}', '{aktor.TglLahir.ToShortDateString()}', '{aktor.Gender}', '{aktor.NegaraAsal}');";
+            string perintah = $"INSERT INTO aktors (nama, tgl_lahir, gender, negara_asal) " +
+                $"VALUES ('{aktor.Nama}', '{aktor.TglLahir.ToShortDateString()}', '{aktor.Gender}', '{aktor.NegaraAsal}');";
 
             Koneksi.JalankanPerintahQuery(perintah);
         }
@@ -72,7 +72,7 @@ namespace Celikoor_LIB
         }
 
         //! METHOD RETRIEVE R dan FILTER F
-        public static List<Aktor> BacaData(string id="", string nama = "")
+        public static List<Aktor> BacaData(string id="", string nama ="")
         {
             string perintah;
 

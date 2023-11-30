@@ -37,7 +37,7 @@ namespace Celikoor_LIB
         public static void TambahData(Kelompok kelompok)
         {
             //susun perintah query
-            string perintah = $"INSERT INTO kelompoks (id, nama) VALUES ('{kelompok.Id}', '{kelompok.Nama}');"; 
+            string perintah = $"INSERT INTO kelompoks (nama) VALUES ('{kelompok.Nama}');"; 
 
             Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
         }

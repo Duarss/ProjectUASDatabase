@@ -9,13 +9,16 @@ namespace Celikoor_LIB
 {
     public class Pegawai
     {
+        #region FIELDS
         private int id;
         private string nama;
         private string email;
         private string username;
         private string password;
         private string role;
+        #endregion
 
+        #region CONSTRUCTORS
         public Pegawai()
         {
             Id = 0;
@@ -25,32 +28,29 @@ namespace Celikoor_LIB
             Password = "";
             Role = "";
         }
-        public Pegawai(int id, string nama, string email, string username, string password, string role)
-        {
-            Id = id;
-            Nama = nama;
-            Email = email;
-            Username = username;
-            Password = password;
-            Role = role;
-        }
+        #endregion
 
+        #region PROPERTIES
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
         public string Email { get => email; set => email = value; }
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
         public string Role { get => role; set => role = value; }
+        #endregion
 
+        #region METHODS
+        //! METHOD CREATE C
         public static void TambahData(Pegawai pegawai)
         {
-            string perintah = $"INSERT INTO pegawais (id, nama, email, username, password, roles) " +
-                $"VALUES ('{pegawai.Id}', '{pegawai.Nama}', '{pegawai.Email}', '{pegawai.Username}', '{pegawai.Password}'" +
+            string perintah = $"INSERT INTO pegawais (nama, email, username, password, roles) " +
+                $"VALUES ('{pegawai.Nama}', '{pegawai.Email}', '{pegawai.Username}', '{pegawai.Password}'" +
                 $", '{pegawai.Role}');";
 
             Koneksi.JalankanPerintahQuery(perintah);
         }
 
+        //! METHOD DELETE D
         public static void HapusData(string idHapus)
         {
             string perintah = $"DELETE FROM pegawais WHERE id='{idHapus}';";
@@ -58,6 +58,7 @@ namespace Celikoor_LIB
             Koneksi.JalankanPerintahQuery(perintah);
         }
 
+        //! METHOD RETRIEVE R dan FILTER F
         public static List<Pegawai> BacaData(string id = "", string nama = "")
         {
             string perintah;
@@ -90,6 +91,8 @@ namespace Celikoor_LIB
 
             return listPegawai;
         }
+
+        //! METHOD CEK LOGIN PEGAWAI
         public static Pegawai CekLogin(string username, string pswd)
         {
             string perintah = $"SELECT * FROM pegawais p WHERE p.username='{username}' and p.password = '{pswd}'";
@@ -110,5 +113,6 @@ namespace Celikoor_LIB
 
             else return null;
         }
+        #endregion
     }
 }

@@ -31,17 +31,6 @@ namespace Celikoor_LIB
             Harga_weekday = 0;
             Harga_weekend = 0;
         }
-
-        public Studio(int id, string nama, int kapasitas, Jenis_Studio jenisStudio, Cinema cinema, int harga_weekday, int harga_weekend)
-        {
-            Id = id;
-            Nama = nama;
-            Kapasitas = kapasitas;
-            JenisStudio = jenisStudio;
-            Cinema = cinema;
-            Harga_weekday = harga_weekday;
-            Harga_weekend = harga_weekend;
-        }
         #endregion
 
         #region PROPERTIES
@@ -58,8 +47,8 @@ namespace Celikoor_LIB
         //! METHOD CREATE C
         public static void TambahData(Studio studio)
         {
-            string perintah = $"INSERT INTO studios (id, nama, kapasitas, jenis_studios_id, cinemas_id, harga_weekday, harga_weekend)" +
-                $"VALUES ('{studio.Id}', '{studio.Nama}', '{studio.Kapasitas}', '{studio.JenisStudio.Nama}', '{studio.Cinema.Nama_cabang}'" +
+            string perintah = $"INSERT INTO studios (nama, kapasitas, jenis_studios_id, cinemas_id, harga_weekday, harga_weekend)" +
+                $"VALUES ('{studio.Nama}', '{studio.Kapasitas}', '{studio.JenisStudio.Id}', '{studio.Cinema.Id}'" +
                 $", '{studio.Harga_weekday}', '{studio.Harga_weekend}');";
 
             Koneksi.JalankanPerintahQuery(perintah);
@@ -69,7 +58,7 @@ namespace Celikoor_LIB
         public static void UbahData(Studio studio)
         {
             string perintah = $"UPDATE studios SET nama='{studio.Nama}', kapasitas='{studio.Kapasitas}'" +
-                $", jenis_studio_id='{studio.JenisStudio.Nama}', cinemas_id='{studio.Cinema.Nama_cabang}'" +
+                $", jenis_studio_id='{studio.JenisStudio.Id}', cinemas_id='{studio.Cinema.Id}'" +
                 $", harga_weekday='{studio.Harga_weekday}', harga_weekend='{studio.Harga_weekend}' WHERE id='{studio.Id}';";
 
             Koneksi.JalankanPerintahQuery(perintah);

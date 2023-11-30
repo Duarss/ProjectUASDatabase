@@ -40,7 +40,7 @@ namespace Celikoor_LIB
         //! METHOD CREATE C
         public static void TambahData(Genre genre)
         {
-            string perintah = $"INSERT INTO genres (id, nama, deskripsi) VALUES ('{genre.Id}', '{genre.Nama}', '{genre.Deskripsi}');";
+            string perintah = $"INSERT INTO genres (nama, deskripsi) VALUES ('{genre.Nama}', '{genre.Deskripsi}');";
 
             Koneksi.JalankanPerintahQuery(perintah);
         }

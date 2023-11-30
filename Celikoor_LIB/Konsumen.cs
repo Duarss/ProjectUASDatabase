@@ -34,19 +34,6 @@ namespace Celikoor_LIB
             Username = "";
             Password = "";
         }
-
-        public Konsumen(int id, string nama, string email, string noHp, string gender, DateTime tglLahir, double saldo, string username, string password)
-        {
-            Id = id;
-            Nama = nama;
-            Email = email;
-            NoHp = noHp;
-            Gender = gender;
-            TglLahir = tglLahir;
-            Saldo = saldo;
-            Username = username;
-            Password = password;
-        }
         #endregion
 
         #region PROPERTIES
@@ -65,8 +52,8 @@ namespace Celikoor_LIB
         //! METHOD CREATE C
         public static void TambahData(Konsumen konsumen)
         {
-            string perintah = $"INSERT INTO konsumens (id, nama, email, no_hp, gender, tgl_lahir, saldo, username, password) " +
-                $"VALUES ('{konsumen.Id}', '{konsumen.Nama}', '{konsumen.Email}', '{konsumen.NoHp}', '{konsumen.Gender}'" +
+            string perintah = $"INSERT INTO konsumens (nama, email, no_hp, gender, tgl_lahir, saldo, username, password) " +
+                $"VALUES ('{konsumen.Nama}', '{konsumen.Email}', '{konsumen.NoHp}', '{konsumen.Gender}'" +
                 $", '{konsumen.TglLahir.ToShortDateString()}', '{konsumen.Saldo}', '{konsumen.Username}', '{konsumen.Password}');";
 
             Koneksi.JalankanPerintahQuery(perintah);
