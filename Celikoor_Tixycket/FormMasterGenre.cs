@@ -16,5 +16,10 @@ namespace Celikoor_Tixycket
         {
             InitializeComponent();
         }
+
+        private void FormMasterGenre_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
