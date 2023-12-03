@@ -129,11 +129,12 @@ namespace Celikoor_Tixycket
 
         }
         #endregion
+
         private void cinemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormMasterCinema frmCinema = new FormMasterCinema();
-            frmCinema.MdiParent = this;
-            frmCinema.Show();
+            FormMasterCinema frmMasterCinema = new FormMasterCinema();
+            frmMasterCinema.MdiParent = this;
+            frmMasterCinema.Show();
         }
 
         private void studioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -204,5 +205,7 @@ namespace Celikoor_Tixycket
         {
 
         }
+
+
     }
 }

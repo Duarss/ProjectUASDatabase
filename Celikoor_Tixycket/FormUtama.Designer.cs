@@ -32,7 +32,6 @@
             this.menuStripFormUtama = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.konsumenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jENISSTUDIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -52,6 +51,7 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.labelLogInSebagai = new System.Windows.Forms.Label();
             this.buttonLogInOut = new System.Windows.Forms.Button();
+            this.cinemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripFormUtama.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +84,7 @@
             // masterToolStripMenuItem
             // 
             this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.konsumenToolStripMenuItem,
+            this.cinemaToolStripMenuItem,
             this.studioToolStripMenuItem,
             this.jENISSTUDIOToolStripMenuItem,
             this.toolStripMenuItem1,
@@ -98,14 +98,6 @@
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(256, 38);
             this.masterToolStripMenuItem.Text = "MASTER DATA";
-            // 
-            // konsumenToolStripMenuItem
-            // 
-            this.konsumenToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.konsumenToolStripMenuItem.Name = "konsumenToolStripMenuItem";
-            this.konsumenToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.konsumenToolStripMenuItem.Text = "CINEMA";
-            this.konsumenToolStripMenuItem.Click += new System.EventHandler(this.konsumenToolStripMenuItem_Click);
             // 
             // studioToolStripMenuItem
             // 
@@ -257,6 +249,14 @@
             this.buttonLogInOut.UseVisualStyleBackColor = true;
             this.buttonLogInOut.Click += new System.EventHandler(this.buttonLogInOut_Click);
             // 
+            // cinemaToolStripMenuItem
+            // 
+            this.cinemaToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
+            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.cinemaToolStripMenuItem.Text = "CINEMA";
+            this.cinemaToolStripMenuItem.Click += new System.EventHandler(this.cinemaToolStripMenuItem_Click);
+            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -286,7 +286,6 @@
         private System.Windows.Forms.MenuStrip menuStripFormUtama;
         private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transaksiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem konsumenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jENISSTUDIOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gENREToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kelompokToolStripMenuItem;
@@ -306,5 +305,6 @@
         private System.Windows.Forms.Label labelLogInSebagai;
         internal System.Windows.Forms.Button buttonLogInOut;
         private System.Windows.Forms.ToolStripMenuItem pegawaiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cinemaToolStripMenuItem;
     }
 }

@@ -36,8 +36,8 @@
             this.textboxCari = new System.Windows.Forms.TextBox();
             this.comboboxCari = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.buttonCari = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
@@ -84,6 +84,7 @@
             // 
             // comboboxCari
             // 
+            this.comboboxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxCari.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboboxCari.FormattingEnabled = true;
             this.comboboxCari.Items.AddRange(new object[] {
@@ -107,19 +108,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Cari Berdasarkan:";
             // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Tan;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(36, 21);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(936, 55);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "MASTER AKTOR";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // buttonCari
             // 
             this.buttonCari.BackColor = System.Drawing.Color.BurlyWood;
@@ -132,6 +120,19 @@
             this.buttonCari.TabIndex = 77;
             this.buttonCari.Text = "CARI";
             this.buttonCari.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Tan;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(36, 21);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(936, 55);
+            this.label3.TabIndex = 75;
+            this.label3.Text = "MASTER AKTOR";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvData
             // 

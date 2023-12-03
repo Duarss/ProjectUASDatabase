@@ -15,6 +15,7 @@ namespace Celikoor_Tixycket
         public FormMasterAktor()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }
