@@ -204,7 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 658);
+            this.ClientSize = new System.Drawing.Size(1006, 658);
             this.Controls.Add(this.buttonHapus);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonKeluar);

@@ -52,6 +52,7 @@
     <Compile Include="Aktor_film.cs" />
     <Compile Include="Cinema.cs" />
     <Compile Include="Film.cs" />
+    <Compile Include="Film_studio.cs" />
     <Compile Include="Jadwal_film.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="Genre_film.cs" />

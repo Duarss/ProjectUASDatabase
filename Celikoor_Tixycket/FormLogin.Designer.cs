@@ -47,7 +47,6 @@ namespace Celikoor_Tixycket
             this.pageIndicator2 = new System.Windows.Forms.Button();
             this.pageIndicator1 = new System.Windows.Forms.Button();
             this.textBoxUsernameLogin = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -251,11 +250,6 @@ namespace Celikoor_Tixycket
             this.textBoxUsernameLogin.Text = "Enter your username";
             this.textBoxUsernameLogin.Click += new System.EventHandler(this.textBoxUsernameLogin_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
-            // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
@@ -388,7 +382,6 @@ namespace Celikoor_Tixycket
         private Button pageIndicator3;
         private Button pageIndicator2;
         private Button pageIndicator1;
-        private Timer timer1;
         private Label labelPassword;
         private Label labelUsername;
         private RadioButton radioButtonKonsumen;

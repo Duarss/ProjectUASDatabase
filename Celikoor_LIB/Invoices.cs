@@ -77,7 +77,7 @@ namespace Celikoor_LIB
             string invoiceBaru = "001";
 
             string perintah = $"SELECT * FROM invoices " +
-                //$"\nWHERE tanggal=current_date " +
+                $"\nWHERE tanggal=current_date " +
                 $"\norder by invoices desc " +
                 $"\nlimit 1;";
 

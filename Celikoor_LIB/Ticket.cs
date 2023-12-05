@@ -56,11 +56,15 @@ namespace Celikoor_LIB
 
             Koneksi.JalankanPerintahQuery(perintah);
         }
+
         //! METHOD UBAH U
         public static void UbahData(Ticket ticket)
         {
+            string perintah = $"UPDATE tikets SET status_hadir='TRUE' WHERE invoices_id='{ticket.NoInvoice.Id}';";
 
+            Koneksi.JalankanPerintahQuery(perintah);
         }
+
         //! METHOD RETRIEVE R
         public static string GenerateBarcode(Ticket ticket)
         {
