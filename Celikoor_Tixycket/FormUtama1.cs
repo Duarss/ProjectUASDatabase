@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Celikoor_LIB;
 
 namespace Celikoor_Tixycket
 {
@@ -16,6 +17,7 @@ namespace Celikoor_Tixycket
         {
             InitializeComponent();
         }
+
         public Konsumen konsumenLogin;
         public Pegawai pegawaiLogin;
         public FormRegisterKonsumen formRegisterKonsumen;
@@ -146,6 +148,15 @@ namespace Celikoor_Tixycket
             {
                 menu.Visible = false;
             }
+        }
+
+        public void LoginConstraint(bool status, string text)
+        {
+            buttonLogInOut.Enabled = status;
+            buttonLogInOut.Text = text;
+            masterToolStripMenuItem.Enabled = status;
+            sistemToolStripMenuItem.Enabled = status;
+            transaksiToolStripMenuItem.Enabled = status;
         }
 
         private void AturMenu()
