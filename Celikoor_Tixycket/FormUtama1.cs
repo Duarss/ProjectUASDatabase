@@ -159,6 +159,7 @@ namespace Celikoor_Tixycket
                     buttonSystem.Visible = true;
                     panelSystem.Visible = true;
                     buttonTransaction.Visible = true;
+                    buttonTransaction.Enabled = false;
                 }
                 else if (pegawaiLogin.Role == "OPERATOR")
                 {
@@ -173,13 +174,20 @@ namespace Celikoor_Tixycket
                 }
                 else if (pegawaiLogin.Role == "KASIR")
                 {
-                    sistemToolStripMenuItem.Visible = true;
-                    laporanToolStripMenuItem.Visible = true;
+                    buttonMaster.Enabled = false;
+                    panelMaster.Enabled = false;
+                    buttonSystem.Enabled = false;
+                    panelSystem.Enabled = false;
+                    buttonTransaction.Enabled = true;
                 }
             }
             if (konsumenLogin != null)
             {
-                transaksiToolStripMenuItem.Visible = true;
+                buttonMaster.Enabled = false;
+                panelMaster.Enabled = false;
+                buttonSystem.Enabled = false;
+                panelSystem.Enabled = false;
+                buttonTransaction.Enabled = true;
             }
         }
         #endregion

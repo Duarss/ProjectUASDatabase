@@ -63,7 +63,7 @@
             this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForm.Location = new System.Drawing.Point(250, 0);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(834, 565);
+            this.panelForm.Size = new System.Drawing.Size(863, 632);
             this.panelForm.TabIndex = 1;
             // 
             // panelLogoApp
@@ -110,7 +110,6 @@
             // buttonCinema
             // 
             this.buttonCinema.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonCinema.FlatAppearance.BorderSize = 0;
             this.buttonCinema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCinema.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonCinema.Location = new System.Drawing.Point(0, 0);
@@ -126,7 +125,6 @@
             // buttonStudio
             // 
             this.buttonStudio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonStudio.FlatAppearance.BorderSize = 0;
             this.buttonStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStudio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonStudio.Location = new System.Drawing.Point(0, 40);
@@ -142,7 +140,6 @@
             // buttonJenisStudio
             // 
             this.buttonJenisStudio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonJenisStudio.FlatAppearance.BorderSize = 0;
             this.buttonJenisStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonJenisStudio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonJenisStudio.Location = new System.Drawing.Point(0, 80);
@@ -158,7 +155,6 @@
             // buttonGenre
             // 
             this.buttonGenre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonGenre.FlatAppearance.BorderSize = 0;
             this.buttonGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGenre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonGenre.Location = new System.Drawing.Point(0, 120);
@@ -174,7 +170,6 @@
             // buttonAktors
             // 
             this.buttonAktors.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAktors.FlatAppearance.BorderSize = 0;
             this.buttonAktors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAktors.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonAktors.Location = new System.Drawing.Point(0, 160);
@@ -190,7 +185,6 @@
             // buttonKonsumen
             // 
             this.buttonKonsumen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonKonsumen.FlatAppearance.BorderSize = 0;
             this.buttonKonsumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKonsumen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonKonsumen.Location = new System.Drawing.Point(0, 200);
@@ -206,7 +200,6 @@
             // buttonPegawai
             // 
             this.buttonPegawai.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPegawai.FlatAppearance.BorderSize = 0;
             this.buttonPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPegawai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonPegawai.Location = new System.Drawing.Point(0, 240);
@@ -222,7 +215,6 @@
             // buttonKelompok
             // 
             this.buttonKelompok.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonKelompok.FlatAppearance.BorderSize = 0;
             this.buttonKelompok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKelompok.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonKelompok.Location = new System.Drawing.Point(0, 280);
@@ -266,7 +258,6 @@
             // buttonPenjadwalanFilm
             // 
             this.buttonPenjadwalanFilm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPenjadwalanFilm.FlatAppearance.BorderSize = 0;
             this.buttonPenjadwalanFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPenjadwalanFilm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonPenjadwalanFilm.Location = new System.Drawing.Point(0, 0);
@@ -282,7 +273,6 @@
             // buttonPencatatanKedatangan
             // 
             this.buttonPencatatanKedatangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPencatatanKedatangan.FlatAppearance.BorderSize = 0;
             this.buttonPencatatanKedatangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPencatatanKedatangan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonPencatatanKedatangan.Location = new System.Drawing.Point(0, 40);
@@ -298,7 +288,6 @@
             // buttonLaporan
             // 
             this.buttonLaporan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonLaporan.FlatAppearance.BorderSize = 0;
             this.buttonLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLaporan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonLaporan.Location = new System.Drawing.Point(0, 80);
@@ -340,7 +329,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(250, 565);
+            this.panelMenu.Size = new System.Drawing.Size(250, 632);
             this.panelMenu.TabIndex = 0;
             // 
             // panelTransaction
@@ -358,7 +347,6 @@
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(0, 0);
@@ -373,7 +361,6 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Location = new System.Drawing.Point(0, 40);
@@ -388,7 +375,6 @@
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Location = new System.Drawing.Point(0, 80);
@@ -405,7 +391,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1084, 565);
+            this.ClientSize = new System.Drawing.Size(1113, 632);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

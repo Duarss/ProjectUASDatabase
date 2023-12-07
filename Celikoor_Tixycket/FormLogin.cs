@@ -22,7 +22,7 @@ namespace Celikoor_Tixycket
         }
         #region Global Variable
         List<Image> imageList = new List<Image> { Resources.poster1, Resources.poster3};
-        FormUtama formUtama;
+        FormUtama1 formUtama1;
         int indexImg = 0; //untuk ganti poster
         bool loginStatus = false; //ganti nama button di formutama. Ada di formClosing
         string loginAs;
@@ -48,7 +48,7 @@ namespace Celikoor_Tixycket
         #region Events
         private void FormLoginKonsumen_Load(object sender, EventArgs e)
         {
-            formUtama = (FormUtama)this.Owner;
+            formUtama1 = (FormUtama1)this.Owner;
             panelImage.Select();//to prevent textbox from being selected when a form load
         }
 
@@ -56,7 +56,7 @@ namespace Celikoor_Tixycket
         {
             this.ActiveControl = null;
             this.Visible = false;
-            formUtama.formRegisterKonsumen.Visible = true;
+            formUtama1.formRegisterKonsumen.Visible = true;
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -72,24 +72,24 @@ namespace Celikoor_Tixycket
                     {
                         if (loginAs == "Konsumen")
                         {
-                            formUtama.konsumenLogin = Konsumen.CekLogin(id, pwd);
+                            formUtama1.konsumenLogin = Konsumen.CekLogin(id, pwd);
                         }
                         else if (loginAs == "Pegawai")
                         {
-                            formUtama.pegawaiLogin = Pegawai.CekLogin(id, pwd);
+                            formUtama1.pegawaiLogin = Pegawai.CekLogin(id, pwd);
                         }
                         //cek apakah ada yang berhasil login
-                        if (formUtama.konsumenLogin == null && formUtama.pegawaiLogin == null) //jik tidak berhasil
+                        if (formUtama1.konsumenLogin == null && formUtama1.pegawaiLogin == null) //jik tidak berhasil
                         {
                             MessageBox.Show("Username atau password salah");
                         }
                         else //jika berhasil
                         {
-                            formUtama.loginStatus = true;
-                            formUtama.Visible = true;
+                            formUtama1.loginStatus = true;
+                            formUtama1.Visible = true;
                             loginStatus = true;
                             loginAs = null;
-                            formUtama.formRegisterKonsumen.Close();
+                            formUtama1.formRegisterKonsumen.Close();
                             this.Close();
                         }
                     }
@@ -170,14 +170,14 @@ namespace Celikoor_Tixycket
         {
             if (loginStatus)
             {
-                formUtama.LoginConstraint(true, "Log out");
+                formUtama1.LoginConstraint(true, "Log out");
             }
             else
             {
-                formUtama.LoginConstraint(true, "Log in");
+                formUtama1.LoginConstraint(true, "Log in");
             }
 
-            formUtama.formRegisterKonsumen.Close();
+            formUtama1.formRegisterKonsumen.Close();
         }
         private void FormLoginKonsumen_Click(object sender, EventArgs e)
         {
