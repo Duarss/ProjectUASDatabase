@@ -51,23 +51,30 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.buttonLogInOut = new System.Windows.Forms.Button();
+            this.panelLabel = new System.Windows.Forms.Panel();
+            this.labelLoginSebagai = new System.Windows.Forms.Label();
+            this.panelLogoApp.SuspendLayout();
             this.panelMaster.SuspendLayout();
             this.panelSystem.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelTransaction.SuspendLayout();
+            this.panelLabel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelForm
             // 
             this.panelForm.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForm.Location = new System.Drawing.Point(250, 0);
+            this.panelForm.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelForm.Location = new System.Drawing.Point(250, 61);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(863, 632);
+            this.panelForm.Size = new System.Drawing.Size(863, 571);
             this.panelForm.TabIndex = 1;
+            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
             // 
             // panelLogoApp
             // 
+            this.panelLogoApp.Controls.Add(this.buttonLogInOut);
             this.panelLogoApp.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogoApp.Location = new System.Drawing.Point(0, 0);
             this.panelLogoApp.Name = "panelLogoApp";
@@ -386,12 +393,44 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // buttonLogInOut
+            // 
+            this.buttonLogInOut.BackColor = System.Drawing.Color.Khaki;
+            this.buttonLogInOut.ForeColor = System.Drawing.Color.Black;
+            this.buttonLogInOut.Location = new System.Drawing.Point(38, 25);
+            this.buttonLogInOut.Name = "buttonLogInOut";
+            this.buttonLogInOut.Size = new System.Drawing.Size(150, 50);
+            this.buttonLogInOut.TabIndex = 0;
+            this.buttonLogInOut.Text = "LOGIN";
+            this.buttonLogInOut.UseVisualStyleBackColor = false;
+            this.buttonLogInOut.Click += new System.EventHandler(this.buttonLogInOut_Click);
+            // 
+            // panelLabel
+            // 
+            this.panelLabel.BackColor = System.Drawing.Color.Chocolate;
+            this.panelLabel.Controls.Add(this.labelLoginSebagai);
+            this.panelLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLabel.Location = new System.Drawing.Point(250, 0);
+            this.panelLabel.Name = "panelLabel";
+            this.panelLabel.Size = new System.Drawing.Size(863, 58);
+            this.panelLabel.TabIndex = 2;
+            // 
+            // labelLoginSebagai
+            // 
+            this.labelLoginSebagai.AutoSize = true;
+            this.labelLoginSebagai.Location = new System.Drawing.Point(13, 16);
+            this.labelLoginSebagai.Name = "labelLoginSebagai";
+            this.labelLoginSebagai.Size = new System.Drawing.Size(191, 25);
+            this.labelLoginSebagai.TabIndex = 0;
+            this.labelLoginSebagai.Text = "Logged In As : None";
+            // 
             // FormUtama1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1113, 632);
+            this.Controls.Add(this.panelLabel);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -399,10 +438,13 @@
             this.Name = "FormUtama1";
             this.Text = "FormUtama1";
             this.Load += new System.EventHandler(this.FormUtama1_Load);
+            this.panelLogoApp.ResumeLayout(false);
             this.panelMaster.ResumeLayout(false);
             this.panelSystem.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelTransaction.ResumeLayout(false);
+            this.panelLabel.ResumeLayout(false);
+            this.panelLabel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -431,5 +473,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonLogInOut;
+        private System.Windows.Forms.Panel panelLabel;
+        private System.Windows.Forms.Label labelLoginSebagai;
     }
 }

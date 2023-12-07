@@ -32,6 +32,7 @@
             this.menuStripFormUtama = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cinemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jENISSTUDIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -51,7 +52,6 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.labelLogInSebagai = new System.Windows.Forms.Label();
             this.buttonLogInOut = new System.Windows.Forms.Button();
-            this.cinemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripFormUtama.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@
             this.menuStripFormUtama.Location = new System.Drawing.Point(0, 0);
             this.menuStripFormUtama.Name = "menuStripFormUtama";
             this.menuStripFormUtama.Padding = new System.Windows.Forms.Padding(6, 1, 0, 1);
-            this.menuStripFormUtama.Size = new System.Drawing.Size(2497, 40);
+            this.menuStripFormUtama.Size = new System.Drawing.Size(1924, 40);
             this.menuStripFormUtama.TabIndex = 0;
             this.menuStripFormUtama.Text = "menuStrip1";
             // 
@@ -98,6 +98,14 @@
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(256, 38);
             this.masterToolStripMenuItem.Text = "MASTER DATA";
+            // 
+            // cinemaToolStripMenuItem
+            // 
+            this.cinemaToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
+            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
+            this.cinemaToolStripMenuItem.Text = "CINEMA";
+            this.cinemaToolStripMenuItem.Click += new System.EventHandler(this.cinemaToolStripMenuItem_Click);
             // 
             // studioToolStripMenuItem
             // 
@@ -231,7 +239,7 @@
             this.labelLogInSebagai.AutoSize = true;
             this.labelLogInSebagai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelLogInSebagai.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogInSebagai.Location = new System.Drawing.Point(1845, 5);
+            this.labelLogInSebagai.Location = new System.Drawing.Point(1154, 0);
             this.labelLogInSebagai.Name = "labelLogInSebagai";
             this.labelLogInSebagai.Size = new System.Drawing.Size(306, 34);
             this.labelLogInSebagai.TabIndex = 2;
@@ -240,7 +248,7 @@
             // buttonLogInOut
             // 
             this.buttonLogInOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogInOut.Location = new System.Drawing.Point(2232, -1);
+            this.buttonLogInOut.Location = new System.Drawing.Point(1483, -1);
             this.buttonLogInOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLogInOut.Name = "buttonLogInOut";
             this.buttonLogInOut.Size = new System.Drawing.Size(253, 41);
@@ -249,20 +257,12 @@
             this.buttonLogInOut.UseVisualStyleBackColor = true;
             this.buttonLogInOut.Click += new System.EventHandler(this.buttonLogInOut_Click);
             // 
-            // cinemaToolStripMenuItem
-            // 
-            this.cinemaToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
-            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.cinemaToolStripMenuItem.Text = "CINEMA";
-            this.cinemaToolStripMenuItem.Click += new System.EventHandler(this.cinemaToolStripMenuItem_Click);
-            // 
             // FormUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(2497, 844);
+            this.ClientSize = new System.Drawing.Size(1924, 844);
             this.Controls.Add(this.buttonLogInOut);
             this.Controls.Add(this.labelLogInSebagai);
             this.Controls.Add(this.menuStripFormUtama);

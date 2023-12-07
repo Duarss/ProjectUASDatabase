@@ -154,9 +154,9 @@ namespace Celikoor_Tixycket
         {
             buttonLogInOut.Enabled = status;
             buttonLogInOut.Text = text;
-            masterToolStripMenuItem.Enabled = status;
-            sistemToolStripMenuItem.Enabled = status;
-            transaksiToolStripMenuItem.Enabled = status;
+            buttonMaster.Enabled = status;
+            buttonSystem.Enabled = status;
+            buttonTransaction.Enabled = status;
         }
 
         private void AturMenu()
@@ -209,6 +209,61 @@ namespace Celikoor_Tixycket
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonLogInOut_Click(object sender, EventArgs e)
+        {
+            if (loginStatus == false)
+            {
+                Form form = Application.OpenForms["FormLoginKonsumen"];
+                LoginConstraint(false, "In Progress");
+
+                if (form == null)
+                {
+                    formLoginKonsumen = new FormLogin();
+                    formLoginKonsumen.Owner = this;
+
+                    formRegisterKonsumen = new FormRegisterKonsumen();
+                    formRegisterKonsumen.Owner = this;
+
+                    formLoginKonsumen.ShowDialog();
+                    formLoginKonsumen.StartPosition = FormStartPosition.CenterScreen;
+                }
+
+                else
+                {
+                    form.Show();
+                    form.BringToFront();
+                }
+
+                if (konsumenLogin != null)
+                {
+                    labelLoginSebagai.Text = "Logged In as : " + konsumenLogin.Nama;
+
+                }
+
+                else if (pegawaiLogin != null)
+                {
+                    labelLoginSebagai.Text = "Logged In as : " + pegawaiLogin.Nama;
+                }
+
+                AturMenu();
+            }
+            else
+            {
+                loginStatus = false;
+                buttonLogInOut.Text = "Log in";
+                konsumenLogin = null;
+                pegawaiLogin = null;
+                labelLoginSebagai.Text = "Logged In as : ";
+                MessageBox.Show("Anda Berhasil Log Out!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AturMenu();
+            }
+        }
+
+        private void panelForm_Paint(object sender, PaintEventArgs e)
         {
 
         }
