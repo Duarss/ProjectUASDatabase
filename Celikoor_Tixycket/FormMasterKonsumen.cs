@@ -16,5 +16,10 @@ namespace Celikoor_Tixycket
         {
             InitializeComponent();
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

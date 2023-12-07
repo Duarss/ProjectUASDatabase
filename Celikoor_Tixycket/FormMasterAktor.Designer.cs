@@ -58,6 +58,7 @@
             this.buttonKeluar.TabIndex = 74;
             this.buttonKeluar.Text = "&KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // panel1
             // 

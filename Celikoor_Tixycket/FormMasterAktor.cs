@@ -17,5 +17,10 @@ namespace Celikoor_Tixycket
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
