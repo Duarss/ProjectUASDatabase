@@ -16,6 +16,7 @@ namespace Celikoor_Tixycket
         public FormUtama1()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         public Konsumen konsumenLogin;
@@ -205,7 +206,15 @@ namespace Celikoor_Tixycket
 
         private void FormUtama1_Load(object sender, EventArgs e)
         {
-
+            panelMaster.Enabled = false;
+            buttonCinema.Visible = false;
+            buttonStudio.Visible = false;
+            buttonJenisStudio.Visible = false;
+            buttonGenre.Visible = false;
+            buttonAktors.Visible = false;
+            buttonKonsumen.Visible = false;
+            buttonPegawai.Visible = false;
+            buttonKelompok.Visible = false;
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
