@@ -167,33 +167,25 @@ namespace Celikoor_Tixycket
                 if (pegawaiLogin.Role == "ADMIN")
                 {
                     buttonMaster.Visible = true;
-                    panelMaster.Visible = true;
                     buttonSystem.Visible = true;
-                    panelSystem.Visible = true;
-                    buttonTransaction.Visible = true;
+                    buttonTransaction.Visible = true; // +-+
                     buttonTransaction.Enabled = false;
                 }
                 else if (pegawaiLogin.Role == "OPERATOR")
                 {
-                    buttonMaster.Enabled = false;
-                    panelMaster.Enabled = false;
-                    buttonSystem.Enabled = true;
-                    panelSystem.Enabled = true;
-                    buttonPencatatanKedatangan.Enabled = true;
-                    buttonPenjadwalanFilm.Enabled = false;
-                    buttonLaporan.Enabled = false;
+                    buttonSystem.Visible = true;
+                    buttonPenjadwalanFilm.Visible = false;
+                    buttonLaporan.Visible = false;
 
                 }
                 else if (pegawaiLogin.Role == "KASIR")
                 {
-                    buttonMaster.Enabled = false;
-                    panelMaster.Enabled = false;
-                    buttonSystem.Enabled = false;
-                    panelSystem.Enabled = false;
-                    buttonTransaction.Enabled = true;
+                    buttonSystem.Visible = true;
+                    buttonPencatatanKedatangan.Visible = false;
+                    buttonPenjadwalanFilm.Visible = false;
                 }
             }
-            if (konsumenLogin != null)
+            else if (konsumenLogin != null)
             {
                 buttonMaster.Enabled = false;
                 panelMaster.Enabled = false;
@@ -205,7 +197,7 @@ namespace Celikoor_Tixycket
         #endregion
 
         private void FormUtama1_Load(object sender, EventArgs e)
-        {
+        {/*
             panelMaster.Enabled = false;
             buttonCinema.Visible = false;
             buttonStudio.Visible = false;
@@ -215,6 +207,12 @@ namespace Celikoor_Tixycket
             buttonKonsumen.Visible = false;
             buttonPegawai.Visible = false;
             buttonKelompok.Visible = false;
+            */
+            buttonMaster.Visible = false;
+            panelMaster.Visible = false;
+            buttonSystem.Visible = false;
+            panelSystem.Visible = false;
+            buttonTransaction.Visible = false;
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
@@ -257,7 +255,6 @@ namespace Celikoor_Tixycket
                 {
                     labelLoginSebagai.Text = "Logged In as : " + pegawaiLogin.Nama;
                 }
-
                 AturMenu();
             }
             else
@@ -266,6 +263,7 @@ namespace Celikoor_Tixycket
                 buttonLogInOut.Text = "Log in";
                 konsumenLogin = null;
                 pegawaiLogin = null;
+                FormUtama1_Load(sender, e);
                 labelLoginSebagai.Text = "Logged In as : ";
                 MessageBox.Show("Anda Berhasil Log Out!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AturMenu();
@@ -273,6 +271,11 @@ namespace Celikoor_Tixycket
         }
 
         private void panelForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonTransaction_Click(object sender, EventArgs e)
         {
 
         }

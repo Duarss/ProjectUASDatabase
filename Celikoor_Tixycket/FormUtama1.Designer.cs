@@ -30,6 +30,7 @@
         {
             this.panelForm = new System.Windows.Forms.Panel();
             this.panelLogoApp = new System.Windows.Forms.Panel();
+            this.labelLoginSebagai = new System.Windows.Forms.Label();
             this.buttonLogInOut = new System.Windows.Forms.Button();
             this.buttonMaster = new System.Windows.Forms.Button();
             this.panelMaster = new System.Windows.Forms.Panel();
@@ -48,8 +49,6 @@
             this.buttonPenjadwalanFilm = new System.Windows.Forms.Button();
             this.buttonTransaction = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelTransaction = new System.Windows.Forms.Panel();
-            this.labelLoginSebagai = new System.Windows.Forms.Label();
             this.panelLogoApp.SuspendLayout();
             this.panelMaster.SuspendLayout();
             this.panelSystem.SuspendLayout();
@@ -68,20 +67,29 @@
             // 
             // panelLogoApp
             // 
-            this.panelLogoApp.Controls.Add(this.labelLoginSebagai);
             this.panelLogoApp.Controls.Add(this.buttonLogInOut);
+            this.panelLogoApp.Controls.Add(this.labelLoginSebagai);
             this.panelLogoApp.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogoApp.Location = new System.Drawing.Point(0, 0);
             this.panelLogoApp.Name = "panelLogoApp";
-            this.panelLogoApp.Size = new System.Drawing.Size(224, 94);
+            this.panelLogoApp.Size = new System.Drawing.Size(229, 94);
             this.panelLogoApp.TabIndex = 0;
+            // 
+            // labelLoginSebagai
+            // 
+            this.labelLoginSebagai.AutoSize = true;
+            this.labelLoginSebagai.Location = new System.Drawing.Point(12, 20);
+            this.labelLoginSebagai.Name = "labelLoginSebagai";
+            this.labelLoginSebagai.Size = new System.Drawing.Size(161, 20);
+            this.labelLoginSebagai.TabIndex = 1;
+            this.labelLoginSebagai.Text = "Logged In As : None";
             // 
             // buttonLogInOut
             // 
             this.buttonLogInOut.BackColor = System.Drawing.Color.Khaki;
             this.buttonLogInOut.Font = new System.Drawing.Font("Verdana", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogInOut.ForeColor = System.Drawing.Color.Black;
-            this.buttonLogInOut.Location = new System.Drawing.Point(44, 56);
+            this.buttonLogInOut.Location = new System.Drawing.Point(44, 50);
             this.buttonLogInOut.Name = "buttonLogInOut";
             this.buttonLogInOut.Size = new System.Drawing.Size(139, 29);
             this.buttonLogInOut.TabIndex = 0;
@@ -98,7 +106,7 @@
             this.buttonMaster.Location = new System.Drawing.Point(0, 94);
             this.buttonMaster.Name = "buttonMaster";
             this.buttonMaster.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonMaster.Size = new System.Drawing.Size(224, 45);
+            this.buttonMaster.Size = new System.Drawing.Size(229, 45);
             this.buttonMaster.TabIndex = 1;
             this.buttonMaster.Text = "Master";
             this.buttonMaster.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,7 +127,7 @@
             this.panelMaster.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMaster.Location = new System.Drawing.Point(0, 139);
             this.panelMaster.Name = "panelMaster";
-            this.panelMaster.Size = new System.Drawing.Size(224, 325);
+            this.panelMaster.Size = new System.Drawing.Size(229, 325);
             this.panelMaster.TabIndex = 2;
             // 
             // buttonKelompok
@@ -130,7 +138,7 @@
             this.buttonKelompok.Location = new System.Drawing.Point(0, 280);
             this.buttonKelompok.Name = "buttonKelompok";
             this.buttonKelompok.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonKelompok.Size = new System.Drawing.Size(224, 40);
+            this.buttonKelompok.Size = new System.Drawing.Size(229, 40);
             this.buttonKelompok.TabIndex = 7;
             this.buttonKelompok.Text = "Kelompok";
             this.buttonKelompok.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +153,7 @@
             this.buttonPegawai.Location = new System.Drawing.Point(0, 240);
             this.buttonPegawai.Name = "buttonPegawai";
             this.buttonPegawai.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonPegawai.Size = new System.Drawing.Size(224, 40);
+            this.buttonPegawai.Size = new System.Drawing.Size(229, 40);
             this.buttonPegawai.TabIndex = 6;
             this.buttonPegawai.Text = "Pegawai";
             this.buttonPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,7 +168,7 @@
             this.buttonKonsumen.Location = new System.Drawing.Point(0, 200);
             this.buttonKonsumen.Name = "buttonKonsumen";
             this.buttonKonsumen.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonKonsumen.Size = new System.Drawing.Size(224, 40);
+            this.buttonKonsumen.Size = new System.Drawing.Size(229, 40);
             this.buttonKonsumen.TabIndex = 5;
             this.buttonKonsumen.Text = "Konsumen";
             this.buttonKonsumen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,7 +183,7 @@
             this.buttonAktors.Location = new System.Drawing.Point(0, 160);
             this.buttonAktors.Name = "buttonAktors";
             this.buttonAktors.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonAktors.Size = new System.Drawing.Size(224, 40);
+            this.buttonAktors.Size = new System.Drawing.Size(229, 40);
             this.buttonAktors.TabIndex = 4;
             this.buttonAktors.Text = "Aktors";
             this.buttonAktors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,7 +198,7 @@
             this.buttonGenre.Location = new System.Drawing.Point(0, 120);
             this.buttonGenre.Name = "buttonGenre";
             this.buttonGenre.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonGenre.Size = new System.Drawing.Size(224, 40);
+            this.buttonGenre.Size = new System.Drawing.Size(229, 40);
             this.buttonGenre.TabIndex = 3;
             this.buttonGenre.Text = "Genre";
             this.buttonGenre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,7 +213,7 @@
             this.buttonJenisStudio.Location = new System.Drawing.Point(0, 80);
             this.buttonJenisStudio.Name = "buttonJenisStudio";
             this.buttonJenisStudio.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonJenisStudio.Size = new System.Drawing.Size(224, 40);
+            this.buttonJenisStudio.Size = new System.Drawing.Size(229, 40);
             this.buttonJenisStudio.TabIndex = 2;
             this.buttonJenisStudio.Text = "Jenis Studio";
             this.buttonJenisStudio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,7 +228,7 @@
             this.buttonStudio.Location = new System.Drawing.Point(0, 40);
             this.buttonStudio.Name = "buttonStudio";
             this.buttonStudio.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonStudio.Size = new System.Drawing.Size(224, 40);
+            this.buttonStudio.Size = new System.Drawing.Size(229, 40);
             this.buttonStudio.TabIndex = 1;
             this.buttonStudio.Text = "Studio";
             this.buttonStudio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,7 +243,7 @@
             this.buttonCinema.Location = new System.Drawing.Point(0, 0);
             this.buttonCinema.Name = "buttonCinema";
             this.buttonCinema.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonCinema.Size = new System.Drawing.Size(224, 40);
+            this.buttonCinema.Size = new System.Drawing.Size(229, 40);
             this.buttonCinema.TabIndex = 0;
             this.buttonCinema.Text = "Cinema";
             this.buttonCinema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,7 +259,7 @@
             this.buttonSystem.Location = new System.Drawing.Point(0, 464);
             this.buttonSystem.Name = "buttonSystem";
             this.buttonSystem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonSystem.Size = new System.Drawing.Size(224, 45);
+            this.buttonSystem.Size = new System.Drawing.Size(229, 45);
             this.buttonSystem.TabIndex = 3;
             this.buttonSystem.Text = "System";
             this.buttonSystem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -267,7 +275,7 @@
             this.panelSystem.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSystem.Location = new System.Drawing.Point(0, 509);
             this.panelSystem.Name = "panelSystem";
-            this.panelSystem.Size = new System.Drawing.Size(224, 128);
+            this.panelSystem.Size = new System.Drawing.Size(229, 128);
             this.panelSystem.TabIndex = 4;
             // 
             // buttonLaporan
@@ -278,7 +286,7 @@
             this.buttonLaporan.Location = new System.Drawing.Point(0, 80);
             this.buttonLaporan.Name = "buttonLaporan";
             this.buttonLaporan.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonLaporan.Size = new System.Drawing.Size(224, 40);
+            this.buttonLaporan.Size = new System.Drawing.Size(229, 40);
             this.buttonLaporan.TabIndex = 7;
             this.buttonLaporan.Text = "Laporan";
             this.buttonLaporan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,7 +301,7 @@
             this.buttonPencatatanKedatangan.Location = new System.Drawing.Point(0, 40);
             this.buttonPencatatanKedatangan.Name = "buttonPencatatanKedatangan";
             this.buttonPencatatanKedatangan.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonPencatatanKedatangan.Size = new System.Drawing.Size(224, 40);
+            this.buttonPencatatanKedatangan.Size = new System.Drawing.Size(229, 40);
             this.buttonPencatatanKedatangan.TabIndex = 6;
             this.buttonPencatatanKedatangan.Text = "Catat Kedatangan";
             this.buttonPencatatanKedatangan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -308,7 +316,7 @@
             this.buttonPenjadwalanFilm.Location = new System.Drawing.Point(0, 0);
             this.buttonPenjadwalanFilm.Name = "buttonPenjadwalanFilm";
             this.buttonPenjadwalanFilm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonPenjadwalanFilm.Size = new System.Drawing.Size(224, 40);
+            this.buttonPenjadwalanFilm.Size = new System.Drawing.Size(229, 40);
             this.buttonPenjadwalanFilm.TabIndex = 5;
             this.buttonPenjadwalanFilm.Text = "Penjadwalan Film";
             this.buttonPenjadwalanFilm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -324,17 +332,17 @@
             this.buttonTransaction.Location = new System.Drawing.Point(0, 637);
             this.buttonTransaction.Name = "buttonTransaction";
             this.buttonTransaction.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonTransaction.Size = new System.Drawing.Size(224, 45);
+            this.buttonTransaction.Size = new System.Drawing.Size(229, 45);
             this.buttonTransaction.TabIndex = 5;
             this.buttonTransaction.Text = "Transaction";
             this.buttonTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTransaction.UseVisualStyleBackColor = true;
+            this.buttonTransaction.Click += new System.EventHandler(this.buttonTransaction_Click);
             // 
             // panelMenu
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.Peru;
-            this.panelMenu.Controls.Add(this.panelTransaction);
             this.panelMenu.Controls.Add(this.buttonTransaction);
             this.panelMenu.Controls.Add(this.panelSystem);
             this.panelMenu.Controls.Add(this.buttonSystem);
@@ -347,27 +355,9 @@
             this.panelMenu.Size = new System.Drawing.Size(250, 632);
             this.panelMenu.TabIndex = 0;
             // 
-            // panelTransaction
-            // 
-            this.panelTransaction.BackColor = System.Drawing.Color.SandyBrown;
-            this.panelTransaction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTransaction.Location = new System.Drawing.Point(0, 682);
-            this.panelTransaction.Name = "panelTransaction";
-            this.panelTransaction.Size = new System.Drawing.Size(224, 122);
-            this.panelTransaction.TabIndex = 6;
-            // 
-            // labelLoginSebagai
-            // 
-            this.labelLoginSebagai.AutoSize = true;
-            this.labelLoginSebagai.Location = new System.Drawing.Point(19, 19);
-            this.labelLoginSebagai.Name = "labelLoginSebagai";
-            this.labelLoginSebagai.Size = new System.Drawing.Size(191, 25);
-            this.labelLoginSebagai.TabIndex = 1;
-            this.labelLoginSebagai.Text = "Logged In As : None";
-            // 
             // FormUtama1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1113, 632);
@@ -407,7 +397,6 @@
         private System.Windows.Forms.Button buttonPenjadwalanFilm;
         private System.Windows.Forms.Button buttonTransaction;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panelTransaction;
         private System.Windows.Forms.Button buttonLogInOut;
         private System.Windows.Forms.Label labelLoginSebagai;
     }
