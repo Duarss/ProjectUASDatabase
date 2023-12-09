@@ -16,6 +16,7 @@ namespace Celikoor_Tixycket
         public FormTambahAktor()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
@@ -44,6 +45,11 @@ namespace Celikoor_Tixycket
             {
                 MessageBox.Show("Tambah data gagal. Error: " + x.Message);
             }
+        }
+
+        private void FormTambahAktor_Load(object sender, EventArgs e)
+        {
+            textBoxIdAktor.Select();
         }
     }
 }

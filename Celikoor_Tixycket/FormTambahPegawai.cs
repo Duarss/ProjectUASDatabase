@@ -47,5 +47,10 @@ namespace Celikoor_Tixycket
             comboBoxRolePegawai.DataSource = ListData;
             comboBoxRolePegawai.DisplayMember = "Nama";
         }
+
+        private void FormTambahPegawai_Load_1(object sender, EventArgs e)
+        {
+            textBoxIdPegawai.Select();
+        }
     }
 }

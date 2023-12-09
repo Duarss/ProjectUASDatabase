@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.buttonTambah = new System.Windows.Forms.Button();
-            this.buttonHapus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +48,7 @@
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(177, 62);
             this.buttonKeluar.TabIndex = 74;
-            this.buttonKeluar.Text = "&KELUAR";
+            this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
@@ -90,7 +89,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.RowHeadersWidth = 62;
-            this.dgvData.Size = new System.Drawing.Size(1552, 1040);
+            this.dgvData.Size = new System.Drawing.Size(1552, 1057);
             this.dgvData.TabIndex = 76;
             // 
             // buttonTambah
@@ -103,29 +102,15 @@
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(166, 62);
             this.buttonTambah.TabIndex = 73;
-            this.buttonTambah.Text = "&TAMBAH";
+            this.buttonTambah.Text = "&ADD";
             this.buttonTambah.UseVisualStyleBackColor = false;
-            // 
-            // buttonHapus
-            // 
-            this.buttonHapus.BackColor = System.Drawing.Color.BurlyWood;
-            this.buttonHapus.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHapus.ForeColor = System.Drawing.Color.White;
-            this.buttonHapus.Location = new System.Drawing.Point(751, 1163);
-            this.buttonHapus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonHapus.Name = "buttonHapus";
-            this.buttonHapus.Size = new System.Drawing.Size(177, 62);
-            this.buttonHapus.TabIndex = 78;
-            this.buttonHapus.Text = "&HAPUS";
-            this.buttonHapus.UseVisualStyleBackColor = false;
-            this.buttonHapus.Click += new System.EventHandler(this.buttonHapus_Click);
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // FormMasterCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1643, 1241);
-            this.Controls.Add(this.buttonHapus);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvData);
@@ -146,6 +131,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Button buttonTambah;
-        private System.Windows.Forms.Button buttonHapus;
     }
 }

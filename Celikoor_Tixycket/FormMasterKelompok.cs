@@ -21,5 +21,12 @@ namespace Celikoor_Tixycket
         {
             this.Close();
         }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormTambahKelompok formTambahKelompok = new FormTambahKelompok();
+            formTambahKelompok.Owner = this;
+            formTambahKelompok.ShowDialog();
+        }
     }
 }

@@ -28,9 +28,11 @@ namespace Celikoor_Tixycket
 
         }
 
-        private void buttonHapus_Click(object sender, EventArgs e)
+        private void buttonTambah_Click(object sender, EventArgs e)
         {
-
+            FormTambahCinema formTambahCinema = new FormTambahCinema();
+            formTambahCinema.Owner = this;
+            formTambahCinema.ShowDialog();
         }
     }
 }

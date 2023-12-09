@@ -35,5 +35,10 @@ namespace Celikoor_Tixycket
                 MessageBox.Show("Tambah data gagal. Error: " + x.Message);
             }
         }
+
+        private void FormTambahKelompok_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
