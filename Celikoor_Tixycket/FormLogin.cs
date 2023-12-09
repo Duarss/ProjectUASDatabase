@@ -46,7 +46,7 @@ namespace Celikoor_Tixycket
         
         #endregion
         #region Events
-        private void FormLoginKonsumen_Load(object sender, EventArgs e)
+        private void FormLogin_Load(object sender, EventArgs e)
         {
             formUtama1 = (FormUtama1)this.Owner;
             panelImage.Select();//to prevent textbox from being selected when a form load
@@ -166,7 +166,7 @@ namespace Celikoor_Tixycket
             indexImg++;
         }
 
-        private void FormLoginKonsumen_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (loginStatus)
             {
@@ -179,7 +179,7 @@ namespace Celikoor_Tixycket
 
             formUtama1.formRegisterKonsumen.Close();
         }
-        private void FormLoginKonsumen_Click(object sender, EventArgs e)
+        private void FormLogin_Click(object sender, EventArgs e)
         {
             TextboxDefault();
             this.ActiveControl = null;

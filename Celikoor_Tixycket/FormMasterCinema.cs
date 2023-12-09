@@ -27,5 +27,10 @@ namespace Celikoor_Tixycket
         {
 
         }
+
+        private void buttonHapus_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

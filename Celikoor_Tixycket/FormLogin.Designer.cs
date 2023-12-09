@@ -355,9 +355,9 @@ namespace Celikoor_Tixycket
             this.MaximizeBox = false;
             this.Name = "FormLogin";
             this.Text = "TIXIE";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLoginKonsumen_FormClosing);
-            this.Load += new System.EventHandler(this.FormLoginKonsumen_Load);
-            this.Click += new System.EventHandler(this.FormLoginKonsumen_Click);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
+            this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.Click += new System.EventHandler(this.FormLogin_Click);
             this.panelImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
