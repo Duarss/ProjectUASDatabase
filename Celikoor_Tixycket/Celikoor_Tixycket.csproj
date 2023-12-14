@@ -190,6 +190,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Customization\CustomComboBox.resx">
+      <DependentUpon>CustomComboBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customization\CustomTextbox.resx">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +318,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Text Tixie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opening1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opening2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opening3.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

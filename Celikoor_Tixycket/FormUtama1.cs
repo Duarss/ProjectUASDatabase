@@ -22,7 +22,7 @@ namespace Celikoor_Tixycket
         public Konsumen konsumenLogin;
         public Pegawai pegawaiLogin;
         public FormRegisterKonsumen formRegisterKonsumen;
-        public FormLogin formLogin;
+        public FormLogin formLoginKonsumen;
         public bool loginStatus = false;
 
         #region menu master
@@ -229,14 +229,14 @@ namespace Celikoor_Tixycket
 
                 if (form == null)
                 {
-                    formLogin= new FormLogin();
-                    formLogin.Owner = this;
+                    formLoginKonsumen= new FormLogin();
+                    formLoginKonsumen.Owner = this;
 
                     formRegisterKonsumen = new FormRegisterKonsumen();
                     formRegisterKonsumen.Owner = this;
 
-                    formLogin.ShowDialog();
-                    formLogin.StartPosition = FormStartPosition.CenterScreen;
+                    formLoginKonsumen.ShowDialog();
+                    formLoginKonsumen.StartPosition = FormStartPosition.CenterScreen;
                 }
 
                 else

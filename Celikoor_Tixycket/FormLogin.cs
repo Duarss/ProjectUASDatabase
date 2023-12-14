@@ -21,7 +21,7 @@ namespace Celikoor_Tixycket
             StartPosition = FormStartPosition.CenterScreen;
         }
         #region Global Variable
-        List<Image> imageList = new List<Image> { Resources.poster1, Resources.poster3};
+        List<Image> imageList = new List<Image> { Resources.opening1, Resources.opening2, Resources.opening3, Resources.poster1 };
         FormUtama1 formUtama1;
         int indexImg = 0; //untuk ganti poster
         bool loginStatus = false; //ganti nama button di formutama. Ada di formClosing
@@ -132,7 +132,7 @@ namespace Celikoor_Tixycket
 
         private void timerImageMoving_Tick(object sender, EventArgs e)
         {
-            if (indexImg > 1) // diubah berdasarkan jumlah gambar
+            if (indexImg > 3) // diubah berdasarkan jumlah gambar
             {
                 indexImg = 0;
             }
@@ -162,7 +162,7 @@ namespace Celikoor_Tixycket
                 pageIndicator3.ForeColor = Color.AntiqueWhite;
                 pageIndicator3.BackColor = Color.AntiqueWhite;
             }
-            panelImage.BackgroundImage = imageList[indexImg];
+            pictureBoxImages.Image = imageList[indexImg];
             indexImg++;
         }
 
