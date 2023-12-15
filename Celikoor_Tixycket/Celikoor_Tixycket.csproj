@@ -68,6 +68,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
     </Compile>
+    <Compile Include="FormEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditProfile.Designer.cs">
+      <DependentUpon>FormEditProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,12 @@
     <Compile Include="FormTambahAktor.Designer.cs">
       <DependentUpon>FormTambahAktor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahFilm.Designer.cs">
+      <DependentUpon>FormTambahFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahGenre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +208,9 @@
     <EmbeddedResource Include="Customization\CustomTextbox.resx">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditProfile.resx">
+      <DependentUpon>FormEditProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahCinema.resx">
       <DependentUpon>FormTambahCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahFilm.resx">
+      <DependentUpon>FormTambahFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahGenre.resx">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>
