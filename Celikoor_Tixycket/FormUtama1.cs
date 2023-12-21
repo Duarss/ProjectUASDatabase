@@ -34,49 +34,61 @@ namespace Celikoor_Tixycket
         private void buttonCinema_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterCinema());
-            HiddenMenu();
+            DefaultForeColor(panelMaster);
+            ChangeForeColor(buttonCinema);
         }
 
         private void buttonStudio_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterStudio());
-            HiddenMenu();
+            DefaultForeColor(panelMaster);
+            ChangeForeColor(buttonStudio);
         }
 
         private void buttonJenisStudio_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterJenisStudio());
-            HiddenMenu();
+            DefaultForeColor(panelMaster);
+            ChangeForeColor(buttonJenisStudio);
         }
 
         private void buttonGenre_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterGenre());
-            HiddenMenu();
+            DefaultForeColor(panelMaster);
+            ChangeForeColor(buttonGenre);
         }
 
         private void buttonAktors_Click(object sender, EventArgs e)
         {
             OpenForm (new FormMasterAktor());
-            HiddenMenu();
+            DefaultForeColor(panelMaster);
+            ChangeForeColor(buttonAktors);
         }
 
         private void buttonKonsumen_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterKonsumen());
-            HiddenMenu();
+            DefaultForeColor(panelMaster);
+            ChangeForeColor(buttonKonsumen);
         }
 
         private void buttonPegawai_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterPegawai());
-            HiddenMenu();
+            DefaultForeColor(panelMaster);
+            ChangeForeColor(buttonPegawai);
         }
 
         private void buttonKelompok_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterKelompok());
-            HiddenMenu();
+            DefaultForeColor(panelMaster);
+            ChangeForeColor(buttonKelompok);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormProfile());
         }
         #endregion
 
@@ -88,22 +100,30 @@ namespace Celikoor_Tixycket
 
         private void buttonPenjadwalanFilm_Click(object sender, EventArgs e)
         {
-            HiddenMenu();
         }
 
         private void buttonPencatatanKedatangan_Click(object sender, EventArgs e)
         {
-            HiddenMenu();
         }
 
         private void buttonLaporan_Click(object sender, EventArgs e)
         {
-            HiddenMenu();
         }
         #endregion
 
         #region methods
         private Form formActive = null;
+        private void DefaultForeColor(Panel panelControl)
+        {
+            foreach(Button button in panelMaster.Controls.OfType<Button>())
+            {
+                button.ForeColor = Color.White;
+            }
+        }
+        private void ChangeForeColor(Button buttonControl)
+        {
+            buttonControl.ForeColor = Color.DarkSlateGray;
+        }
         private void OpenForm(Form form)
         {
             if (formActive != null)
@@ -126,15 +146,15 @@ namespace Celikoor_Tixycket
             panelSystem.Visible = false;
         }
 
-        private void HiddenMenu()
+        private void HiddenMenu(Panel menu)
         {
-            if (panelMaster.Visible == true)
+            if (menu.Visible == true)
             {
-                panelMaster.Visible = false;
+                menu.Visible = false;
             }
-            if (panelSystem.Visible == true)
+            if (menu.Visible == true)
             {
-                panelSystem.Visible = false;
+                menu.Visible = false;
             }
         }
 
@@ -142,7 +162,6 @@ namespace Celikoor_Tixycket
         {
             if (menu.Visible == false)
             {
-                HiddenMenu();
                 menu.Visible = true;
             }
             else
@@ -280,5 +299,12 @@ namespace Celikoor_Tixycket
         {
 
         }
+
+        private void panelSystem_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }

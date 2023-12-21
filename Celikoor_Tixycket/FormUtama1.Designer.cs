@@ -50,9 +50,7 @@
             this.buttonPenjadwalanFilm = new System.Windows.Forms.Button();
             this.buttonTransaction = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.customComboBox1 = new Celikoor_Tixycket.Customization.CustomComboBox();
-            this.customComboBox2 = new Celikoor_Tixycket.Customization.CustomComboBox();
-            this.customTextbox1 = new Celikoor_Tixycket.CustomTextbox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelForm.SuspendLayout();
             this.panelLogoApp.SuspendLayout();
             this.panelMaster.SuspendLayout();
@@ -63,9 +61,7 @@
             // panelForm
             // 
             this.panelForm.BackColor = System.Drawing.Color.NavajoWhite;
-            this.panelForm.Controls.Add(this.customTextbox1);
-            this.panelForm.Controls.Add(this.customComboBox2);
-            this.panelForm.Controls.Add(this.customComboBox1);
+            this.panelForm.Controls.Add(this.button1);
             this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForm.Location = new System.Drawing.Point(250, 0);
             this.panelForm.Name = "panelForm";
@@ -88,7 +84,7 @@
             this.buttonLogInOut.BackColor = System.Drawing.Color.Khaki;
             this.buttonLogInOut.Font = new System.Drawing.Font("Verdana", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogInOut.ForeColor = System.Drawing.Color.Black;
-            this.buttonLogInOut.Location = new System.Drawing.Point(44, 50);
+            this.buttonLogInOut.Location = new System.Drawing.Point(34, 50);
             this.buttonLogInOut.Name = "buttonLogInOut";
             this.buttonLogInOut.Size = new System.Drawing.Size(139, 29);
             this.buttonLogInOut.TabIndex = 0;
@@ -99,7 +95,7 @@
             // labelLoginSebagai
             // 
             this.labelLoginSebagai.AutoSize = true;
-            this.labelLoginSebagai.Location = new System.Drawing.Point(21, 17);
+            this.labelLoginSebagai.Location = new System.Drawing.Point(30, 17);
             this.labelLoginSebagai.Name = "labelLoginSebagai";
             this.labelLoginSebagai.Size = new System.Drawing.Size(161, 20);
             this.labelLoginSebagai.TabIndex = 1;
@@ -142,7 +138,7 @@
             // 
             this.buttonKelompok.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonKelompok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonKelompok.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonKelompok.ForeColor = System.Drawing.Color.White;
             this.buttonKelompok.Location = new System.Drawing.Point(0, 280);
             this.buttonKelompok.Name = "buttonKelompok";
             this.buttonKelompok.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -157,7 +153,7 @@
             // 
             this.buttonPegawai.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPegawai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonPegawai.ForeColor = System.Drawing.Color.White;
             this.buttonPegawai.Location = new System.Drawing.Point(0, 240);
             this.buttonPegawai.Name = "buttonPegawai";
             this.buttonPegawai.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -172,7 +168,7 @@
             // 
             this.buttonKonsumen.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonKonsumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonKonsumen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonKonsumen.ForeColor = System.Drawing.Color.White;
             this.buttonKonsumen.Location = new System.Drawing.Point(0, 200);
             this.buttonKonsumen.Name = "buttonKonsumen";
             this.buttonKonsumen.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -187,7 +183,7 @@
             // 
             this.buttonAktors.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonAktors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAktors.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonAktors.ForeColor = System.Drawing.Color.White;
             this.buttonAktors.Location = new System.Drawing.Point(0, 160);
             this.buttonAktors.Name = "buttonAktors";
             this.buttonAktors.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -202,7 +198,7 @@
             // 
             this.buttonGenre.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGenre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonGenre.ForeColor = System.Drawing.Color.White;
             this.buttonGenre.Location = new System.Drawing.Point(0, 120);
             this.buttonGenre.Name = "buttonGenre";
             this.buttonGenre.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -217,7 +213,7 @@
             // 
             this.buttonJenisStudio.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonJenisStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonJenisStudio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonJenisStudio.ForeColor = System.Drawing.Color.White;
             this.buttonJenisStudio.Location = new System.Drawing.Point(0, 80);
             this.buttonJenisStudio.Name = "buttonJenisStudio";
             this.buttonJenisStudio.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -232,7 +228,7 @@
             // 
             this.buttonStudio.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStudio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonStudio.ForeColor = System.Drawing.Color.White;
             this.buttonStudio.Location = new System.Drawing.Point(0, 40);
             this.buttonStudio.Name = "buttonStudio";
             this.buttonStudio.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -247,7 +243,7 @@
             // 
             this.buttonCinema.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonCinema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCinema.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCinema.ForeColor = System.Drawing.Color.White;
             this.buttonCinema.Location = new System.Drawing.Point(0, 0);
             this.buttonCinema.Name = "buttonCinema";
             this.buttonCinema.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -285,12 +281,13 @@
             this.panelSystem.Name = "panelSystem";
             this.panelSystem.Size = new System.Drawing.Size(229, 128);
             this.panelSystem.TabIndex = 4;
+            this.panelSystem.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSystem_Paint);
             // 
             // buttonLaporan
             // 
             this.buttonLaporan.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLaporan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonLaporan.ForeColor = System.Drawing.Color.White;
             this.buttonLaporan.Location = new System.Drawing.Point(0, 80);
             this.buttonLaporan.Name = "buttonLaporan";
             this.buttonLaporan.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -305,7 +302,7 @@
             // 
             this.buttonPencatatanKedatangan.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonPencatatanKedatangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPencatatanKedatangan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonPencatatanKedatangan.ForeColor = System.Drawing.Color.White;
             this.buttonPencatatanKedatangan.Location = new System.Drawing.Point(0, 40);
             this.buttonPencatatanKedatangan.Name = "buttonPencatatanKedatangan";
             this.buttonPencatatanKedatangan.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -320,7 +317,7 @@
             // 
             this.buttonPenjadwalanFilm.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonPenjadwalanFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPenjadwalanFilm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonPenjadwalanFilm.ForeColor = System.Drawing.Color.White;
             this.buttonPenjadwalanFilm.Location = new System.Drawing.Point(0, 0);
             this.buttonPenjadwalanFilm.Name = "buttonPenjadwalanFilm";
             this.buttonPenjadwalanFilm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -363,70 +360,15 @@
             this.panelMenu.Size = new System.Drawing.Size(250, 632);
             this.panelMenu.TabIndex = 0;
             // 
-            // customComboBox1
+            // button1
             // 
-            this.customComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.customComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customComboBox1.BorderSize = 1;
-            this.customComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.customComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.customComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.customComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.customComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.customComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.customComboBox1.Location = new System.Drawing.Point(312, 207);
-            this.customComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.customComboBox1.Name = "customComboBox1";
-            this.customComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.customComboBox1.SelectedIndex = -1;
-            this.customComboBox1.SelectedItem = null;
-            this.customComboBox1.Size = new System.Drawing.Size(200, 30);
-            this.customComboBox1.TabIndex = 0;
-            this.customComboBox1.Texts = "";
-            // 
-            // customComboBox2
-            // 
-            this.customComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.customComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.customComboBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.customComboBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customComboBox2.BorderSize = 1;
-            this.customComboBox2.DataSource = null;
-            this.customComboBox2.DisplayMember = "";
-            this.customComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.customComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.customComboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.customComboBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(104)))), ((int)(((byte)(238)))));
-            this.customComboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.customComboBox2.ListTextColor = System.Drawing.Color.DimGray;
-            this.customComboBox2.Location = new System.Drawing.Point(294, 269);
-            this.customComboBox2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.customComboBox2.Name = "customComboBox2";
-            this.customComboBox2.Padding = new System.Windows.Forms.Padding(1);
-            this.customComboBox2.SelectedIndex = -1;
-            this.customComboBox2.SelectedItem = null;
-            this.customComboBox2.Size = new System.Drawing.Size(200, 30);
-            this.customComboBox2.TabIndex = 1;
-            this.customComboBox2.Texts = "";
-            this.customComboBox2.ValueMember = "";
-            // 
-            // customTextbox1
-            // 
-            this.customTextbox1.BackColor = System.Drawing.SystemColors.Window;
-            this.customTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextbox1.BorderSize = 2;
-            this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextbox1.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextbox1.Location = new System.Drawing.Point(312, 386);
-            this.customTextbox1.Multiline = false;
-            this.customTextbox1.Name = "customTextbox1";
-            this.customTextbox1.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextbox1.PasswordChar = false;
-            this.customTextbox1.Size = new System.Drawing.Size(250, 33);
-            this.customTextbox1.TabIndex = 2;
-            this.customTextbox1.Texts = "";
-            this.customTextbox1.UnderlinedStyle = false;
+            this.button1.Location = new System.Drawing.Point(112, 196);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormUtama1
             // 
@@ -474,8 +416,6 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button buttonLogInOut;
         private System.Windows.Forms.Label labelLoginSebagai;
-        private Customization.CustomComboBox customComboBox1;
-        private CustomTextbox customTextbox1;
-        private Customization.CustomComboBox customComboBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
