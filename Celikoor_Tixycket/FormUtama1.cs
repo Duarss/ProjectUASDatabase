@@ -34,56 +34,56 @@ namespace Celikoor_Tixycket
         private void buttonCinema_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterCinema());
-            DefaultForeColor(panelMaster);
+            DefaultTextBoxForeColor(panelMaster);
             ChangeForeColor(buttonCinema);
         }
 
         private void buttonStudio_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterStudio());
-            DefaultForeColor(panelMaster);
+            DefaultTextBoxForeColor(panelMaster);
             ChangeForeColor(buttonStudio);
         }
 
         private void buttonJenisStudio_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterJenisStudio());
-            DefaultForeColor(panelMaster);
+            DefaultTextBoxForeColor(panelMaster);
             ChangeForeColor(buttonJenisStudio);
         }
 
         private void buttonGenre_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterGenre());
-            DefaultForeColor(panelMaster);
+            DefaultTextBoxForeColor(panelMaster);
             ChangeForeColor(buttonGenre);
         }
 
         private void buttonAktors_Click(object sender, EventArgs e)
         {
             OpenForm (new FormMasterAktor());
-            DefaultForeColor(panelMaster);
+            DefaultTextBoxForeColor(panelMaster);
             ChangeForeColor(buttonAktors);
         }
 
         private void buttonKonsumen_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterKonsumen());
-            DefaultForeColor(panelMaster);
+            DefaultTextBoxForeColor(panelMaster);
             ChangeForeColor(buttonKonsumen);
         }
 
         private void buttonPegawai_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterPegawai());
-            DefaultForeColor(panelMaster);
+            DefaultTextBoxForeColor(panelMaster);
             ChangeForeColor(buttonPegawai);
         }
 
         private void buttonKelompok_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterKelompok());
-            DefaultForeColor(panelMaster);
+            DefaultTextBoxForeColor(panelMaster);
             ChangeForeColor(buttonKelompok);
         }
         private void button1_Click(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace Celikoor_Tixycket
 
         #region methods
         private Form formActive = null;
-        private void DefaultForeColor(Panel panelControl)
+        private void DefaultTextBoxForeColor(Panel panelControl)
         {
             foreach(Button button in panelMaster.Controls.OfType<Button>())
             {

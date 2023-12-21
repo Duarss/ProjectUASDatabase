@@ -21,7 +21,7 @@ namespace Celikoor_Tixycket
             StartPosition = FormStartPosition.CenterScreen;
         }
         #region Global Variable
-        List<Image> imageList = new List<Image> { Resources.opening1, Resources.opening2, Resources.opening3, Resources.poster1 };
+        List<Image> imageList = new List<Image> { Resources.opening1, Resources.opening2, Resources.opening3, Resources.opening4 };
         FormUtama1 formUtama1;
         int indexImg = 0; //untuk ganti poster
         bool loginStatus = false; //ganti nama button di formutama. Ada di formClosing

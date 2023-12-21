@@ -128,7 +128,7 @@ namespace Celikoor_Tixycket
             // timerImageMoving
             // 
             this.timerImageMoving.Enabled = true;
-            this.timerImageMoving.Interval = 4000;
+            this.timerImageMoving.Interval = 6000;
             this.timerImageMoving.Tick += new System.EventHandler(this.timerImageMoving_Tick);
             // 
             // checkBoxRememberMe
@@ -241,7 +241,7 @@ namespace Celikoor_Tixycket
             // pictureBoxImages
             // 
             this.pictureBoxImages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxImages.Image = global::Celikoor_Tixycket.Properties.Resources.opening1;
+            this.pictureBoxImages.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImages.Image")));
             this.pictureBoxImages.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxImages.Name = "pictureBoxImages";
             this.pictureBoxImages.Size = new System.Drawing.Size(503, 683);

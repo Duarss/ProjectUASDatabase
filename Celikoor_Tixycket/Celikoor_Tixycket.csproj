@@ -341,13 +341,16 @@
     <None Include="Resources\opening1.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opening4.gif" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\opening2.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\opening3.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\profile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
