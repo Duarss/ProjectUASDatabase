@@ -276,14 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="db.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>db.Designer.cs</LastGenOutput>
@@ -292,6 +287,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -302,15 +302,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Title.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Title1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Title-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Brown Mystery Movie Poster .png" />
   </ItemGroup>
   <ItemGroup>
@@ -318,12 +309,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Minimal Wild Forest Movie Poster.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Page1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Page2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\templateRegistration.png" />
@@ -341,9 +326,6 @@
     <None Include="Resources\opening1.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\profile.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\opening4.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -354,6 +336,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\opening41.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_pp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\side_menu_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cinema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\studio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\genre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+    <None Include="Resources\note.png" />
+    <None Include="Resources\home.png" />
+    <Content Include="Resources\schedule.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

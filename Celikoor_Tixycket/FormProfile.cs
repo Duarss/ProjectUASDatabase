@@ -23,47 +23,42 @@ namespace Celikoor_Tixycket
         {
         }
 
-        private void panelFotoProfile_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void customTextboxName_Click(object sender, EventArgs e)
         {
-            ChangeUnderlineStyle();
+            DisableUnderlineStyle();
             customTextboxName.UnderlinedStyle = true;
         }
 
         private void customTextboxEmail_Click(object sender, EventArgs e)
         {
-            ChangeUnderlineStyle();
+            DisableUnderlineStyle();
             customTextboxEmail.UnderlinedStyle = true;
         }
 
         private void customTextboxUsername_Click(object sender, EventArgs e)
         {
-            ChangeUnderlineStyle();
+            DisableUnderlineStyle();
             customTextboxUsername.UnderlinedStyle = true;
         }
 
         private void customTextboxPhoneNumber_Click(object sender, EventArgs e)
         {
-            ChangeUnderlineStyle();
+            DisableUnderlineStyle();
             customTextboxPhoneNumber.UnderlinedStyle = true;
         }
 
         private void customTextboxPassword_Click(object sender, EventArgs e)
         {
-            ChangeUnderlineStyle();
+            DisableUnderlineStyle();
             customTextboxPassword.UnderlinedStyle = true;
         }
 
         private void customTextboxBirthDate_Click(object sender, EventArgs e)
         {
-            ChangeUnderlineStyle();
+            DisableUnderlineStyle();
             customTextboxBirthDate.UnderlinedStyle = true;
         }
-        private void ChangeUnderlineStyle()
+        private void DisableUnderlineStyle()
         {
             foreach (CustomTextbox customTextbox in panelFotoProfile.Controls.OfType<CustomTextbox>())
             {
@@ -71,19 +66,19 @@ namespace Celikoor_Tixycket
             }
         }
 
-        private void buttonEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormProfile_Click(object sender, EventArgs e)
         {
-            ChangeUnderlineStyle();
+            DisableUnderlineStyle();
         }
 
-        private void customTextboxEmail__TextChanged(object sender, EventArgs e)
+        private void panelFotoProfile_Click(object sender, EventArgs e)
         {
+            DisableUnderlineStyle();
+        }
 
+        private void labelProfile_Click(object sender, EventArgs e)
+        {
+            DisableUnderlineStyle();
         }
     }
 }

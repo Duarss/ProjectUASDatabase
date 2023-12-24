@@ -22,13 +22,18 @@ namespace Celikoor_Tixycket
         public Konsumen konsumenLogin;
         public Pegawai pegawaiLogin;
         public FormRegisterKonsumen formRegisterKonsumen;
-        public FormLogin formLoginKonsumen;
+        public FormLogin formLogin;
         public bool loginStatus = false;
+
+        bool sidebarExpand = true;
+        bool masterSection = false;
+        bool systemSection = false;
 
         #region menu master
         private void buttonMaster_Click(object sender, EventArgs e)
         {
-            ShowMenu(panelMaster);
+            timerMasterExpand.Start();
+            //ShowMenu(panelMaster);
         }
 
         private void buttonCinema_Click(object sender, EventArgs e)
@@ -66,13 +71,6 @@ namespace Celikoor_Tixycket
             ChangeForeColor(buttonAktors);
         }
 
-        private void buttonKonsumen_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FormMasterKonsumen());
-            DefaultTextBoxForeColor(panelMaster);
-            ChangeForeColor(buttonKonsumen);
-        }
-
         private void buttonPegawai_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterPegawai());
@@ -86,6 +84,10 @@ namespace Celikoor_Tixycket
             DefaultTextBoxForeColor(panelMaster);
             ChangeForeColor(buttonKelompok);
         }
+        private void buttonProfile_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormProfile());
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             OpenForm(new FormProfile());
@@ -95,7 +97,7 @@ namespace Celikoor_Tixycket
         #region menu system
         private void buttonSystem_Click(object sender, EventArgs e)
         {
-            ShowMenu(panelSystem);
+            timerSystemExpand.Start();
         }
 
         private void buttonPenjadwalanFilm_Click(object sender, EventArgs e)
@@ -124,11 +126,11 @@ namespace Celikoor_Tixycket
         {
             buttonControl.ForeColor = Color.DarkSlateGray;
         }
-        private void OpenForm(Form form)
+        public void OpenForm(Form form)
         {
             if (formActive != null)
             {
-                formActive.Close();
+                //formActive.Close();
             }
             formActive = form;
             form.TopLevel = false;
@@ -174,9 +176,14 @@ namespace Celikoor_Tixycket
         {
             buttonLogInOut.Enabled = status;
             buttonLogInOut.Text = text;
-            buttonMaster.Enabled = status;
-            buttonSystem.Enabled = status;
-            buttonTransaction.Enabled = status;
+            panelButtonMaster.Enabled = status;
+            panelButtonSystem.Enabled = status;
+            panelButtonTransaction.Enabled = status;
+        }
+
+        private void ProfileSetUp()
+        {
+
         }
 
         private void AturMenu()
@@ -185,32 +192,32 @@ namespace Celikoor_Tixycket
             {
                 if (pegawaiLogin.Role == "ADMIN")
                 {
-                    buttonMaster.Visible = true;
-                    buttonSystem.Visible = true;
-                    buttonTransaction.Visible = true; // +-+
-                    buttonTransaction.Enabled = false;
+                    panelButtonMaster.Visible = true;
+                    panelButtonSystem.Visible = true;
+                    panelButtonTransaction.Visible = true; // +-+
+                    panelButtonTransaction.Enabled = false;
                 }
                 else if (pegawaiLogin.Role == "OPERATOR")
                 {
-                    buttonSystem.Visible = true;
+                    panelButtonSystem.Visible = true;
                     buttonPenjadwalanFilm.Visible = false;
                     buttonLaporan.Visible = false;
 
                 }
                 else if (pegawaiLogin.Role == "KASIR")
                 {
-                    buttonSystem.Visible = true;
+                    panelButtonSystem.Visible = true;
                     buttonPencatatanKedatangan.Visible = false;
                     buttonPenjadwalanFilm.Visible = false;
                 }
             }
             else if (konsumenLogin != null)
             {
-                buttonMaster.Enabled = false;
+                panelButtonMaster.Enabled = false;
                 panelMaster.Enabled = false;
-                buttonSystem.Enabled = false;
+                panelButtonSystem.Enabled = false;
                 panelSystem.Enabled = false;
-                buttonTransaction.Enabled = true;
+                panelButtonTransaction.Enabled = true;
             }
         }
         #endregion
@@ -227,11 +234,11 @@ namespace Celikoor_Tixycket
             buttonPegawai.Visible = false;
             buttonKelompok.Visible = false;
             */
-            buttonMaster.Visible = false;
-            panelMaster.Visible = false;
-            buttonSystem.Visible = false;
-            panelSystem.Visible = false;
-            buttonTransaction.Visible = false;
+            panelButtonMaster.Visible = false;
+            panelMaster.Height = 0;
+            panelButtonSystem.Visible = false;
+            panelSystem.Height = 0;
+            panelButtonTransaction.Visible = false;
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
@@ -248,14 +255,16 @@ namespace Celikoor_Tixycket
 
                 if (form == null)
                 {
-                    formLoginKonsumen= new FormLogin();
-                    formLoginKonsumen.Owner = this;
+                    formLogin= new FormLogin();
+                    formLogin.Owner = this;
 
                     formRegisterKonsumen = new FormRegisterKonsumen();
                     formRegisterKonsumen.Owner = this;
 
-                    formLoginKonsumen.ShowDialog();
-                    formLoginKonsumen.StartPosition = FormStartPosition.CenterScreen;
+                    OpenForm(formRegisterKonsumen);
+                    OpenForm(formLogin);
+                    //formLogin.ShowDialog();
+                    //formLogin.StartPosition = FormStartPosition.CenterScreen;
                 }
 
                 else
@@ -263,18 +272,6 @@ namespace Celikoor_Tixycket
                     form.Show();
                     form.BringToFront();
                 }
-
-                if (konsumenLogin != null)
-                {
-                    labelLoginSebagai.Text = "Logged In as : " + konsumenLogin.Nama;
-                }
-
-                else if (pegawaiLogin != null)
-                {
-                    labelLoginSebagai.Text = "Logged In as : " + pegawaiLogin.Nama;
-                }
-
-                AturMenu();
             }
 
             else
@@ -283,16 +280,27 @@ namespace Celikoor_Tixycket
                 buttonLogInOut.Text = "Log in";
                 konsumenLogin = null;
                 pegawaiLogin = null;
+                panelForm.Controls.Clear();
                 FormUtama1_Load(sender, e);
-                labelLoginSebagai.Text = "Logged In as : ";
+                buttonProfile.Text = "Logged In as : ";
                 MessageBox.Show("Anda Berhasil Log Out!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AturMenu();
             }
         }
 
-        private void panelForm_Paint(object sender, PaintEventArgs e)
+        public void SetUIAfterLogin()
         {
+            if (konsumenLogin != null)
+            {
+                buttonProfile.Text = "                 " + konsumenLogin.Nama;
+            }
 
+            else if (pegawaiLogin != null)
+            {
+                buttonProfile.Text = "                 " + pegawaiLogin.Nama;
+            }
+
+            AturMenu();
         }
 
         private void buttonTransaction_Click(object sender, EventArgs e)
@@ -301,6 +309,120 @@ namespace Celikoor_Tixycket
         }
 
         private void panelSystem_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timerSideMenuExpand_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                panelMenu.Width -= 8;
+                if(panelMenu.Width <= 81)
+                {
+                    timerSideMenuExpand.Stop();
+                    sidebarExpand = false;
+                }
+            }
+            else
+            {
+                panelMenu.Width += 8;
+                if (panelMenu.Width >= panelMenu.MaximumSize.Width)
+                {
+                    timerSideMenuExpand.Stop();
+                    sidebarExpand = true;
+                }
+            }
+        }
+
+        private void timerMasterExpand_Tick(object sender, EventArgs e)
+        {
+            if (masterSection)
+            {
+                panelMaster.Height -= 15;
+                if (panelMaster.Height<= 0)
+                {
+                    timerMasterExpand.Stop();
+                    masterSection = false;
+                }
+            }
+            else
+            {
+                panelMaster.Height += 15;
+                if (panelMaster.Height >= panelMaster.MaximumSize.Height)
+                {
+                    timerMasterExpand.Stop();
+                    masterSection = true;
+                }
+            }
+        }
+        private void timerSystemExpand_Tick(object sender, EventArgs e)
+        {
+            if (systemSection)
+            {
+                panelSystem.Height -= 15;
+                if (panelSystem.Height <= 0)
+                {
+                    timerSystemExpand.Stop();
+                    systemSection = false;
+                }
+            }
+            else
+            {
+                panelSystem.Height += 15;
+                if (panelSystem.Height >= panelSystem.MaximumSize.Height)
+                {
+                    timerSystemExpand.Stop();
+                    systemSection = true;
+                }
+            }
+        }
+        private void buttonSideMenu_Click(object sender, EventArgs e)
+        {
+            timerSideMenuExpand.Start();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxMaster_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxStudio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxGenre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxActors_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
 
         }

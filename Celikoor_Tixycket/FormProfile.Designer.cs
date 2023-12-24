@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProfile));
             this.labelProfile = new System.Windows.Forms.Label();
-            this.labelNama = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelNoTelp = new System.Windows.Forms.Label();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.labelEmail = new System.Windows.Forms.Label();
             this.panelFotoProfile = new System.Windows.Forms.Panel();
+            this.labelNameUser = new System.Windows.Forms.Label();
+            this.buttonEditProfilePicture = new System.Windows.Forms.Button();
             this.labelBirthDate = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelBalanceValue = new System.Windows.Forms.Label();
@@ -55,26 +58,27 @@
             this.labelProfile.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.labelProfile.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProfile.ForeColor = System.Drawing.Color.Transparent;
-            this.labelProfile.Location = new System.Drawing.Point(-1, -9);
+            this.labelProfile.Location = new System.Drawing.Point(-416, -7);
             this.labelProfile.Name = "labelProfile";
-            this.labelProfile.Size = new System.Drawing.Size(1466, 89);
+            this.labelProfile.Size = new System.Drawing.Size(2145, 89);
             this.labelProfile.TabIndex = 1;
             this.labelProfile.Text = "EDIT PROFILE";
             this.labelProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelProfile.Click += new System.EventHandler(this.labelProfile_Click);
             // 
-            // labelNama
+            // labelName
             // 
-            this.labelNama.AutoSize = true;
-            this.labelNama.BackColor = System.Drawing.Color.PeachPuff;
-            this.labelNama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelNama.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNama.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelNama.Location = new System.Drawing.Point(311, 315);
-            this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(85, 28);
-            this.labelNama.TabIndex = 0;
-            this.labelNama.Text = "Name";
-            this.labelNama.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelName.AutoSize = true;
+            this.labelName.BackColor = System.Drawing.Color.PeachPuff;
+            this.labelName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelName.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelName.Location = new System.Drawing.Point(295, 315);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(85, 28);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "Name";
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelUsername
             // 
@@ -83,7 +87,7 @@
             this.labelUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelUsername.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelUsername.Location = new System.Drawing.Point(311, 414);
+            this.labelUsername.Location = new System.Drawing.Point(295, 414);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(141, 28);
             this.labelUsername.TabIndex = 3;
@@ -97,7 +101,7 @@
             this.labelNoTelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNoTelp.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNoTelp.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelNoTelp.Location = new System.Drawing.Point(739, 414);
+            this.labelNoTelp.Location = new System.Drawing.Point(723, 414);
             this.labelNoTelp.Name = "labelNoTelp";
             this.labelNoTelp.Size = new System.Drawing.Size(201, 28);
             this.labelNoTelp.TabIndex = 2;
@@ -109,14 +113,13 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(530, 645);
+            this.buttonEdit.Location = new System.Drawing.Point(514, 645);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(292, 51);
             this.buttonEdit.TabIndex = 3;
             this.buttonEdit.Text = "SAVE CHANGES";
             this.buttonEdit.UseVisualStyleBackColor = false;
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // labelEmail
             // 
@@ -125,7 +128,7 @@
             this.labelEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelEmail.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmail.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelEmail.Location = new System.Drawing.Point(739, 315);
+            this.labelEmail.Location = new System.Drawing.Point(723, 315);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(83, 28);
             this.labelEmail.TabIndex = 1;
@@ -134,6 +137,8 @@
             // panelFotoProfile
             // 
             this.panelFotoProfile.BackColor = System.Drawing.Color.PeachPuff;
+            this.panelFotoProfile.Controls.Add(this.labelNameUser);
+            this.panelFotoProfile.Controls.Add(this.buttonEditProfilePicture);
             this.panelFotoProfile.Controls.Add(this.customTextboxBirthDate);
             this.panelFotoProfile.Controls.Add(this.customTextboxPhoneNumber);
             this.panelFotoProfile.Controls.Add(this.customTextboxEmail);
@@ -146,16 +151,43 @@
             this.panelFotoProfile.Controls.Add(this.labelBalance);
             this.panelFotoProfile.Controls.Add(this.pictureBoxFotoPtofil);
             this.panelFotoProfile.Controls.Add(this.buttonEdit);
-            this.panelFotoProfile.Controls.Add(this.labelNama);
+            this.panelFotoProfile.Controls.Add(this.labelName);
             this.panelFotoProfile.Controls.Add(this.labelUsername);
             this.panelFotoProfile.Controls.Add(this.labelEmail);
             this.panelFotoProfile.Controls.Add(this.labelNoTelp);
+            this.panelFotoProfile.ForeColor = System.Drawing.Color.Transparent;
             this.panelFotoProfile.Location = new System.Drawing.Point(-1, 72);
             this.panelFotoProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFotoProfile.Name = "panelFotoProfile";
             this.panelFotoProfile.Size = new System.Drawing.Size(1462, 776);
             this.panelFotoProfile.TabIndex = 4;
-            this.panelFotoProfile.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFotoProfile_Paint);
+            this.panelFotoProfile.Click += new System.EventHandler(this.panelFotoProfile_Click);
+            // 
+            // labelNameUser
+            // 
+            this.labelNameUser.AutoSize = true;
+            this.labelNameUser.BackColor = System.Drawing.Color.PeachPuff;
+            this.labelNameUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNameUser.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNameUser.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelNameUser.Location = new System.Drawing.Point(615, 110);
+            this.labelNameUser.Name = "labelNameUser";
+            this.labelNameUser.Size = new System.Drawing.Size(294, 34);
+            this.labelNameUser.TabIndex = 24;
+            this.labelNameUser.Text = "WILLY HIMAWAN";
+            // 
+            // buttonEditProfilePicture
+            // 
+            this.buttonEditProfilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEditProfilePicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonEditProfilePicture.BackgroundImage")));
+            this.buttonEditProfilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEditProfilePicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditProfilePicture.ForeColor = System.Drawing.Color.PeachPuff;
+            this.buttonEditProfilePicture.Location = new System.Drawing.Point(527, 177);
+            this.buttonEditProfilePicture.Name = "buttonEditProfilePicture";
+            this.buttonEditProfilePicture.Size = new System.Drawing.Size(65, 55);
+            this.buttonEditProfilePicture.TabIndex = 23;
+            this.buttonEditProfilePicture.UseVisualStyleBackColor = false;
             // 
             // labelBirthDate
             // 
@@ -164,7 +196,7 @@
             this.labelBirthDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelBirthDate.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBirthDate.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelBirthDate.Location = new System.Drawing.Point(739, 512);
+            this.labelBirthDate.Location = new System.Drawing.Point(723, 512);
             this.labelBirthDate.Name = "labelBirthDate";
             this.labelBirthDate.Size = new System.Drawing.Size(142, 28);
             this.labelBirthDate.TabIndex = 15;
@@ -177,7 +209,7 @@
             this.labelPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPassword.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelPassword.Location = new System.Drawing.Point(311, 512);
+            this.labelPassword.Location = new System.Drawing.Point(295, 512);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(138, 28);
             this.labelPassword.TabIndex = 13;
@@ -190,7 +222,7 @@
             this.labelBalanceValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelBalanceValue.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBalanceValue.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelBalanceValue.Location = new System.Drawing.Point(610, 159);
+            this.labelBalanceValue.Location = new System.Drawing.Point(618, 197);
             this.labelBalanceValue.Name = "labelBalanceValue";
             this.labelBalanceValue.Size = new System.Drawing.Size(70, 25);
             this.labelBalanceValue.TabIndex = 11;
@@ -203,7 +235,7 @@
             this.labelBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelBalance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBalance.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelBalance.Location = new System.Drawing.Point(610, 121);
+            this.labelBalance.Location = new System.Drawing.Point(618, 168);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.Size = new System.Drawing.Size(197, 25);
             this.labelBalance.TabIndex = 10;
@@ -211,12 +243,12 @@
             // 
             // pictureBoxFotoPtofil
             // 
-            this.pictureBoxFotoPtofil.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.profile;
+            this.pictureBoxFotoPtofil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxFotoPtofil.BackgroundImage")));
             this.pictureBoxFotoPtofil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxFotoPtofil.Location = new System.Drawing.Point(374, 51);
+            this.pictureBoxFotoPtofil.Location = new System.Drawing.Point(424, 76);
             this.pictureBoxFotoPtofil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxFotoPtofil.Name = "pictureBoxFotoPtofil";
-            this.pictureBoxFotoPtofil.Size = new System.Drawing.Size(216, 201);
+            this.pictureBoxFotoPtofil.Size = new System.Drawing.Size(161, 156);
             this.pictureBoxFotoPtofil.TabIndex = 9;
             this.pictureBoxFotoPtofil.TabStop = false;
             // 
@@ -228,7 +260,7 @@
             this.customTextboxBirthDate.BorderSize = 2;
             this.customTextboxBirthDate.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextboxBirthDate.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxBirthDate.Location = new System.Drawing.Point(744, 549);
+            this.customTextboxBirthDate.Location = new System.Drawing.Point(728, 549);
             this.customTextboxBirthDate.Multiline = false;
             this.customTextboxBirthDate.Name = "customTextboxBirthDate";
             this.customTextboxBirthDate.Padding = new System.Windows.Forms.Padding(7);
@@ -247,7 +279,7 @@
             this.customTextboxPhoneNumber.BorderSize = 2;
             this.customTextboxPhoneNumber.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextboxPhoneNumber.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxPhoneNumber.Location = new System.Drawing.Point(744, 452);
+            this.customTextboxPhoneNumber.Location = new System.Drawing.Point(728, 452);
             this.customTextboxPhoneNumber.Multiline = false;
             this.customTextboxPhoneNumber.Name = "customTextboxPhoneNumber";
             this.customTextboxPhoneNumber.Padding = new System.Windows.Forms.Padding(7);
@@ -266,7 +298,7 @@
             this.customTextboxEmail.BorderSize = 2;
             this.customTextboxEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextboxEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxEmail.Location = new System.Drawing.Point(744, 353);
+            this.customTextboxEmail.Location = new System.Drawing.Point(728, 353);
             this.customTextboxEmail.Multiline = false;
             this.customTextboxEmail.Name = "customTextboxEmail";
             this.customTextboxEmail.Padding = new System.Windows.Forms.Padding(7);
@@ -275,7 +307,6 @@
             this.customTextboxEmail.TabIndex = 20;
             this.customTextboxEmail.Texts = "Willy Himawan";
             this.customTextboxEmail.UnderlinedStyle = false;
-            this.customTextboxEmail._TextChanged += new System.EventHandler(this.customTextboxEmail__TextChanged);
             this.customTextboxEmail.Click += new System.EventHandler(this.customTextboxEmail_Click);
             // 
             // customTextboxPassword
@@ -286,7 +317,7 @@
             this.customTextboxPassword.BorderSize = 2;
             this.customTextboxPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextboxPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxPassword.Location = new System.Drawing.Point(316, 549);
+            this.customTextboxPassword.Location = new System.Drawing.Point(300, 549);
             this.customTextboxPassword.Multiline = false;
             this.customTextboxPassword.Name = "customTextboxPassword";
             this.customTextboxPassword.Padding = new System.Windows.Forms.Padding(7);
@@ -305,7 +336,7 @@
             this.customTextboxUsername.BorderSize = 2;
             this.customTextboxUsername.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextboxUsername.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxUsername.Location = new System.Drawing.Point(316, 452);
+            this.customTextboxUsername.Location = new System.Drawing.Point(300, 452);
             this.customTextboxUsername.Multiline = false;
             this.customTextboxUsername.Name = "customTextboxUsername";
             this.customTextboxUsername.Padding = new System.Windows.Forms.Padding(7);
@@ -324,7 +355,7 @@
             this.customTextboxName.BorderSize = 2;
             this.customTextboxName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextboxName.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxName.Location = new System.Drawing.Point(316, 353);
+            this.customTextboxName.Location = new System.Drawing.Point(300, 353);
             this.customTextboxName.Multiline = false;
             this.customTextboxName.Name = "customTextboxName";
             this.customTextboxName.Padding = new System.Windows.Forms.Padding(7);
@@ -356,7 +387,7 @@
 
         #endregion
         private System.Windows.Forms.Label labelProfile;
-        private System.Windows.Forms.Label labelNama;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelNoTelp;
         private System.Windows.Forms.Button buttonEdit;
@@ -373,5 +404,7 @@
         private CustomTextbox customTextboxPassword;
         private CustomTextbox customTextboxUsername;
         private CustomTextbox customTextboxName;
+        private System.Windows.Forms.Button buttonEditProfilePicture;
+        private System.Windows.Forms.Label labelNameUser;
     }
 }

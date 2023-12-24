@@ -22,7 +22,7 @@ namespace Celikoor_Tixycket
         }
         #region Global Variable
         List<Image> imageList = new List<Image> { Resources.opening1, Resources.opening2, Resources.opening3, Resources.opening4 };
-        FormUtama1 formUtama1;
+        FormUtama1 formUtama;
         int indexImg = 0; //untuk ganti poster
         bool loginStatus = false; //ganti nama button di formutama. Ada di formClosing
         string loginAs;
@@ -48,15 +48,14 @@ namespace Celikoor_Tixycket
         #region Events
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            formUtama1 = (FormUtama1)this.Owner;
+            formUtama = (FormUtama1)this.Owner;
             panelImage.Select();//to prevent textbox from being selected when a form load
         }
 
         private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.ActiveControl = null;
-            this.Visible = false;
-            formUtama1.formRegisterKonsumen.Visible = true;
+            this.SendToBack();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -72,35 +71,36 @@ namespace Celikoor_Tixycket
                     {
                         if (loginAs == "Konsumen")
                         {
-                            formUtama1.konsumenLogin = Konsumen.CekLogin(id, pwd);
+                            formUtama.konsumenLogin = Konsumen.CekLogin(id, pwd);
                         }
                         else if (loginAs == "Pegawai")
                         {
-                            formUtama1.pegawaiLogin = Pegawai.CekLogin(id, pwd);
+                            formUtama.pegawaiLogin = Pegawai.CekLogin(id, pwd);
                         }
                         //cek apakah ada yang berhasil login
-                        if (formUtama1.konsumenLogin == null && formUtama1.pegawaiLogin == null) //jik tidak berhasil
+                        if (formUtama.konsumenLogin == null && formUtama.pegawaiLogin == null) //jik tidak berhasil
                         {
-                            MessageBox.Show("Username atau password salah");
+                            MessageBox.Show("Username or password is incorrect");
                         }
                         else //jika berhasil
                         {
-                            formUtama1.loginStatus = true;
-                            formUtama1.Visible = true;
+                            formUtama.loginStatus = true;
+                            formUtama.Visible = true;
                             loginStatus = true;
                             loginAs = null;
-                            formUtama1.formRegisterKonsumen.Close();
+                            formUtama.formRegisterKonsumen.Close();
+                            formUtama.SetUIAfterLogin();
                             this.Close();
                         }
                     }
                     else //jika radiobutton tidak diisi
                     {
-                        MessageBox.Show("Login as harus diisi");
+                        MessageBox.Show("'Input As' cannot be empty");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Username atau password harus diisi");
+                    MessageBox.Show("Username and password cannot be empty");
                 }
             }
             catch (Exception x)
@@ -170,14 +170,10 @@ namespace Celikoor_Tixycket
         {
             if (loginStatus)
             {
-                formUtama1.LoginConstraint(true, "Log out");
+                formUtama.LoginConstraint(true, "Log out");
             }
-            else
-            {
-                formUtama1.LoginConstraint(true, "Log in");
-            }
-
-            formUtama1.formRegisterKonsumen.Close();
+            formUtama.formRegisterKonsumen.FormRegisterKonsumen_FormClosing(sender, e);
+            this.Dispose();
         }
         private void FormLogin_Click(object sender, EventArgs e)
         {

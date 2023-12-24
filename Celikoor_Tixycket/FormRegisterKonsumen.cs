@@ -28,26 +28,19 @@ namespace Celikoor_Tixycket
 
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formUtama.formLoginKonsumen.Visible = true;
-            this.Visible = false;
+            this.SendToBack();
         }
 
-        private void buttonRegister_Click(object sender, EventArgs e)
+        public void FormRegisterKonsumen_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
-        }
-
-        private void FormRegisterKonsumen_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            formUtama.formLoginKonsumen.Close();
-            formUtama.LoginConstraint(true, "Log in");
+            this.Dispose();
+            //formUtama.LoginConstraint(true, "Log in");
         }
         #endregion
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void buttonRegister_Click(object sender, EventArgs e)
         {
-            formUtama.formLoginKonsumen.Visible = true;
-            this.Visible = false;
+            this.SendToBack();
         }
 
         private void labelPINPassword_Click(object sender, EventArgs e)
