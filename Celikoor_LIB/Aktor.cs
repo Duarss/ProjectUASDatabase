@@ -75,7 +75,7 @@ namespace Celikoor_LIB
 
             else
             {
-                perintah = $"SELECT * FROM aktors WHERE '{id}' like '%{nama}%'";
+                perintah = $"SELECT * FROM aktors WHERE {id} like '%{nama}%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);

@@ -68,11 +68,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
     </Compile>
-    <Compile Include="FormEditProfile.cs">
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEditProfile.Designer.cs">
-      <DependentUpon>FormEditProfile.cs</DependentUpon>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProfile.cs">
       <SubType>Form</SubType>
@@ -208,11 +208,11 @@
     <EmbeddedResource Include="Customization\CustomTextbox.resx">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEditProfile.resx">
-      <DependentUpon>FormEditProfile.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterAktor.resx">
       <DependentUpon>FormMasterAktor.cs</DependentUpon>
@@ -302,15 +302,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Brown Mystery Movie Poster .png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minimal Romance Movie Poster.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minimal Wild Forest Movie Poster.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\templateRegistration.png" />
   </ItemGroup>
   <ItemGroup>
@@ -333,9 +324,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\opening3.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\opening41.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile.png" />
@@ -368,6 +356,11 @@
     <None Include="Resources\print.png" />
     <None Include="Resources\note.png" />
     <None Include="Resources\home.png" />
+    <None Include="Resources\poster5.jpg" />
+    <None Include="Resources\poster4.jpg" />
+    <None Include="Resources\poster3.png" />
+    <None Include="Resources\poster1.png" />
+    <None Include="Resources\poster2.png" />
     <Content Include="Resources\schedule.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

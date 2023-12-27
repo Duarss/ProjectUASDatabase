@@ -574,7 +574,7 @@
             this.buttonTransaction.Location = new System.Drawing.Point(0, 0);
             this.buttonTransaction.Name = "buttonTransaction";
             this.buttonTransaction.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonTransaction.Size = new System.Drawing.Size(215, 45);
+            this.buttonTransaction.Size = new System.Drawing.Size(247, 45);
             this.buttonTransaction.TabIndex = 16;
             this.buttonTransaction.Text = "               Transaction";
             this.buttonTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -610,11 +610,12 @@
             this.buttonHome.Location = new System.Drawing.Point(0, 0);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonHome.Size = new System.Drawing.Size(233, 45);
+            this.buttonHome.Size = new System.Drawing.Size(247, 45);
             this.buttonHome.TabIndex = 16;
             this.buttonHome.Text = "               Main";
             this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // panelLogoApp
             // 
@@ -665,7 +666,7 @@
             this.buttonLogInOut.BackColor = System.Drawing.Color.Khaki;
             this.buttonLogInOut.Font = new System.Drawing.Font("Verdana", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogInOut.ForeColor = System.Drawing.Color.Black;
-            this.buttonLogInOut.Location = new System.Drawing.Point(611, 17);
+            this.buttonLogInOut.Location = new System.Drawing.Point(707, 32);
             this.buttonLogInOut.Name = "buttonLogInOut";
             this.buttonLogInOut.Size = new System.Drawing.Size(120, 32);
             this.buttonLogInOut.TabIndex = 0;

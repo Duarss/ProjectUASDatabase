@@ -345,7 +345,7 @@ namespace Celikoor_Tixycket
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1460, 844);
+            this.ClientSize = new System.Drawing.Size(1260, 844);
             this.Controls.Add(this.radioButtonPegawai);
             this.Controls.Add(this.labelLoginAs);
             this.Controls.Add(this.radioButtonKonsumen);

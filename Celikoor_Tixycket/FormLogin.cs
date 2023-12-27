@@ -50,6 +50,7 @@ namespace Celikoor_Tixycket
         {
             formUtama = (FormUtama1)this.Owner;
             panelImage.Select();//to prevent textbox from being selected when a form load
+           // pictureBoxImages.
         }
 
         private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

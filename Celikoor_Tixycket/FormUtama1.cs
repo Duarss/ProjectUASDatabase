@@ -86,7 +86,14 @@ namespace Celikoor_Tixycket
         }
         private void buttonProfile_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormProfile());
+            try
+            {
+                OpenForm(new FormProfile());
+            }
+            catch (Exception x) 
+            {
+                MessageBox.Show("Please log in first");
+            };
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -130,7 +137,7 @@ namespace Celikoor_Tixycket
         {
             if (formActive != null)
             {
-                //formActive.Close();
+                formActive.Close();
             }
             formActive = form;
             form.TopLevel = false;
@@ -239,6 +246,7 @@ namespace Celikoor_Tixycket
             panelButtonSystem.Visible = false;
             panelSystem.Height = 0;
             panelButtonTransaction.Visible = false;
+            OpenForm(new FormMain());
         }
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
@@ -282,7 +290,7 @@ namespace Celikoor_Tixycket
                 pegawaiLogin = null;
                 panelForm.Controls.Clear();
                 FormUtama1_Load(sender, e);
-                buttonProfile.Text = "Logged In as : ";
+                buttonProfile.Text = "                 Not logged in";
                 MessageBox.Show("Anda Berhasil Log Out!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AturMenu();
             }
@@ -427,6 +435,9 @@ namespace Celikoor_Tixycket
 
         }
 
-        
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMain());
+        }
     }
 }
