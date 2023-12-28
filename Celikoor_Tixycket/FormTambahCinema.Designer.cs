@@ -61,6 +61,7 @@
             this.buttonKeluar.TabIndex = 39;
             this.buttonKeluar.Text = "EXIT";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // buttonTambah
             // 
