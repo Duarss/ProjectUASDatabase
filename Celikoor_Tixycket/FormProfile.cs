@@ -80,5 +80,10 @@ namespace Celikoor_Tixycket
         {
             DisableUnderlineStyle();
         }
+
+        private void buttonEditProfilePicture_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

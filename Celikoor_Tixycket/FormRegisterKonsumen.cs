@@ -28,13 +28,12 @@ namespace Celikoor_Tixycket
 
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.SendToBack();
+            formUtama.OpenForm(new FormLogin());
         }
 
         public void FormRegisterKonsumen_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
-            //formUtama.LoginConstraint(true, "Log in");
         }
         #endregion
 

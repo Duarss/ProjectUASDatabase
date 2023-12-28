@@ -358,9 +358,19 @@
     <None Include="Resources\home.png" />
     <None Include="Resources\poster5.jpg" />
     <None Include="Resources\poster4.jpg" />
-    <None Include="Resources\poster3.png" />
-    <None Include="Resources\poster1.png" />
-    <None Include="Resources\poster2.png" />
+    <None Include="Resources\poster3.jpg" />
+    <None Include="Resources\poster2.jpg" />
+    <None Include="Resources\poster1.jpg" />
+    <None Include="Resources\poster10.jpg" />
+    <None Include="Resources\poster9.jpg" />
+    <None Include="Resources\poster8.jpg" />
+    <None Include="Resources\poster7.jpg" />
+    <None Include="Resources\poster6.jpg" />
+    <None Include="Resources\poster12.jpeg" />
+    <None Include="Resources\poster11.jpeg" />
+    <None Include="Resources\left.png" />
+    <None Include="Resources\right.png" />
+    <None Include="Resources\Discount_Banner_1.png" />
     <Content Include="Resources\schedule.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

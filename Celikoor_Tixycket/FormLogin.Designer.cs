@@ -38,8 +38,6 @@ namespace Celikoor_Tixycket
             this.label1 = new System.Windows.Forms.Label();
             this.labelTo = new System.Windows.Forms.Label();
             this.timerImageMoving = new System.Windows.Forms.Timer(this.components);
-            this.checkBoxRememberMe = new System.Windows.Forms.CheckBox();
-            this.ForgotPassword = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelImage = new System.Windows.Forms.Panel();
             this.pageIndicator4 = new System.Windows.Forms.Button();
@@ -54,6 +52,8 @@ namespace Celikoor_Tixycket
             this.radioButtonKonsumen = new System.Windows.Forms.RadioButton();
             this.labelLoginAs = new System.Windows.Forms.Label();
             this.radioButtonPegawai = new System.Windows.Forms.RadioButton();
+            this.checkBoxRememberMe = new System.Windows.Forms.CheckBox();
+            this.ForgotPassword = new System.Windows.Forms.Label();
             this.panelImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImages)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -130,31 +130,6 @@ namespace Celikoor_Tixycket
             this.timerImageMoving.Enabled = true;
             this.timerImageMoving.Interval = 6000;
             this.timerImageMoving.Tick += new System.EventHandler(this.timerImageMoving_Tick);
-            // 
-            // checkBoxRememberMe
-            // 
-            this.checkBoxRememberMe.AutoSize = true;
-            this.checkBoxRememberMe.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxRememberMe.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.checkBoxRememberMe.Location = new System.Drawing.Point(736, 574);
-            this.checkBoxRememberMe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBoxRememberMe.Name = "checkBoxRememberMe";
-            this.checkBoxRememberMe.Size = new System.Drawing.Size(179, 28);
-            this.checkBoxRememberMe.TabIndex = 26;
-            this.checkBoxRememberMe.Text = "Remember me?";
-            this.checkBoxRememberMe.UseVisualStyleBackColor = true;
-            this.checkBoxRememberMe.Click += new System.EventHandler(this.checkBoxRememberMe_Click);
-            // 
-            // ForgotPassword
-            // 
-            this.ForgotPassword.AutoSize = true;
-            this.ForgotPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForgotPassword.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.ForgotPassword.Location = new System.Drawing.Point(956, 574);
-            this.ForgotPassword.Name = "ForgotPassword";
-            this.ForgotPassword.Size = new System.Drawing.Size(184, 24);
-            this.ForgotPassword.TabIndex = 27;
-            this.ForgotPassword.Text = "Forgot Password?";
             // 
             // label2
             // 
@@ -340,6 +315,31 @@ namespace Celikoor_Tixycket
             this.radioButtonPegawai.UseVisualStyleBackColor = false;
             this.radioButtonPegawai.CheckedChanged += new System.EventHandler(this.radioButtonPegawai_CheckedChanged);
             // 
+            // checkBoxRememberMe
+            // 
+            this.checkBoxRememberMe.AutoSize = true;
+            this.checkBoxRememberMe.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxRememberMe.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.checkBoxRememberMe.Location = new System.Drawing.Point(736, 573);
+            this.checkBoxRememberMe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBoxRememberMe.Name = "checkBoxRememberMe";
+            this.checkBoxRememberMe.Size = new System.Drawing.Size(179, 28);
+            this.checkBoxRememberMe.TabIndex = 26;
+            this.checkBoxRememberMe.Text = "Remember me?";
+            this.checkBoxRememberMe.UseVisualStyleBackColor = true;
+            this.checkBoxRememberMe.Click += new System.EventHandler(this.checkBoxRememberMe_Click);
+            // 
+            // ForgotPassword
+            // 
+            this.ForgotPassword.AutoSize = true;
+            this.ForgotPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForgotPassword.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.ForgotPassword.Location = new System.Drawing.Point(956, 574);
+            this.ForgotPassword.Name = "ForgotPassword";
+            this.ForgotPassword.Size = new System.Drawing.Size(184, 24);
+            this.ForgotPassword.TabIndex = 27;
+            this.ForgotPassword.Text = "Forgot Password?";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -388,8 +388,6 @@ namespace Celikoor_Tixycket
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel panelImage;
         private System.Windows.Forms.Timer timerImageMoving;
-        private System.Windows.Forms.CheckBox checkBoxRememberMe;
-        private System.Windows.Forms.Label ForgotPassword;
         private System.Windows.Forms.Label label2;
         private Button pageIndicator4;
         private Button pageIndicator3;
@@ -401,5 +399,7 @@ namespace Celikoor_Tixycket
         private Label labelLoginAs;
         private RadioButton radioButtonPegawai;
         private PictureBox pictureBoxImages;
+        private CheckBox checkBoxRememberMe;
+        private Label ForgotPassword;
     }
 }

@@ -55,8 +55,7 @@ namespace Celikoor_Tixycket
 
         private void linkLabelCreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.ActiveControl = null;
-            this.SendToBack();
+            formUtama.OpenForm(new FormRegisterKonsumen());
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -89,7 +88,6 @@ namespace Celikoor_Tixycket
                             formUtama.Visible = true;
                             loginStatus = true;
                             loginAs = null;
-                            formUtama.formRegisterKonsumen.Close();
                             formUtama.SetUIAfterLogin();
                             this.Close();
                         }
@@ -173,7 +171,6 @@ namespace Celikoor_Tixycket
             {
                 formUtama.LoginConstraint(true, "Log out");
             }
-            formUtama.formRegisterKonsumen.FormRegisterKonsumen_FormClosing(sender, e);
             this.Dispose();
         }
         private void FormLogin_Click(object sender, EventArgs e)

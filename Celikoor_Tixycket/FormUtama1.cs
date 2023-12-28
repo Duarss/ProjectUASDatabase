@@ -33,7 +33,6 @@ namespace Celikoor_Tixycket
         private void buttonMaster_Click(object sender, EventArgs e)
         {
             timerMasterExpand.Start();
-            //ShowMenu(panelMaster);
         }
 
         private void buttonCinema_Click(object sender, EventArgs e)
@@ -135,6 +134,7 @@ namespace Celikoor_Tixycket
         }
         public void OpenForm(Form form)
         {
+            form.Owner = this;
             if (formActive != null)
             {
                 formActive.Close();
@@ -149,36 +149,6 @@ namespace Celikoor_Tixycket
             form.Show();
         }
 
-        public void CustomDesign()
-        {
-            panelMaster.Visible = false;
-            panelSystem.Visible = false;
-        }
-
-        private void HiddenMenu(Panel menu)
-        {
-            if (menu.Visible == true)
-            {
-                menu.Visible = false;
-            }
-            if (menu.Visible == true)
-            {
-                menu.Visible = false;
-            }
-        }
-
-        private void ShowMenu(Panel menu)
-        {
-            if (menu.Visible == false)
-            {
-                menu.Visible = true;
-            }
-            else
-            {
-                menu.Visible = false;
-            }
-        }
-
         public void LoginConstraint(bool status, string text)
         {
             buttonLogInOut.Enabled = status;
@@ -188,15 +158,11 @@ namespace Celikoor_Tixycket
             panelButtonTransaction.Enabled = status;
         }
 
-        private void ProfileSetUp()
-        {
-
-        }
-
         private void AturMenu()
         {
             if (pegawaiLogin != null)
             {
+                panelHome.Visible = false;
                 if (pegawaiLogin.Role == "ADMIN")
                 {
                     panelButtonMaster.Visible = true;
@@ -230,17 +196,7 @@ namespace Celikoor_Tixycket
         #endregion
 
         private void FormUtama1_Load(object sender, EventArgs e)
-        {/*
-            panelMaster.Enabled = false;
-            buttonCinema.Visible = false;
-            buttonStudio.Visible = false;
-            buttonJenisStudio.Visible = false;
-            buttonGenre.Visible = false;
-            buttonAktors.Visible = false;
-            buttonKonsumen.Visible = false;
-            buttonPegawai.Visible = false;
-            buttonKelompok.Visible = false;
-            */
+        {
             panelButtonMaster.Visible = false;
             panelMaster.Height = 0;
             panelButtonSystem.Visible = false;
@@ -249,12 +205,7 @@ namespace Celikoor_Tixycket
             OpenForm(new FormMain());
         }
 
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void buttonLogInOut_Click(object sender, EventArgs e)
+        public void LoginSetUp(object sender, EventArgs e)
         {
             if (loginStatus == false)
             {
@@ -266,13 +217,7 @@ namespace Celikoor_Tixycket
                     formLogin= new FormLogin();
                     formLogin.Owner = this;
 
-                    formRegisterKonsumen = new FormRegisterKonsumen();
-                    formRegisterKonsumen.Owner = this;
-
-                    OpenForm(formRegisterKonsumen);
                     OpenForm(formLogin);
-                    //formLogin.ShowDialog();
-                    //formLogin.StartPosition = FormStartPosition.CenterScreen;
                 }
 
                 else
@@ -388,16 +333,6 @@ namespace Celikoor_Tixycket
         private void buttonSideMenu_Click(object sender, EventArgs e)
         {
             timerSideMenuExpand.Start();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBoxMaster_Click(object sender, EventArgs e)

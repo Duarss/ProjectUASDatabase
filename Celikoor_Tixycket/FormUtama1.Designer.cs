@@ -77,6 +77,7 @@
             this.panelForm = new System.Windows.Forms.Panel();
             this.timerMasterExpand = new System.Windows.Forms.Timer(this.components);
             this.timerSystemExpand = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelFlowLayoutMenu.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
@@ -103,6 +104,7 @@
             this.panelLogoApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPtofil)).BeginInit();
             this.panelForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -137,6 +139,7 @@
             // panelSideMenu
             // 
             this.panelSideMenu.BackColor = System.Drawing.Color.Peru;
+            this.panelSideMenu.Controls.Add(this.pictureBox4);
             this.panelSideMenu.Controls.Add(this.label1);
             this.panelSideMenu.Controls.Add(this.buttonSideMenu);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -610,7 +613,7 @@
             this.buttonHome.Location = new System.Drawing.Point(0, 0);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonHome.Size = new System.Drawing.Size(247, 45);
+            this.buttonHome.Size = new System.Drawing.Size(250, 45);
             this.buttonHome.TabIndex = 16;
             this.buttonHome.Text = "               Main";
             this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -666,19 +669,21 @@
             this.buttonLogInOut.BackColor = System.Drawing.Color.Khaki;
             this.buttonLogInOut.Font = new System.Drawing.Font("Verdana", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogInOut.ForeColor = System.Drawing.Color.Black;
-            this.buttonLogInOut.Location = new System.Drawing.Point(707, 32);
+            this.buttonLogInOut.Location = new System.Drawing.Point(-130, 41);
             this.buttonLogInOut.Name = "buttonLogInOut";
             this.buttonLogInOut.Size = new System.Drawing.Size(120, 32);
             this.buttonLogInOut.TabIndex = 0;
             this.buttonLogInOut.Text = "LOGIN";
             this.buttonLogInOut.UseVisualStyleBackColor = false;
-            this.buttonLogInOut.Click += new System.EventHandler(this.buttonLogInOut_Click);
+            this.buttonLogInOut.Click += new System.EventHandler(this.LoginSetUp);
             // 
             // panelForm
             // 
+            this.panelForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelForm.BackColor = System.Drawing.Color.NavajoWhite;
             this.panelForm.Controls.Add(this.buttonLogInOut);
-            this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForm.Location = new System.Drawing.Point(250, 0);
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(863, 869);
@@ -694,11 +699,21 @@
             this.timerSystemExpand.Interval = 1;
             this.timerSystemExpand.Tick += new System.EventHandler(this.timerSystemExpand_Tick);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Black;
+            this.pictureBox4.Location = new System.Drawing.Point(-4, 72);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(255, 3);
+            this.pictureBox4.TabIndex = 28;
+            this.pictureBox4.TabStop = false;
+            // 
             // FormUtama1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1113, 869);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelMenu);
@@ -735,6 +750,7 @@
             this.panelLogoApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPtofil)).EndInit();
             this.panelForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -787,5 +803,6 @@
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Timer timerMasterExpand;
         private System.Windows.Forms.Timer timerSystemExpand;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

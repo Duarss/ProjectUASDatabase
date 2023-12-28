@@ -53,8 +53,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.labelSaldo = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelPINPassword
@@ -98,11 +101,11 @@
             // 
             this.linkLabelAlreadyHaveAnAccount.AutoSize = true;
             this.linkLabelAlreadyHaveAnAccount.BackColor = System.Drawing.Color.White;
-            this.linkLabelAlreadyHaveAnAccount.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelAlreadyHaveAnAccount.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelAlreadyHaveAnAccount.LinkColor = System.Drawing.Color.Peru;
-            this.linkLabelAlreadyHaveAnAccount.Location = new System.Drawing.Point(894, 625);
+            this.linkLabelAlreadyHaveAnAccount.Location = new System.Drawing.Point(941, 691);
             this.linkLabelAlreadyHaveAnAccount.Name = "linkLabelAlreadyHaveAnAccount";
-            this.linkLabelAlreadyHaveAnAccount.Size = new System.Drawing.Size(72, 16);
+            this.linkLabelAlreadyHaveAnAccount.Size = new System.Drawing.Size(89, 19);
             this.linkLabelAlreadyHaveAnAccount.TabIndex = 15;
             this.linkLabelAlreadyHaveAnAccount.TabStop = true;
             this.linkLabelAlreadyHaveAnAccount.Text = "Click Here";
@@ -150,10 +153,10 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Azure;
-            this.buttonLogin.Location = new System.Drawing.Point(690, 575);
+            this.buttonLogin.Location = new System.Drawing.Point(686, 624);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(336, 36);
+            this.buttonLogin.Size = new System.Drawing.Size(386, 46);
             this.buttonLogin.TabIndex = 33;
             this.buttonLogin.Text = "Sign Up";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -177,7 +180,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label2.Location = new System.Drawing.Point(484, 515);
+            this.label2.Location = new System.Drawing.Point(484, 564);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 22);
             this.label2.TabIndex = 35;
@@ -266,11 +269,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label4.Location = new System.Drawing.Point(713, 625);
+            this.label4.Location = new System.Drawing.Point(720, 691);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 16);
+            this.label4.Size = new System.Drawing.Size(215, 19);
             this.label4.TabIndex = 47;
             this.label4.Text = "Already Have an Account?";
             // 
@@ -280,7 +283,7 @@
             this.radioButton1.BackColor = System.Drawing.Color.White;
             this.radioButton1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.radioButton1.Location = new System.Drawing.Point(602, 514);
+            this.radioButton1.Location = new System.Drawing.Point(602, 563);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(72, 25);
             this.radioButton1.TabIndex = 48;
@@ -294,7 +297,7 @@
             this.radioButton2.BackColor = System.Drawing.Color.White;
             this.radioButton2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.radioButton2.Location = new System.Drawing.Point(716, 514);
+            this.radioButton2.Location = new System.Drawing.Point(716, 563);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(96, 25);
             this.radioButton2.TabIndex = 49;
@@ -350,12 +353,34 @@
             this.label6.TabIndex = 54;
             this.label6.Text = "Let\'s begin the adventure";
             // 
+            // labelSaldo
+            // 
+            this.labelSaldo.AutoSize = true;
+            this.labelSaldo.BackColor = System.Drawing.Color.White;
+            this.labelSaldo.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaldo.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.labelSaldo.Location = new System.Drawing.Point(484, 485);
+            this.labelSaldo.Name = "labelSaldo";
+            this.labelSaldo.Size = new System.Drawing.Size(62, 20);
+            this.labelSaldo.TabIndex = 55;
+            this.labelSaldo.Text = "Saldo";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(488, 510);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(337, 30);
+            this.numericUpDown1.TabIndex = 56;
+            // 
             // FormRegisterKonsumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1460, 844);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.labelSaldo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox3);
@@ -389,6 +414,7 @@
             this.Load += new System.EventHandler(this.FormRegisterKonsumen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,5 +445,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelSaldo;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

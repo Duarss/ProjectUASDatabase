@@ -1,4 +1,5 @@
-﻿using Celikoor_Tixycket.Properties;
+﻿using Celikoor_LIB;
+using Celikoor_Tixycket.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,14 @@ namespace Celikoor_Tixycket
         public FormMain()
         {
             InitializeComponent();
+            SetupPictureBoxEvents();
         }
-        List<Image> imageList = new List<Image> { Resources.poster1, Resources.poster2, Resources.poster3, Resources.poster4, Resources.poster5};
-        int index = 2; //mengikuti poster yang di main page
+        FormUtama1 formUtama;
+        List<Film> listFilms;
+        int minIndex = 1;
+        int maxIndex = 10; //listFilm.Count();
+        int leftIndex = 1; //absolut
+        int rightIndex = 5; //absolut
         bool rightDirection = true;
         private void pictureBox14_Click(object sender, EventArgs e)
         {
@@ -27,49 +33,52 @@ namespace Celikoor_Tixycket
         }
         private void CreatePictureBox()
         {
+            string dir = Environment.CurrentDirectory;
+            dir = dir.Substring(0, dir.Length - 9);
+            
             PictureBox newPictureBox = new PictureBox();
-            if (rightDirection)
+
+            if (rightDirection) //left - geser ke kanan
             {
                 newPictureBox.Location = new System.Drawing.Point(-93, 120);
                 newPictureBox.Name = "pictureBoxPosterLeft2";
-                index--;
-                if(index < 1)
+                leftIndex--;
+                rightIndex--;
+                if (leftIndex < minIndex)
                 {
-                    index = 5;
+                    leftIndex = maxIndex;
                 }
+                if (rightIndex < minIndex)
+                {
+                    rightIndex = maxIndex;
+                }
+                dir += $"Resources\\poster{leftIndex}.jpg";
             }
             else
             {
                 newPictureBox.Location = new System.Drawing.Point(1024, 120);
                 newPictureBox.Name = "pictureBoxPosterRight2";
-                index++;
-                if(index > 5)
+                leftIndex++;
+                rightIndex++;
+                if (leftIndex > maxIndex)
                 {
-                    index = 1;
+                    leftIndex = minIndex;
                 }
+                if (rightIndex > maxIndex)
+                {
+                    rightIndex = minIndex;
+                }
+                dir += $"Resources\\poster{rightIndex}.jpg";
+            }
+            
+            if (System.IO.File.Exists(dir))
+            {
+                newPictureBox.BackgroundImage = Image.FromFile(dir);
             }
             newPictureBox.Size = new System.Drawing.Size(192, 232);
-            switch (index)
-            {
-                case 1:
-                    newPictureBox.BackgroundImage = Resources.poster1;
-                    break;
-                case 2:
-                    newPictureBox.BackgroundImage = Resources.poster2;
-                    break;
-                case 3:
-                    newPictureBox.BackgroundImage = Resources.poster3;
-                    break;
-                case 4:
-                    newPictureBox.BackgroundImage = Resources.poster4;
-                    break;
-                case 5:
-                    newPictureBox.BackgroundImage = Resources.poster5;
-                    break;
-            }
+           
             newPictureBox.BackgroundImageLayout = ImageLayout.Stretch;
             panelPoster.Controls.Add(newPictureBox);
-            
         }
         private void timerSM_Tick(object sender, EventArgs e)
         {
@@ -80,7 +89,7 @@ namespace Celikoor_Tixycket
                 {
                     if (pictureBox.Name == "pictureBoxPosterLeft2")
                     {
-                        
+
                         if (pictureBox.Width < 224 && pictureBox.Height < 302)
                         {
                             pictureBox.Width = 224;
@@ -97,10 +106,10 @@ namespace Celikoor_Tixycket
                         if (pictureBox.Left >= 142 && pictureBox.Top <= 82)
                         {
                             pictureBox.Name = "pictureBoxPosterLeft1";
-                            buttonRight.Enabled = true;
                             buttonLeft.Enabled = true;
+                            buttonRight.Enabled = true;
                             CreatePictureBox();
-                            label2.Text = index.ToString();
+                            SetupPictureBoxEvents();
                             timerSM.Stop();
                         }
                     }
@@ -109,8 +118,8 @@ namespace Celikoor_Tixycket
                 {
                     if (pictureBox.Name == "pictureBoxPosterRight2")
                     {
-                        
-                        if (pictureBox.Width < 224 &&  pictureBox.Height < 302)
+
+                        if (pictureBox.Width < 224 && pictureBox.Height < 302)
                         {
                             pictureBox.Width = 224;
                             pictureBox.Height = 302;
@@ -126,15 +135,14 @@ namespace Celikoor_Tixycket
                         if (pictureBox.Left <= 764 && pictureBox.Top <= 82)
                         {
                             pictureBox.Name = "pictureBoxPosterRight1";
-                            buttonRight.Enabled = true;
                             buttonLeft.Enabled = true;
+                            buttonRight.Enabled = true;
                             CreatePictureBox();
-                            label2.Text = index.ToString();
+                            SetupPictureBoxEvents();
                             timerSM.Stop();
                         }
                     }
                 }
-
             }
         }
         private void timerMB_Tick(object sender, EventArgs e)
@@ -245,7 +253,6 @@ namespace Celikoor_Tixycket
                         }
                     }
                 }
-                
             }
         }
 
@@ -304,7 +311,7 @@ namespace Celikoor_Tixycket
                 }
             }
         }
-        private void buttonLeft_Click(object sender, EventArgs e)
+        private void buttonRight_Click(object sender, EventArgs e)
         {
             rightDirection = false;
             timerBM.Start();
@@ -318,11 +325,11 @@ namespace Celikoor_Tixycket
                     pictureBox.Dispose();
                 }
             }
-            buttonLeft.Enabled = false;
             buttonRight.Enabled = false;
+            buttonLeft.Enabled = false;
         }
 
-        private async void buttonRight_Click(object sender, EventArgs e)
+        private async void buttonLeft_Click(object sender, EventArgs e)
         {
             rightDirection = true;
             timerBM.Start();
@@ -336,24 +343,77 @@ namespace Celikoor_Tixycket
                     pictureBox.Dispose();
                 }
             }
-            buttonLeft.Enabled = false;
             buttonRight.Enabled = false;
+            buttonLeft.Enabled = false;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            string dir = Environment.CurrentDirectory;
-            dir = dir.Substring(0, dir.Length - 9);
-            dir += "Resources\\poster4.jpg";
-            if (System.IO.File.Exists(dir))
+            formUtama = (FormUtama1)this.Owner;
+            //listFilms = Film.BacaData();
+            //maxIndex = listFilms.Count;
+        }
+
+        private void buttonLogIn_Click(object sender, EventArgs e)
+        {
+            formUtama.LoginSetUp(sender, e);
+        }
+
+        private void buttonSignUp_Click(object sender, EventArgs e)
+        {
+            formUtama.OpenForm(new FormRegisterKonsumen());
+        }
+
+        private void pictureBoxPosterMiddle_Click(object sender, EventArgs e)
+        {
+            labelFilmName.Text = "berubah";
+        }
+        private void SetupPictureBoxEvents()
+        {
+            foreach (PictureBox pictureBox in panelPoster.Controls)
             {
-                pictureBoxPosterMiddle.BackgroundImage = Image.FromFile(dir);
+                if(pictureBox.Name == "pictureBoxPosterMiddle")
+                {
+                    pictureBox.Click += PictureBox_Click;
+                    pictureBox.MouseEnter += PictureBox_MouseEnter;
+                    pictureBox.MouseLeave += PictureBox_MouseLeave;
+                }
+                if(pictureBox.Name == "pictureBoxPosterLeft1" || pictureBox.Name == "pictureBoxPosterRight1")
+                {
+                    pictureBox.Click -= PictureBox_Click;
+                    pictureBox.MouseEnter -= PictureBox_MouseEnter;
+                    pictureBox.MouseLeave -= PictureBox_MouseLeave;
+                }
             }
         }
 
-        private void buttonLogInOut_Click(object sender, EventArgs e)
+        private void PictureBox_Click(object sender, EventArgs e)
         {
+            if (sender is PictureBox clickedPictureBox)
+            {
+                string pictureBoxName = clickedPictureBox.Name;
+                MessageBox.Show($"Clicked on PictureBox with Name: {pictureBoxName}");
+            }
+        }
 
+        private void PictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            if (sender is PictureBox enteredPictureBox)
+            {
+                string pictureBoxName = enteredPictureBox.Name;
+                // Add your hover effect or logic here
+                enteredPictureBox.BorderStyle = BorderStyle.FixedSingle;
+                enteredPictureBox.BackColor = Color.FromArgb(125, Color.Black);
+            }
+        }
+
+        private void PictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is PictureBox leftPictureBox)
+            {
+                // Reset the hover effect or logic here
+                leftPictureBox.BorderStyle = BorderStyle.None;
+            }
         }
     }
 }

@@ -38,17 +38,17 @@
             this.panelFotoProfile = new System.Windows.Forms.Panel();
             this.labelNameUser = new System.Windows.Forms.Label();
             this.buttonEditProfilePicture = new System.Windows.Forms.Button();
-            this.labelBirthDate = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
-            this.labelBalanceValue = new System.Windows.Forms.Label();
-            this.labelBalance = new System.Windows.Forms.Label();
-            this.pictureBoxFotoPtofil = new System.Windows.Forms.PictureBox();
             this.customTextboxBirthDate = new Celikoor_Tixycket.CustomTextbox();
             this.customTextboxPhoneNumber = new Celikoor_Tixycket.CustomTextbox();
             this.customTextboxEmail = new Celikoor_Tixycket.CustomTextbox();
             this.customTextboxPassword = new Celikoor_Tixycket.CustomTextbox();
             this.customTextboxUsername = new Celikoor_Tixycket.CustomTextbox();
             this.customTextboxName = new Celikoor_Tixycket.CustomTextbox();
+            this.labelBirthDate = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelBalanceValue = new System.Windows.Forms.Label();
+            this.labelBalance = new System.Windows.Forms.Label();
+            this.pictureBoxFotoPtofil = new System.Windows.Forms.PictureBox();
             this.panelFotoProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPtofil)).BeginInit();
             this.SuspendLayout();
@@ -188,69 +188,7 @@
             this.buttonEditProfilePicture.Size = new System.Drawing.Size(65, 55);
             this.buttonEditProfilePicture.TabIndex = 23;
             this.buttonEditProfilePicture.UseVisualStyleBackColor = false;
-            // 
-            // labelBirthDate
-            // 
-            this.labelBirthDate.AutoSize = true;
-            this.labelBirthDate.BackColor = System.Drawing.Color.PeachPuff;
-            this.labelBirthDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBirthDate.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBirthDate.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelBirthDate.Location = new System.Drawing.Point(723, 512);
-            this.labelBirthDate.Name = "labelBirthDate";
-            this.labelBirthDate.Size = new System.Drawing.Size(142, 28);
-            this.labelBirthDate.TabIndex = 15;
-            this.labelBirthDate.Text = "Birth Date";
-            // 
-            // labelPassword
-            // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.BackColor = System.Drawing.Color.PeachPuff;
-            this.labelPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelPassword.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelPassword.Location = new System.Drawing.Point(295, 512);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(138, 28);
-            this.labelPassword.TabIndex = 13;
-            this.labelPassword.Text = "Password";
-            // 
-            // labelBalanceValue
-            // 
-            this.labelBalanceValue.AutoSize = true;
-            this.labelBalanceValue.BackColor = System.Drawing.Color.PeachPuff;
-            this.labelBalanceValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBalanceValue.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBalanceValue.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelBalanceValue.Location = new System.Drawing.Point(618, 197);
-            this.labelBalanceValue.Name = "labelBalanceValue";
-            this.labelBalanceValue.Size = new System.Drawing.Size(70, 25);
-            this.labelBalanceValue.TabIndex = 11;
-            this.labelBalanceValue.Text = "Rp. 0";
-            // 
-            // labelBalance
-            // 
-            this.labelBalance.AutoSize = true;
-            this.labelBalance.BackColor = System.Drawing.Color.PeachPuff;
-            this.labelBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBalance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBalance.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelBalance.Location = new System.Drawing.Point(618, 168);
-            this.labelBalance.Name = "labelBalance";
-            this.labelBalance.Size = new System.Drawing.Size(197, 25);
-            this.labelBalance.TabIndex = 10;
-            this.labelBalance.Text = "Account Balance";
-            // 
-            // pictureBoxFotoPtofil
-            // 
-            this.pictureBoxFotoPtofil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxFotoPtofil.BackgroundImage")));
-            this.pictureBoxFotoPtofil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxFotoPtofil.Location = new System.Drawing.Point(424, 76);
-            this.pictureBoxFotoPtofil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxFotoPtofil.Name = "pictureBoxFotoPtofil";
-            this.pictureBoxFotoPtofil.Size = new System.Drawing.Size(161, 156);
-            this.pictureBoxFotoPtofil.TabIndex = 9;
-            this.pictureBoxFotoPtofil.TabStop = false;
+            this.buttonEditProfilePicture.Click += new System.EventHandler(this.buttonEditProfilePicture_Click);
             // 
             // customTextboxBirthDate
             // 
@@ -365,6 +303,69 @@
             this.customTextboxName.Texts = "Willy Himawan";
             this.customTextboxName.UnderlinedStyle = false;
             this.customTextboxName.Click += new System.EventHandler(this.customTextboxName_Click);
+            // 
+            // labelBirthDate
+            // 
+            this.labelBirthDate.AutoSize = true;
+            this.labelBirthDate.BackColor = System.Drawing.Color.PeachPuff;
+            this.labelBirthDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBirthDate.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBirthDate.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelBirthDate.Location = new System.Drawing.Point(723, 512);
+            this.labelBirthDate.Name = "labelBirthDate";
+            this.labelBirthDate.Size = new System.Drawing.Size(142, 28);
+            this.labelBirthDate.TabIndex = 15;
+            this.labelBirthDate.Text = "Birth Date";
+            // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.BackColor = System.Drawing.Color.PeachPuff;
+            this.labelPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelPassword.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelPassword.Location = new System.Drawing.Point(295, 512);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(138, 28);
+            this.labelPassword.TabIndex = 13;
+            this.labelPassword.Text = "Password";
+            // 
+            // labelBalanceValue
+            // 
+            this.labelBalanceValue.AutoSize = true;
+            this.labelBalanceValue.BackColor = System.Drawing.Color.PeachPuff;
+            this.labelBalanceValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBalanceValue.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBalanceValue.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelBalanceValue.Location = new System.Drawing.Point(618, 197);
+            this.labelBalanceValue.Name = "labelBalanceValue";
+            this.labelBalanceValue.Size = new System.Drawing.Size(70, 25);
+            this.labelBalanceValue.TabIndex = 11;
+            this.labelBalanceValue.Text = "Rp. 0";
+            // 
+            // labelBalance
+            // 
+            this.labelBalance.AutoSize = true;
+            this.labelBalance.BackColor = System.Drawing.Color.PeachPuff;
+            this.labelBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBalance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBalance.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelBalance.Location = new System.Drawing.Point(618, 168);
+            this.labelBalance.Name = "labelBalance";
+            this.labelBalance.Size = new System.Drawing.Size(197, 25);
+            this.labelBalance.TabIndex = 10;
+            this.labelBalance.Text = "Account Balance";
+            // 
+            // pictureBoxFotoPtofil
+            // 
+            this.pictureBoxFotoPtofil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxFotoPtofil.BackgroundImage")));
+            this.pictureBoxFotoPtofil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxFotoPtofil.Location = new System.Drawing.Point(424, 76);
+            this.pictureBoxFotoPtofil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxFotoPtofil.Name = "pictureBoxFotoPtofil";
+            this.pictureBoxFotoPtofil.Size = new System.Drawing.Size(161, 156);
+            this.pictureBoxFotoPtofil.TabIndex = 9;
+            this.pictureBoxFotoPtofil.TabStop = false;
             // 
             // FormProfile
             // 
