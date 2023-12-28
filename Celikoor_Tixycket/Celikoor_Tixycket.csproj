@@ -188,6 +188,12 @@
     <Compile Include="FormTambahPegawai.Designer.cs">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahStudio.Designer.cs">
+      <DependentUpon>FormTambahStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahPegawai.resx">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahStudio.resx">
+      <DependentUpon>FormTambahStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

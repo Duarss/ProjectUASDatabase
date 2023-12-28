@@ -25,25 +25,34 @@ namespace Celikoor_Tixycket
             try
             {
                 Cinema c = new Cinema();
-                c.Id = int.Parse(textBoxIdCinema.Text);
                 c.Nama_cabang = textBoxNamaCabang.Text;
                 c.Alamat = textBoxAlamatCinema.Text;
                 c.TglDibuka = dateTimePickerTglDibukaCInema.Value;
                 c.Kota = textBoxKotaCinema.Text;
 
                 Cinema.TambahData(c);
-                MessageBox.Show("Tambah data berhasil");
+                MessageBox.Show("Add data success!");
                 this.Close();
             }
             catch (Exception x)
             {
-                MessageBox.Show("Tambah data gagal. Error: " + x.Message);
+                MessageBox.Show("Add data failed. Error: " + x.Message);
             }
         }
 
         private void FormTambahCinema_Load(object sender, EventArgs e)
         {
-            textBoxIdCinema.Select();
+            textBoxNamaCabang.Focus();
+        }
+
+        private void textBoxNamaCabang_Click(object sender, EventArgs e)
+        {
+            textBoxNamaCabang.Select(0, textBoxNamaCabang.Text.Length);
+        }
+
+        private void textBoxNamaCabang_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

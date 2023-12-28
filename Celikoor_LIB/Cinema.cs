@@ -41,7 +41,7 @@ namespace Celikoor_LIB
         public static void TambahData(Cinema cinema)
         {
             string perintah = $"INSERT INTO cinemas (nama_cabang, alamat, tgl_dibuka, kota) " +
-                $"VALUES ('{cinema.Nama_cabang}', '{cinema.Alamat}', '{cinema.TglDibuka.ToShortDateString()}'" +
+                $"VALUES ('{cinema.Nama_cabang}', '{cinema.Alamat}', '{cinema.TglDibuka.ToString("yyyy-MM-dd")}'" +
                 $", '{cinema.Kota}');";
 
             Koneksi.JalankanPerintahQuery(perintah);

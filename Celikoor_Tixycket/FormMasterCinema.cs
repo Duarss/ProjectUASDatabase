@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Celikoor_LIB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,25 @@ namespace Celikoor_Tixycket
 
         private void FormMasterCinema_Load(object sender, EventArgs e)
         {
-
+            List<Cinema> listData = Cinema.BacaData();
+            dgvData.DataSource = listData;
+            
+            if(dgvData.ColumnCount == 5)
+            {
+                DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
+                btnHapus.Text = "Delete"; //judul button
+                btnHapus.HeaderText = "Action"; //judul kolom
+                btnHapus.UseColumnTextForButtonValue = true; //agar tulisan muncul di button
+                btnHapus.Name = "buttonHapusGrid"; //nama objek button
+                dgvData.Columns.Add(btnHapus); //tambahkan button ke grid
+            }
+            foreach (DataGridViewColumn column in dgvData.Columns)
+            {
+                if (column.Name != "Id" && column.Name != "buttonHapusGrid")
+                {
+                    column.Width = 228;
+                }
+            }
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
@@ -33,6 +52,33 @@ namespace Celikoor_Tixycket
             FormTambahCinema formTambahCinema = new FormTambahCinema();
             formTambahCinema.Owner = this;
             formTambahCinema.ShowDialog();
+            FormMasterCinema_Load(this, e);
+        }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dgvData.CurrentRow.Cells["Id"].Value.ToString();
+
+            if (e.ColumnIndex == dgvData.Columns["buttonHapusGrid"].Index)
+            {
+                //konfirmasi penghapusan ke user
+                DialogResult dr = MessageBox.Show("Delete data " + kode + "?", "Delete Process",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes) //jika user setuju hapus data
+                {
+                    try
+                    {
+                        //hapus data dari database
+                        Cinema.HapusData(kode);
+                        //refresh form master
+                        FormMasterCinema_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Failed to delete data: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

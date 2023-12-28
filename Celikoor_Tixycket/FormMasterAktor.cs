@@ -29,5 +29,10 @@ namespace Celikoor_Tixycket
             formTambahAktor.Owner = this;
             formTambahAktor.ShowDialog();
         }
+
+        private void FormMasterAktor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

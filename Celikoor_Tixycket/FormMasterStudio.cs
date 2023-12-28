@@ -21,5 +21,30 @@ namespace Celikoor_Tixycket
         {
             this.Close();
         }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormTambahStudio frmTambahStudio = new FormTambahStudio();
+            frmTambahStudio.Owner = this;
+            frmTambahStudio.ShowDialog();
+            FormMasterStudio_Load(this, e);
+        }
+
+        private void FormMasterStudio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textboxCari_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception x)
+            {
+                // empty
+            }
+        }
     }
 }
