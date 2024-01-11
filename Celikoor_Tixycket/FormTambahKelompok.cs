@@ -23,7 +23,6 @@ namespace Celikoor_Tixycket
             try
             {
                 Kelompok k = new Kelompok();
-                k.Id = int.Parse(textBoxIdKelompok.Text);
                 k.Nama = textBoxNamaKelompok.Text;
 
                 Kelompok.TambahData(k);

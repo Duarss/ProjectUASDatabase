@@ -30,17 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTambahGenre));
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.buttonKosongi = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxDeskripsiGenre = new System.Windows.Forms.TextBox();
+            this.labelTambahGenre = new System.Windows.Forms.Label();
+            this.textBoxDeskripsi = new System.Windows.Forms.TextBox();
             this.labelDeskripsi = new System.Windows.Forms.Label();
-            this.textBoxIdGenre = new System.Windows.Forms.TextBox();
-            this.labelId = new System.Windows.Forms.Label();
-            this.textBoxNamaGenre = new System.Windows.Forms.TextBox();
+            this.textBoxGenre = new System.Windows.Forms.TextBox();
             this.labelNamaGenre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,22 +55,8 @@
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(182, 55);
             this.buttonKeluar.TabIndex = 44;
-            this.buttonKeluar.Text = "KELUAR";
+            this.buttonKeluar.Text = "CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
-            // 
-            // buttonKosongi
-            // 
-            this.buttonKosongi.BackColor = System.Drawing.Color.Tan;
-            this.buttonKosongi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonKosongi.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKosongi.ForeColor = System.Drawing.Color.White;
-            this.buttonKosongi.Location = new System.Drawing.Point(402, 464);
-            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.buttonKosongi.Name = "buttonKosongi";
-            this.buttonKosongi.Size = new System.Drawing.Size(182, 55);
-            this.buttonKosongi.TabIndex = 45;
-            this.buttonKosongi.Text = "KOSONGI";
-            this.buttonKosongi.UseVisualStyleBackColor = false;
             // 
             // buttonSimpan
             // 
@@ -86,7 +69,7 @@
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(182, 55);
             this.buttonSimpan.TabIndex = 43;
-            this.buttonSimpan.Text = "SIMPAN";
+            this.buttonSimpan.Text = "SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
@@ -120,28 +103,28 @@
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // labelTambahGenre
             // 
-            this.label2.BackColor = System.Drawing.Color.Tan;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(53, 44);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(885, 62);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "TAMBAH GENRE";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTambahGenre.BackColor = System.Drawing.Color.Tan;
+            this.labelTambahGenre.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTambahGenre.ForeColor = System.Drawing.Color.White;
+            this.labelTambahGenre.Location = new System.Drawing.Point(53, 44);
+            this.labelTambahGenre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTambahGenre.Name = "labelTambahGenre";
+            this.labelTambahGenre.Size = new System.Drawing.Size(885, 62);
+            this.labelTambahGenre.TabIndex = 50;
+            this.labelTambahGenre.Text = "ADD GENRE";
+            this.labelTambahGenre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxDeskripsiGenre
+            // textBoxDeskripsi
             // 
-            this.textBoxDeskripsiGenre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDeskripsiGenre.Location = new System.Drawing.Point(477, 208);
-            this.textBoxDeskripsiGenre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxDeskripsiGenre.Multiline = true;
-            this.textBoxDeskripsiGenre.Name = "textBoxDeskripsiGenre";
-            this.textBoxDeskripsiGenre.Size = new System.Drawing.Size(398, 136);
-            this.textBoxDeskripsiGenre.TabIndex = 59;
+            this.textBoxDeskripsi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDeskripsi.Location = new System.Drawing.Point(477, 216);
+            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxDeskripsi.Multiline = true;
+            this.textBoxDeskripsi.Name = "textBoxDeskripsi";
+            this.textBoxDeskripsi.Size = new System.Drawing.Size(398, 136);
+            this.textBoxDeskripsi.TabIndex = 59;
             // 
             // labelDeskripsi
             // 
@@ -149,68 +132,45 @@
             this.labelDeskripsi.Location = new System.Drawing.Point(472, 156);
             this.labelDeskripsi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDeskripsi.Name = "labelDeskripsi";
-            this.labelDeskripsi.Size = new System.Drawing.Size(126, 55);
+            this.labelDeskripsi.Size = new System.Drawing.Size(161, 55);
             this.labelDeskripsi.TabIndex = 58;
-            this.labelDeskripsi.Text = "Deskripsi:";
-            this.labelDeskripsi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelDeskripsi.Text = "Description:";
+            this.labelDeskripsi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBoxIdGenre
+            // textBoxGenre
             // 
-            this.textBoxIdGenre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIdGenre.Location = new System.Drawing.Point(270, 166);
-            this.textBoxIdGenre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxIdGenre.Name = "textBoxIdGenre";
-            this.textBoxIdGenre.Size = new System.Drawing.Size(94, 36);
-            this.textBoxIdGenre.TabIndex = 57;
-            // 
-            // labelId
-            // 
-            this.labelId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(123, 156);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(130, 55);
-            this.labelId.TabIndex = 56;
-            this.labelId.Text = "Id Genre:";
-            this.labelId.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBoxNamaGenre
-            // 
-            this.textBoxNamaGenre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaGenre.Location = new System.Drawing.Point(128, 305);
-            this.textBoxNamaGenre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxNamaGenre.Name = "textBoxNamaGenre";
-            this.textBoxNamaGenre.Size = new System.Drawing.Size(256, 36);
-            this.textBoxNamaGenre.TabIndex = 55;
+            this.textBoxGenre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGenre.Location = new System.Drawing.Point(128, 216);
+            this.textBoxGenre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxGenre.Name = "textBoxGenre";
+            this.textBoxGenre.Size = new System.Drawing.Size(256, 36);
+            this.textBoxGenre.TabIndex = 55;
             // 
             // labelNamaGenre
             // 
             this.labelNamaGenre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaGenre.Location = new System.Drawing.Point(117, 245);
+            this.labelNamaGenre.Location = new System.Drawing.Point(123, 156);
             this.labelNamaGenre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNamaGenre.Name = "labelNamaGenre";
-            this.labelNamaGenre.Size = new System.Drawing.Size(178, 55);
+            this.labelNamaGenre.Size = new System.Drawing.Size(94, 55);
             this.labelNamaGenre.TabIndex = 54;
-            this.labelNamaGenre.Text = "Nama Genre:";
-            this.labelNamaGenre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelNamaGenre.Text = "Genre:";
+            this.labelNamaGenre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormTambahGenre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 548);
-            this.Controls.Add(this.textBoxDeskripsiGenre);
+            this.Controls.Add(this.textBoxDeskripsi);
             this.Controls.Add(this.labelDeskripsi);
-            this.Controls.Add(this.textBoxIdGenre);
-            this.Controls.Add(this.labelId);
-            this.Controls.Add(this.textBoxNamaGenre);
+            this.Controls.Add(this.textBoxGenre);
             this.Controls.Add(this.labelNamaGenre);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelTambahGenre);
             this.Controls.Add(this.buttonKeluar);
-            this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.buttonSimpan);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -228,17 +188,14 @@
         #endregion
 
         private System.Windows.Forms.Button buttonKeluar;
-        private System.Windows.Forms.Button buttonKosongi;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxDeskripsiGenre;
+        private System.Windows.Forms.Label labelTambahGenre;
+        private System.Windows.Forms.TextBox textBoxDeskripsi;
         private System.Windows.Forms.Label labelDeskripsi;
-        private System.Windows.Forms.TextBox textBoxIdGenre;
-        private System.Windows.Forms.Label labelId;
-        private System.Windows.Forms.TextBox textBoxNamaGenre;
+        private System.Windows.Forms.TextBox textBoxGenre;
         private System.Windows.Forms.Label labelNamaGenre;
     }
 }

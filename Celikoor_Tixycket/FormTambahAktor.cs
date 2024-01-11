@@ -24,14 +24,13 @@ namespace Celikoor_Tixycket
             try
             {
                 Aktor a = new Aktor();
-                a.Id = int.Parse(textBoxIdAktor.Text);
-                a.Nama = textBoxNamaAktor.Text;
-                a.TglLahir = dateTimePickerTglLahirAktor.Value;
-                if (radioButtonLakiAktor.Checked)
+                a.Nama = textBoxNama.Text;
+                a.TglLahir = dateTimePickerTglLahir.Value;
+                if (radioButtonMale.Checked)
                 {
                     a.Gender = "L";
                 }
-                else if (radioButtonPerempuanAktor.Checked)
+                else if (radioButtonFemale.Checked)
                 {
                     a.Gender = "P";
                 }
@@ -49,7 +48,7 @@ namespace Celikoor_Tixycket
 
         private void FormTambahAktor_Load(object sender, EventArgs e)
         {
-            textBoxIdAktor.Select();
+            textBoxNama.Select();
         }
     }
 }

@@ -23,7 +23,6 @@ namespace Celikoor_Tixycket
             try
             {
                 Konsumen k = new Konsumen();
-                k.Id = int.Parse(textBoxIdKonsumen.Text);
                 k.Nama = textBoxNamaKonsumen.Text;
                 k.NoHp = textBoxNoHpKonsumen.Text;
                 if (radioButtonLakiKonsumen.Checked)
@@ -51,7 +50,7 @@ namespace Celikoor_Tixycket
 
         private void FormTambahKonsumen_Load(object sender, EventArgs e)
         {
-            textBoxIdKonsumen.Select();
+            textBoxNamaKonsumen.Select();
         }
     }
 }

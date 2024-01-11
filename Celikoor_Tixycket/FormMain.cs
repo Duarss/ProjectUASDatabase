@@ -330,7 +330,7 @@ namespace Celikoor_Tixycket
             buttonLeft.Enabled = false;
         }
 
-        private async void buttonLeft_Click(object sender, EventArgs e)
+        private void buttonLeft_Click(object sender, EventArgs e)
         {
             rightDirection = true;
             timerBM.Start();

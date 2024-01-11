@@ -45,18 +45,18 @@ namespace Celikoor_LIB
         }
 
         //! METHOD RETRIEVE R
-        public static List<Film_studio> BacaData(int idStudio=0)
+        public static List<Film_studio> BacaData(string id="")
         {
             string perintah;
 
-            if (idStudio == 0)
+            if (id == "")
             {
                 perintah = $"SELECT * FROM film_studio";
             }
 
             else
             {
-                perintah = $"SELECT * FROM film_studio WHERE studios_id='{idStudio}'";
+                perintah = $"SELECT * FROM film_studio WHERE studios_id='{id}'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);

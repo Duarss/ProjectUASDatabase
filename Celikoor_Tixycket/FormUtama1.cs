@@ -89,10 +89,11 @@ namespace Celikoor_Tixycket
             {
                 OpenForm(new FormProfile());
             }
+
             catch (Exception x) 
             {
-                MessageBox.Show("Please log in first");
-            };
+                MessageBox.Show("Please log in first!" + x.Message);
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {

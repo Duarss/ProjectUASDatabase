@@ -78,18 +78,18 @@ namespace Celikoor_LIB
         }
 
         //! METHOD RETRIEVE R dan FILTER F
-        public static List<Konsumen> BacaData(string id="", string nama="")
+        public static List<Konsumen> BacaData(string filter="", string nilai="")
         {
             string perintah;
 
-            if (id == "")
+            if (filter == "")
             {
-                perintah = $"SELECT * FROM konsumens";
+                perintah = $"SELECT id, nama, email, no_hp FROM konsumens";
             }
 
             else
             {
-                perintah = $"SELECT * FROM konsumens WHERE {id} like '%{nama}%'";
+                perintah = $"SELECT * FROM konsumens WHERE {filter} like '%{nilai}%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
@@ -108,7 +108,7 @@ namespace Celikoor_LIB
                 tampung.TglLahir = (DateTime)hasil.GetValue(5);
                 tampung.Saldo = double.Parse(hasil.GetValue(6).ToString());
                 tampung.Username = hasil.GetValue(7).ToString();
-                tampung.Password = hasil.GetValue(8).ToString();
+                tampung.Password = "";
 
                 listKonsumen.Add(tampung);
             }

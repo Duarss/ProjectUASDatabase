@@ -26,8 +26,8 @@ namespace Celikoor_Tixycket
 
         private void FormMasterCinema_Load(object sender, EventArgs e)
         {
-            List<Cinema> listData = Cinema.BacaData();
-            dgvData.DataSource = listData;
+            List<Cinema> listDataCinema = Cinema.BacaData();
+            dgvData.DataSource = listDataCinema;
             
             if(dgvData.ColumnCount == 5)
             {
@@ -38,6 +38,7 @@ namespace Celikoor_Tixycket
                 btnHapus.Name = "buttonHapusGrid"; //nama objek button
                 dgvData.Columns.Add(btnHapus); //tambahkan button ke grid
             }
+
             foreach (DataGridViewColumn column in dgvData.Columns)
             {
                 if (column.Name != "Id" && column.Name != "buttonHapusGrid")

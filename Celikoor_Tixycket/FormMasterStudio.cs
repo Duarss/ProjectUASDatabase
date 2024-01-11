@@ -67,9 +67,10 @@ namespace Celikoor_Tixycket
             {
 
             }
+
             catch (Exception x)
             {
-                // empty
+                MessageBox.Show(x.Message);
             }
         }
 
@@ -82,21 +83,27 @@ namespace Celikoor_Tixycket
         {
             try
             {
-                string value = textboxCari.Text;
+                string nilai = textboxCari.Text;
                 string filter = "";
-                if(comboboxCari.Text == "Nama")
+                if(comboboxCari.SelectedIndex == 0)
                 {
-                    filter = "nama";
-                }else if (comboboxCari.Text == "Kapasitas")
-                {
-                    filter = "kapasitas";
-                }else if (comboboxCari.Text == "Jenis Studio")
-                {
-                    filter = "jenis_studios_id";
+                    filter = "Nama";
                 }
-                List<Studio> listStudio = Studio.BacaData(filter, value);
-                dgvData.DataSource=listStudio;
+
+                else if (comboboxCari.SelectedIndex == 1)
+                {
+                    filter = "Kapasitas";
+                }
+
+                else if (comboboxCari.SelectedIndex == 2)
+                {
+                    filter = "jenis_studios_id.nama";
+                }
+
+                List<Studio> listDataStudio = Studio.BacaData(filter, nilai);
+                dgvData.DataSource = listDataStudio;
             }
+
             catch (Exception x)
             {
                 MessageBox.Show(x.Message);

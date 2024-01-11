@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTambahPegawai));
-            this.labelJudul = new System.Windows.Forms.Label();
+            this.labelTambahPegawai = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.buttonKosongi = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.labelCari = new System.Windows.Forms.Label();
             this.textBoxNamaPegawai = new System.Windows.Forms.TextBox();
-            this.labelId = new System.Windows.Forms.Label();
-            this.textBoxIdPegawai = new System.Windows.Forms.TextBox();
             this.labelTanggalLahir = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.textBoxUsernamePegawai = new System.Windows.Forms.TextBox();
@@ -53,19 +50,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelJudul
+            // labelTambahPegawai
             // 
-            this.labelJudul.BackColor = System.Drawing.Color.Tan;
-            this.labelJudul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelJudul.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJudul.ForeColor = System.Drawing.Color.Transparent;
-            this.labelJudul.Location = new System.Drawing.Point(137, 31);
-            this.labelJudul.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(860, 62);
-            this.labelJudul.TabIndex = 31;
-            this.labelJudul.Text = "TAMBAH PEGAWAI";
-            this.labelJudul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTambahPegawai.BackColor = System.Drawing.Color.Tan;
+            this.labelTambahPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelTambahPegawai.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTambahPegawai.ForeColor = System.Drawing.Color.Transparent;
+            this.labelTambahPegawai.Location = new System.Drawing.Point(34, 32);
+            this.labelTambahPegawai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTambahPegawai.Name = "labelTambahPegawai";
+            this.labelTambahPegawai.Size = new System.Drawing.Size(843, 62);
+            this.labelTambahPegawai.TabIndex = 31;
+            this.labelTambahPegawai.Text = "ADD EMPLOYEE";
+            this.labelTambahPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonKeluar
             // 
@@ -73,27 +70,13 @@
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(814, 592);
+            this.buttonKeluar.Location = new System.Drawing.Point(695, 593);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(182, 56);
             this.buttonKeluar.TabIndex = 34;
-            this.buttonKeluar.Text = "KELUAR";
+            this.buttonKeluar.Text = "CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
-            // 
-            // buttonKosongi
-            // 
-            this.buttonKosongi.BackColor = System.Drawing.Color.Tan;
-            this.buttonKosongi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonKosongi.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonKosongi.ForeColor = System.Drawing.Color.White;
-            this.buttonKosongi.Location = new System.Drawing.Point(469, 592);
-            this.buttonKosongi.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonKosongi.Name = "buttonKosongi";
-            this.buttonKosongi.Size = new System.Drawing.Size(182, 56);
-            this.buttonKosongi.TabIndex = 35;
-            this.buttonKosongi.Text = "KOSONGI";
-            this.buttonKosongi.UseVisualStyleBackColor = false;
             // 
             // buttonSimpan
             // 
@@ -101,81 +84,61 @@
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(137, 592);
+            this.buttonSimpan.Location = new System.Drawing.Point(34, 593);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(182, 56);
             this.buttonSimpan.TabIndex = 33;
-            this.buttonSimpan.Text = "SIMPAN";
+            this.buttonSimpan.Text = "SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // labelCari
             // 
             this.labelCari.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCari.Location = new System.Drawing.Point(276, 199);
+            this.labelCari.Location = new System.Drawing.Point(210, 139);
             this.labelCari.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCari.Name = "labelCari";
-            this.labelCari.Size = new System.Drawing.Size(210, 56);
+            this.labelCari.Size = new System.Drawing.Size(93, 56);
             this.labelCari.TabIndex = 19;
-            this.labelCari.Text = "Nama Pegawai:";
-            this.labelCari.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelCari.Text = "Name:";
+            this.labelCari.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxNamaPegawai
             // 
             this.textBoxNamaPegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaPegawai.Location = new System.Drawing.Point(529, 208);
+            this.textBoxNamaPegawai.Location = new System.Drawing.Point(400, 150);
             this.textBoxNamaPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNamaPegawai.Name = "textBoxNamaPegawai";
             this.textBoxNamaPegawai.Size = new System.Drawing.Size(302, 36);
             this.textBoxNamaPegawai.TabIndex = 20;
             // 
-            // labelId
-            // 
-            this.labelId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelId.Location = new System.Drawing.Point(322, 130);
-            this.labelId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(164, 56);
-            this.labelId.TabIndex = 21;
-            this.labelId.Text = "Id Pegawai:";
-            this.labelId.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBoxIdPegawai
-            // 
-            this.textBoxIdPegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIdPegawai.Location = new System.Drawing.Point(529, 140);
-            this.textBoxIdPegawai.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxIdPegawai.Name = "textBoxIdPegawai";
-            this.textBoxIdPegawai.Size = new System.Drawing.Size(104, 36);
-            this.textBoxIdPegawai.TabIndex = 22;
-            // 
             // labelTanggalLahir
             // 
             this.labelTanggalLahir.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTanggalLahir.Location = new System.Drawing.Point(394, 269);
+            this.labelTanggalLahir.Location = new System.Drawing.Point(210, 220);
             this.labelTanggalLahir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTanggalLahir.Name = "labelTanggalLahir";
             this.labelTanggalLahir.Size = new System.Drawing.Size(92, 56);
             this.labelTanggalLahir.TabIndex = 24;
             this.labelTanggalLahir.Text = "Email:";
-            this.labelTanggalLahir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelTanggalLahir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelUsername
             // 
             this.labelUsername.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(338, 336);
+            this.labelUsername.Location = new System.Drawing.Point(210, 297);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(148, 56);
+            this.labelUsername.Size = new System.Drawing.Size(147, 56);
             this.labelUsername.TabIndex = 29;
             this.labelUsername.Text = "Username:";
-            this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxUsernamePegawai
             // 
             this.textBoxUsernamePegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsernamePegawai.Location = new System.Drawing.Point(529, 344);
+            this.textBoxUsernamePegawai.Location = new System.Drawing.Point(400, 308);
             this.textBoxUsernamePegawai.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUsernamePegawai.Name = "textBoxUsernamePegawai";
             this.textBoxUsernamePegawai.Size = new System.Drawing.Size(302, 36);
@@ -184,18 +147,18 @@
             // labelPassword
             // 
             this.labelPassword.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(338, 402);
+            this.labelPassword.Location = new System.Drawing.Point(210, 376);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(148, 56);
+            this.labelPassword.Size = new System.Drawing.Size(139, 56);
             this.labelPassword.TabIndex = 31;
             this.labelPassword.Text = "Password:";
-            this.labelPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxPasswordPegawai
             // 
             this.textBoxPasswordPegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPasswordPegawai.Location = new System.Drawing.Point(529, 411);
+            this.textBoxPasswordPegawai.Location = new System.Drawing.Point(400, 387);
             this.textBoxPasswordPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPasswordPegawai.Name = "textBoxPasswordPegawai";
             this.textBoxPasswordPegawai.Size = new System.Drawing.Size(302, 36);
@@ -204,13 +167,13 @@
             // labelJabatan
             // 
             this.labelJabatan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJabatan.Location = new System.Drawing.Point(394, 464);
+            this.labelJabatan.Location = new System.Drawing.Point(210, 458);
             this.labelJabatan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelJabatan.Name = "labelJabatan";
-            this.labelJabatan.Size = new System.Drawing.Size(92, 56);
+            this.labelJabatan.Size = new System.Drawing.Size(83, 56);
             this.labelJabatan.TabIndex = 35;
             this.labelJabatan.Text = "Role:";
-            this.labelJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // comboBoxRolePegawai
             // 
@@ -221,7 +184,7 @@
             "Admin",
             "Operator",
             "Kasir"});
-            this.comboBoxRolePegawai.Location = new System.Drawing.Point(529, 474);
+            this.comboBoxRolePegawai.Location = new System.Drawing.Point(400, 469);
             this.comboBoxRolePegawai.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxRolePegawai.Name = "comboBoxRolePegawai";
             this.comboBoxRolePegawai.Size = new System.Drawing.Size(302, 37);
@@ -230,7 +193,7 @@
             // textBoxEmailPegawai
             // 
             this.textBoxEmailPegawai.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmailPegawai.Location = new System.Drawing.Point(529, 278);
+            this.textBoxEmailPegawai.Location = new System.Drawing.Point(400, 231);
             this.textBoxEmailPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEmailPegawai.Name = "textBoxEmailPegawai";
             this.textBoxEmailPegawai.Size = new System.Drawing.Size(302, 36);
@@ -239,7 +202,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox1.Location = new System.Drawing.Point(137, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 32);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(11, 536);
@@ -249,7 +212,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox2.Location = new System.Drawing.Point(986, 31);
+            this.pictureBox2.Location = new System.Drawing.Point(866, 32);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(11, 536);
@@ -259,10 +222,10 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox3.Location = new System.Drawing.Point(137, 556);
+            this.pictureBox3.Location = new System.Drawing.Point(34, 557);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(860, 12);
+            this.pictureBox3.Size = new System.Drawing.Size(843, 12);
             this.pictureBox3.TabIndex = 41;
             this.pictureBox3.TabStop = false;
             // 
@@ -270,16 +233,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 676);
+            this.ClientSize = new System.Drawing.Size(906, 676);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxEmailPegawai);
-            this.Controls.Add(this.labelJudul);
+            this.Controls.Add(this.labelTambahPegawai);
             this.Controls.Add(this.comboBoxRolePegawai);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.labelJabatan);
-            this.Controls.Add(this.buttonKosongi);
             this.Controls.Add(this.textBoxPasswordPegawai);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.labelPassword);
@@ -288,8 +250,6 @@
             this.Controls.Add(this.labelCari);
             this.Controls.Add(this.labelTanggalLahir);
             this.Controls.Add(this.textBoxNamaPegawai);
-            this.Controls.Add(this.textBoxIdPegawai);
-            this.Controls.Add(this.labelId);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -306,14 +266,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelJudul;
+        private System.Windows.Forms.Label labelTambahPegawai;
         private System.Windows.Forms.Button buttonKeluar;
-        private System.Windows.Forms.Button buttonKosongi;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Label labelCari;
         private System.Windows.Forms.TextBox textBoxNamaPegawai;
-        private System.Windows.Forms.Label labelId;
-        private System.Windows.Forms.TextBox textBoxIdPegawai;
         private System.Windows.Forms.Label labelTanggalLahir;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.TextBox textBoxUsernamePegawai;

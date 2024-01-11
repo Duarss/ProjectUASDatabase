@@ -33,8 +33,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMasterPegawai));
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textboxCari = new System.Windows.Forms.TextBox();
-            this.comboboxCari = new System.Windows.Forms.ComboBox();
+            this.textBoxCari = new System.Windows.Forms.TextBox();
+            this.comboBoxCari = new System.Windows.Forms.ComboBox();
             this.labelCariBerdasarkan = new System.Windows.Forms.Label();
             this.buttonCari = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
@@ -49,50 +49,52 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(1427, 1160);
+            this.buttonKeluar.Location = new System.Drawing.Point(1225, 979);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(166, 62);
             this.buttonKeluar.TabIndex = 84;
             this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textboxCari);
-            this.panel1.Controls.Add(this.comboboxCari);
+            this.panel1.Controls.Add(this.textBoxCari);
+            this.panel1.Controls.Add(this.comboBoxCari);
             this.panel1.Controls.Add(this.labelCariBerdasarkan);
             this.panel1.Controls.Add(this.buttonCari);
-            this.panel1.Location = new System.Drawing.Point(52, 92);
+            this.panel1.Location = new System.Drawing.Point(26, 92);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1538, 110);
+            this.panel1.Size = new System.Drawing.Size(1365, 110);
             this.panel1.TabIndex = 82;
             // 
-            // textboxCari
+            // textBoxCari
             // 
-            this.textboxCari.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxCari.Location = new System.Drawing.Point(755, 35);
-            this.textboxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textboxCari.Name = "textboxCari";
-            this.textboxCari.Size = new System.Drawing.Size(541, 42);
-            this.textboxCari.TabIndex = 2;
+            this.textBoxCari.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCari.Location = new System.Drawing.Point(706, 35);
+            this.textBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxCari.Name = "textBoxCari";
+            this.textBoxCari.Size = new System.Drawing.Size(433, 42);
+            this.textBoxCari.TabIndex = 2;
             // 
-            // comboboxCari
+            // comboBoxCari
             // 
-            this.comboboxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboboxCari.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboboxCari.FormattingEnabled = true;
-            this.comboboxCari.Items.AddRange(new object[] {
-            "Kode Kategori",
-            "Nama"});
-            this.comboboxCari.Location = new System.Drawing.Point(301, 35);
-            this.comboboxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboboxCari.Name = "comboboxCari";
-            this.comboboxCari.Size = new System.Drawing.Size(283, 42);
-            this.comboboxCari.TabIndex = 1;
+            this.comboBoxCari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCari.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCari.FormattingEnabled = true;
+            this.comboBoxCari.Items.AddRange(new object[] {
+            "Nama",
+            "Username",
+            "Role"});
+            this.comboBoxCari.Location = new System.Drawing.Point(301, 35);
+            this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxCari.Name = "comboBoxCari";
+            this.comboBoxCari.Size = new System.Drawing.Size(283, 42);
+            this.comboBoxCari.TabIndex = 1;
             // 
             // labelCariBerdasarkan
             // 
@@ -111,13 +113,14 @@
             this.buttonCari.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonCari.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCari.ForeColor = System.Drawing.Color.White;
-            this.buttonCari.Location = new System.Drawing.Point(1338, 23);
+            this.buttonCari.Location = new System.Drawing.Point(1171, 23);
             this.buttonCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCari.Name = "buttonCari";
             this.buttonCari.Size = new System.Drawing.Size(166, 62);
             this.buttonCari.TabIndex = 77;
             this.buttonCari.Text = "SEARCH";
             this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
             // dgvData
             // 
@@ -131,7 +134,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(52, 223);
+            this.dgvData.Location = new System.Drawing.Point(26, 223);
             this.dgvData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvData.Name = "dgvData";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -143,7 +146,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.RowHeadersWidth = 62;
-            this.dgvData.Size = new System.Drawing.Size(1538, 931);
+            this.dgvData.Size = new System.Drawing.Size(1365, 737);
             this.dgvData.TabIndex = 86;
             // 
             // buttonTambah
@@ -151,7 +154,7 @@
             this.buttonTambah.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
-            this.buttonTambah.Location = new System.Drawing.Point(49, 1160);
+            this.buttonTambah.Location = new System.Drawing.Point(26, 979);
             this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(166, 62);
@@ -165,10 +168,10 @@
             this.label3.BackColor = System.Drawing.Color.Tan;
             this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(52, 19);
+            this.label3.Location = new System.Drawing.Point(26, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1538, 55);
+            this.label3.Size = new System.Drawing.Size(1365, 55);
             this.label3.TabIndex = 85;
             this.label3.Text = "MASTER EMPLOYEE";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1643, 1241);
+            this.ClientSize = new System.Drawing.Size(1418, 1055);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
@@ -186,6 +189,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMasterPegawai";
             this.Text = "TIXIE";
+            this.Load += new System.EventHandler(this.FormMasterPegawai_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
@@ -197,8 +201,8 @@
 
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textboxCari;
-        private System.Windows.Forms.ComboBox comboboxCari;
+        private System.Windows.Forms.TextBox textBoxCari;
+        private System.Windows.Forms.ComboBox comboBoxCari;
         private System.Windows.Forms.Label labelCariBerdasarkan;
         private System.Windows.Forms.Button buttonCari;
         private System.Windows.Forms.DataGridView dgvData;

@@ -80,18 +80,18 @@ namespace Celikoor_LIB
         }
 
         //! METHOD RETRIEVE R dan FILTER F
-        public static List<Film> BacaData(string id="", string judul="")
+        public static List<Film> BacaData(string filter="", string nilai="")
         {
             string perintah;
 
-            if (id == "")
+            if (filter == "")
             {
                 perintah = $"SELECT * FROM films";
             }
 
             else
             {
-                perintah = $"SELECT * FROM films WHERE {id} like '%{judul}%'";
+                perintah = $"SELECT * FROM films WHERE {filter} like '%{nilai}%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
@@ -101,7 +101,6 @@ namespace Celikoor_LIB
             while(hasil.Read() == true)
             {
                 Film tampung = new Film();
-
                 tampung.Id = hasil.GetInt32(0);
                 tampung.Judul = hasil.GetValue(1).ToString();
                 tampung.Sinopsis = hasil.GetValue(2).ToString();

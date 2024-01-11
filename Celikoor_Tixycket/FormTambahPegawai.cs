@@ -24,7 +24,6 @@ namespace Celikoor_Tixycket
             try
             {
                 Pegawai p = new Pegawai();
-                p.Id = int.Parse(textBoxIdPegawai.Text);
                 p.Nama = textBoxNamaPegawai.Text;
                 p.Email = textBoxEmailPegawai.Text;
                 p.Username = textBoxUsernamePegawai.Text;
@@ -50,7 +49,7 @@ namespace Celikoor_Tixycket
 
         private void FormTambahPegawai_Load_1(object sender, EventArgs e)
         {
-            textBoxIdPegawai.Select();
+            textBoxNamaPegawai.Select();
         }
     }
 }

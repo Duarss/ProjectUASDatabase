@@ -66,18 +66,18 @@ namespace Celikoor_LIB
         }
 
         //! METHOD RETRIEVE R dan FILTER F
-        public static List<Aktor> BacaData(string id="", string nama ="")
+        public static List<Aktor> BacaData(string filter="", string nilai ="")
         {
             string perintah;
 
-            if (id == "")
+            if (filter == "")
             {
                 perintah = $"SELECT * FROM aktors";
             }
 
             else
             {
-                perintah = $"SELECT * FROM aktors WHERE {id} like '%{nama}%'";
+                perintah = $"SELECT * FROM aktors WHERE {filter} like '%{nilai}%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);

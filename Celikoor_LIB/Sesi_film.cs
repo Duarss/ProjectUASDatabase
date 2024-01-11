@@ -51,11 +51,11 @@ namespace Celikoor_LIB
         }
 
         //! METHOD RETRIEVE R
-        public static List<Sesi_film> BacaData(int id = 0)
+        public static List<Sesi_film> BacaData(string id="")
         {
             string perintah;
 
-            if (id == 0)
+            if (id == "")
             {
                 perintah = $"SELECT * FROM sesi_films";
             }

@@ -23,9 +23,8 @@ namespace Celikoor_Tixycket
             try
             {
                 Genre g = new Genre();
-                g.Id = int.Parse(textBoxIdGenre.Text);
-                g.Nama = textBoxNamaGenre.Text;
-                g.Deskripsi = textBoxDeskripsiGenre.Text;
+                g.Nama = textBoxGenre.Text;
+                g.Deskripsi = textBoxDeskripsi.Text;
 
                 Genre.TambahData(g);
                 MessageBox.Show("Tambah data berhasil");
