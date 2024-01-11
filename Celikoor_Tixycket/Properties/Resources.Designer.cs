@@ -103,9 +103,29 @@ namespace Celikoor_Tixycket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Discount_Banner_11 {
+        internal static System.Drawing.Bitmap Discount_Banner_2 {
             get {
-                object obj = ResourceManager.GetObject("Discount_Banner_11", resourceCulture);
+                object obj = ResourceManager.GetObject("Discount_Banner_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Discount_Banner_3 {
+            get {
+                object obj = ResourceManager.GetObject("Discount_Banner_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Discount_Banner_4 {
+            get {
+                object obj = ResourceManager.GetObject("Discount_Banner_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

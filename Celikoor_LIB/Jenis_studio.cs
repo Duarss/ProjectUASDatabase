@@ -78,6 +78,10 @@ namespace Celikoor_LIB
 
             return listJenisStudio;
         }
+        public override string ToString()
+        {
+            return Nama;
+        }
         #endregion
     }
 }

@@ -28,6 +28,7 @@ namespace Celikoor_LIB
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
         public string Deskripsi { get => deskripsi; set => deskripsi = value; }
+
         #endregion
 
         #region METHODS

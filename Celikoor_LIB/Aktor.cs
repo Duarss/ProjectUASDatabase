@@ -29,11 +29,13 @@ namespace Celikoor_LIB
         #endregion
 
         #region PROPERTIES
-        public int Id { get => id; set => id = value; }
+        public int Id 
+        { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
         public DateTime TglLahir { get => tglLahir; set => tglLahir = value; }
         public string Gender { get => gender; set => gender = value; }
         public string NegaraAsal { get => negaraAsal; set => negaraAsal = value; }
+
         #endregion
 
         #region METHODS

@@ -28,6 +28,15 @@ namespace Celikoor_LIB
             Password = "";
             Role = "";
         }
+
+        public Pegawai(int id, string nama, string email, string username, string role)
+        {
+            this.Id = id;
+            this.Nama = nama;
+            this.Email = email;
+            this.Username = username;
+            this.Role = role;
+        }
         #endregion
 
         #region PROPERTIES
@@ -101,13 +110,12 @@ namespace Celikoor_LIB
             //selama masih ada data yang dapat dibaca dari datareader
             if (hasil.Read() == true)
             {
-                Pegawai tampung = new Pegawai();
-                tampung.Id = int.Parse(hasil.GetValue(0).ToString());
-                tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.Email = hasil.GetValue(2).ToString();
-                tampung.Username = hasil.GetValue(3).ToString();
-                tampung.Role = hasil.GetValue(5).ToString();
-
+                int id = int.Parse(hasil.GetValue(0).ToString());
+                string nama = hasil.GetValue(1).ToString();
+                string email = hasil.GetValue(2).ToString();
+                string usernamePegawai = hasil.GetValue(3).ToString();
+                string role = hasil.GetValue(5).ToString();
+                Pegawai tampung = new Pegawai(id, nama, email, usernamePegawai, role);
                 return tampung;
             }
 

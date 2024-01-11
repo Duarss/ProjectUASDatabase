@@ -56,8 +56,9 @@
             this.timerMB = new System.Windows.Forms.Timer(this.components);
             this.timerMS = new System.Windows.Forms.Timer(this.components);
             this.labelFilmName = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelDiscountBanner = new System.Windows.Forms.Panel();
             this.pictureBoxDiscountBanner = new System.Windows.Forms.PictureBox();
+            this.timerDiscountBanner = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPosterLeft2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPosterLeft1)).BeginInit();
             this.panelPoster.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelDiscountBanner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiscountBanner)).BeginInit();
             this.SuspendLayout();
             // 
@@ -342,23 +343,28 @@
             this.labelFilmName.TabIndex = 43;
             this.labelFilmName.Text = "filmText";
             // 
-            // panel1
+            // panelDiscountBanner
             // 
-            this.panel1.Controls.Add(this.pictureBoxDiscountBanner);
-            this.panel1.Location = new System.Drawing.Point(70, 671);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1117, 145);
-            this.panel1.TabIndex = 44;
+            this.panelDiscountBanner.Controls.Add(this.pictureBoxDiscountBanner);
+            this.panelDiscountBanner.Location = new System.Drawing.Point(70, 671);
+            this.panelDiscountBanner.Name = "panelDiscountBanner";
+            this.panelDiscountBanner.Size = new System.Drawing.Size(1117, 145);
+            this.panelDiscountBanner.TabIndex = 44;
             // 
             // pictureBoxDiscountBanner
             // 
             this.pictureBoxDiscountBanner.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.Discount_Banner_1;
             this.pictureBoxDiscountBanner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxDiscountBanner.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxDiscountBanner.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxDiscountBanner.Name = "pictureBoxDiscountBanner";
             this.pictureBoxDiscountBanner.Size = new System.Drawing.Size(1117, 145);
             this.pictureBoxDiscountBanner.TabIndex = 0;
             this.pictureBoxDiscountBanner.TabStop = false;
+            // 
+            // timerDiscountBanner
+            // 
+            this.timerDiscountBanner.Interval = 2000;
+            this.timerDiscountBanner.Tick += new System.EventHandler(this.timerDiscountBanner_Tick);
             // 
             // FormMain
             // 
@@ -366,7 +372,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1260, 844);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelDiscountBanner);
             this.Controls.Add(this.labelFilmName);
             this.Controls.Add(this.buttonRight);
             this.Controls.Add(this.pictureBox9);
@@ -405,7 +411,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPosterLeft2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPosterLeft1)).EndInit();
             this.panelPoster.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelDiscountBanner.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiscountBanner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -441,7 +447,8 @@
         private System.Windows.Forms.Timer timerMB;
         private System.Windows.Forms.Timer timerMS;
         private System.Windows.Forms.Label labelFilmName;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelDiscountBanner;
         private System.Windows.Forms.PictureBox pictureBoxDiscountBanner;
+        private System.Windows.Forms.Timer timerDiscountBanner;
     }
 }

@@ -48,6 +48,13 @@ namespace Celikoor_Tixycket
         private void FormTambahStudio_Load(object sender, EventArgs e)
         {
             textBoxNamaStudio.Focus();
+            List<Jenis_Studio> listJenisStudio = Jenis_Studio.BacaData();
+            comboBoxStudio.DataSource = listJenisStudio;
+            comboBoxStudio.DisplayMember = "Nama";
+
+            List<Cinema> listCinema = Cinema.BacaData();
+            comboBoxCinema.DataSource = listCinema;
+            comboBoxCinema.DisplayMember = "Nama_cabang";
         }
     }
 }

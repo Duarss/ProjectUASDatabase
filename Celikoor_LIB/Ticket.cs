@@ -19,6 +19,8 @@ namespace Celikoor_LIB
         private Jadwal_film jadwalFilm;
         private Studio studio;
         private Film film;
+
+        
         #endregion
 
         #region CONSTRUCTORS

@@ -39,7 +39,6 @@
     <Reference Include="Celikoor_LIB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Celikoor_LIB\bin\Debug\Celikoor_LIB.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -380,6 +379,9 @@
     <None Include="Resources\left.png" />
     <None Include="Resources\right.png" />
     <None Include="Resources\Discount_Banner_1.png" />
+    <None Include="Resources\Discount_Banner_2.png" />
+    <None Include="Resources\Discount_Banner_3.png" />
+    <None Include="Resources\Discount_Banner_4.png" />
     <Content Include="Resources\schedule.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

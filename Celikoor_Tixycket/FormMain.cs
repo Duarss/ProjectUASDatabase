@@ -22,6 +22,7 @@ namespace Celikoor_Tixycket
         }
         FormUtama1 formUtama;
         List<Film> listFilms;
+        List<Image> listDiscBannerImage = new List<Image> { Resources.Discount_Banner_1, Resources.Discount_Banner_2, Resources.Discount_Banner_3, Resources.Discount_Banner_4 };
         int minIndex = 1;
         int maxIndex = 10; //listFilm.Count();
         int leftIndex = 1; //absolut
@@ -414,6 +415,11 @@ namespace Celikoor_Tixycket
                 // Reset the hover effect or logic here
                 leftPictureBox.BorderStyle = BorderStyle.None;
             }
+        }
+
+        private void timerDiscountBanner_Tick(object sender, EventArgs e)
+        {
+            
         }
     }
 }

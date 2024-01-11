@@ -28,8 +28,6 @@ namespace Celikoor_LIB
             Kapasitas = 0;
             JenisStudio = new Jenis_Studio();
             Cinema = new Cinema();
-            Harga_weekday = 0;
-            Harga_weekend = 0;
         }
         #endregion
 
@@ -73,18 +71,18 @@ namespace Celikoor_LIB
         }
 
         //! METHOD RETRIEVE R dan FILTER F
-        public static List<Studio> BacaData(string id="", string nama="")
+        public static List<Studio> BacaData(string filter="", string nilai="")
         {
             string perintah;
 
-            if (id == "")
+            if (filter == "")
             {
                 perintah = $"SELECT * FROM studios";
             }
 
             else
             {
-                perintah = $"SELECT * FROM studios WHERE {id} like '%{nama}%'";
+                perintah = $"SELECT * FROM studios WHERE {filter} like '%{nilai}%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
@@ -96,21 +94,25 @@ namespace Celikoor_LIB
             {   
                 Studio tampung = new Studio();
 
-                tampung.Id = hasil.GetInt32(0);
+                tampung.Id = int.Parse(hasil.GetValue(0).ToString());
                 tampung.Nama = hasil.GetValue(1).ToString();
                 tampung.Kapasitas = int.Parse(hasil.GetValue(2).ToString());
                 Jenis_Studio tampungJenisStudio = new Jenis_Studio();
-                tampungJenisStudio.Id = hasil.GetInt32(3);
+                if (hasil.GetValue(3).ToString() != "")
+                {
+                    tampung.JenisStudio.Id = int.Parse(hasil.GetValue(3).ToString());
+                    List<Jenis_Studio> listItem = Jenis_Studio.BacaData(tampung.JenisStudio.Id.ToString());
+                    tampung.JenisStudio = listItem[0];
+                }
                 Cinema tampungCinema = new Cinema();
-                tampungCinema.Id = hasil.GetInt32(4);
+                if (hasil.GetValue(4).ToString() != "")
+                {
+                    tampung.Cinema.Id = int.Parse(hasil.GetValue(4).ToString());
+                    List<Cinema> listItem = Cinema.BacaData(tampung.Cinema.Id.ToString());
+                    tampung.Cinema = listItem[0];
+                }
                 tampung.Harga_weekday = int.Parse(hasil.GetValue(5).ToString());
                 tampung.Harga_weekend = int.Parse(hasil.GetValue(6).ToString());
-                tampungJenisStudio.Nama = hasil.GetValue(7).ToString();
-                tampungCinema.Nama_cabang = hasil.GetValue(8).ToString();
-
-                tampung.JenisStudio = tampungJenisStudio;
-                tampung.Cinema = tampungCinema;
-
                 listStudio.Add(tampung);
             }
 

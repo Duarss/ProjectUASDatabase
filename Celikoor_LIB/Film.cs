@@ -40,6 +40,8 @@ namespace Celikoor_LIB
 
         #region PROPERTIES
         public int Id { get => id; set => id = value; }
+        
+        public double Diskon { get => diskon; set => diskon = value; }
         public string Judul { get => judul; set => judul = value; }
         public string Sinopsis { get => sinopsis; set => sinopsis = value; }
         public int Tahun { get => tahun; set => tahun = value; }
@@ -48,7 +50,6 @@ namespace Celikoor_LIB
         public string Bahasa { get => bahasa; set => bahasa = value; }
         public int Is_sub_indo { get => is_sub_indo; set => is_sub_indo = value; }
         public string CoverImage { get => coverImage; set => coverImage = value; }
-        public double Diskon { get => diskon; set => diskon = value; }
         #endregion
 
         #region METHODS

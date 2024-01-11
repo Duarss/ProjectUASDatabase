@@ -28,7 +28,6 @@ namespace Celikoor_LIB
             Diskon_nominal = 0;
             Penonton = new Konsumen();
             Kasir = new Pegawai();
-            Status = "";
         }
         #endregion
 

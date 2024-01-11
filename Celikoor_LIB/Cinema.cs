@@ -88,6 +88,10 @@ namespace Celikoor_LIB
             //kirim list ke pemanggilnya
             return listCinema;
         }
+        public override string ToString()
+        {
+            return Nama_cabang;
+        }
         #endregion
     }
 }
