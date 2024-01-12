@@ -4,11 +4,12 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace Celikoor_LIB
 {
-    public class Koneksi
+    public class Koneksi : IDisposable
     {
         private MySqlConnection koneksiDB;
 
@@ -17,15 +18,31 @@ namespace Celikoor_LIB
             get => koneksiDB; private set =>
                 koneksiDB = value;
         }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (KoneksiDB != null)
+                {
+                    KoneksiDB.Close();
+                    KoneksiDB.Dispose();
+                }
+            }
+        }
 
         public Koneksi(string pS, string pD, string pU, string pP)
         {
             string conString =
-                "Server= " + pS + ";Database= " + pD + ";Uid= " + pU + ";Pwd= " + pP;
+                "Server= " + pS + ";Database= " + pD + ";Uid= " + pU + ";Pwd= " + pP + ";Max Pool Size=200;"; // updated version *
             //"Server=localhost;Database=jualBeli;Uid=root;Pwd=;";
             KoneksiDB = new MySqlConnection();
             KoneksiDB.ConnectionString = conString;
-            KoneksiDB.Open();
+            //KoneksiDB.Open();
 
             Connect();
         }
@@ -50,39 +67,45 @@ namespace Celikoor_LIB
             //--------------------------------------------------------------------------------
 
             string conString =
-                "Server= " + vServer + ";Database= " + vDb + ";Uid= " + vUID + ";Pwd= " + vPWD;
+                "Server= " + vServer + ";Database= " + vDb + ";Uid= " + vUID + ";Pwd= " + vPWD + ";Max Pool Size=200;";
             //"Server=localhost;Database=jualBeli;Uid=root;Pwd=;";
             KoneksiDB = new MySqlConnection();
             KoneksiDB.ConnectionString = conString;
-            KoneksiDB.Open();
+            //KoneksiDB.Open();
 
             Connect();
         }
 
         public void Connect()
         {
-            //Jika koneksi sedang terbuka, tutup dulu koneksi yang sedang aktif
-            if (KoneksiDB.State == System.Data.ConnectionState.Open)
-                KoneksiDB.Close();
+            try
+            {
+                //Jika koneksi sedang terbuka, tutup dulu koneksi yang sedang aktif
+                if (KoneksiDB.State == System.Data.ConnectionState.Open)
+                    KoneksiDB.Close();
 
-            KoneksiDB.Open();
+                KoneksiDB.Open();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Too much connection has been made! Please try again later...");
+            }
         }
+
 
         public static void JalankanPerintahQuery(string perintah)
         {
             Koneksi k = new Koneksi();
             MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
-            cmd.ExecuteNonQuery(); //untuk insert update delete
-
+            cmd.ExecuteNonQuery(); // untuk insert update delete
         }
-
+        
         public static MySqlDataReader JalankanPerintahSelect(string perintah)
         {
             Koneksi k = new Koneksi();
             MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
             MySqlDataReader dr = cmd.ExecuteReader(); //untuk insert update delete
             return dr;
-
         }
     }
 }

@@ -29,6 +29,8 @@ namespace Celikoor_Tixycket
             FormTambahAktor formTambahAktor = new FormTambahAktor();
             formTambahAktor.Owner = this;
             formTambahAktor.ShowDialog();
+
+            FormMasterAktor_Load(this, e);
         }
 
         private void FormMasterAktor_Load(object sender, EventArgs e)
@@ -44,13 +46,20 @@ namespace Celikoor_Tixycket
                 btnHapus.UseColumnTextForButtonValue = true; //agar tulisan muncul di button
                 btnHapus.Name = "buttonHapusGrid"; //nama objek button
                 dgvData.Columns.Add(btnHapus); //tambahkan button ke grid
+
+                DataGridViewButtonColumn btnUpdate = new DataGridViewButtonColumn();
+                btnUpdate.Text = "Update"; //judul button
+                btnUpdate.HeaderText = "Update"; //judul kolom
+                btnUpdate.UseColumnTextForButtonValue = true; //agar tulisan muncul di button
+                btnUpdate.Name = "buttonUpdateGrid"; //nama objek button
+                dgvData.Columns.Add(btnUpdate); //tambahkan button ke grid
             }
 
             foreach (DataGridViewColumn column in dgvData.Columns)
             {
-                if (column.Name != "Id" && column.Name != "buttonHapusGrid")
+                if (column.Name != "Id" && column.Name != "buttonHapusGrid" && column.Name != "buttonUpdateGrid")
                 {
-                    column.Width = 228;
+                    column.Width = 212;
                 }
             }
         }

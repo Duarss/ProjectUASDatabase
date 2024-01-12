@@ -12,7 +12,7 @@ namespace Celikoor_LIB
         #region FIELDS
         int id;
         string nama;
-        DateTime tglLahir;
+        string tglLahir;
         string gender;
         string negaraAsal;
         #endregion
@@ -22,7 +22,7 @@ namespace Celikoor_LIB
         {
             Id = 0;
             Nama = "";
-            TglLahir = DateTime.Now;
+            TglLahir = "";
             Gender = "";
             NegaraAsal = "";
         }
@@ -32,7 +32,7 @@ namespace Celikoor_LIB
         public int Id 
         { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
-        public DateTime TglLahir { get => tglLahir; set => tglLahir = value; }
+        public string TglLahir { get => tglLahir; set => tglLahir = value; }
         public string Gender { get => gender; set => gender = value; }
         public string NegaraAsal { get => negaraAsal; set => negaraAsal = value; }
 
@@ -43,7 +43,7 @@ namespace Celikoor_LIB
         public static void TambahData(Aktor aktor)
         {
             string perintah = $"INSERT INTO aktors (nama, tgl_lahir, gender, negara_asal) " +
-                $"VALUES ('{aktor.Nama}', '{aktor.TglLahir.ToShortDateString()}', '{aktor.Gender}', '{aktor.NegaraAsal}');";
+                $"VALUES ('{aktor.Nama}', '{aktor.TglLahir}', '{aktor.Gender}', '{aktor.NegaraAsal}');";
 
             Koneksi.JalankanPerintahQuery(perintah);
         }
@@ -51,7 +51,7 @@ namespace Celikoor_LIB
         //! METHOD UPDATE U
         public static void UbahData(Aktor aktor)
         {
-            string perintah = $"UPDATE aktors SET nama='{aktor.Nama}', tgl_lahir='{aktor.TglLahir.ToShortDateString()}'" +
+            string perintah = $"UPDATE aktors SET nama='{aktor.Nama}', tgl_lahir='{aktor.TglLahir}'" +
                 $", gender='{aktor.Gender}', negara_asal='{aktor.NegaraAsal}');";
 
             Koneksi.JalankanPerintahQuery(perintah);
@@ -90,7 +90,7 @@ namespace Celikoor_LIB
 
                 tampung.Id = hasil.GetInt32(0);
                 tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.TglLahir = (DateTime)hasil.GetValue(2);
+                tampung.TglLahir = hasil.GetValue(2).ToString();
                 tampung.Gender = hasil.GetValue(3).ToString();
                 tampung.NegaraAsal = hasil.GetValue(4).ToString();
 
@@ -98,6 +98,10 @@ namespace Celikoor_LIB
             }
             //kirim list ke pemanggilnya
             return listAktor;
+        }
+        public override string ToString()
+        {
+            return Nama;
         }
         #endregion
     }

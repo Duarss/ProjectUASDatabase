@@ -84,39 +84,41 @@ namespace Celikoor_LIB
             {
                 perintah = $"SELECT * FROM studios WHERE {filter} like '%{nilai}%'";
             }
-
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-
             List<Studio> listStudio = new List<Studio>();
-
-            //selama masih ada data yang dapat dibaca dari datareader
-            while (hasil.Read() == true)
-            {   
-                Studio tampung = new Studio();
-
-                tampung.Id = int.Parse(hasil.GetValue(0).ToString());
-                tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.Kapasitas = int.Parse(hasil.GetValue(2).ToString());
-                Jenis_Studio tampungJenisStudio = new Jenis_Studio();
-                if (hasil.GetValue(3).ToString() != "")
+            using (MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah))
+            {
+                while (hasil.Read() == true)
                 {
-                    tampung.JenisStudio.Id = int.Parse(hasil.GetValue(3).ToString());
-                    List<Jenis_Studio> listItem = Jenis_Studio.BacaData(tampung.JenisStudio.Id.ToString());
-                    tampung.JenisStudio = listItem[0];
+                    Studio tampung = new Studio();
+
+                    tampung.Id = int.Parse(hasil.GetValue(0).ToString());
+                    tampung.Nama = hasil.GetValue(1).ToString();
+                    tampung.Kapasitas = int.Parse(hasil.GetValue(2).ToString());
+                    Jenis_Studio tampungJenisStudio = new Jenis_Studio();
+                    if (hasil.GetValue(3).ToString() != "")
+                    {
+                        tampung.JenisStudio.Id = int.Parse(hasil.GetValue(3).ToString());
+                        List<Jenis_Studio> listItem = Jenis_Studio.BacaData(tampung.JenisStudio.Id.ToString());
+                        tampung.JenisStudio = listItem[0];
+                    }
+                    Cinema tampungCinema = new Cinema();
+                    if (hasil.GetValue(4).ToString() != "")
+                    {
+                        tampung.Cinema.Id = int.Parse(hasil.GetValue(4).ToString());
+                        List<Cinema> listItem = Cinema.BacaData(tampung.Cinema.Id.ToString());
+                        tampung.Cinema = listItem[0];
+                    }
+                    tampung.Harga_weekday = int.Parse(hasil.GetValue(5).ToString());
+                    tampung.Harga_weekend = int.Parse(hasil.GetValue(6).ToString());
+                    listStudio.Add(tampung);
                 }
-                Cinema tampungCinema = new Cinema();
-                if (hasil.GetValue(4).ToString() != "")
-                {
-                    tampung.Cinema.Id = int.Parse(hasil.GetValue(4).ToString());
-                    List<Cinema> listItem = Cinema.BacaData(tampung.Cinema.Id.ToString());
-                    tampung.Cinema = listItem[0];
-                }
-                tampung.Harga_weekday = int.Parse(hasil.GetValue(5).ToString());
-                tampung.Harga_weekend = int.Parse(hasil.GetValue(6).ToString());
-                listStudio.Add(tampung);
+
+                return listStudio;
             }
-
-            return listStudio;
+        }
+        public override string ToString()
+        {
+            return Nama;
         }
         #endregion
     }

@@ -25,17 +25,17 @@ namespace Celikoor_Tixycket
             formTambahPegawai.Owner = this;
             formTambahPegawai.ShowDialog();
 
-            this.Hide();
+            FormMasterPegawai_Load(this, e);
         }
 
         private void FormMasterPegawai_Load(object sender, EventArgs e)
         {
             List<Pegawai> listDataPegawai = Pegawai.BacaData();
             dgvData.DataSource = listDataPegawai;
-
-            List<Cinema> listDataCinema = Cinema.BacaData();
-            dgvData.DataSource = listDataCinema;
-
+            if (dgvData.Columns.Contains("Password"))
+            {
+                dgvData.Columns.Remove("Password");
+            }
             if (dgvData.ColumnCount == 5)
             {
                 DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
@@ -50,9 +50,10 @@ namespace Celikoor_Tixycket
             {
                 if (column.Name != "Id" && column.Name != "buttonHapusGrid")
                 {
-                    column.Width = 228;
+                    column.Width = 237;
                 }
             }
+            
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)

@@ -24,7 +24,7 @@ namespace Celikoor_Tixycket
             formTambahKelompok.Owner = this;
             formTambahKelompok.ShowDialog();
 
-            this.Hide();
+            FormMasterKelompok_Load(this, e);
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)

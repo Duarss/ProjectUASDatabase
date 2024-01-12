@@ -20,11 +20,11 @@ namespace Celikoor_Tixycket
             InitializeComponent();
             SetupPictureBoxEvents();
         }
-        FormUtama1 formUtama;
-        List<Film> listFilms;
+        FormUtama formUtama;
+        static List<Film> listFilms;
         List<Image> listDiscBannerImage = new List<Image> { Resources.Discount_Banner_1, Resources.Discount_Banner_2, Resources.Discount_Banner_3, Resources.Discount_Banner_4 };
         int minIndex = 1;
-        int maxIndex = 10; //listFilm.Count();
+        int maxIndex; //listFilm.Count();
         int leftIndex = 1; //absolut
         int rightIndex = 5; //absolut
         bool rightDirection = true;
@@ -53,7 +53,8 @@ namespace Celikoor_Tixycket
                 {
                     rightIndex = maxIndex;
                 }
-                dir += $"Resources\\poster{leftIndex}.jpg";
+                dir += $"Resources\\{listFilms[leftIndex-1].CoverImage}.jpg";
+                newPictureBox.Tag = listFilms[leftIndex-1].Judul;
             }
             else
             {
@@ -69,7 +70,8 @@ namespace Celikoor_Tixycket
                 {
                     rightIndex = minIndex;
                 }
-                dir += $"Resources\\poster{rightIndex}.jpg";
+                dir += $"Resources\\{listFilms[rightIndex-1].CoverImage}.jpg";
+                newPictureBox.Tag = listFilms[rightIndex-1].Judul;
             }
             
             if (System.IO.File.Exists(dir))
@@ -79,7 +81,16 @@ namespace Celikoor_Tixycket
             newPictureBox.Size = new System.Drawing.Size(192, 232);
            
             newPictureBox.BackgroundImageLayout = ImageLayout.Stretch;
+            
             panelPoster.Controls.Add(newPictureBox);
+            foreach(PictureBox pictureBox in panelPoster.Controls.OfType<PictureBox>())
+            {
+                if(pictureBox.Name == "pictureBoxPosterMiddle")
+                {
+                    labelFilmName.Text = pictureBox.Tag.ToString();
+                    labelFilmName.TextAlign = ContentAlignment.MiddleCenter;
+                }
+            }
         }
         private void timerSM_Tick(object sender, EventArgs e)
         {
@@ -350,9 +361,48 @@ namespace Celikoor_Tixycket
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            formUtama = (FormUtama1)this.Owner;
-            //listFilms = Film.BacaData();
-            //maxIndex = listFilms.Count;
+            formUtama = (FormUtama)this.Owner;
+            listFilms = Film.BacaData();
+            maxIndex = listFilms.Count;
+
+            if(listFilms.Count() < 5)
+            {
+                panelPoster.Enabled = false;
+                buttonLeft.Visible = false;
+                buttonRight.Visible = false;
+                labelFilmName.Visible = false;
+
+                Label newLabel = new Label();
+                newLabel.Location = new Point(405, 222);
+                newLabel.Name = "labelError";
+                newLabel.Font = new Font("Arial Narrow", 18, FontStyle.Bold);
+                newLabel.ForeColor = Color.Black;
+                newLabel.Size = new Size(390, 35);
+                newLabel.Text = "No Film Added Yet. Stay Tuned!";
+                panelPoster.Controls.Add(newLabel);
+                newLabel.BringToFront();
+            }
+            else
+            {
+                int index = 0;
+                foreach(PictureBox newPictureBox in panelPoster.Controls)
+                {
+                    string dir = Environment.CurrentDirectory;
+                    dir = dir.Substring(0, dir.Length - 9);
+
+                    dir += $"Resources\\{listFilms[index].CoverImage}.jpg";
+                    newPictureBox.Tag = $"{listFilms[index].Judul}";
+                    if (System.IO.File.Exists(dir))
+                    {
+                        newPictureBox.BackgroundImage = Image.FromFile(dir);
+                    }
+                    newPictureBox.BackgroundImageLayout = ImageLayout.Stretch;
+                    index++;
+                }
+
+                labelFilmName.Text = pictureBoxPosterMiddle.Tag.ToString();
+                labelFilmName.TextAlign = ContentAlignment.MiddleCenter;
+            }
         }
 
         private void buttonLogIn_Click(object sender, EventArgs e)
@@ -390,11 +440,24 @@ namespace Celikoor_Tixycket
 
         private void PictureBox_Click(object sender, EventArgs e)
         {
+            Film chosenFilm = new Film();
             if (sender is PictureBox clickedPictureBox)
             {
-                string pictureBoxName = clickedPictureBox.Name;
+                string pictureBoxName = clickedPictureBox.Tag.ToString();
                 MessageBox.Show($"Clicked on PictureBox with Name: {pictureBoxName}");
+
+                foreach (Film film in listFilms)
+                {
+                    if (film.Judul == clickedPictureBox.Tag.ToString())
+                    {
+                        chosenFilm = film;
+                    }
+                }
             }
+            //
+            formUtama.film = chosenFilm;
+            formUtama.buttonTransaction_Click(sender, e);
+            this.Close();
         }
 
         private void PictureBox_MouseEnter(object sender, EventArgs e)
@@ -416,10 +479,18 @@ namespace Celikoor_Tixycket
                 leftPictureBox.BorderStyle = BorderStyle.None;
             }
         }
-
+        int indexDB = 1;
         private void timerDiscountBanner_Tick(object sender, EventArgs e)
         {
-            
+            if(indexDB > 4)
+            {
+                indexDB = 1;
+            }
+            string dir = Environment.CurrentDirectory;
+            dir = dir.Substring(0, dir.Length - 9);
+            dir += $"Resources\\Discount_Banner_{indexDB}.png";
+            pictureBoxDiscountBanner.Image = Image.FromFile(dir);
+            indexDB++;
         }
     }
 }

@@ -73,6 +73,18 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPemesananTiket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPemesananTiket.Designer.cs">
+      <DependentUpon>FormPemesananTiket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPenjadwalanFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPenjadwalanFilm.Designer.cs">
+      <DependentUpon>FormPenjadwalanFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,17 +211,29 @@
     <Compile Include="FormTambahStudio.Designer.cs">
       <DependentUpon>FormTambahStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateAktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateAktor.Designer.cs">
+      <DependentUpon>FormUpdateAktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateKonsumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateKonsumen.Designer.cs">
+      <DependentUpon>FormUpdateKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateStudio.Designer.cs">
+      <DependentUpon>FormUpdateStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUtama.Designer.cs">
       <DependentUpon>FormUtama.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormUtama1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUtama1.Designer.cs">
-      <DependentUpon>FormUtama1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -249,6 +273,9 @@
     <EmbeddedResource Include="FormMasterStudio.resx">
       <DependentUpon>FormMasterStudio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPemesananTiket.resx">
+      <DependentUpon>FormPemesananTiket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,9 +314,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUtama1.resx">
-      <DependentUpon>FormUtama1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -373,24 +397,24 @@
     <None Include="Resources\print.png" />
     <None Include="Resources\note.png" />
     <None Include="Resources\home.png" />
-    <None Include="Resources\poster5.jpg" />
-    <None Include="Resources\poster4.jpg" />
-    <None Include="Resources\poster3.jpg" />
-    <None Include="Resources\poster2.jpg" />
-    <None Include="Resources\poster1.jpg" />
-    <None Include="Resources\poster10.jpg" />
-    <None Include="Resources\poster9.jpg" />
-    <None Include="Resources\poster8.jpg" />
-    <None Include="Resources\poster7.jpg" />
-    <None Include="Resources\poster6.jpg" />
-    <None Include="Resources\poster12.jpeg" />
-    <None Include="Resources\poster11.jpeg" />
+    <None Include="Resources\p5.jpg" />
+    <None Include="Resources\p4.jpg" />
+    <None Include="Resources\p3.jpg" />
+    <None Include="Resources\p2.jpg" />
+    <None Include="Resources\p1.jpg" />
+    <None Include="Resources\p10.jpg" />
+    <None Include="Resources\p9.jpg" />
+    <None Include="Resources\p8.jpg" />
+    <None Include="Resources\p7.jpg" />
+    <None Include="Resources\p6.jpg" />
     <None Include="Resources\left.png" />
     <None Include="Resources\right.png" />
     <None Include="Resources\Discount_Banner_1.png" />
     <None Include="Resources\Discount_Banner_2.png" />
     <None Include="Resources\Discount_Banner_3.png" />
     <None Include="Resources\Discount_Banner_4.png" />
+    <Content Include="Resources\p11.jpg" />
+    <Content Include="Resources\p12.jpg" />
     <Content Include="Resources\schedule.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

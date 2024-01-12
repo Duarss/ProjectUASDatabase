@@ -23,14 +23,19 @@ namespace Celikoor_Tixycket
             FormTambahKonsumen formTambahKonsumen = new FormTambahKonsumen();
             formTambahKonsumen.Owner = this;
             formTambahKonsumen.ShowDialog();
+
+            FormMasterKonsumen_Load(this, e);
         }
 
         private void FormMasterKonsumen_Load(object sender, EventArgs e)
         {
             List<Konsumen> listDataKonsumen = Konsumen.BacaData();
             dgvData.DataSource = listDataKonsumen;
-
-            if (dgvData.ColumnCount == 4)
+            if (dgvData.Columns.Contains("password"))
+            {
+                dgvData.Columns.Remove("password");
+            }
+            if (dgvData.ColumnCount == 8)
             {
                 DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
                 btnHapus.Text = "Delete"; //judul button
@@ -38,13 +43,19 @@ namespace Celikoor_Tixycket
                 btnHapus.UseColumnTextForButtonValue = true; //agar tulisan muncul di button
                 btnHapus.Name = "buttonHapusGrid"; //nama objek button
                 dgvData.Columns.Add(btnHapus); //tambahkan button ke grid
-            }
 
+                DataGridViewButtonColumn btnUpdate = new DataGridViewButtonColumn();
+                btnUpdate.Text = "Update"; //judul button
+                btnUpdate.HeaderText = "Update"; //judul kolom
+                btnUpdate.UseColumnTextForButtonValue = true; //agar tulisan muncul di button
+                btnUpdate.Name = "buttonUpdateGrid"; //nama objek button
+                dgvData.Columns.Add(btnUpdate); //tambahkan button ke grid
+            }
             foreach (DataGridViewColumn column in dgvData.Columns)
             {
-                if (column.Name != "Id" && column.Name != "buttonHapusGrid")
+                if (column.Name != "Id" && column.Name != "buttonHapusGrid" && column.Name != "buttonUpdateGrid")
                 {
-                    column.Width = 228;
+                    column.Width = 120;
                 }
             }
         }

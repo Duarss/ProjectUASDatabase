@@ -84,12 +84,12 @@ namespace Celikoor_LIB
 
             if (filter == "")
             {
-                perintah = $"SELECT id, nama, email, no_hp FROM konsumens";
+                perintah = $"SELECT id, nama, email, no_hp, gender, tgl_lahir, saldo, username FROM konsumens";
             }
 
             else
             {
-                perintah = $"SELECT * FROM konsumens WHERE {filter} like '%{nilai}%'";
+                perintah = $"SELECT id, nama, email, no_hp, gender, tgl_lahir, saldo, username FROM konsumens WHERE {filter} like '%{nilai}%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
@@ -108,7 +108,6 @@ namespace Celikoor_LIB
                 tampung.TglLahir = (DateTime)hasil.GetValue(5);
                 tampung.Saldo = double.Parse(hasil.GetValue(6).ToString());
                 tampung.Username = hasil.GetValue(7).ToString();
-                tampung.Password = "";
 
                 listKonsumen.Add(tampung);
             }
@@ -141,6 +140,10 @@ namespace Celikoor_LIB
             }
 
             else return null;
+        }
+        public override string ToString()
+        {
+            return Nama;
         }
         #endregion
     }

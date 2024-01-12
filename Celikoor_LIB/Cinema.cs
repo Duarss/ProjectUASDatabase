@@ -70,23 +70,23 @@ namespace Celikoor_LIB
                 perintah = $"SELECT * FROM cinemas WHERE id='{id}'";
             }
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-
             List<Cinema> listCinema = new List<Cinema>();
+            using (MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah))
+            {
+                while (hasil.Read() == true)
+                {
+                    Cinema tampung = new Cinema();
+                    tampung.Id = hasil.GetInt32(0);
+                    tampung.Nama_cabang = hasil.GetValue(1).ToString();
+                    tampung.Alamat = hasil.GetValue(2).ToString();
+                    tampung.TglDibuka = (DateTime)hasil.GetValue(3);
+                    tampung.Kota = hasil.GetValue(4).ToString();
 
-            while (hasil.Read() == true)
-            {   
-                Cinema tampung = new Cinema();
-                tampung.Id = hasil.GetInt32(0);
-                tampung.Nama_cabang = hasil.GetValue(1).ToString();
-                tampung.Alamat = hasil.GetValue(2).ToString();
-                tampung.TglDibuka = (DateTime)hasil.GetValue(3);
-                tampung.Kota = hasil.GetValue(4).ToString();
-
-                listCinema.Add(tampung);
+                    listCinema.Add(tampung);
+                }
+                //kirim list ke pemanggilnya
+                return listCinema;
             }
-            //kirim list ke pemanggilnya
-            return listCinema;
         }
         public override string ToString()
         {

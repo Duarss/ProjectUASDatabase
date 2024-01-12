@@ -79,6 +79,10 @@ namespace Celikoor_LIB
 
             return listKelompok;
         }
+        public override string ToString()
+        {
+            return Nama;
+        }
         #endregion
     }
 }

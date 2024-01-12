@@ -20,6 +20,7 @@ namespace Celikoor_LIB
         int is_sub_indo;
         string coverImage;
         double diskon;
+        List<Aktor_film> listAktorFilm;
         #endregion
 
         #region CONSTRUCTORS
@@ -35,6 +36,7 @@ namespace Celikoor_LIB
             Is_sub_indo = 0;
             CoverImage = "";
             Diskon = 0;
+            ListAktorFilm = new List<Aktor_film>();
         }
         #endregion
 
@@ -50,9 +52,11 @@ namespace Celikoor_LIB
         public string Bahasa { get => bahasa; set => bahasa = value; }
         public int Is_sub_indo { get => is_sub_indo; set => is_sub_indo = value; }
         public string CoverImage { get => coverImage; set => coverImage = value; }
+        public List<Aktor_film> ListAktorFilm { get => listAktorFilm; set => listAktorFilm = value; }
         #endregion
 
         #region METHODS
+        
         //! METHOD CREATE C
         public static void TambahData(Film film)
         {
@@ -107,22 +111,28 @@ namespace Celikoor_LIB
                 tampung.Tahun = int.Parse(hasil.GetValue(3).ToString());
                 tampung.Durasi = int.Parse(hasil.GetValue(4).ToString());
                 
-                Kelompok tampungKelompokUsia = new Kelompok();
-                tampungKelompokUsia.Id = hasil.GetInt32(5);
+                tampung.KelompokUsia = new Kelompok();
+                if (hasil.GetValue(5).ToString() != "")
+                {
+                    tampung.KelompokUsia.Id = int.Parse(hasil.GetValue(5).ToString());
+                    int num = tampung.KelompokUsia.Id;
+                    List<Kelompok> listKel = Kelompok.BacaData(tampung.KelompokUsia.Id.ToString());
+                    tampung.KelompokUsia = listKel[0];
+                }
                 tampung.Bahasa = hasil.GetValue(6).ToString();
                 tampung.Is_sub_indo = int.Parse(hasil.GetValue(7).ToString());
                 tampung.CoverImage = hasil.GetValue(8).ToString();
                 tampung.Diskon = double.Parse(hasil.GetValue(9).ToString());
-                tampungKelompokUsia.Nama = hasil.GetValue(10).ToString();
-
-                tampung.KelompokUsia = tampungKelompokUsia;
 
                 listFilm.Add(tampung);
             }
 
             return listFilm;
         }
-
+        public override string ToString()
+        {
+            return Judul;
+        }
         #endregion
     }
 }

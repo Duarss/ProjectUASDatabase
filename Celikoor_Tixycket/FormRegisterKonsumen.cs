@@ -19,12 +19,12 @@ namespace Celikoor_Tixycket
             StartPosition = FormStartPosition.CenterScreen;
         }
         #region Global Variable
-        FormUtama1 formUtama;
+        FormUtama formUtama;
         #endregion
         #region Events
         private void FormRegisterKonsumen_Load(object sender, EventArgs e)
         {
-            formUtama = (FormUtama1)this.Owner;
+            formUtama = (FormUtama)this.Owner;
         }
 
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

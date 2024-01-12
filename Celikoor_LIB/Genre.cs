@@ -80,6 +80,10 @@ namespace Celikoor_LIB
 
             return listGenre;
         }
+        public override string ToString()
+        {
+            return Nama;
+        }
         #endregion
     }
 }

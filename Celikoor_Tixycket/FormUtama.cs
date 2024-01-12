@@ -1,11 +1,9 @@
-﻿using Celikoor_Tixycket;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,81 +18,226 @@ namespace Celikoor_Tixycket
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
-        #region Global Variable
+
         public Konsumen konsumenLogin;
         public Pegawai pegawaiLogin;
         public FormRegisterKonsumen formRegisterKonsumen;
-        public FormLogin formLoginKonsumen;
+        public FormLogin formLogin;
+        public Film film; // untuk transaksi
+        public FormPemesananTiket formPemesananTiket;
+        Koneksi koneksi;
+
         public bool loginStatus = false;
+
+        bool sidebarExpand = true;
+        bool masterSection = false;
+        bool systemSection = false;
+
+        #region menu master
+        private void buttonMaster_Click(object sender, EventArgs e)
+        {
+            timerMasterExpand.Start();
+        }
+
+        private void buttonCinema_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMasterCinema());
+            DefaultTextBoxForeColor(panelMaster);
+            ChangeForeColor(buttonCinema);
+        }
+
+        private void buttonStudio_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMasterStudio());
+            DefaultTextBoxForeColor(panelMaster);
+            ChangeForeColor(buttonStudio);
+        }
+
+        private void buttonJenisStudio_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMasterJenisStudio());
+            DefaultTextBoxForeColor(panelMaster);
+            ChangeForeColor(buttonJenisStudio);
+        }
+
+        private void buttonGenre_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMasterGenre());
+            DefaultTextBoxForeColor(panelMaster);
+            ChangeForeColor(buttonGenre);
+        }
+
+        private void buttonAktors_Click(object sender, EventArgs e)
+        {
+            OpenForm (new FormMasterAktor());
+            DefaultTextBoxForeColor(panelMaster);
+            ChangeForeColor(buttonAktors);
+        }
+
+        private void buttonPegawai_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMasterPegawai());
+            DefaultTextBoxForeColor(panelMaster);
+            ChangeForeColor(buttonPegawai);
+        }
+
+        private void buttonKelompok_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMasterKelompok());
+            DefaultTextBoxForeColor(panelMaster);
+            ChangeForeColor(buttonKelompok);
+        }
+        private void buttonCustomer_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMasterKonsumen());
+            DefaultTextBoxForeColor(panelMaster);
+            ChangeForeColor(buttonCustomer);
+        }
+        private void buttonProfile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenForm(new FormProfile());
+            }
+
+            catch (Exception x) 
+            {
+                MessageBox.Show("Please log in first!" + x.Message);
+            }
+        }
+        public void buttonTransaction_Click(object sender, EventArgs e)
+        {
+
+            formPemesananTiket.BringToFront();
+            formPemesananTiket.Show();
+        }
         #endregion
-        #region Methods
+
+        #region menu system
+        private void buttonSystem_Click(object sender, EventArgs e)
+        {
+            timerSystemExpand.Start();
+        }
+
+        private void buttonPenjadwalanFilm_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void buttonPencatatanKedatangan_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void buttonLaporan_Click(object sender, EventArgs e)
+        {
+        }
+        #endregion
+
+        #region methods
+        private Form formActive = null;
+        private void DefaultTextBoxForeColor(Panel panelControl)
+        {
+            foreach(Button button in panelMaster.Controls.OfType<Button>())
+            {
+                button.ForeColor = Color.White;
+            }
+        }
+        private void ChangeForeColor(Button buttonControl)
+        {
+            buttonControl.ForeColor = Color.DarkSlateGray;
+        }
+        public void OpenForm(Form form)
+        {
+            form.Owner = this;
+            if (formActive != null)
+            {
+                formActive.Close();
+            }
+            formActive = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panelForm.Controls.Add(form);
+            panelForm.Tag = form;
+            form.BringToFront();
+            form.Show();
+        }
+
         public void LoginConstraint(bool status, string text)
         {
             buttonLogInOut.Enabled = status;
             buttonLogInOut.Text = text;
-            masterToolStripMenuItem.Enabled = status;
-            sistemToolStripMenuItem.Enabled = status;
-            transaksiToolStripMenuItem.Enabled = status;
+            panelButtonMaster.Enabled = status;
+            panelButtonSystem.Enabled = status;
+            panelButtonTransaction.Enabled = status;
         }
-        private void AturMenuAfterLogout()
+
+        private void AturMenu()
         {
-            masterToolStripMenuItem.Visible = false;
-            transaksiToolStripMenuItem.Visible = false;
-            sistemToolStripMenuItem.Visible = false;
-            penjadwalanFilmToolStripMenuItem.Visible = false;
-            laporanToolStripMenuItem.Visible = false;
-            pencatatanKedatanganToolStripMenuItem.Visible = false;
-        }
-        private void AturMenuAfterLogin()
-        {
-            if(pegawaiLogin != null)
+            if (pegawaiLogin != null)
             {
+                panelHome.Visible = false;
                 if (pegawaiLogin.Role == "ADMIN")
                 {
-                    masterToolStripMenuItem.Visible = true;
-                    transaksiToolStripMenuItem.Visible = true;
-                    sistemToolStripMenuItem.Visible = true;
+                    panelButtonMaster.Visible = true;
+                    panelButtonSystem.Visible = true;
+                    panelButtonTransaction.Visible = true; // +-+
+                    panelButtonTransaction.Enabled = false;
                 }
                 else if (pegawaiLogin.Role == "OPERATOR")
                 {
-                    sistemToolStripMenuItem.Visible = true;
-                    pencatatanKedatanganToolStripMenuItem.Visible = true;
+                    panelButtonSystem.Visible = true;
+                    buttonPenjadwalanFilm.Visible = false;
+                    buttonLaporan.Visible = false;
+
                 }
                 else if (pegawaiLogin.Role == "KASIR")
                 {
-                    sistemToolStripMenuItem.Visible= true;
-                    laporanToolStripMenuItem.Visible = true;
+                    panelButtonSystem.Visible = true;
+                    buttonPencatatanKedatangan.Visible = false;
+                    buttonPenjadwalanFilm.Visible = false;
                 }
             }
-            if(konsumenLogin != null)
+            else if (konsumenLogin != null)
             {
-                transaksiToolStripMenuItem.Visible = true;
+                panelButtonMaster.Enabled = false;
+                panelMaster.Enabled = false;
+                panelButtonSystem.Enabled = false;
+                panelSystem.Enabled = false;
+                panelButtonTransaction.Enabled = true;
             }
         }
         #endregion
-        #region Events
-        private void FormUtama_Load(object sender, EventArgs e)
+
+        private void FormUtama1_Load(object sender, EventArgs e)
         {
-            AturMenuAfterLogout();
+            panelButtonMaster.Visible = false;
+            panelMaster.Height = 0;
+            panelButtonSystem.Visible = false;
+            panelSystem.Height = 0;
+            //lButtonTransaction.Visible = false;
+            formPemesananTiket = new FormPemesananTiket();
+            formPemesananTiket.Owner = this;
+            formPemesananTiket.TopLevel = false;
+            formPemesananTiket.FormBorderStyle = FormBorderStyle.None;
+            formPemesananTiket.Dock = DockStyle.Fill;
+            panelForm.Controls.Add(formPemesananTiket);
+            formPemesananTiket.Hide();
+            OpenForm(new FormMain());
         }
 
-        private void buttonLogInOut_Click(object sender, EventArgs e)
+        public void LoginSetUp(object sender, EventArgs e)
         {
             if (loginStatus == false)
             {
-                Form form = Application.OpenForms["FormLoginKonsumen"];
+                Form form = Application.OpenForms["FormLogin"];
                 LoginConstraint(false, "In Progress");
 
                 if (form == null)
                 {
-                    formLoginKonsumen = new FormLogin();
-                    formLoginKonsumen.Owner = this;
+                    formLogin= new FormLogin();
+                    formLogin.Owner = this;
 
-                    formRegisterKonsumen = new FormRegisterKonsumen();
-                    formRegisterKonsumen.Owner = this;
-
-                    formLoginKonsumen.ShowDialog();
-                    formLoginKonsumen.StartPosition = FormStartPosition.CenterScreen;
+                    OpenForm(formLogin);
                 }
 
                 else
@@ -102,110 +245,155 @@ namespace Celikoor_Tixycket
                     form.Show();
                     form.BringToFront();
                 }
-
-                if (konsumenLogin != null)
-                {
-                    labelLogInSebagai.Text = "Logged In as : " + konsumenLogin.Nama;
-
-                }
-
-                else if (pegawaiLogin != null)
-                {
-                    labelLogInSebagai.Text = "Logged In as : " + pegawaiLogin.Nama;
-                }
-
-                AturMenuAfterLogin();
             }
+
             else
             {
                 loginStatus = false;
                 buttonLogInOut.Text = "Log in";
                 konsumenLogin = null;
                 pegawaiLogin = null;
-                labelLogInSebagai.Text = "Logged In as : ";
+                panelForm.Controls.Clear();
+                FormUtama1_Load(sender, e);
+                buttonProfile.Text = "                 Not logged in";
                 MessageBox.Show("Anda Berhasil Log Out!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AturMenuAfterLogout();
+                AturMenu();
+            }
+        }
+
+        public void SetUIAfterLogin()
+        {
+            if (konsumenLogin != null)
+            {
+                buttonProfile.Text = "                 " + konsumenLogin.Nama;
             }
 
-        }
-        #endregion
+            else if (pegawaiLogin != null)
+            {
+                buttonProfile.Text = "                 " + pegawaiLogin.Nama;
+            }
 
-        private void cinemaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMasterCinema frmMasterCinema = new FormMasterCinema();
-            frmMasterCinema.MdiParent = this;
-            frmMasterCinema.Show();
+            AturMenu();
         }
 
-        private void studioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMasterStudio frmStudio = new FormMasterStudio();
-            frmStudio.MdiParent = this;
-            frmStudio.Show();
-        }
 
-        private void jenisStudioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMasterJenisStudio frmJenisStudio = new FormMasterJenisStudio();
-            frmJenisStudio.MdiParent = this;
-            frmJenisStudio.Show();
-        }
-
-        private void genreToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMasterGenre frmGenre = new FormMasterGenre();
-            frmGenre.MdiParent = this;
-            frmGenre.Show();
-        }
-
-        private void aktorsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMasterAktor frmAktor = new FormMasterAktor();
-            frmAktor.MdiParent = this;
-            frmAktor.Show();
-        }
-
-        private void konsumenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMasterKonsumen frmKonsumen = new FormMasterKonsumen();
-            frmKonsumen.MdiParent = this;
-            frmKonsumen.Show();
-        }
-
-        private void pegawaiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMasterPegawai frmPegawai = new FormMasterPegawai();
-            frmPegawai.MdiParent = this;
-            frmPegawai.Show();
-        }
-
-        private void kelompokToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormMasterKelompok frmKelompok = new FormMasterKelompok();
-            frmKelompok.MdiParent = this;
-            frmKelompok.Show();
-        }
-
-        private void penjadwalanFilmToolStripMenuItem_Click(object sender, EventArgs e)
+        private void panelSystem_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void pencatatanKedatanganToolStripMenuItem_Click(object sender, EventArgs e)
+        private void timerSideMenuExpand_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                panelMenu.Width -= 8;
+                if(panelMenu.Width <= 81)
+                {
+                    timerSideMenuExpand.Stop();
+                    sidebarExpand = false;
+                }
+            }
+            else
+            {
+                panelMenu.Width += 8;
+                if (panelMenu.Width >= panelMenu.MaximumSize.Width)
+                {
+                    timerSideMenuExpand.Stop();
+                    sidebarExpand = true;
+                }
+            }
+        }
+
+        private void timerMasterExpand_Tick(object sender, EventArgs e)
+        {
+            if (masterSection)
+            {
+                panelMaster.Height -= 15;
+                if (panelMaster.Height<= 0)
+                {
+                    timerMasterExpand.Stop();
+                    masterSection = false;
+                }
+            }
+            else
+            {
+                panelMaster.Height += 15;
+                if (panelMaster.Height >= panelMaster.MaximumSize.Height)
+                {
+                    timerMasterExpand.Stop();
+                    masterSection = true;
+                }
+            }
+        }
+        private void timerSystemExpand_Tick(object sender, EventArgs e)
+        {
+            if (systemSection)
+            {
+                panelSystem.Height -= 15;
+                if (panelSystem.Height <= 0)
+                {
+                    timerSystemExpand.Stop();
+                    systemSection = false;
+                }
+            }
+            else
+            {
+                panelSystem.Height += 15;
+                if (panelSystem.Height >= panelSystem.MaximumSize.Height)
+                {
+                    timerSystemExpand.Stop();
+                    systemSection = true;
+                }
+            }
+        }
+        private void buttonSideMenu_Click(object sender, EventArgs e)
+        {
+            timerSideMenuExpand.Start();
+        }
+
+        private void pictureBoxMaster_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void laporanToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pictureBoxStudio_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void transaksiToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void pictureBoxGenre_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void pictureBoxActors_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMain());
+        }
+
+        private void panelForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

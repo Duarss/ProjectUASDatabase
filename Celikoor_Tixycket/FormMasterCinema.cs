@@ -43,7 +43,7 @@ namespace Celikoor_Tixycket
             {
                 if (column.Name != "Id" && column.Name != "buttonHapusGrid")
                 {
-                    column.Width = 228;
+                    column.Width = 234;
                 }
             }
         }

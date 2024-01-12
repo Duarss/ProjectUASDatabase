@@ -22,7 +22,7 @@ namespace Celikoor_Tixycket
         }
         #region Global Variable
         List<Image> imageList = new List<Image> { Resources.opening1, Resources.opening2, Resources.opening3, Resources.opening4 };
-        FormUtama1 formUtama;
+        FormUtama formUtama;
         int indexImg = 0; //untuk ganti poster
         bool loginStatus = false; //ganti nama button di formutama. Ada di formClosing
         string loginAs;
@@ -48,7 +48,7 @@ namespace Celikoor_Tixycket
         #region Events
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            formUtama = (FormUtama1)this.Owner;
+            formUtama = (FormUtama)this.Owner;
             panelImage.Select();//to prevent textbox from being selected when a form load
            // pictureBoxImages.
         }

@@ -79,7 +79,7 @@ namespace Celikoor_LIB
 
             else
             {
-                perintah = $"SELECT * FROM pegawais WHERE {filter} like '%{nilai}%'";
+                perintah = $"SELECT id, nama, email, username, roles FROM pegawais WHERE {filter} like '%{nilai}%'";
             }
 
             MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
@@ -93,7 +93,6 @@ namespace Celikoor_LIB
                 tampung.Nama = hasil.GetValue(1).ToString();
                 tampung.Email = hasil.GetValue(2).ToString();
                 tampung.Username = hasil.GetValue(3).ToString();
-                tampung.Password = "";
                 tampung.Role = hasil.GetValue(4).ToString();
 
                 listPegawai.Add(tampung);
@@ -121,6 +120,10 @@ namespace Celikoor_LIB
             }
 
             else return null;
+        }
+        public override string ToString()
+        {
+            return Nama;
         }
         #endregion
     }

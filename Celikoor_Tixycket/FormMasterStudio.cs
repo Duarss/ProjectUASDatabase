@@ -49,9 +49,9 @@ namespace Celikoor_Tixycket
             }
             foreach (DataGridViewColumn column in dgvData.Columns)
             {
-                if (column.Name != "Id" && column.Name != "buttonHapusGrid")
+                if (column.Name != "Id" && column.Name != "buttonHapusGrid" && column.Name != "buttonUpdateGrid")
                 {
-                    column.Width = 130;
+                    column.Width = 134;
                 }
             }
         }

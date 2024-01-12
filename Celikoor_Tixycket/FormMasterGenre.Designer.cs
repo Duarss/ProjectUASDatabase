@@ -43,10 +43,10 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(1210, 979);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(1076, 783);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(177, 62);
+            this.buttonKeluar.Size = new System.Drawing.Size(157, 50);
             this.buttonKeluar.TabIndex = 78;
             this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -57,10 +57,10 @@
             this.label3.BackColor = System.Drawing.Color.Tan;
             this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(35, 19);
+            this.label3.Location = new System.Drawing.Point(31, 15);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1352, 55);
+            this.label3.Size = new System.Drawing.Size(1202, 44);
             this.label3.TabIndex = 79;
             this.label3.Text = "MASTER GENRE";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,9 +77,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(35, 92);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvData.Location = new System.Drawing.Point(31, 74);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,7 +90,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.RowHeadersWidth = 62;
-            this.dgvData.Size = new System.Drawing.Size(1352, 877);
+            this.dgvData.Size = new System.Drawing.Size(1202, 702);
             this.dgvData.TabIndex = 80;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
@@ -98,10 +99,10 @@
             this.buttonTambah.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
-            this.buttonTambah.Location = new System.Drawing.Point(35, 979);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonTambah.Location = new System.Drawing.Point(31, 783);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(166, 62);
+            this.buttonTambah.Size = new System.Drawing.Size(148, 50);
             this.buttonTambah.TabIndex = 77;
             this.buttonTambah.Text = "&ADD";
             this.buttonTambah.UseVisualStyleBackColor = false;
@@ -109,14 +110,15 @@
             // 
             // FormMasterGenre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1418, 1055);
+            this.ClientSize = new System.Drawing.Size(1260, 844);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.buttonTambah);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMasterGenre";
             this.Text = "TIXIE";
             this.Load += new System.EventHandler(this.FormMasterGenre_Load);

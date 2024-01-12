@@ -28,283 +28,815 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUtama));
-            this.menuStripFormUtama = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cinemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.studioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jENISSTUDIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.gENREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aktorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.konsumenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kelompokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.transaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.sistemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.penjadwalanFilmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pencatatanKedatanganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelLogInSebagai = new System.Windows.Forms.Label();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelFlowLayoutMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonSideMenu = new System.Windows.Forms.Button();
+            this.panelButtonMaster = new System.Windows.Forms.Panel();
+            this.pictureBoxMaster = new System.Windows.Forms.PictureBox();
+            this.buttonMaster = new System.Windows.Forms.Button();
+            this.panelMaster = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.buttonCustomer = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEmployee = new System.Windows.Forms.PictureBox();
+            this.buttonKelompok = new System.Windows.Forms.Button();
+            this.pictureBoxActors = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGenre = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxStudio = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCinema = new System.Windows.Forms.PictureBox();
+            this.buttonPegawai = new System.Windows.Forms.Button();
+            this.buttonAktors = new System.Windows.Forms.Button();
+            this.buttonGenre = new System.Windows.Forms.Button();
+            this.buttonJenisStudio = new System.Windows.Forms.Button();
+            this.buttonStudio = new System.Windows.Forms.Button();
+            this.buttonCinema = new System.Windows.Forms.Button();
+            this.panelButtonSystem = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonSystem = new System.Windows.Forms.Button();
+            this.panelSystem = new System.Windows.Forms.Panel();
+            this.pictureBoxPrint = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNote = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSchedule = new System.Windows.Forms.PictureBox();
+            this.buttonLaporan = new System.Windows.Forms.Button();
+            this.buttonPencatatanKedatangan = new System.Windows.Forms.Button();
+            this.buttonPenjadwalanFilm = new System.Windows.Forms.Button();
+            this.panelButtonTransaction = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.buttonTransaction = new System.Windows.Forms.Button();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.pictureBoxHome = new System.Windows.Forms.PictureBox();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.panelLogoApp = new System.Windows.Forms.Panel();
+            this.pictureBoxFotoPtofil = new System.Windows.Forms.PictureBox();
+            this.buttonProfile = new System.Windows.Forms.Button();
+            this.timerSideMenuExpand = new System.Windows.Forms.Timer(this.components);
             this.buttonLogInOut = new System.Windows.Forms.Button();
-            this.menuStripFormUtama.SuspendLayout();
+            this.panelForm = new System.Windows.Forms.Panel();
+            this.timerMasterExpand = new System.Windows.Forms.Timer(this.components);
+            this.timerSystemExpand = new System.Windows.Forms.Timer(this.components);
+            this.panelMenu.SuspendLayout();
+            this.panelFlowLayoutMenu.SuspendLayout();
+            this.panelSideMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panelButtonMaster.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMaster)).BeginInit();
+            this.panelMaster.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxActors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGenre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCinema)).BeginInit();
+            this.panelButtonSystem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelSystem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSchedule)).BeginInit();
+            this.panelButtonTransaction.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).BeginInit();
+            this.panelLogoApp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPtofil)).BeginInit();
+            this.panelForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStripFormUtama
+            // panelMenu
             // 
-            this.menuStripFormUtama.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStripFormUtama.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStripFormUtama.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStripFormUtama.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem6,
-            this.masterToolStripMenuItem,
-            this.toolStripMenuItem4,
-            this.transaksiToolStripMenuItem,
-            this.toolStripMenuItem3,
-            this.sistemToolStripMenuItem,
-            this.toolStripMenuItem5});
-            this.menuStripFormUtama.Location = new System.Drawing.Point(0, 0);
-            this.menuStripFormUtama.Name = "menuStripFormUtama";
-            this.menuStripFormUtama.Padding = new System.Windows.Forms.Padding(6, 1, 0, 1);
-            this.menuStripFormUtama.Size = new System.Drawing.Size(1924, 40);
-            this.menuStripFormUtama.TabIndex = 0;
-            this.menuStripFormUtama.Text = "menuStrip1";
+            this.panelMenu.AutoScroll = true;
+            this.panelMenu.BackColor = System.Drawing.Color.Peru;
+            this.panelMenu.Controls.Add(this.panelFlowLayoutMenu);
+            this.panelMenu.Controls.Add(this.panelLogoApp);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.MaximumSize = new System.Drawing.Size(250, 869);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(250, 869);
+            this.panelMenu.TabIndex = 20;
             // 
-            // toolStripMenuItem6
+            // panelFlowLayoutMenu
             // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(46, 38);
-            this.toolStripMenuItem6.Text = "|";
+            this.panelFlowLayoutMenu.BackColor = System.Drawing.Color.Peru;
+            this.panelFlowLayoutMenu.Controls.Add(this.panelSideMenu);
+            this.panelFlowLayoutMenu.Controls.Add(this.panelButtonMaster);
+            this.panelFlowLayoutMenu.Controls.Add(this.panelMaster);
+            this.panelFlowLayoutMenu.Controls.Add(this.panelButtonSystem);
+            this.panelFlowLayoutMenu.Controls.Add(this.panelSystem);
+            this.panelFlowLayoutMenu.Controls.Add(this.panelButtonTransaction);
+            this.panelFlowLayoutMenu.Controls.Add(this.panelHome);
+            this.panelFlowLayoutMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFlowLayoutMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelFlowLayoutMenu.Name = "panelFlowLayoutMenu";
+            this.panelFlowLayoutMenu.Size = new System.Drawing.Size(250, 752);
+            this.panelFlowLayoutMenu.TabIndex = 19;
             // 
-            // masterToolStripMenuItem
+            // panelSideMenu
             // 
-            this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cinemaToolStripMenuItem,
-            this.studioToolStripMenuItem,
-            this.jENISSTUDIOToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.gENREToolStripMenuItem,
-            this.aktorsToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.konsumenToolStripMenuItem1,
-            this.pegawaiToolStripMenuItem,
-            this.kelompokToolStripMenuItem});
-            this.masterToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(256, 38);
-            this.masterToolStripMenuItem.Text = "MASTER DATA";
+            this.panelSideMenu.BackColor = System.Drawing.Color.Peru;
+            this.panelSideMenu.Controls.Add(this.pictureBox4);
+            this.panelSideMenu.Controls.Add(this.label1);
+            this.panelSideMenu.Controls.Add(this.buttonSideMenu);
+            this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSideMenu.ForeColor = System.Drawing.Color.Transparent;
+            this.panelSideMenu.Location = new System.Drawing.Point(3, 3);
+            this.panelSideMenu.Name = "panelSideMenu";
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 75);
+            this.panelSideMenu.TabIndex = 11;
             // 
-            // cinemaToolStripMenuItem
+            // pictureBox4
             // 
-            this.cinemaToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
-            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.cinemaToolStripMenuItem.Text = "CINEMA";
-            this.cinemaToolStripMenuItem.Click += new System.EventHandler(this.cinemaToolStripMenuItem_Click);
+            this.pictureBox4.BackColor = System.Drawing.Color.Black;
+            this.pictureBox4.Location = new System.Drawing.Point(-4, 72);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(255, 3);
+            this.pictureBox4.TabIndex = 28;
+            this.pictureBox4.TabStop = false;
             // 
-            // studioToolStripMenuItem
+            // label1
             // 
-            this.studioToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studioToolStripMenuItem.Name = "studioToolStripMenuItem";
-            this.studioToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.studioToolStripMenuItem.Text = "STUDIO";
-            this.studioToolStripMenuItem.Click += new System.EventHandler(this.studioToolStripMenuItem_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(80, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Menu";
             // 
-            // jENISSTUDIOToolStripMenuItem
+            // buttonSideMenu
             // 
-            this.jENISSTUDIOToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jENISSTUDIOToolStripMenuItem.Name = "jENISSTUDIOToolStripMenuItem";
-            this.jENISSTUDIOToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.jENISSTUDIOToolStripMenuItem.Text = "JENIS STUDIO";
-            this.jENISSTUDIOToolStripMenuItem.Click += new System.EventHandler(this.jenisStudioToolStripMenuItem_Click);
+            this.buttonSideMenu.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSideMenu.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.side_menu_icon;
+            this.buttonSideMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSideMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSideMenu.ForeColor = System.Drawing.Color.Peru;
+            this.buttonSideMenu.Location = new System.Drawing.Point(10, 13);
+            this.buttonSideMenu.Name = "buttonSideMenu";
+            this.buttonSideMenu.Size = new System.Drawing.Size(46, 48);
+            this.buttonSideMenu.TabIndex = 3;
+            this.buttonSideMenu.UseVisualStyleBackColor = false;
+            this.buttonSideMenu.Click += new System.EventHandler(this.buttonSideMenu_Click);
             // 
-            // toolStripMenuItem1
+            // panelButtonMaster
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(290, 6);
+            this.panelButtonMaster.BackColor = System.Drawing.Color.Peru;
+            this.panelButtonMaster.Controls.Add(this.pictureBoxMaster);
+            this.panelButtonMaster.Controls.Add(this.buttonMaster);
+            this.panelButtonMaster.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelButtonMaster.ForeColor = System.Drawing.Color.Transparent;
+            this.panelButtonMaster.Location = new System.Drawing.Point(3, 84);
+            this.panelButtonMaster.Name = "panelButtonMaster";
+            this.panelButtonMaster.Size = new System.Drawing.Size(250, 45);
+            this.panelButtonMaster.TabIndex = 17;
             // 
-            // gENREToolStripMenuItem
+            // pictureBoxMaster
             // 
-            this.gENREToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gENREToolStripMenuItem.Name = "gENREToolStripMenuItem";
-            this.gENREToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.gENREToolStripMenuItem.Text = "GENRE";
-            this.gENREToolStripMenuItem.Click += new System.EventHandler(this.genreToolStripMenuItem_Click);
+            this.pictureBoxMaster.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.admin;
+            this.pictureBoxMaster.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxMaster.Location = new System.Drawing.Point(13, 3);
+            this.pictureBoxMaster.Name = "pictureBoxMaster";
+            this.pictureBoxMaster.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxMaster.TabIndex = 13;
+            this.pictureBoxMaster.TabStop = false;
             // 
-            // aktorsToolStripMenuItem
+            // buttonMaster
             // 
-            this.aktorsToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aktorsToolStripMenuItem.Name = "aktorsToolStripMenuItem";
-            this.aktorsToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.aktorsToolStripMenuItem.Text = "AKTORS";
-            this.aktorsToolStripMenuItem.Click += new System.EventHandler(this.aktorsToolStripMenuItem_Click);
+            this.buttonMaster.FlatAppearance.BorderSize = 0;
+            this.buttonMaster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMaster.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonMaster.Location = new System.Drawing.Point(0, 0);
+            this.buttonMaster.Name = "buttonMaster";
+            this.buttonMaster.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonMaster.Size = new System.Drawing.Size(247, 45);
+            this.buttonMaster.TabIndex = 12;
+            this.buttonMaster.Text = "               Master";
+            this.buttonMaster.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMaster.UseVisualStyleBackColor = true;
+            this.buttonMaster.Click += new System.EventHandler(this.buttonMaster_Click);
             // 
-            // toolStripMenuItem2
+            // panelMaster
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(290, 6);
+            this.panelMaster.BackColor = System.Drawing.Color.SandyBrown;
+            this.panelMaster.Controls.Add(this.pictureBox5);
+            this.panelMaster.Controls.Add(this.buttonCustomer);
+            this.panelMaster.Controls.Add(this.pictureBox6);
+            this.panelMaster.Controls.Add(this.pictureBoxEmployee);
+            this.panelMaster.Controls.Add(this.buttonKelompok);
+            this.panelMaster.Controls.Add(this.pictureBoxActors);
+            this.panelMaster.Controls.Add(this.pictureBoxGenre);
+            this.panelMaster.Controls.Add(this.pictureBox2);
+            this.panelMaster.Controls.Add(this.pictureBoxStudio);
+            this.panelMaster.Controls.Add(this.pictureBoxCinema);
+            this.panelMaster.Controls.Add(this.buttonPegawai);
+            this.panelMaster.Controls.Add(this.buttonAktors);
+            this.panelMaster.Controls.Add(this.buttonGenre);
+            this.panelMaster.Controls.Add(this.buttonJenisStudio);
+            this.panelMaster.Controls.Add(this.buttonStudio);
+            this.panelMaster.Controls.Add(this.buttonCinema);
+            this.panelMaster.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMaster.Location = new System.Drawing.Point(3, 135);
+            this.panelMaster.MaximumSize = new System.Drawing.Size(250, 359);
+            this.panelMaster.Name = "panelMaster";
+            this.panelMaster.Size = new System.Drawing.Size(250, 359);
+            this.panelMaster.TabIndex = 13;
             // 
-            // konsumenToolStripMenuItem1
+            // pictureBox5
             // 
-            this.konsumenToolStripMenuItem1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.konsumenToolStripMenuItem1.Name = "konsumenToolStripMenuItem1";
-            this.konsumenToolStripMenuItem1.Size = new System.Drawing.Size(293, 38);
-            this.konsumenToolStripMenuItem1.Text = "KONSUMEN";
-            this.konsumenToolStripMenuItem1.Click += new System.EventHandler(this.konsumenToolStripMenuItem_Click);
+            this.pictureBox5.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.employee;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(16, 304);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
             // 
-            // pegawaiToolStripMenuItem
+            // buttonCustomer
             // 
-            this.pegawaiToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pegawaiToolStripMenuItem.Name = "pegawaiToolStripMenuItem";
-            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.pegawaiToolStripMenuItem.Text = "PEGAWAI";
-            this.pegawaiToolStripMenuItem.Click += new System.EventHandler(this.pegawaiToolStripMenuItem_Click);
+            this.buttonCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCustomer.ForeColor = System.Drawing.Color.White;
+            this.buttonCustomer.Location = new System.Drawing.Point(0, 301);
+            this.buttonCustomer.Name = "buttonCustomer";
+            this.buttonCustomer.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonCustomer.Size = new System.Drawing.Size(250, 43);
+            this.buttonCustomer.TabIndex = 8;
+            this.buttonCustomer.Text = "        Customer";
+            this.buttonCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCustomer.UseVisualStyleBackColor = true;
+            this.buttonCustomer.Click += new System.EventHandler(this.buttonCustomer_Click);
             // 
-            // kelompokToolStripMenuItem
+            // pictureBox6
             // 
-            this.kelompokToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kelompokToolStripMenuItem.Name = "kelompokToolStripMenuItem";
-            this.kelompokToolStripMenuItem.Size = new System.Drawing.Size(293, 38);
-            this.kelompokToolStripMenuItem.Text = "KELOMPOK";
-            this.kelompokToolStripMenuItem.Click += new System.EventHandler(this.kelompokToolStripMenuItem_Click);
+            this.pictureBox6.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.admin;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(15, 260);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox6.TabIndex = 11;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
-            // toolStripMenuItem4
+            // pictureBoxEmployee
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(46, 38);
-            this.toolStripMenuItem4.Text = "|";
+            this.pictureBoxEmployee.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.employee;
+            this.pictureBoxEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxEmployee.Location = new System.Drawing.Point(15, 219);
+            this.pictureBoxEmployee.Name = "pictureBoxEmployee";
+            this.pictureBoxEmployee.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxEmployee.TabIndex = 12;
+            this.pictureBoxEmployee.TabStop = false;
+            this.pictureBoxEmployee.Click += new System.EventHandler(this.pictureBoxEmployee_Click);
             // 
-            // transaksiToolStripMenuItem
+            // buttonKelompok
             // 
-            this.transaksiToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
-            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(262, 38);
-            this.transaksiToolStripMenuItem.Text = "TRANSACTION";
-            this.transaksiToolStripMenuItem.Click += new System.EventHandler(this.transaksiToolStripMenuItem_Click);
+            this.buttonKelompok.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonKelompok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonKelompok.ForeColor = System.Drawing.Color.White;
+            this.buttonKelompok.Location = new System.Drawing.Point(0, 258);
+            this.buttonKelompok.Name = "buttonKelompok";
+            this.buttonKelompok.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonKelompok.Size = new System.Drawing.Size(250, 43);
+            this.buttonKelompok.TabIndex = 7;
+            this.buttonKelompok.Text = "        Rating Content";
+            this.buttonKelompok.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonKelompok.UseVisualStyleBackColor = true;
+            this.buttonKelompok.Click += new System.EventHandler(this.buttonKelompok_Click);
             // 
-            // toolStripMenuItem3
+            // pictureBoxActors
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(46, 38);
-            this.toolStripMenuItem3.Text = "|";
+            this.pictureBoxActors.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.actors;
+            this.pictureBoxActors.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxActors.Location = new System.Drawing.Point(15, 175);
+            this.pictureBoxActors.Name = "pictureBoxActors";
+            this.pictureBoxActors.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxActors.TabIndex = 11;
+            this.pictureBoxActors.TabStop = false;
+            this.pictureBoxActors.Click += new System.EventHandler(this.pictureBoxActors_Click);
             // 
-            // sistemToolStripMenuItem
+            // pictureBoxGenre
             // 
-            this.sistemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.penjadwalanFilmToolStripMenuItem,
-            this.pencatatanKedatanganToolStripMenuItem,
-            this.laporanToolStripMenuItem});
-            this.sistemToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sistemToolStripMenuItem.Name = "sistemToolStripMenuItem";
-            this.sistemToolStripMenuItem.Size = new System.Drawing.Size(157, 38);
-            this.sistemToolStripMenuItem.Text = "SYSTEM";
+            this.pictureBoxGenre.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.genre;
+            this.pictureBoxGenre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxGenre.Location = new System.Drawing.Point(15, 131);
+            this.pictureBoxGenre.Name = "pictureBoxGenre";
+            this.pictureBoxGenre.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxGenre.TabIndex = 10;
+            this.pictureBoxGenre.TabStop = false;
+            this.pictureBoxGenre.Click += new System.EventHandler(this.pictureBoxGenre_Click);
             // 
-            // penjadwalanFilmToolStripMenuItem
+            // pictureBox2
             // 
-            this.penjadwalanFilmToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.penjadwalanFilmToolStripMenuItem.Name = "penjadwalanFilmToolStripMenuItem";
-            this.penjadwalanFilmToolStripMenuItem.Size = new System.Drawing.Size(449, 38);
-            this.penjadwalanFilmToolStripMenuItem.Text = "PENJADWALAN FILM";
-            this.penjadwalanFilmToolStripMenuItem.Click += new System.EventHandler(this.penjadwalanFilmToolStripMenuItem_Click);
+            this.pictureBox2.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.admin;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 89);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // pencatatanKedatanganToolStripMenuItem
+            // pictureBoxStudio
             // 
-            this.pencatatanKedatanganToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pencatatanKedatanganToolStripMenuItem.Name = "pencatatanKedatanganToolStripMenuItem";
-            this.pencatatanKedatanganToolStripMenuItem.Size = new System.Drawing.Size(449, 38);
-            this.pencatatanKedatanganToolStripMenuItem.Text = "PENCATATAN KEDATANGAN";
-            this.pencatatanKedatanganToolStripMenuItem.Click += new System.EventHandler(this.pencatatanKedatanganToolStripMenuItem_Click);
+            this.pictureBoxStudio.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.studio;
+            this.pictureBoxStudio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxStudio.Location = new System.Drawing.Point(15, 46);
+            this.pictureBoxStudio.Name = "pictureBoxStudio";
+            this.pictureBoxStudio.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxStudio.TabIndex = 8;
+            this.pictureBoxStudio.TabStop = false;
+            this.pictureBoxStudio.Click += new System.EventHandler(this.pictureBoxStudio_Click);
             // 
-            // laporanToolStripMenuItem
+            // pictureBoxCinema
             // 
-            this.laporanToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
-            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(449, 38);
-            this.laporanToolStripMenuItem.Text = "LAPORAN";
-            this.laporanToolStripMenuItem.Click += new System.EventHandler(this.laporanToolStripMenuItem_Click);
+            this.pictureBoxCinema.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.cinema;
+            this.pictureBoxCinema.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxCinema.Location = new System.Drawing.Point(15, 2);
+            this.pictureBoxCinema.Name = "pictureBoxCinema";
+            this.pictureBoxCinema.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxCinema.TabIndex = 3;
+            this.pictureBoxCinema.TabStop = false;
+            this.pictureBoxCinema.Click += new System.EventHandler(this.pictureBoxMaster_Click);
             // 
-            // toolStripMenuItem5
+            // buttonPegawai
             // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(46, 38);
-            this.toolStripMenuItem5.Text = "|";
+            this.buttonPegawai.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPegawai.ForeColor = System.Drawing.Color.White;
+            this.buttonPegawai.Location = new System.Drawing.Point(0, 215);
+            this.buttonPegawai.Name = "buttonPegawai";
+            this.buttonPegawai.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonPegawai.Size = new System.Drawing.Size(250, 43);
+            this.buttonPegawai.TabIndex = 6;
+            this.buttonPegawai.Text = "        Employee";
+            this.buttonPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPegawai.UseVisualStyleBackColor = true;
+            this.buttonPegawai.Click += new System.EventHandler(this.buttonPegawai_Click);
             // 
-            // labelLogInSebagai
+            // buttonAktors
             // 
-            this.labelLogInSebagai.AutoSize = true;
-            this.labelLogInSebagai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelLogInSebagai.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogInSebagai.Location = new System.Drawing.Point(1154, 0);
-            this.labelLogInSebagai.Name = "labelLogInSebagai";
-            this.labelLogInSebagai.Size = new System.Drawing.Size(306, 34);
-            this.labelLogInSebagai.TabIndex = 2;
-            this.labelLogInSebagai.Text = "Logged In As : None";
+            this.buttonAktors.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAktors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAktors.ForeColor = System.Drawing.Color.White;
+            this.buttonAktors.Location = new System.Drawing.Point(0, 172);
+            this.buttonAktors.Name = "buttonAktors";
+            this.buttonAktors.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonAktors.Size = new System.Drawing.Size(250, 43);
+            this.buttonAktors.TabIndex = 4;
+            this.buttonAktors.Text = "        Actors";
+            this.buttonAktors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAktors.UseVisualStyleBackColor = true;
+            this.buttonAktors.Click += new System.EventHandler(this.buttonAktors_Click);
+            // 
+            // buttonGenre
+            // 
+            this.buttonGenre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGenre.ForeColor = System.Drawing.Color.White;
+            this.buttonGenre.Location = new System.Drawing.Point(0, 129);
+            this.buttonGenre.Name = "buttonGenre";
+            this.buttonGenre.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonGenre.Size = new System.Drawing.Size(250, 43);
+            this.buttonGenre.TabIndex = 3;
+            this.buttonGenre.Text = "        Genre";
+            this.buttonGenre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonGenre.UseVisualStyleBackColor = true;
+            this.buttonGenre.Click += new System.EventHandler(this.buttonGenre_Click);
+            // 
+            // buttonJenisStudio
+            // 
+            this.buttonJenisStudio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonJenisStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonJenisStudio.ForeColor = System.Drawing.Color.White;
+            this.buttonJenisStudio.Location = new System.Drawing.Point(0, 86);
+            this.buttonJenisStudio.Name = "buttonJenisStudio";
+            this.buttonJenisStudio.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonJenisStudio.Size = new System.Drawing.Size(250, 43);
+            this.buttonJenisStudio.TabIndex = 2;
+            this.buttonJenisStudio.Text = "        Studio Type";
+            this.buttonJenisStudio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonJenisStudio.UseVisualStyleBackColor = true;
+            this.buttonJenisStudio.Click += new System.EventHandler(this.buttonJenisStudio_Click);
+            // 
+            // buttonStudio
+            // 
+            this.buttonStudio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStudio.ForeColor = System.Drawing.Color.White;
+            this.buttonStudio.Location = new System.Drawing.Point(0, 43);
+            this.buttonStudio.Name = "buttonStudio";
+            this.buttonStudio.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonStudio.Size = new System.Drawing.Size(250, 43);
+            this.buttonStudio.TabIndex = 1;
+            this.buttonStudio.Text = "        Studio";
+            this.buttonStudio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonStudio.UseVisualStyleBackColor = true;
+            this.buttonStudio.Click += new System.EventHandler(this.buttonStudio_Click);
+            // 
+            // buttonCinema
+            // 
+            this.buttonCinema.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCinema.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.cinema;
+            this.buttonCinema.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonCinema.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCinema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCinema.ForeColor = System.Drawing.Color.White;
+            this.buttonCinema.Location = new System.Drawing.Point(0, 0);
+            this.buttonCinema.Name = "buttonCinema";
+            this.buttonCinema.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonCinema.Size = new System.Drawing.Size(250, 43);
+            this.buttonCinema.TabIndex = 0;
+            this.buttonCinema.Text = "        Cinema";
+            this.buttonCinema.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCinema.UseVisualStyleBackColor = false;
+            this.buttonCinema.Click += new System.EventHandler(this.buttonCinema_Click);
+            // 
+            // panelButtonSystem
+            // 
+            this.panelButtonSystem.BackColor = System.Drawing.Color.Peru;
+            this.panelButtonSystem.Controls.Add(this.pictureBox1);
+            this.panelButtonSystem.Controls.Add(this.buttonSystem);
+            this.panelButtonSystem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelButtonSystem.ForeColor = System.Drawing.Color.Transparent;
+            this.panelButtonSystem.Location = new System.Drawing.Point(3, 500);
+            this.panelButtonSystem.Name = "panelButtonSystem";
+            this.panelButtonSystem.Size = new System.Drawing.Size(250, 45);
+            this.panelButtonSystem.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.admin;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // buttonSystem
+            // 
+            this.buttonSystem.FlatAppearance.BorderSize = 0;
+            this.buttonSystem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSystem.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonSystem.Location = new System.Drawing.Point(0, 0);
+            this.buttonSystem.Name = "buttonSystem";
+            this.buttonSystem.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonSystem.Size = new System.Drawing.Size(247, 45);
+            this.buttonSystem.TabIndex = 14;
+            this.buttonSystem.Text = "               System";
+            this.buttonSystem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSystem.UseVisualStyleBackColor = true;
+            this.buttonSystem.Click += new System.EventHandler(this.buttonSystem_Click);
+            // 
+            // panelSystem
+            // 
+            this.panelSystem.BackColor = System.Drawing.Color.SandyBrown;
+            this.panelSystem.Controls.Add(this.pictureBoxPrint);
+            this.panelSystem.Controls.Add(this.pictureBoxNote);
+            this.panelSystem.Controls.Add(this.pictureBoxSchedule);
+            this.panelSystem.Controls.Add(this.buttonLaporan);
+            this.panelSystem.Controls.Add(this.buttonPencatatanKedatangan);
+            this.panelSystem.Controls.Add(this.buttonPenjadwalanFilm);
+            this.panelSystem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSystem.Location = new System.Drawing.Point(3, 551);
+            this.panelSystem.MaximumSize = new System.Drawing.Size(250, 141);
+            this.panelSystem.Name = "panelSystem";
+            this.panelSystem.Size = new System.Drawing.Size(250, 141);
+            this.panelSystem.TabIndex = 15;
+            // 
+            // pictureBoxPrint
+            // 
+            this.pictureBoxPrint.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.print;
+            this.pictureBoxPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxPrint.Location = new System.Drawing.Point(15, 87);
+            this.pictureBoxPrint.Name = "pictureBoxPrint";
+            this.pictureBoxPrint.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxPrint.TabIndex = 19;
+            this.pictureBoxPrint.TabStop = false;
+            // 
+            // pictureBoxNote
+            // 
+            this.pictureBoxNote.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.note;
+            this.pictureBoxNote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxNote.Location = new System.Drawing.Point(15, 45);
+            this.pictureBoxNote.Name = "pictureBoxNote";
+            this.pictureBoxNote.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxNote.TabIndex = 18;
+            this.pictureBoxNote.TabStop = false;
+            // 
+            // pictureBoxSchedule
+            // 
+            this.pictureBoxSchedule.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.schedule;
+            this.pictureBoxSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxSchedule.Location = new System.Drawing.Point(15, 3);
+            this.pictureBoxSchedule.Name = "pictureBoxSchedule";
+            this.pictureBoxSchedule.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxSchedule.TabIndex = 17;
+            this.pictureBoxSchedule.TabStop = false;
+            // 
+            // buttonLaporan
+            // 
+            this.buttonLaporan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonLaporan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLaporan.ForeColor = System.Drawing.Color.White;
+            this.buttonLaporan.Location = new System.Drawing.Point(0, 86);
+            this.buttonLaporan.Name = "buttonLaporan";
+            this.buttonLaporan.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonLaporan.Size = new System.Drawing.Size(250, 43);
+            this.buttonLaporan.TabIndex = 7;
+            this.buttonLaporan.Text = "        Print";
+            this.buttonLaporan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLaporan.UseVisualStyleBackColor = true;
+            this.buttonLaporan.Click += new System.EventHandler(this.buttonLaporan_Click);
+            // 
+            // buttonPencatatanKedatangan
+            // 
+            this.buttonPencatatanKedatangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonPencatatanKedatangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPencatatanKedatangan.ForeColor = System.Drawing.Color.White;
+            this.buttonPencatatanKedatangan.Location = new System.Drawing.Point(0, 43);
+            this.buttonPencatatanKedatangan.Name = "buttonPencatatanKedatangan";
+            this.buttonPencatatanKedatangan.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonPencatatanKedatangan.Size = new System.Drawing.Size(250, 43);
+            this.buttonPencatatanKedatangan.TabIndex = 6;
+            this.buttonPencatatanKedatangan.Text = "        Note Arrival";
+            this.buttonPencatatanKedatangan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPencatatanKedatangan.UseVisualStyleBackColor = true;
+            this.buttonPencatatanKedatangan.Click += new System.EventHandler(this.buttonPencatatanKedatangan_Click);
+            // 
+            // buttonPenjadwalanFilm
+            // 
+            this.buttonPenjadwalanFilm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonPenjadwalanFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPenjadwalanFilm.ForeColor = System.Drawing.Color.White;
+            this.buttonPenjadwalanFilm.Location = new System.Drawing.Point(0, 0);
+            this.buttonPenjadwalanFilm.Name = "buttonPenjadwalanFilm";
+            this.buttonPenjadwalanFilm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonPenjadwalanFilm.Size = new System.Drawing.Size(250, 43);
+            this.buttonPenjadwalanFilm.TabIndex = 5;
+            this.buttonPenjadwalanFilm.Text = "        Film Schedule";
+            this.buttonPenjadwalanFilm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPenjadwalanFilm.UseVisualStyleBackColor = true;
+            this.buttonPenjadwalanFilm.Click += new System.EventHandler(this.buttonPenjadwalanFilm_Click);
+            // 
+            // panelButtonTransaction
+            // 
+            this.panelButtonTransaction.BackColor = System.Drawing.Color.Peru;
+            this.panelButtonTransaction.Controls.Add(this.pictureBox3);
+            this.panelButtonTransaction.Controls.Add(this.buttonTransaction);
+            this.panelButtonTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelButtonTransaction.ForeColor = System.Drawing.Color.Transparent;
+            this.panelButtonTransaction.Location = new System.Drawing.Point(3, 698);
+            this.panelButtonTransaction.Name = "panelButtonTransaction";
+            this.panelButtonTransaction.Size = new System.Drawing.Size(250, 45);
+            this.panelButtonTransaction.TabIndex = 18;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.admin;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(13, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // buttonTransaction
+            // 
+            this.buttonTransaction.FlatAppearance.BorderSize = 0;
+            this.buttonTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTransaction.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonTransaction.Location = new System.Drawing.Point(0, 0);
+            this.buttonTransaction.Name = "buttonTransaction";
+            this.buttonTransaction.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonTransaction.Size = new System.Drawing.Size(247, 45);
+            this.buttonTransaction.TabIndex = 16;
+            this.buttonTransaction.Text = "               Transaction";
+            this.buttonTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTransaction.UseVisualStyleBackColor = true;
+            this.buttonTransaction.Click += new System.EventHandler(this.buttonTransaction_Click);
+            // 
+            // panelHome
+            // 
+            this.panelHome.BackColor = System.Drawing.Color.Peru;
+            this.panelHome.Controls.Add(this.pictureBoxHome);
+            this.panelHome.Controls.Add(this.buttonHome);
+            this.panelHome.ForeColor = System.Drawing.Color.Transparent;
+            this.panelHome.Location = new System.Drawing.Point(3, 749);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(250, 45);
+            this.panelHome.TabIndex = 19;
+            // 
+            // pictureBoxHome
+            // 
+            this.pictureBoxHome.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.home;
+            this.pictureBoxHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxHome.Location = new System.Drawing.Point(13, 3);
+            this.pictureBoxHome.Name = "pictureBoxHome";
+            this.pictureBoxHome.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxHome.TabIndex = 13;
+            this.pictureBoxHome.TabStop = false;
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.FlatAppearance.BorderSize = 0;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonHome.Location = new System.Drawing.Point(0, 0);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonHome.Size = new System.Drawing.Size(250, 45);
+            this.buttonHome.TabIndex = 16;
+            this.buttonHome.Text = "               Main";
+            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
+            // panelLogoApp
+            // 
+            this.panelLogoApp.BackColor = System.Drawing.Color.Chocolate;
+            this.panelLogoApp.Controls.Add(this.pictureBoxFotoPtofil);
+            this.panelLogoApp.Controls.Add(this.buttonProfile);
+            this.panelLogoApp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelLogoApp.Location = new System.Drawing.Point(0, 781);
+            this.panelLogoApp.Name = "panelLogoApp";
+            this.panelLogoApp.Size = new System.Drawing.Size(250, 88);
+            this.panelLogoApp.TabIndex = 0;
+            // 
+            // pictureBoxFotoPtofil
+            // 
+            this.pictureBoxFotoPtofil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxFotoPtofil.BackgroundImage")));
+            this.pictureBoxFotoPtofil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxFotoPtofil.Location = new System.Drawing.Point(11, 20);
+            this.pictureBoxFotoPtofil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxFotoPtofil.Name = "pictureBoxFotoPtofil";
+            this.pictureBoxFotoPtofil.Size = new System.Drawing.Size(52, 48);
+            this.pictureBoxFotoPtofil.TabIndex = 10;
+            this.pictureBoxFotoPtofil.TabStop = false;
+            // 
+            // buttonProfile
+            // 
+            this.buttonProfile.BackColor = System.Drawing.Color.Transparent;
+            this.buttonProfile.FlatAppearance.BorderSize = 0;
+            this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProfile.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonProfile.Location = new System.Drawing.Point(0, 0);
+            this.buttonProfile.Name = "buttonProfile";
+            this.buttonProfile.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonProfile.Size = new System.Drawing.Size(253, 88);
+            this.buttonProfile.TabIndex = 15;
+            this.buttonProfile.Text = "                 Not logged in";
+            this.buttonProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonProfile.UseVisualStyleBackColor = false;
+            this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
+            // 
+            // timerSideMenuExpand
+            // 
+            this.timerSideMenuExpand.Interval = 1;
+            this.timerSideMenuExpand.Tick += new System.EventHandler(this.timerSideMenuExpand_Tick);
             // 
             // buttonLogInOut
             // 
-            this.buttonLogInOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogInOut.Location = new System.Drawing.Point(1483, -1);
-            this.buttonLogInOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonLogInOut.BackColor = System.Drawing.Color.Khaki;
+            this.buttonLogInOut.Font = new System.Drawing.Font("Verdana", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogInOut.ForeColor = System.Drawing.Color.Black;
+            this.buttonLogInOut.Location = new System.Drawing.Point(-130, 41);
             this.buttonLogInOut.Name = "buttonLogInOut";
-            this.buttonLogInOut.Size = new System.Drawing.Size(253, 41);
-            this.buttonLogInOut.TabIndex = 5;
-            this.buttonLogInOut.Text = "Log in";
-            this.buttonLogInOut.UseVisualStyleBackColor = true;
-            this.buttonLogInOut.Click += new System.EventHandler(this.buttonLogInOut_Click);
+            this.buttonLogInOut.Size = new System.Drawing.Size(120, 32);
+            this.buttonLogInOut.TabIndex = 0;
+            this.buttonLogInOut.Text = "LOGIN";
+            this.buttonLogInOut.UseVisualStyleBackColor = false;
+            this.buttonLogInOut.Click += new System.EventHandler(this.LoginSetUp);
+            // 
+            // panelForm
+            // 
+            this.panelForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelForm.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panelForm.Controls.Add(this.buttonLogInOut);
+            this.panelForm.Location = new System.Drawing.Point(250, 0);
+            this.panelForm.Name = "panelForm";
+            this.panelForm.Size = new System.Drawing.Size(863, 869);
+            this.panelForm.TabIndex = 21;
+            this.panelForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelForm_Paint);
+            // 
+            // timerMasterExpand
+            // 
+            this.timerMasterExpand.Interval = 1;
+            this.timerMasterExpand.Tick += new System.EventHandler(this.timerMasterExpand_Tick);
+            // 
+            // timerSystemExpand
+            // 
+            this.timerSystemExpand.Interval = 1;
+            this.timerSystemExpand.Tick += new System.EventHandler(this.timerSystemExpand_Tick);
             // 
             // FormUtama
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1924, 844);
-            this.Controls.Add(this.buttonLogInOut);
-            this.Controls.Add(this.labelLogInSebagai);
-            this.Controls.Add(this.menuStripFormUtama);
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(1113, 869);
+            this.Controls.Add(this.panelForm);
+            this.Controls.Add(this.panelMenu);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStripFormUtama;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormUtama";
             this.Text = "TIXIE";
-            this.Load += new System.EventHandler(this.FormUtama_Load);
-            this.menuStripFormUtama.ResumeLayout(false);
-            this.menuStripFormUtama.PerformLayout();
+            this.Load += new System.EventHandler(this.FormUtama1_Load);
+            this.panelMenu.ResumeLayout(false);
+            this.panelFlowLayoutMenu.ResumeLayout(false);
+            this.panelSideMenu.ResumeLayout(false);
+            this.panelSideMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panelButtonMaster.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMaster)).EndInit();
+            this.panelMaster.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxActors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGenre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCinema)).EndInit();
+            this.panelButtonSystem.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelSystem.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSchedule)).EndInit();
+            this.panelButtonTransaction.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).EndInit();
+            this.panelLogoApp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPtofil)).EndInit();
+            this.panelForm.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStripFormUtama;
-        private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transaksiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem jENISSTUDIOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gENREToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kelompokToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem studioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aktorsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem konsumenToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem sistemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem penjadwalanFilmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pencatatanKedatanganToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem laporanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.Label labelLogInSebagai;
-        internal System.Windows.Forms.Button buttonLogInOut;
-        private System.Windows.Forms.ToolStripMenuItem pegawaiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cinemaToolStripMenuItem;
+        private System.Windows.Forms.Panel panelLogoApp;
+        private System.Windows.Forms.PictureBox pictureBoxFotoPtofil;
+        private System.Windows.Forms.Button buttonSideMenu;
+        private System.Windows.Forms.Panel panelSideMenu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonTransaction;
+        private System.Windows.Forms.Panel panelSystem;
+        private System.Windows.Forms.Button buttonLaporan;
+        private System.Windows.Forms.Button buttonPencatatanKedatangan;
+        private System.Windows.Forms.Button buttonPenjadwalanFilm;
+        private System.Windows.Forms.Button buttonSystem;
+        private System.Windows.Forms.Panel panelMaster;
+        private System.Windows.Forms.Button buttonKelompok;
+        private System.Windows.Forms.Button buttonAktors;
+        private System.Windows.Forms.Button buttonGenre;
+        private System.Windows.Forms.Button buttonJenisStudio;
+        private System.Windows.Forms.Button buttonStudio;
+        private System.Windows.Forms.Button buttonCinema;
+        private System.Windows.Forms.Button buttonMaster;
+        private System.Windows.Forms.Button buttonPegawai;
+        private System.Windows.Forms.Timer timerSideMenuExpand;
+        private System.Windows.Forms.PictureBox pictureBoxCinema;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBoxEmployee;
+        private System.Windows.Forms.PictureBox pictureBoxActors;
+        private System.Windows.Forms.PictureBox pictureBoxGenre;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxStudio;
+        private System.Windows.Forms.PictureBox pictureBoxPrint;
+        private System.Windows.Forms.PictureBox pictureBoxNote;
+        private System.Windows.Forms.PictureBox pictureBoxSchedule;
+        private System.Windows.Forms.Panel panelButtonMaster;
+        private System.Windows.Forms.PictureBox pictureBoxMaster;
+        private System.Windows.Forms.Panel panelButtonSystem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelButtonTransaction;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.FlowLayoutPanel panelFlowLayoutMenu;
+        private System.Windows.Forms.Button buttonProfile;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button buttonLogInOut;
+        public System.Windows.Forms.Panel panelForm;
+        private System.Windows.Forms.Panel panelHome;
+        private System.Windows.Forms.PictureBox pictureBoxHome;
+        private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.Timer timerMasterExpand;
+        private System.Windows.Forms.Timer timerSystemExpand;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button buttonCustomer;
     }
 }

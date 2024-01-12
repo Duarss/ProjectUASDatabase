@@ -37,7 +37,7 @@ namespace Celikoor_Tixycket
             {
                 if (column.Name != "Id" && column.Name != "buttonHapusGrid")
                 {
-                    column.Width = 228;
+                    column.Width = 300;
                 }
             }
         }
@@ -47,6 +47,8 @@ namespace Celikoor_Tixycket
             FormTambahGenre formTambahGenre = new FormTambahGenre();
             formTambahGenre.Owner = this;
             formTambahGenre.ShowDialog();
+
+            FormMasterGenre_Load(this, e);
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
