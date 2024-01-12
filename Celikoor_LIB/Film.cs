@@ -98,35 +98,37 @@ namespace Celikoor_LIB
                 perintah = $"SELECT * FROM films WHERE {filter} like '%{nilai}%'";
             }
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            //MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
 
             List<Film> listFilm = new List<Film>();
-
-            while(hasil.Read() == true)
+            Koneksi conn = new Koneksi();
+            MySqlCommand cmd = new MySqlCommand(perintah, conn.KoneksiDB);
+            MySqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read() == true)
             {
                 Film tampung = new Film();
-                tampung.Id = hasil.GetInt32(0);
-                tampung.Judul = hasil.GetValue(1).ToString();
-                tampung.Sinopsis = hasil.GetValue(2).ToString();
-                tampung.Tahun = int.Parse(hasil.GetValue(3).ToString());
-                tampung.Durasi = int.Parse(hasil.GetValue(4).ToString());
+                tampung.Id = dr.GetInt32(0);
+                tampung.Judul = dr.GetValue(1).ToString();
+                tampung.Sinopsis = dr.GetValue(2).ToString();
+                tampung.Tahun = int.Parse(dr.GetValue(3).ToString());
+                tampung.Durasi = int.Parse(dr.GetValue(4).ToString());
                 
                 tampung.KelompokUsia = new Kelompok();
-                if (hasil.GetValue(5).ToString() != "")
+                if (dr.GetValue(5).ToString() != "")
                 {
-                    tampung.KelompokUsia.Id = int.Parse(hasil.GetValue(5).ToString());
+                    tampung.KelompokUsia.Id = int.Parse(dr.GetValue(5).ToString());
                     int num = tampung.KelompokUsia.Id;
                     List<Kelompok> listKel = Kelompok.BacaData(tampung.KelompokUsia.Id.ToString());
                     tampung.KelompokUsia = listKel[0];
                 }
-                tampung.Bahasa = hasil.GetValue(6).ToString();
-                tampung.Is_sub_indo = int.Parse(hasil.GetValue(7).ToString());
-                tampung.CoverImage = hasil.GetValue(8).ToString();
-                tampung.Diskon = double.Parse(hasil.GetValue(9).ToString());
+                tampung.Bahasa = dr.GetValue(6).ToString();
+                tampung.Is_sub_indo = int.Parse(dr.GetValue(7).ToString());
+                tampung.CoverImage = dr.GetValue(8).ToString();
+                tampung.Diskon = double.Parse(dr.GetValue(9).ToString());
 
                 listFilm.Add(tampung);
             }
-
+            conn.KoneksiDB.Close();
             return listFilm;
         }
         public override string ToString()

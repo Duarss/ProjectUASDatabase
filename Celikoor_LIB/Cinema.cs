@@ -71,22 +71,25 @@ namespace Celikoor_LIB
             }
 
             List<Cinema> listCinema = new List<Cinema>();
-            using (MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah))
-            {
-                while (hasil.Read() == true)
-                {
-                    Cinema tampung = new Cinema();
-                    tampung.Id = hasil.GetInt32(0);
-                    tampung.Nama_cabang = hasil.GetValue(1).ToString();
-                    tampung.Alamat = hasil.GetValue(2).ToString();
-                    tampung.TglDibuka = (DateTime)hasil.GetValue(3);
-                    tampung.Kota = hasil.GetValue(4).ToString();
 
-                    listCinema.Add(tampung);
-                }
-                //kirim list ke pemanggilnya
-                return listCinema;
+            Koneksi conn = new Koneksi();
+            MySqlCommand cmd = new MySqlCommand(perintah, conn.KoneksiDB);
+            MySqlDataReader dr = cmd.ExecuteReader();
+            //MySqlDataReader dr = Koneksi.JalankanPerintahSelect(perintah);
+            while (dr.Read() == true)
+            {
+                Cinema tampung = new Cinema();
+                tampung.Id = dr.GetInt32(0);
+                tampung.Nama_cabang = dr.GetValue(1).ToString();
+                tampung.Alamat = dr.GetValue(2).ToString();
+                tampung.TglDibuka = (DateTime)dr.GetValue(3);
+                tampung.Kota = dr.GetValue(4).ToString();
+
+                listCinema.Add(tampung);
             }
+            //kirim list ke pemanggilnya
+            conn.KoneksiDB.Close();
+            return listCinema;
         }
         public override string ToString()
         {

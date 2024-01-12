@@ -63,20 +63,22 @@ namespace Celikoor_LIB
             }
 
             //eksekusi perintah di atas
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            //MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
 
             List<Kelompok> listKelompok = new List<Kelompok>();
-
+            Koneksi conn = new Koneksi();
+            MySqlCommand cmd = new MySqlCommand(perintah, conn.KoneksiDB);
+            MySqlDataReader dr = cmd.ExecuteReader();
             //selama masih ada data yang dapat dibaca dari datareader
-            while (hasil.Read() == true)
+            while (dr.Read() == true)
             { 
                 Kelompok tampung = new Kelompok();
-                tampung.Id = int.Parse(hasil.GetValue(0).ToString()); //kolom pertama
-                tampung.Nama = hasil.GetValue(1).ToString(); //kolom kedua
+                tampung.Id = int.Parse(dr.GetValue(0).ToString()); //kolom pertama
+                tampung.Nama = dr.GetValue(1).ToString(); //kolom kedua
 
                 listKelompok.Add(tampung);
             }
-
+            conn.KoneksiDB.Close();
             return listKelompok;
         }
         public override string ToString()
