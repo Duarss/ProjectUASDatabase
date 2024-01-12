@@ -31,25 +31,30 @@ namespace Celikoor_Tixycket
                 p.Role = (string)comboBoxRolePegawai.SelectedItem;
 
                 Pegawai.TambahData(p);
-                MessageBox.Show("Tambah data berhasil");
+                MessageBox.Show("Success to add data!");
                 this.Close();
             }
             catch (Exception x)
             {
-                MessageBox.Show("Tambah data gagal. Error: " + x.Message);
+                MessageBox.Show("Failed to add data! Error: " + x.Message);
             }
         }
 
         private void FormTambahPegawai_Load(object sender, EventArgs e)
         {
-            List<Pegawai> ListData = Pegawai.BacaData();
-            comboBoxRolePegawai.DataSource = ListData;
-            comboBoxRolePegawai.DisplayMember = "Nama";
+            List<Pegawai> listDataPegawai = Pegawai.BacaData();
+            comboBoxRolePegawai.DataSource = listDataPegawai;
+            comboBoxRolePegawai.DisplayMember = "Roles";
         }
 
         private void FormTambahPegawai_Load_1(object sender, EventArgs e)
         {
             textBoxNamaPegawai.Select();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

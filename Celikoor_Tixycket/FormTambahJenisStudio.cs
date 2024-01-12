@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Celikoor_LIB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,35 @@ namespace Celikoor_Tixycket
         public FormTambahJenisStudio()
         {
             InitializeComponent();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormTambahJenisStudio_Load(object sender, EventArgs e)
+        {
+            textBoxJenisStudio.Select();
+        }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Jenis_Studio jenisStudio = new Jenis_Studio();
+                jenisStudio.Nama = textBoxJenisStudio.Text;
+                jenisStudio.Deskripsi = textBoxDeskripsi.Text;
+
+                Jenis_Studio.TambahData(jenisStudio);
+                MessageBox.Show("Success to add data!");
+                this.Close();
+            }
+
+            catch (Exception x)
+            {
+                MessageBox.Show("Failed to add data! Error: " + x.Message);
+            }
         }
     }
 }

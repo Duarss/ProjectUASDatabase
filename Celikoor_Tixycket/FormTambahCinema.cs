@@ -31,12 +31,12 @@ namespace Celikoor_Tixycket
                 c.Kota = textBoxKotaCinema.Text;
 
                 Cinema.TambahData(c);
-                MessageBox.Show("Add data success!");
+                MessageBox.Show("Success to add data!");
                 this.Close();
             }
             catch (Exception x)
             {
-                MessageBox.Show("Add data failed. Error: " + x.Message);
+                MessageBox.Show("Failed to add data! Error: " + x.Message);
             }
         }
 
@@ -48,11 +48,6 @@ namespace Celikoor_Tixycket
         private void textBoxNamaCabang_Click(object sender, EventArgs e)
         {
             textBoxNamaCabang.Select(0, textBoxNamaCabang.Text.Length);
-        }
-
-        private void textBoxNamaCabang_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)

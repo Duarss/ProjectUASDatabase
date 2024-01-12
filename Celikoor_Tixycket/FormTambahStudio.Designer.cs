@@ -78,13 +78,13 @@
             // labelCari
             // 
             this.labelCari.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCari.Location = new System.Drawing.Point(180, 136);
+            this.labelCari.Location = new System.Drawing.Point(214, 135);
             this.labelCari.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCari.Name = "labelCari";
-            this.labelCari.Size = new System.Drawing.Size(210, 55);
+            this.labelCari.Size = new System.Drawing.Size(176, 55);
             this.labelCari.TabIndex = 66;
             this.labelCari.Text = "Studio Name:";
-            this.labelCari.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelCari.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox3
             // 
@@ -216,7 +216,7 @@
             // numericUpDownWeekday
             // 
             this.numericUpDownWeekday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownWeekday.Location = new System.Drawing.Point(412, 436);
+            this.numericUpDownWeekday.Location = new System.Drawing.Point(412, 440);
             this.numericUpDownWeekday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDownWeekday.Name = "numericUpDownWeekday";
             this.numericUpDownWeekday.Size = new System.Drawing.Size(386, 31);
@@ -225,18 +225,18 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(200, 421);
+            this.label4.Location = new System.Drawing.Point(195, 437);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(190, 55);
+            this.label4.Size = new System.Drawing.Size(205, 30);
             this.label4.TabIndex = 79;
             this.label4.Text = "Weekday Price:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // numericUpDownWeekend
             // 
             this.numericUpDownWeekend.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownWeekend.Location = new System.Drawing.Point(412, 500);
+            this.numericUpDownWeekend.Location = new System.Drawing.Point(412, 515);
             this.numericUpDownWeekend.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDownWeekend.Name = "numericUpDownWeekend";
             this.numericUpDownWeekend.Size = new System.Drawing.Size(386, 31);
@@ -245,13 +245,13 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(200, 485);
+            this.label5.Location = new System.Drawing.Point(195, 510);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(190, 55);
+            this.label5.Size = new System.Drawing.Size(205, 35);
             this.label5.TabIndex = 81;
             this.label5.Text = "Weekend Price:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormTambahStudio
             // 

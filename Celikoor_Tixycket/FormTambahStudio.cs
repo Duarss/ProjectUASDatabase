@@ -31,12 +31,12 @@ namespace Celikoor_Tixycket
                 s.Harga_weekend = (int)numericUpDownWeekend.Value;
 
                 Studio.TambahData(s);
-                MessageBox.Show("Add data success!");
+                MessageBox.Show("Success to add data!");
                 this.Close();
             }
             catch (Exception x)
             {
-                MessageBox.Show("Add data failed. Error: " + x.Message);
+                MessageBox.Show("Failed to add data! Error: " + x.Message);
             }
         }
 

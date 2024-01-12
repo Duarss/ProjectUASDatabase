@@ -100,6 +100,7 @@
             this.buttonKeluar.TabIndex = 55;
             this.buttonKeluar.Text = "CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // buttonSimpan
             // 
@@ -114,6 +115,7 @@
             this.buttonSimpan.TabIndex = 54;
             this.buttonSimpan.Text = "SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // textBoxDeskripsi
             // 
@@ -174,6 +176,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTambahJenisStudio";
             this.Text = "TIXIE";
+            this.Load += new System.EventHandler(this.FormTambahJenisStudio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

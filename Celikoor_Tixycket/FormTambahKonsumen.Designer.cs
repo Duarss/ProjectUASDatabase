@@ -84,6 +84,7 @@
             this.buttonKeluar.TabIndex = 39;
             this.buttonKeluar.Text = "CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // pictureBox3
             // 

@@ -36,7 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxNamaKelompok = new System.Windows.Forms.TextBox();
+            this.textBoxKelompokUsia = new System.Windows.Forms.TextBox();
             this.labelKelompokUsia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,8 +54,9 @@
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(182, 55);
             this.buttonKeluar.TabIndex = 39;
-            this.buttonKeluar.Text = "KELUAR";
+            this.buttonKeluar.Text = "CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // buttonSimpan
             // 
@@ -68,7 +69,7 @@
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(182, 55);
             this.buttonSimpan.TabIndex = 38;
-            this.buttonSimpan.Text = "SIMPAN";
+            this.buttonSimpan.Text = "SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
@@ -129,14 +130,14 @@
             this.label3.Text = "TAMBAH KONSUMEN";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxNamaKelompok
+            // textBoxKelompokUsia
             // 
-            this.textBoxNamaKelompok.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaKelompok.Location = new System.Drawing.Point(343, 178);
-            this.textBoxNamaKelompok.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxNamaKelompok.Name = "textBoxNamaKelompok";
-            this.textBoxNamaKelompok.Size = new System.Drawing.Size(247, 36);
-            this.textBoxNamaKelompok.TabIndex = 51;
+            this.textBoxKelompokUsia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxKelompokUsia.Location = new System.Drawing.Point(343, 178);
+            this.textBoxKelompokUsia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxKelompokUsia.Name = "textBoxKelompokUsia";
+            this.textBoxKelompokUsia.Size = new System.Drawing.Size(247, 36);
+            this.textBoxKelompokUsia.TabIndex = 51;
             // 
             // labelKelompokUsia
             // 
@@ -155,7 +156,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 425);
             this.Controls.Add(this.labelKelompokUsia);
-            this.Controls.Add(this.textBoxNamaKelompok);
+            this.Controls.Add(this.textBoxKelompokUsia);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -185,7 +186,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxNamaKelompok;
+        private System.Windows.Forms.TextBox textBoxKelompokUsia;
         private System.Windows.Forms.Label labelKelompokUsia;
     }
 }

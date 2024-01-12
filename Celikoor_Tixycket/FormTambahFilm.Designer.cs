@@ -42,7 +42,7 @@
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.textBoxDurasi = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxKelompokUsia = new System.Windows.Forms.ComboBox();
             this.labelBahasa = new System.Windows.Forms.Label();
             this.textBoxBahasa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -190,6 +190,7 @@
             this.buttonSimpan.TabIndex = 60;
             this.buttonSimpan.Text = "SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // textBoxDurasi
             // 
@@ -200,14 +201,14 @@
             this.textBoxDurasi.Size = new System.Drawing.Size(385, 36);
             this.textBoxDurasi.TabIndex = 77;
             // 
-            // comboBox1
+            // comboBoxKelompokUsia
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(487, 444);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 37);
-            this.comboBox1.TabIndex = 78;
+            this.comboBoxKelompokUsia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxKelompokUsia.FormattingEnabled = true;
+            this.comboBoxKelompokUsia.Location = new System.Drawing.Point(487, 444);
+            this.comboBoxKelompokUsia.Name = "comboBoxKelompokUsia";
+            this.comboBoxKelompokUsia.Size = new System.Drawing.Size(182, 37);
+            this.comboBoxKelompokUsia.TabIndex = 78;
             // 
             // labelBahasa
             // 
@@ -303,7 +304,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxBahasa);
             this.Controls.Add(this.labelBahasa);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxKelompokUsia);
             this.Controls.Add(this.textBoxDurasi);
             this.Controls.Add(this.textBoxSinopsis);
             this.Controls.Add(this.labelDurasi);
@@ -320,6 +321,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTambahFilm";
             this.Text = "TIXIE";
+            this.Load += new System.EventHandler(this.FormTambahFilm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -343,7 +345,7 @@
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.TextBox textBoxDurasi;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxKelompokUsia;
         private System.Windows.Forms.Label labelBahasa;
         private System.Windows.Forms.TextBox textBoxBahasa;
         private System.Windows.Forms.Label label1;

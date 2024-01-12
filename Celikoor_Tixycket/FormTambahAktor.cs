@@ -37,18 +37,23 @@ namespace Celikoor_Tixycket
                 a.NegaraAsal = textBoxNegaraAsalAktor.Text;
 
                 Aktor.TambahData(a);
-                MessageBox.Show("Tambah data berhasil");
+                MessageBox.Show("Success to add data!");
                 this.Close();
             }
             catch (Exception x)
             {
-                MessageBox.Show("Tambah data gagal. Error: " + x.Message);
+                MessageBox.Show("Failed to add data! Error: " + x.Message);
             }
         }
 
         private void FormTambahAktor_Load(object sender, EventArgs e)
         {
             textBoxNama.Select();
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

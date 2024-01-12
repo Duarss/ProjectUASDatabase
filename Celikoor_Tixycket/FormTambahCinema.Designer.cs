@@ -192,7 +192,6 @@
             this.textBoxNamaCabang.Size = new System.Drawing.Size(418, 36);
             this.textBoxNamaCabang.TabIndex = 51;
             this.textBoxNamaCabang.Click += new System.EventHandler(this.textBoxNamaCabang_Click);
-            this.textBoxNamaCabang.TextChanged += new System.EventHandler(this.textBoxNamaCabang_TextChanged);
             // 
             // labelCari
             // 

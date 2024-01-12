@@ -27,18 +27,23 @@ namespace Celikoor_Tixycket
                 g.Deskripsi = textBoxDeskripsi.Text;
 
                 Genre.TambahData(g);
-                MessageBox.Show("Tambah data berhasil");
+                MessageBox.Show("Success to add data!");
                 this.Close();
             }
             catch (Exception x)
             {
-                MessageBox.Show("Tambah data gagal. Error: " + x.Message);
+                MessageBox.Show("Failed to add data! Error: " + x.Message);
             }
         }
 
         private void FormTambahGenre_Load(object sender, EventArgs e)
         {
+            textBoxGenre.Select();
+        }
 
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

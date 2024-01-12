@@ -23,21 +23,26 @@ namespace Celikoor_Tixycket
             try
             {
                 Kelompok k = new Kelompok();
-                k.Nama = textBoxNamaKelompok.Text;
+                k.Nama = textBoxKelompokUsia.Text;
 
                 Kelompok.TambahData(k);
-                MessageBox.Show("Tambah data berhasil");
+                MessageBox.Show("Success to add data!");
                 this.Close();
             }
             catch (Exception x)
             {
-                MessageBox.Show("Tambah data gagal. Error: " + x.Message);
+                MessageBox.Show("Failed to add data! Error: " + x.Message);
             }
         }
 
         private void FormTambahKelompok_Load(object sender, EventArgs e)
         {
+            textBoxKelompokUsia.Select();
+        }
 
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
