@@ -35,14 +35,14 @@ namespace Celikoor_Tixycket
             {
                 DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
                 btnHapus.Text = "Delete"; //judul button
-                btnHapus.HeaderText = "Action"; //judul kolom
+                btnHapus.HeaderText = "Delete"; //judul kolom
                 btnHapus.UseColumnTextForButtonValue = true; //agar tulisan muncul di button
                 btnHapus.Name = "buttonHapusGrid"; //nama objek button
                 dgvData.Columns.Add(btnHapus); //tambahkan button ke grid
 
                 DataGridViewButtonColumn btnUpdate = new DataGridViewButtonColumn();
                 btnUpdate.Text = "Update"; //judul button
-                btnUpdate.HeaderText = "Action"; //judul kolom
+                btnUpdate.HeaderText = "Update"; //judul kolom
                 btnUpdate.UseColumnTextForButtonValue = true; //agar tulisan muncul di button
                 btnUpdate.Name = "buttonUpdateGrid"; //nama objek button
                 dgvData.Columns.Add(btnUpdate); //tambahkan button ke grid

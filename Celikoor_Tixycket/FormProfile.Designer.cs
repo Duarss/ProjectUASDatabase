@@ -113,7 +113,7 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(578, 806);
+            this.buttonEdit.Location = new System.Drawing.Point(579, 842);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(328, 64);
@@ -172,9 +172,9 @@
             this.labelNameUser.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.labelNameUser.Location = new System.Drawing.Point(692, 138);
             this.labelNameUser.Name = "labelNameUser";
-            this.labelNameUser.Size = new System.Drawing.Size(343, 40);
+            this.labelNameUser.Size = new System.Drawing.Size(125, 40);
             this.labelNameUser.TabIndex = 24;
-            this.labelNameUser.Text = "WILLY HIMAWAN";
+            this.labelNameUser.Text = "NAME";
             // 
             // buttonEditProfilePicture
             // 
@@ -207,7 +207,7 @@
             this.customTextboxBirthDate.PasswordChar = false;
             this.customTextboxBirthDate.Size = new System.Drawing.Size(350, 48);
             this.customTextboxBirthDate.TabIndex = 22;
-            this.customTextboxBirthDate.Texts = "Willy Himawan";
+            this.customTextboxBirthDate.Texts = "MM/DD/YYYY";
             this.customTextboxBirthDate.UnderlinedStyle = false;
             this.customTextboxBirthDate.Click += new System.EventHandler(this.customTextboxBirthDate_Click);
             // 
@@ -227,7 +227,7 @@
             this.customTextboxPhoneNumber.PasswordChar = false;
             this.customTextboxPhoneNumber.Size = new System.Drawing.Size(350, 48);
             this.customTextboxPhoneNumber.TabIndex = 21;
-            this.customTextboxPhoneNumber.Texts = "Willy Himawan";
+            this.customTextboxPhoneNumber.Texts = "PHONE NUMBER";
             this.customTextboxPhoneNumber.UnderlinedStyle = false;
             this.customTextboxPhoneNumber.Click += new System.EventHandler(this.customTextboxPhoneNumber_Click);
             // 
@@ -247,7 +247,7 @@
             this.customTextboxEmail.PasswordChar = false;
             this.customTextboxEmail.Size = new System.Drawing.Size(350, 48);
             this.customTextboxEmail.TabIndex = 20;
-            this.customTextboxEmail.Texts = "Willy Himawan";
+            this.customTextboxEmail.Texts = "EMAIL";
             this.customTextboxEmail.UnderlinedStyle = false;
             this.customTextboxEmail.Click += new System.EventHandler(this.customTextboxEmail_Click);
             // 
@@ -267,7 +267,7 @@
             this.customTextboxPassword.PasswordChar = true;
             this.customTextboxPassword.Size = new System.Drawing.Size(328, 48);
             this.customTextboxPassword.TabIndex = 19;
-            this.customTextboxPassword.Texts = "Willy Himawan";
+            this.customTextboxPassword.Texts = "PASSWORD";
             this.customTextboxPassword.UnderlinedStyle = false;
             this.customTextboxPassword.Click += new System.EventHandler(this.customTextboxPassword_Click);
             // 
@@ -287,7 +287,7 @@
             this.customTextboxUsername.PasswordChar = false;
             this.customTextboxUsername.Size = new System.Drawing.Size(328, 48);
             this.customTextboxUsername.TabIndex = 18;
-            this.customTextboxUsername.Texts = "Willy Himawan";
+            this.customTextboxUsername.Texts = "USERNAME";
             this.customTextboxUsername.UnderlinedStyle = false;
             this.customTextboxUsername.Click += new System.EventHandler(this.customTextboxUsername_Click);
             // 
@@ -307,7 +307,7 @@
             this.customTextboxName.PasswordChar = false;
             this.customTextboxName.Size = new System.Drawing.Size(328, 48);
             this.customTextboxName.TabIndex = 17;
-            this.customTextboxName.Texts = "Willy Himawan";
+            this.customTextboxName.Texts = "NAME";
             this.customTextboxName.UnderlinedStyle = false;
             this.customTextboxName.Click += new System.EventHandler(this.customTextboxName_Click);
             // 

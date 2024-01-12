@@ -95,10 +95,6 @@ namespace Celikoor_Tixycket
                 MessageBox.Show("Please log in first!" + x.Message);
             }
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FormProfile());
-        }
         #endregion
 
         #region menu system

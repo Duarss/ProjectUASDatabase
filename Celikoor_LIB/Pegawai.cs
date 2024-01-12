@@ -94,7 +94,7 @@ namespace Celikoor_LIB
                 tampung.Email = hasil.GetValue(2).ToString();
                 tampung.Username = hasil.GetValue(3).ToString();
                 tampung.Password = "";
-                tampung.Role = hasil.GetValue(5).ToString();
+                tampung.Role = hasil.GetValue(4).ToString();
 
                 listPegawai.Add(tampung);
             }

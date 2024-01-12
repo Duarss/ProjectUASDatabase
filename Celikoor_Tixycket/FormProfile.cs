@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Celikoor_LIB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,12 @@ namespace Celikoor_Tixycket
             InitializeComponent();
         }
 
+        public Konsumen konsumenLogin;
+        public Pegawai pegawaiLogin;
+
         private void FormProfile_Load(object sender, EventArgs e)
         {
+            
         }
 
         private void customTextboxName_Click(object sender, EventArgs e)

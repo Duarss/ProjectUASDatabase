@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.buttonSignUp = new System.Windows.Forms.Button();
             this.pictureBoxLine = new System.Windows.Forms.PictureBox();
@@ -86,9 +87,10 @@
             this.buttonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogIn.Font = new System.Drawing.Font("Verdana", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogIn.ForeColor = System.Drawing.Color.Black;
-            this.buttonLogIn.Location = new System.Drawing.Point(954, 9);
+            this.buttonLogIn.Location = new System.Drawing.Point(1073, 11);
+            this.buttonLogIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLogIn.Name = "buttonLogIn";
-            this.buttonLogIn.Size = new System.Drawing.Size(120, 36);
+            this.buttonLogIn.Size = new System.Drawing.Size(135, 45);
             this.buttonLogIn.TabIndex = 1;
             this.buttonLogIn.Text = "Login";
             this.buttonLogIn.UseVisualStyleBackColor = false;
@@ -100,9 +102,10 @@
             this.buttonSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignUp.Font = new System.Drawing.Font("Verdana", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSignUp.ForeColor = System.Drawing.Color.Black;
-            this.buttonSignUp.Location = new System.Drawing.Point(1105, 9);
+            this.buttonSignUp.Location = new System.Drawing.Point(1243, 11);
+            this.buttonSignUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSignUp.Name = "buttonSignUp";
-            this.buttonSignUp.Size = new System.Drawing.Size(120, 36);
+            this.buttonSignUp.Size = new System.Drawing.Size(135, 45);
             this.buttonSignUp.TabIndex = 2;
             this.buttonSignUp.Text = "Sign Up";
             this.buttonSignUp.UseVisualStyleBackColor = false;
@@ -111,19 +114,20 @@
             // pictureBoxLine
             // 
             this.pictureBoxLine.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBoxLine.Location = new System.Drawing.Point(-1, 55);
+            this.pictureBoxLine.Location = new System.Drawing.Point(-1, 69);
+            this.pictureBoxLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxLine.Name = "pictureBoxLine";
-            this.pictureBoxLine.Size = new System.Drawing.Size(1263, 3);
+            this.pictureBoxLine.Size = new System.Drawing.Size(1421, 4);
             this.pictureBoxLine.TabIndex = 3;
             this.pictureBoxLine.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Swis721 Blk BT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(134, 93);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(151, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 34);
+            this.label1.Size = new System.Drawing.Size(186, 38);
             this.label1.TabIndex = 4;
             this.label1.Text = "ON GOING";
             // 
@@ -133,91 +137,100 @@
             this.pictureBoxLogo.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.title;
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxLogo.Enabled = false;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(28, 6);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(32, 8);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(142, 42);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(160, 52);
             this.pictureBoxLogo.TabIndex = 25;
             this.pictureBoxLogo.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBox1.Location = new System.Drawing.Point(296, 107);
+            this.pictureBox1.Location = new System.Drawing.Point(333, 134);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(900, 3);
+            this.pictureBox1.Size = new System.Drawing.Size(1012, 4);
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBox2.Location = new System.Drawing.Point(61, 107);
+            this.pictureBox2.Location = new System.Drawing.Point(69, 134);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 3);
+            this.pictureBox2.Size = new System.Drawing.Size(56, 4);
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBox3.Location = new System.Drawing.Point(61, 109);
+            this.pictureBox3.Location = new System.Drawing.Point(69, 136);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(3, 535);
+            this.pictureBox3.Size = new System.Drawing.Size(3, 669);
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBox4.Location = new System.Drawing.Point(1193, 110);
+            this.pictureBox4.Location = new System.Drawing.Point(1342, 138);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(3, 535);
+            this.pictureBox4.Size = new System.Drawing.Size(3, 669);
             this.pictureBox4.TabIndex = 29;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBox5.Location = new System.Drawing.Point(61, 644);
+            this.pictureBox5.Location = new System.Drawing.Point(69, 805);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(1133, 3);
+            this.pictureBox5.Size = new System.Drawing.Size(1275, 4);
             this.pictureBox5.TabIndex = 30;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBox6.Location = new System.Drawing.Point(63, 662);
+            this.pictureBox6.Location = new System.Drawing.Point(71, 828);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(1133, 3);
+            this.pictureBox6.Size = new System.Drawing.Size(1275, 4);
             this.pictureBox6.TabIndex = 31;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBox7.Location = new System.Drawing.Point(61, 662);
+            this.pictureBox7.Location = new System.Drawing.Point(69, 828);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(3, 160);
+            this.pictureBox7.Size = new System.Drawing.Size(3, 200);
             this.pictureBox7.TabIndex = 32;
             this.pictureBox7.TabStop = false;
             // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBox8.Location = new System.Drawing.Point(61, 822);
+            this.pictureBox8.Location = new System.Drawing.Point(69, 1028);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(1133, 3);
+            this.pictureBox8.Size = new System.Drawing.Size(1275, 4);
             this.pictureBox8.TabIndex = 33;
             this.pictureBox8.TabStop = false;
             // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.SandyBrown;
-            this.pictureBox9.Location = new System.Drawing.Point(1193, 663);
+            this.pictureBox9.Location = new System.Drawing.Point(1342, 829);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(3, 160);
+            this.pictureBox9.Size = new System.Drawing.Size(3, 200);
             this.pictureBox9.TabIndex = 34;
             this.pictureBox9.TabStop = false;
             // 
@@ -225,9 +238,10 @@
             // 
             this.pictureBoxPosterMiddle.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.poster3;
             this.pictureBoxPosterMiddle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPosterMiddle.Location = new System.Drawing.Point(412, 24);
+            this.pictureBoxPosterMiddle.Location = new System.Drawing.Point(464, 30);
+            this.pictureBoxPosterMiddle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxPosterMiddle.Name = "pictureBoxPosterMiddle";
-            this.pictureBoxPosterMiddle.Size = new System.Drawing.Size(312, 406);
+            this.pictureBoxPosterMiddle.Size = new System.Drawing.Size(351, 508);
             this.pictureBoxPosterMiddle.TabIndex = 35;
             this.pictureBoxPosterMiddle.TabStop = false;
             this.pictureBoxPosterMiddle.Click += new System.EventHandler(this.pictureBoxPosterMiddle_Click);
@@ -236,9 +250,10 @@
             // 
             this.pictureBoxPosterRight1.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.poster4;
             this.pictureBoxPosterRight1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPosterRight1.Location = new System.Drawing.Point(764, 82);
+            this.pictureBoxPosterRight1.Location = new System.Drawing.Point(860, 102);
+            this.pictureBoxPosterRight1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxPosterRight1.Name = "pictureBoxPosterRight1";
-            this.pictureBoxPosterRight1.Size = new System.Drawing.Size(224, 302);
+            this.pictureBoxPosterRight1.Size = new System.Drawing.Size(252, 378);
             this.pictureBoxPosterRight1.TabIndex = 36;
             this.pictureBoxPosterRight1.TabStop = false;
             // 
@@ -246,9 +261,10 @@
             // 
             this.pictureBoxPosterRight2.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.poster5;
             this.pictureBoxPosterRight2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPosterRight2.Location = new System.Drawing.Point(1024, 120);
+            this.pictureBoxPosterRight2.Location = new System.Drawing.Point(1152, 150);
+            this.pictureBoxPosterRight2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxPosterRight2.Name = "pictureBoxPosterRight2";
-            this.pictureBoxPosterRight2.Size = new System.Drawing.Size(183, 232);
+            this.pictureBoxPosterRight2.Size = new System.Drawing.Size(206, 290);
             this.pictureBoxPosterRight2.TabIndex = 37;
             this.pictureBoxPosterRight2.TabStop = false;
             // 
@@ -256,9 +272,10 @@
             // 
             this.pictureBoxPosterLeft2.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.poster1;
             this.pictureBoxPosterLeft2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPosterLeft2.Location = new System.Drawing.Point(-92, 120);
+            this.pictureBoxPosterLeft2.Location = new System.Drawing.Point(-104, 150);
+            this.pictureBoxPosterLeft2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxPosterLeft2.Name = "pictureBoxPosterLeft2";
-            this.pictureBoxPosterLeft2.Size = new System.Drawing.Size(192, 232);
+            this.pictureBoxPosterLeft2.Size = new System.Drawing.Size(216, 290);
             this.pictureBoxPosterLeft2.TabIndex = 39;
             this.pictureBoxPosterLeft2.TabStop = false;
             // 
@@ -266,9 +283,10 @@
             // 
             this.pictureBoxPosterLeft1.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.poster2;
             this.pictureBoxPosterLeft1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPosterLeft1.Location = new System.Drawing.Point(142, 82);
+            this.pictureBoxPosterLeft1.Location = new System.Drawing.Point(160, 102);
+            this.pictureBoxPosterLeft1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxPosterLeft1.Name = "pictureBoxPosterLeft1";
-            this.pictureBoxPosterLeft1.Size = new System.Drawing.Size(224, 302);
+            this.pictureBoxPosterLeft1.Size = new System.Drawing.Size(252, 378);
             this.pictureBoxPosterLeft1.TabIndex = 38;
             this.pictureBoxPosterLeft1.TabStop = false;
             this.pictureBoxPosterLeft1.Click += new System.EventHandler(this.pictureBox14_Click);
@@ -280,9 +298,10 @@
             this.panelPoster.Controls.Add(this.pictureBoxPosterRight1);
             this.panelPoster.Controls.Add(this.pictureBoxPosterLeft2);
             this.panelPoster.Controls.Add(this.pictureBoxPosterMiddle);
-            this.panelPoster.Location = new System.Drawing.Point(70, 116);
+            this.panelPoster.Location = new System.Drawing.Point(79, 145);
+            this.panelPoster.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelPoster.Name = "panelPoster";
-            this.panelPoster.Size = new System.Drawing.Size(1117, 442);
+            this.panelPoster.Size = new System.Drawing.Size(1257, 552);
             this.panelPoster.TabIndex = 40;
             // 
             // timerSM
@@ -297,9 +316,10 @@
             this.buttonRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRight.ForeColor = System.Drawing.Color.PeachPuff;
-            this.buttonRight.Location = new System.Drawing.Point(1178, 318);
+            this.buttonRight.Location = new System.Drawing.Point(1325, 398);
+            this.buttonRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonRight.Name = "buttonRight";
-            this.buttonRight.Size = new System.Drawing.Size(59, 55);
+            this.buttonRight.Size = new System.Drawing.Size(66, 69);
             this.buttonRight.TabIndex = 41;
             this.buttonRight.UseVisualStyleBackColor = false;
             this.buttonRight.Click += new System.EventHandler(this.buttonRight_Click);
@@ -311,9 +331,10 @@
             this.buttonLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLeft.ForeColor = System.Drawing.Color.PeachPuff;
-            this.buttonLeft.Location = new System.Drawing.Point(24, 318);
+            this.buttonLeft.Location = new System.Drawing.Point(27, 398);
+            this.buttonLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonLeft.Name = "buttonLeft";
-            this.buttonLeft.Size = new System.Drawing.Size(59, 55);
+            this.buttonLeft.Size = new System.Drawing.Size(66, 69);
             this.buttonLeft.TabIndex = 42;
             this.buttonLeft.UseVisualStyleBackColor = false;
             this.buttonLeft.Click += new System.EventHandler(this.buttonLeft_Click);
@@ -336,28 +357,30 @@
             // labelFilmName
             // 
             this.labelFilmName.AutoSize = true;
-            this.labelFilmName.Font = new System.Drawing.Font("Swis721 Blk BT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFilmName.Location = new System.Drawing.Point(588, 584);
+            this.labelFilmName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFilmName.Location = new System.Drawing.Point(662, 730);
             this.labelFilmName.Name = "labelFilmName";
-            this.labelFilmName.Size = new System.Drawing.Size(140, 34);
+            this.labelFilmName.Size = new System.Drawing.Size(131, 38);
             this.labelFilmName.TabIndex = 43;
             this.labelFilmName.Text = "filmText";
             // 
             // panelDiscountBanner
             // 
             this.panelDiscountBanner.Controls.Add(this.pictureBoxDiscountBanner);
-            this.panelDiscountBanner.Location = new System.Drawing.Point(70, 671);
+            this.panelDiscountBanner.Location = new System.Drawing.Point(79, 839);
+            this.panelDiscountBanner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelDiscountBanner.Name = "panelDiscountBanner";
-            this.panelDiscountBanner.Size = new System.Drawing.Size(1117, 145);
+            this.panelDiscountBanner.Size = new System.Drawing.Size(1257, 181);
             this.panelDiscountBanner.TabIndex = 44;
             // 
             // pictureBoxDiscountBanner
             // 
             this.pictureBoxDiscountBanner.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.Discount_Banner_1;
             this.pictureBoxDiscountBanner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxDiscountBanner.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxDiscountBanner.Location = new System.Drawing.Point(3, 4);
+            this.pictureBoxDiscountBanner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxDiscountBanner.Name = "pictureBoxDiscountBanner";
-            this.pictureBoxDiscountBanner.Size = new System.Drawing.Size(1117, 145);
+            this.pictureBoxDiscountBanner.Size = new System.Drawing.Size(1257, 181);
             this.pictureBoxDiscountBanner.TabIndex = 0;
             this.pictureBoxDiscountBanner.TabStop = false;
             // 
@@ -368,10 +391,10 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1260, 844);
+            this.ClientSize = new System.Drawing.Size(1418, 1055);
             this.Controls.Add(this.panelDiscountBanner);
             this.Controls.Add(this.labelFilmName);
             this.Controls.Add(this.buttonRight);
@@ -391,8 +414,10 @@
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.buttonLogIn);
             this.Controls.Add(this.panelPoster);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMain";
-            this.Text = ".";
+            this.Text = "TIXIE";
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
