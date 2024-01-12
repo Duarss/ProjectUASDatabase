@@ -91,6 +91,7 @@
             this.dgvData.RowHeadersWidth = 62;
             this.dgvData.Size = new System.Drawing.Size(1358, 869);
             this.dgvData.TabIndex = 84;
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
             // buttonTambah
             // 

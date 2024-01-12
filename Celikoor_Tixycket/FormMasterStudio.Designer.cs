@@ -56,7 +56,7 @@
             this.buttonKeluar.TabIndex = 84;
             this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
-            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click_1);
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // panel1
             // 
@@ -80,7 +80,6 @@
             this.textboxCari.Name = "textboxCari";
             this.textboxCari.Size = new System.Drawing.Size(428, 42);
             this.textboxCari.TabIndex = 2;
-            this.textboxCari.TextChanged += new System.EventHandler(this.textboxCari_TextChanged);
             // 
             // comboboxCari
             // 
@@ -162,6 +161,7 @@
             this.dgvData.RowHeadersWidth = 62;
             this.dgvData.Size = new System.Drawing.Size(1314, 726);
             this.dgvData.TabIndex = 86;
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
             // buttonTambah
             // 

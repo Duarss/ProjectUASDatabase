@@ -78,5 +78,31 @@ namespace Celikoor_Tixycket
             List<Konsumen> listDataKonsumen = Konsumen.BacaData(filter, nilai);
             dgvData.DataSource = listDataKonsumen;
         }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dgvData.CurrentRow.Cells["Id"].Value.ToString();
+
+            if (e.ColumnIndex == dgvData.Columns["buttonHapusGrid"].Index)
+            {
+                //konfirmasi penghapusan ke user
+                DialogResult dr = MessageBox.Show("Delete data " + kode + "?", "Delete Process",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes) //jika user setuju hapus data
+                {
+                    try
+                    {
+                        //hapus data dari database
+                        Konsumen.HapusData(kode);
+                        //refresh form master
+                        FormMasterKonsumen_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Failed to delete data: " + ex.Message);
+                    }
+                }
+            }
+        }
     }
 }

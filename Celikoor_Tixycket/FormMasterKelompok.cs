@@ -55,5 +55,31 @@ namespace Celikoor_Tixycket
                 }
             }
         }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dgvData.CurrentRow.Cells["Id"].Value.ToString();
+
+            if (e.ColumnIndex == dgvData.Columns["buttonHapusGrid"].Index)
+            {
+                //konfirmasi penghapusan ke user
+                DialogResult dr = MessageBox.Show("Delete data " + kode + "?", "Delete Process",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes) //jika user setuju hapus data
+                {
+                    try
+                    {
+                        //hapus data dari database
+                        Kelompok.HapusData(kode);
+                        //refresh form master
+                        FormMasterKelompok_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Failed to delete data: " + ex.Message);
+                    }
+                }
+            }
+        }
     }
 }

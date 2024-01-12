@@ -18,11 +18,6 @@ namespace Celikoor_Tixycket
             InitializeComponent();
         }
 
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void buttonTambah_Click(object sender, EventArgs e)
         {
             FormTambahStudio frmTambahStudio = new FormTambahStudio();
@@ -61,20 +56,7 @@ namespace Celikoor_Tixycket
             }
         }
 
-        private void textboxCari_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-
-            }
-
-            catch (Exception x)
-            {
-                MessageBox.Show(x.Message);
-            }
-        }
-
-        private void buttonKeluar_Click_1(object sender, EventArgs e)
+        private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -87,12 +69,12 @@ namespace Celikoor_Tixycket
                 string filter = "";
                 if(comboboxCari.SelectedIndex == 0)
                 {
-                    filter = "Nama";
+                    filter = "nama";
                 }
 
                 else if (comboboxCari.SelectedIndex == 1)
                 {
-                    filter = "Kapasitas";
+                    filter = "kapasitas";
                 }
 
                 else if (comboboxCari.SelectedIndex == 2)
@@ -107,6 +89,32 @@ namespace Celikoor_Tixycket
             catch (Exception x)
             {
                 MessageBox.Show(x.Message);
+            }
+        }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string kode = dgvData.CurrentRow.Cells["Id"].Value.ToString();
+
+            if (e.ColumnIndex == dgvData.Columns["buttonHapusGrid"].Index)
+            {
+                //konfirmasi penghapusan ke user
+                DialogResult dr = MessageBox.Show("Delete data " + kode + "?", "Delete Process",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes) //jika user setuju hapus data
+                {
+                    try
+                    {
+                        //hapus data dari database
+                        Studio.HapusData(kode);
+                        //refresh form master
+                        FormMasterStudio_Load(this, e);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Failed to delete data: " + ex.Message);
+                    }
+                }
             }
         }
     }
