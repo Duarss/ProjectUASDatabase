@@ -25,7 +25,7 @@ namespace Celikoor_Tixycket
             {
                 Aktor a = new Aktor();
                 a.Nama = textBoxNama.Text;
-                a.TglLahir = ((DateTime)dateTimePickerTglLahir.Value).ToString("yyyy-MM-dd");
+                a.TglLahir = dateTimePickerTglLahir.Value.ToString("yyyy-MM-dd");
                 if (radioButtonMale.Checked)
                 {
                     a.Gender = "L";

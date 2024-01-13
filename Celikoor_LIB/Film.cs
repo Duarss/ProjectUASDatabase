@@ -60,8 +60,8 @@ namespace Celikoor_LIB
         //! METHOD CREATE C
         public static void TambahData(Film film)
         {
-            string perintah = $"INSERT INTO films (id, judul, sinopsis, tahun, durasi, kelompoks_id, bahasa, is_sub_indo, coverimage, diskon_nominal)" +
-                $"VALUES ('{film.Id}', '{film.Judul}', '{film.Sinopsis}', '{film.Tahun}', '{film.Durasi}', '{film.KelompokUsia.Id}', '{film.Bahasa}', '{film.Is_sub_indo}', '{film.CoverImage}', '{film.Diskon}');";
+            string perintah = $"INSERT INTO films (judul, sinopsis, tahun, durasi, kelompoks_id, bahasa, is_sub_indo, coverimage, diskon_nominal)" +
+                $"VALUES ('{film.Judul}', '{film.Sinopsis}', '{film.Tahun}', '{film.Durasi}', '{film.KelompokUsia.Id}', '{film.Bahasa}', '{film.Is_sub_indo}', '{film.CoverImage}', '{film.Diskon}');";
 
             Koneksi.JalankanPerintahQuery(perintah);
         }
@@ -69,7 +69,9 @@ namespace Celikoor_LIB
         //! METHOD UPDATE U
         public static void UbahData(Film film)
         {
-            string perintah = $"UPDATE films SET judul= '{film.Judul}', sinopsis='{film.Sinopsis}', tahun='{film.Tahun}', durasi='{film.Durasi}', kelompoks_id='{film.KelompokUsia.Id}', '{film.Bahasa}', '{film.Is_sub_indo}', '{film.CoverImage}', '{film.Diskon}'" +
+            string perintah = $"UPDATE films SET judul= '{film.Judul}', sinopsis='{film.Sinopsis}', tahun='{film.Tahun}', " +
+                $"durasi='{film.Durasi}', kelompoks_id='{film.KelompokUsia.Id}', bahasa='{film.Bahasa}', " +
+                $"is_sub_indo='{film.Is_sub_indo}', cover_image='{film.CoverImage}', diskon_nominal='{film.Diskon}' " +
                 $"WHERE id = '{film.Id}'";
 
             Koneksi.JalankanPerintahQuery(perintah);

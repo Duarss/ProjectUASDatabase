@@ -64,9 +64,9 @@ namespace Celikoor_Tixycket
             this.linkLabelCreateAnAccount.AutoSize = true;
             this.linkLabelCreateAnAccount.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelCreateAnAccount.LinkColor = System.Drawing.Color.Peru;
-            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(992, 704);
+            this.linkLabelCreateAnAccount.Location = new System.Drawing.Point(1116, 880);
             this.linkLabelCreateAnAccount.Name = "linkLabelCreateAnAccount";
-            this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(103, 27);
+            this.linkLabelCreateAnAccount.Size = new System.Drawing.Size(128, 33);
             this.linkLabelCreateAnAccount.TabIndex = 21;
             this.linkLabelCreateAnAccount.TabStop = true;
             this.linkLabelCreateAnAccount.Text = "Click Here";
@@ -78,10 +78,10 @@ namespace Celikoor_Tixycket
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Azure;
-            this.buttonLogin.Location = new System.Drawing.Point(736, 620);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonLogin.Location = new System.Drawing.Point(828, 775);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(404, 43);
+            this.buttonLogin.Size = new System.Drawing.Size(454, 54);
             this.buttonLogin.TabIndex = 20;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -92,10 +92,10 @@ namespace Celikoor_Tixycket
             this.textBoxPasswordLogin.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxPasswordLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPasswordLogin.ForeColor = System.Drawing.Color.Silver;
-            this.textBoxPasswordLogin.Location = new System.Drawing.Point(737, 436);
-            this.textBoxPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxPasswordLogin.Location = new System.Drawing.Point(829, 545);
+            this.textBoxPasswordLogin.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textBoxPasswordLogin.Name = "textBoxPasswordLogin";
-            this.textBoxPasswordLogin.Size = new System.Drawing.Size(395, 34);
+            this.textBoxPasswordLogin.Size = new System.Drawing.Size(444, 39);
             this.textBoxPasswordLogin.TabIndex = 12;
             this.textBoxPasswordLogin.Text = "Enter your password";
             this.textBoxPasswordLogin.WordWrap = false;
@@ -107,9 +107,9 @@ namespace Celikoor_Tixycket
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Verdana", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Tan;
-            this.label1.Location = new System.Drawing.Point(758, 93);
+            this.label1.Location = new System.Drawing.Point(853, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 45);
+            this.label1.Size = new System.Drawing.Size(431, 54);
             this.label1.TabIndex = 22;
             this.label1.Text = "WELCOME BACK";
             // 
@@ -119,9 +119,9 @@ namespace Celikoor_Tixycket
             this.labelTo.Enabled = false;
             this.labelTo.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTo.ForeColor = System.Drawing.Color.Tan;
-            this.labelTo.Location = new System.Drawing.Point(874, 145);
+            this.labelTo.Location = new System.Drawing.Point(983, 181);
             this.labelTo.Name = "labelTo";
-            this.labelTo.Size = new System.Drawing.Size(47, 34);
+            this.labelTo.Size = new System.Drawing.Size(55, 40);
             this.labelTo.TabIndex = 23;
             this.labelTo.Text = "to";
             // 
@@ -136,9 +136,9 @@ namespace Celikoor_Tixycket
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.label2.Location = new System.Drawing.Point(762, 707);
+            this.label2.Location = new System.Drawing.Point(857, 884);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(234, 24);
+            this.label2.Size = new System.Drawing.Size(284, 29);
             this.label2.TabIndex = 28;
             this.label2.Text = "Don\'t have an account?";
             // 
@@ -151,9 +151,9 @@ namespace Celikoor_Tixycket
             this.panelImage.Controls.Add(this.pageIndicator1);
             this.panelImage.Controls.Add(this.pictureBoxImages);
             this.panelImage.Location = new System.Drawing.Point(0, 0);
-            this.panelImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelImage.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panelImage.Name = "panelImage";
-            this.panelImage.Size = new System.Drawing.Size(584, 847);
+            this.panelImage.Size = new System.Drawing.Size(657, 1059);
             this.panelImage.TabIndex = 25;
             this.panelImage.Click += new System.EventHandler(this.panelImage_Click);
             // 
@@ -164,10 +164,10 @@ namespace Celikoor_Tixycket
             this.pageIndicator4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pageIndicator4.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageIndicator4.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.pageIndicator4.Location = new System.Drawing.Point(317, 811);
-            this.pageIndicator4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pageIndicator4.Location = new System.Drawing.Point(357, 1014);
+            this.pageIndicator4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pageIndicator4.Name = "pageIndicator4";
-            this.pageIndicator4.Size = new System.Drawing.Size(23, 10);
+            this.pageIndicator4.Size = new System.Drawing.Size(26, 12);
             this.pageIndicator4.TabIndex = 32;
             this.pageIndicator4.UseVisualStyleBackColor = false;
             // 
@@ -178,10 +178,10 @@ namespace Celikoor_Tixycket
             this.pageIndicator3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pageIndicator3.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageIndicator3.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.pageIndicator3.Location = new System.Drawing.Point(288, 811);
-            this.pageIndicator3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pageIndicator3.Location = new System.Drawing.Point(324, 1014);
+            this.pageIndicator3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pageIndicator3.Name = "pageIndicator3";
-            this.pageIndicator3.Size = new System.Drawing.Size(23, 10);
+            this.pageIndicator3.Size = new System.Drawing.Size(26, 12);
             this.pageIndicator3.TabIndex = 31;
             this.pageIndicator3.UseVisualStyleBackColor = false;
             // 
@@ -192,10 +192,10 @@ namespace Celikoor_Tixycket
             this.pageIndicator2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pageIndicator2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageIndicator2.ForeColor = System.Drawing.Color.AntiqueWhite;
-            this.pageIndicator2.Location = new System.Drawing.Point(259, 811);
-            this.pageIndicator2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pageIndicator2.Location = new System.Drawing.Point(291, 1014);
+            this.pageIndicator2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pageIndicator2.Name = "pageIndicator2";
-            this.pageIndicator2.Size = new System.Drawing.Size(23, 10);
+            this.pageIndicator2.Size = new System.Drawing.Size(26, 12);
             this.pageIndicator2.TabIndex = 30;
             this.pageIndicator2.UseVisualStyleBackColor = false;
             // 
@@ -206,10 +206,10 @@ namespace Celikoor_Tixycket
             this.pageIndicator1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pageIndicator1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pageIndicator1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.pageIndicator1.Location = new System.Drawing.Point(230, 811);
-            this.pageIndicator1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pageIndicator1.Location = new System.Drawing.Point(259, 1014);
+            this.pageIndicator1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pageIndicator1.Name = "pageIndicator1";
-            this.pageIndicator1.Size = new System.Drawing.Size(23, 10);
+            this.pageIndicator1.Size = new System.Drawing.Size(26, 12);
             this.pageIndicator1.TabIndex = 29;
             this.pageIndicator1.UseVisualStyleBackColor = false;
             // 
@@ -218,8 +218,9 @@ namespace Celikoor_Tixycket
             this.pictureBoxImages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxImages.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxImages.Image")));
             this.pictureBoxImages.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxImages.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxImages.Name = "pictureBoxImages";
-            this.pictureBoxImages.Size = new System.Drawing.Size(584, 847);
+            this.pictureBoxImages.Size = new System.Drawing.Size(657, 1059);
             this.pictureBoxImages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxImages.TabIndex = 33;
             this.pictureBoxImages.TabStop = false;
@@ -231,10 +232,10 @@ namespace Celikoor_Tixycket
             this.textBoxUsernameLogin.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxUsernameLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsernameLogin.ForeColor = System.Drawing.Color.Silver;
-            this.textBoxUsernameLogin.Location = new System.Drawing.Point(737, 357);
-            this.textBoxUsernameLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxUsernameLogin.Location = new System.Drawing.Point(829, 446);
+            this.textBoxUsernameLogin.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.textBoxUsernameLogin.Name = "textBoxUsernameLogin";
-            this.textBoxUsernameLogin.Size = new System.Drawing.Size(395, 34);
+            this.textBoxUsernameLogin.Size = new System.Drawing.Size(444, 39);
             this.textBoxUsernameLogin.TabIndex = 1;
             this.textBoxUsernameLogin.Text = "Enter your username";
             this.textBoxUsernameLogin.Click += new System.EventHandler(this.textBoxUsernameLogin_Click);
@@ -244,9 +245,9 @@ namespace Celikoor_Tixycket
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelPassword.Location = new System.Drawing.Point(732, 404);
+            this.labelPassword.Location = new System.Drawing.Point(824, 505);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(138, 28);
+            this.labelPassword.Size = new System.Drawing.Size(169, 34);
             this.labelPassword.TabIndex = 17;
             this.labelPassword.Text = "Password";
             // 
@@ -255,9 +256,9 @@ namespace Celikoor_Tixycket
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelUsername.Location = new System.Drawing.Point(732, 325);
+            this.labelUsername.Location = new System.Drawing.Point(824, 406);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(141, 28);
+            this.labelUsername.Size = new System.Drawing.Size(176, 34);
             this.labelUsername.TabIndex = 16;
             this.labelUsername.Text = "Username";
             // 
@@ -267,10 +268,10 @@ namespace Celikoor_Tixycket
             this.pictureBoxLogo.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.title;
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxLogo.Enabled = false;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(748, 145);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(842, 181);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(371, 119);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(417, 149);
             this.pictureBoxLogo.TabIndex = 24;
             this.pictureBoxLogo.TabStop = false;
             // 
@@ -280,9 +281,10 @@ namespace Celikoor_Tixycket
             this.radioButtonKonsumen.BackColor = System.Drawing.Color.FloralWhite;
             this.radioButtonKonsumen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonKonsumen.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.radioButtonKonsumen.Location = new System.Drawing.Point(880, 502);
+            this.radioButtonKonsumen.Location = new System.Drawing.Point(990, 628);
+            this.radioButtonKonsumen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonKonsumen.Name = "radioButtonKonsumen";
-            this.radioButtonKonsumen.Size = new System.Drawing.Size(123, 28);
+            this.radioButtonKonsumen.Size = new System.Drawing.Size(149, 33);
             this.radioButtonKonsumen.TabIndex = 49;
             this.radioButtonKonsumen.TabStop = true;
             this.radioButtonKonsumen.Text = "Customer";
@@ -294,9 +296,9 @@ namespace Celikoor_Tixycket
             this.labelLoginAs.AutoSize = true;
             this.labelLoginAs.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLoginAs.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelLoginAs.Location = new System.Drawing.Point(731, 502);
+            this.labelLoginAs.Location = new System.Drawing.Point(822, 628);
             this.labelLoginAs.Name = "labelLoginAs";
-            this.labelLoginAs.Size = new System.Drawing.Size(121, 25);
+            this.labelLoginAs.Size = new System.Drawing.Size(142, 29);
             this.labelLoginAs.TabIndex = 50;
             this.labelLoginAs.Text = "Login as :";
             // 
@@ -306,9 +308,10 @@ namespace Celikoor_Tixycket
             this.radioButtonPegawai.BackColor = System.Drawing.Color.FloralWhite;
             this.radioButtonPegawai.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPegawai.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.radioButtonPegawai.Location = new System.Drawing.Point(1017, 502);
+            this.radioButtonPegawai.Location = new System.Drawing.Point(1144, 628);
+            this.radioButtonPegawai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonPegawai.Name = "radioButtonPegawai";
-            this.radioButtonPegawai.Size = new System.Drawing.Size(123, 28);
+            this.radioButtonPegawai.Size = new System.Drawing.Size(151, 33);
             this.radioButtonPegawai.TabIndex = 51;
             this.radioButtonPegawai.TabStop = true;
             this.radioButtonPegawai.Text = "Employee";
@@ -320,10 +323,10 @@ namespace Celikoor_Tixycket
             this.checkBoxRememberMe.AutoSize = true;
             this.checkBoxRememberMe.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxRememberMe.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.checkBoxRememberMe.Location = new System.Drawing.Point(736, 573);
-            this.checkBoxRememberMe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBoxRememberMe.Location = new System.Drawing.Point(828, 716);
+            this.checkBoxRememberMe.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.checkBoxRememberMe.Name = "checkBoxRememberMe";
-            this.checkBoxRememberMe.Size = new System.Drawing.Size(179, 28);
+            this.checkBoxRememberMe.Size = new System.Drawing.Size(217, 33);
             this.checkBoxRememberMe.TabIndex = 26;
             this.checkBoxRememberMe.Text = "Remember me?";
             this.checkBoxRememberMe.UseVisualStyleBackColor = true;
@@ -334,18 +337,18 @@ namespace Celikoor_Tixycket
             this.ForgotPassword.AutoSize = true;
             this.ForgotPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForgotPassword.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.ForgotPassword.Location = new System.Drawing.Point(956, 574);
+            this.ForgotPassword.Location = new System.Drawing.Point(1076, 718);
             this.ForgotPassword.Name = "ForgotPassword";
-            this.ForgotPassword.Size = new System.Drawing.Size(184, 24);
+            this.ForgotPassword.Size = new System.Drawing.Size(225, 29);
             this.ForgotPassword.TabIndex = 27;
             this.ForgotPassword.Text = "Forgot Password?";
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1260, 844);
+            this.ClientSize = new System.Drawing.Size(1418, 1055);
             this.Controls.Add(this.radioButtonPegawai);
             this.Controls.Add(this.labelLoginAs);
             this.Controls.Add(this.radioButtonKonsumen);
@@ -363,7 +366,7 @@ namespace Celikoor_Tixycket
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.pictureBoxLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
             this.Name = "FormLogin";
             this.Text = "TIXIE";

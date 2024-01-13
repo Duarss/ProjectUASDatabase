@@ -88,7 +88,7 @@ namespace Celikoor_LIB
             }
             catch (Exception x)
             {
-                MessageBox.Show("Too much connection has been made! Please try again later...");
+                MessageBox.Show("Too much connection has been made! Please try again later...!" + x.Message);
             }
         }
 

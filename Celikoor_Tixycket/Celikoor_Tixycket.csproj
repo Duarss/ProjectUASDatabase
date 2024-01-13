@@ -73,6 +73,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMasterFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterFilm.Designer.cs">
+      <DependentUpon>FormMasterFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPemesananTiket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,12 @@
     <Compile Include="FormUpdateAktor.Designer.cs">
       <DependentUpon>FormUpdateAktor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateFilm.Designer.cs">
+      <DependentUpon>FormUpdateFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateKonsumen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterCinema.resx">
       <DependentUpon>FormMasterCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterFilm.resx">
+      <DependentUpon>FormMasterFilm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMasterGenre.resx">
       <DependentUpon>FormMasterGenre.cs</DependentUpon>
@@ -311,6 +326,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahStudio.resx">
       <DependentUpon>FormTambahStudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateAktor.resx">
+      <DependentUpon>FormUpdateAktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateFilm.resx">
+      <DependentUpon>FormUpdateFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateKonsumen.resx">
+      <DependentUpon>FormUpdateKonsumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateStudio.resx">
+      <DependentUpon>FormUpdateStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>
