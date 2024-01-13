@@ -1,6 +1,6 @@
 ﻿namespace Celikoor_Tixycket
 {
-    partial class FormMasterAktor
+    partial class FormMasterFilm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMasterAktor));
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxCari = new System.Windows.Forms.TextBox();
             this.comboBoxCari = new System.Windows.Forms.ComboBox();
             this.labelCariBerdasarkan = new System.Windows.Forms.Label();
             this.buttonCari = new System.Windows.Forms.Button();
-            this.labelMasterAktor = new System.Windows.Forms.Label();
+            this.labelMasterFilm = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.buttonTambah = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -49,13 +48,14 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(1228, 979);
+            this.buttonKeluar.Location = new System.Drawing.Point(1226, 976);
             this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(166, 62);
-            this.buttonKeluar.TabIndex = 84;
+            this.buttonKeluar.TabIndex = 89;
             this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // panel1
             // 
@@ -65,11 +65,11 @@
             this.panel1.Controls.Add(this.comboBoxCari);
             this.panel1.Controls.Add(this.labelCariBerdasarkan);
             this.panel1.Controls.Add(this.buttonCari);
-            this.panel1.Location = new System.Drawing.Point(29, 92);
+            this.panel1.Location = new System.Drawing.Point(27, 89);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1364, 110);
-            this.panel1.TabIndex = 82;
+            this.panel1.TabIndex = 87;
             // 
             // textBoxCari
             // 
@@ -86,9 +86,8 @@
             this.comboBoxCari.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCari.FormattingEnabled = true;
             this.comboBoxCari.Items.AddRange(new object[] {
-            "Name",
-            "Gender",
-            "Country Of Origin"});
+            "Judul",
+            "Tahun"});
             this.comboBoxCari.Location = new System.Drawing.Point(302, 35);
             this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxCari.Name = "comboBoxCari";
@@ -119,20 +118,19 @@
             this.buttonCari.TabIndex = 77;
             this.buttonCari.Text = "SEARCH";
             this.buttonCari.UseVisualStyleBackColor = false;
-            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
-            // labelMasterAktor
+            // labelMasterFilm
             // 
-            this.labelMasterAktor.BackColor = System.Drawing.Color.Tan;
-            this.labelMasterAktor.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMasterAktor.ForeColor = System.Drawing.Color.White;
-            this.labelMasterAktor.Location = new System.Drawing.Point(28, 19);
-            this.labelMasterAktor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelMasterAktor.Name = "labelMasterAktor";
-            this.labelMasterAktor.Size = new System.Drawing.Size(1365, 55);
-            this.labelMasterAktor.TabIndex = 85;
-            this.labelMasterAktor.Text = "MASTER ACTOR";
-            this.labelMasterAktor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelMasterFilm.BackColor = System.Drawing.Color.Tan;
+            this.labelMasterFilm.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMasterFilm.ForeColor = System.Drawing.Color.White;
+            this.labelMasterFilm.Location = new System.Drawing.Point(26, 16);
+            this.labelMasterFilm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMasterFilm.Name = "labelMasterFilm";
+            this.labelMasterFilm.Size = new System.Drawing.Size(1365, 55);
+            this.labelMasterFilm.TabIndex = 90;
+            this.labelMasterFilm.Text = "MASTER FILM";
+            this.labelMasterFilm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvData
             // 
@@ -146,7 +144,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(29, 224);
+            this.dgvData.Location = new System.Drawing.Point(27, 221);
             this.dgvData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
@@ -160,7 +158,7 @@
             this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.RowHeadersWidth = 62;
             this.dgvData.Size = new System.Drawing.Size(1365, 742);
-            this.dgvData.TabIndex = 86;
+            this.dgvData.TabIndex = 91;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
             // buttonTambah
@@ -168,30 +166,28 @@
             this.buttonTambah.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
-            this.buttonTambah.Location = new System.Drawing.Point(29, 979);
+            this.buttonTambah.Location = new System.Drawing.Point(27, 976);
             this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(166, 62);
-            this.buttonTambah.TabIndex = 83;
+            this.buttonTambah.TabIndex = 88;
             this.buttonTambah.Text = "&ADD";
             this.buttonTambah.UseVisualStyleBackColor = false;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
-            // FormMasterAktor
+            // FormMasterFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1418, 1055);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.labelMasterAktor);
+            this.Controls.Add(this.labelMasterFilm);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.buttonTambah);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormMasterAktor";
-            this.Text = "TIXIE";
-            this.Load += new System.EventHandler(this.FormMasterAktor_Load);
+            this.Name = "FormMasterFilm";
+            this.Text = "FormMasterFilm";
+            this.Load += new System.EventHandler(this.FormMasterFilm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
@@ -207,7 +203,7 @@
         private System.Windows.Forms.ComboBox comboBoxCari;
         private System.Windows.Forms.Label labelCariBerdasarkan;
         private System.Windows.Forms.Button buttonCari;
-        private System.Windows.Forms.Label labelMasterAktor;
+        private System.Windows.Forms.Label labelMasterFilm;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Button buttonTambah;
     }

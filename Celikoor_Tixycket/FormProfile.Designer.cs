@@ -33,22 +33,23 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelNoTelp = new System.Windows.Forms.Label();
-            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonUpdateChanges = new System.Windows.Forms.Button();
             this.labelEmail = new System.Windows.Forms.Label();
             this.panelFotoProfile = new System.Windows.Forms.Panel();
-            this.labelNameUser = new System.Windows.Forms.Label();
+            this.labelNamaUser = new System.Windows.Forms.Label();
             this.buttonEditProfilePicture = new System.Windows.Forms.Button();
-            this.customTextboxBirthDate = new Celikoor_Tixycket.CustomTextbox();
-            this.customTextboxPhoneNumber = new Celikoor_Tixycket.CustomTextbox();
-            this.customTextboxEmail = new Celikoor_Tixycket.CustomTextbox();
-            this.customTextboxPassword = new Celikoor_Tixycket.CustomTextbox();
-            this.customTextboxUsername = new Celikoor_Tixycket.CustomTextbox();
-            this.customTextboxName = new Celikoor_Tixycket.CustomTextbox();
+            this.customTextBoxTglLahir = new Celikoor_Tixycket.CustomTextbox();
+            this.customTextBoxNoHp = new Celikoor_Tixycket.CustomTextbox();
+            this.customTextBoxEmail = new Celikoor_Tixycket.CustomTextbox();
+            this.customTextBoxPassword = new Celikoor_Tixycket.CustomTextbox();
+            this.customTextBoxUsername = new Celikoor_Tixycket.CustomTextbox();
+            this.customTextBoxNama = new Celikoor_Tixycket.CustomTextbox();
             this.labelBirthDate = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelBalanceValue = new System.Windows.Forms.Label();
             this.labelBalance = new System.Windows.Forms.Label();
             this.pictureBoxFotoPtofil = new System.Windows.Forms.PictureBox();
+            this.labelHello = new System.Windows.Forms.Label();
             this.panelFotoProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFotoPtofil)).BeginInit();
             this.SuspendLayout();
@@ -107,19 +108,20 @@
             this.labelNoTelp.TabIndex = 2;
             this.labelNoTelp.Text = "Phone Number";
             // 
-            // buttonEdit
+            // buttonUpdateChanges
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(579, 842);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(328, 64);
-            this.buttonEdit.TabIndex = 3;
-            this.buttonEdit.Text = "SAVE CHANGES";
-            this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonUpdateChanges.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonUpdateChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdateChanges.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdateChanges.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdateChanges.Location = new System.Drawing.Point(579, 842);
+            this.buttonUpdateChanges.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonUpdateChanges.Name = "buttonUpdateChanges";
+            this.buttonUpdateChanges.Size = new System.Drawing.Size(328, 64);
+            this.buttonUpdateChanges.TabIndex = 3;
+            this.buttonUpdateChanges.Text = "SAVE CHANGES";
+            this.buttonUpdateChanges.UseVisualStyleBackColor = false;
+            this.buttonUpdateChanges.Click += new System.EventHandler(this.buttonUpdateChanges_Click);
             // 
             // labelEmail
             // 
@@ -137,20 +139,21 @@
             // panelFotoProfile
             // 
             this.panelFotoProfile.BackColor = System.Drawing.Color.PeachPuff;
-            this.panelFotoProfile.Controls.Add(this.labelNameUser);
+            this.panelFotoProfile.Controls.Add(this.labelHello);
+            this.panelFotoProfile.Controls.Add(this.labelNamaUser);
             this.panelFotoProfile.Controls.Add(this.buttonEditProfilePicture);
-            this.panelFotoProfile.Controls.Add(this.customTextboxBirthDate);
-            this.panelFotoProfile.Controls.Add(this.customTextboxPhoneNumber);
-            this.panelFotoProfile.Controls.Add(this.customTextboxEmail);
-            this.panelFotoProfile.Controls.Add(this.customTextboxPassword);
-            this.panelFotoProfile.Controls.Add(this.customTextboxUsername);
-            this.panelFotoProfile.Controls.Add(this.customTextboxName);
+            this.panelFotoProfile.Controls.Add(this.customTextBoxTglLahir);
+            this.panelFotoProfile.Controls.Add(this.customTextBoxNoHp);
+            this.panelFotoProfile.Controls.Add(this.customTextBoxEmail);
+            this.panelFotoProfile.Controls.Add(this.customTextBoxPassword);
+            this.panelFotoProfile.Controls.Add(this.customTextBoxUsername);
+            this.panelFotoProfile.Controls.Add(this.customTextBoxNama);
             this.panelFotoProfile.Controls.Add(this.labelBirthDate);
             this.panelFotoProfile.Controls.Add(this.labelPassword);
             this.panelFotoProfile.Controls.Add(this.labelBalanceValue);
             this.panelFotoProfile.Controls.Add(this.labelBalance);
             this.panelFotoProfile.Controls.Add(this.pictureBoxFotoPtofil);
-            this.panelFotoProfile.Controls.Add(this.buttonEdit);
+            this.panelFotoProfile.Controls.Add(this.buttonUpdateChanges);
             this.panelFotoProfile.Controls.Add(this.labelName);
             this.panelFotoProfile.Controls.Add(this.labelUsername);
             this.panelFotoProfile.Controls.Add(this.labelEmail);
@@ -163,18 +166,18 @@
             this.panelFotoProfile.TabIndex = 4;
             this.panelFotoProfile.Click += new System.EventHandler(this.panelFotoProfile_Click);
             // 
-            // labelNameUser
+            // labelNamaUser
             // 
-            this.labelNameUser.AutoSize = true;
-            this.labelNameUser.BackColor = System.Drawing.Color.PeachPuff;
-            this.labelNameUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelNameUser.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameUser.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelNameUser.Location = new System.Drawing.Point(692, 138);
-            this.labelNameUser.Name = "labelNameUser";
-            this.labelNameUser.Size = new System.Drawing.Size(125, 40);
-            this.labelNameUser.TabIndex = 24;
-            this.labelNameUser.Text = "NAME";
+            this.labelNamaUser.AutoSize = true;
+            this.labelNamaUser.BackColor = System.Drawing.Color.PeachPuff;
+            this.labelNamaUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNamaUser.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaUser.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelNamaUser.Location = new System.Drawing.Point(837, 147);
+            this.labelNamaUser.Name = "labelNamaUser";
+            this.labelNamaUser.Size = new System.Drawing.Size(125, 40);
+            this.labelNamaUser.TabIndex = 24;
+            this.labelNamaUser.Text = "NAME";
             // 
             // buttonEditProfilePicture
             // 
@@ -191,125 +194,125 @@
             this.buttonEditProfilePicture.UseVisualStyleBackColor = false;
             this.buttonEditProfilePicture.Click += new System.EventHandler(this.buttonEditProfilePicture_Click);
             // 
-            // customTextboxBirthDate
+            // customTextBoxTglLahir
             // 
-            this.customTextboxBirthDate.BackColor = System.Drawing.Color.PeachPuff;
-            this.customTextboxBirthDate.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.customTextboxBirthDate.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextboxBirthDate.BorderSize = 2;
-            this.customTextboxBirthDate.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextboxBirthDate.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxBirthDate.Location = new System.Drawing.Point(819, 686);
-            this.customTextboxBirthDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.customTextboxBirthDate.Multiline = false;
-            this.customTextboxBirthDate.Name = "customTextboxBirthDate";
-            this.customTextboxBirthDate.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.customTextboxBirthDate.PasswordChar = false;
-            this.customTextboxBirthDate.Size = new System.Drawing.Size(350, 48);
-            this.customTextboxBirthDate.TabIndex = 22;
-            this.customTextboxBirthDate.Texts = "MM/DD/YYYY";
-            this.customTextboxBirthDate.UnderlinedStyle = false;
-            this.customTextboxBirthDate.Click += new System.EventHandler(this.customTextboxBirthDate_Click);
+            this.customTextBoxTglLahir.BackColor = System.Drawing.Color.PeachPuff;
+            this.customTextBoxTglLahir.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.customTextBoxTglLahir.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBoxTglLahir.BorderSize = 2;
+            this.customTextBoxTglLahir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBoxTglLahir.ForeColor = System.Drawing.Color.DimGray;
+            this.customTextBoxTglLahir.Location = new System.Drawing.Point(819, 686);
+            this.customTextBoxTglLahir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBoxTglLahir.Multiline = false;
+            this.customTextBoxTglLahir.Name = "customTextBoxTglLahir";
+            this.customTextBoxTglLahir.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.customTextBoxTglLahir.PasswordChar = false;
+            this.customTextBoxTglLahir.Size = new System.Drawing.Size(350, 48);
+            this.customTextBoxTglLahir.TabIndex = 22;
+            this.customTextBoxTglLahir.Texts = "MM/DD/YYYY";
+            this.customTextBoxTglLahir.UnderlinedStyle = false;
+            this.customTextBoxTglLahir.Click += new System.EventHandler(this.customTextboxBirthDate_Click);
             // 
-            // customTextboxPhoneNumber
+            // customTextBoxNoHp
             // 
-            this.customTextboxPhoneNumber.BackColor = System.Drawing.Color.PeachPuff;
-            this.customTextboxPhoneNumber.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.customTextboxPhoneNumber.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextboxPhoneNumber.BorderSize = 2;
-            this.customTextboxPhoneNumber.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextboxPhoneNumber.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxPhoneNumber.Location = new System.Drawing.Point(819, 565);
-            this.customTextboxPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.customTextboxPhoneNumber.Multiline = false;
-            this.customTextboxPhoneNumber.Name = "customTextboxPhoneNumber";
-            this.customTextboxPhoneNumber.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.customTextboxPhoneNumber.PasswordChar = false;
-            this.customTextboxPhoneNumber.Size = new System.Drawing.Size(350, 48);
-            this.customTextboxPhoneNumber.TabIndex = 21;
-            this.customTextboxPhoneNumber.Texts = "PHONE NUMBER";
-            this.customTextboxPhoneNumber.UnderlinedStyle = false;
-            this.customTextboxPhoneNumber.Click += new System.EventHandler(this.customTextboxPhoneNumber_Click);
+            this.customTextBoxNoHp.BackColor = System.Drawing.Color.PeachPuff;
+            this.customTextBoxNoHp.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.customTextBoxNoHp.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBoxNoHp.BorderSize = 2;
+            this.customTextBoxNoHp.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBoxNoHp.ForeColor = System.Drawing.Color.DimGray;
+            this.customTextBoxNoHp.Location = new System.Drawing.Point(819, 565);
+            this.customTextBoxNoHp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBoxNoHp.Multiline = false;
+            this.customTextBoxNoHp.Name = "customTextBoxNoHp";
+            this.customTextBoxNoHp.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.customTextBoxNoHp.PasswordChar = false;
+            this.customTextBoxNoHp.Size = new System.Drawing.Size(350, 48);
+            this.customTextBoxNoHp.TabIndex = 21;
+            this.customTextBoxNoHp.Texts = "PHONE NUMBER";
+            this.customTextBoxNoHp.UnderlinedStyle = false;
+            this.customTextBoxNoHp.Click += new System.EventHandler(this.customTextboxPhoneNumber_Click);
             // 
-            // customTextboxEmail
+            // customTextBoxEmail
             // 
-            this.customTextboxEmail.BackColor = System.Drawing.Color.PeachPuff;
-            this.customTextboxEmail.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.customTextboxEmail.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextboxEmail.BorderSize = 2;
-            this.customTextboxEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextboxEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxEmail.Location = new System.Drawing.Point(819, 441);
-            this.customTextboxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.customTextboxEmail.Multiline = false;
-            this.customTextboxEmail.Name = "customTextboxEmail";
-            this.customTextboxEmail.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.customTextboxEmail.PasswordChar = false;
-            this.customTextboxEmail.Size = new System.Drawing.Size(350, 48);
-            this.customTextboxEmail.TabIndex = 20;
-            this.customTextboxEmail.Texts = "EMAIL";
-            this.customTextboxEmail.UnderlinedStyle = false;
-            this.customTextboxEmail.Click += new System.EventHandler(this.customTextboxEmail_Click);
+            this.customTextBoxEmail.BackColor = System.Drawing.Color.PeachPuff;
+            this.customTextBoxEmail.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.customTextBoxEmail.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBoxEmail.BorderSize = 2;
+            this.customTextBoxEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBoxEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.customTextBoxEmail.Location = new System.Drawing.Point(819, 441);
+            this.customTextBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBoxEmail.Multiline = false;
+            this.customTextBoxEmail.Name = "customTextBoxEmail";
+            this.customTextBoxEmail.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.customTextBoxEmail.PasswordChar = false;
+            this.customTextBoxEmail.Size = new System.Drawing.Size(350, 48);
+            this.customTextBoxEmail.TabIndex = 20;
+            this.customTextBoxEmail.Texts = "EMAIL";
+            this.customTextBoxEmail.UnderlinedStyle = false;
+            this.customTextBoxEmail.Click += new System.EventHandler(this.customTextboxEmail_Click);
             // 
-            // customTextboxPassword
+            // customTextBoxPassword
             // 
-            this.customTextboxPassword.BackColor = System.Drawing.Color.PeachPuff;
-            this.customTextboxPassword.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.customTextboxPassword.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextboxPassword.BorderSize = 2;
-            this.customTextboxPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextboxPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxPassword.Location = new System.Drawing.Point(338, 686);
-            this.customTextboxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.customTextboxPassword.Multiline = false;
-            this.customTextboxPassword.Name = "customTextboxPassword";
-            this.customTextboxPassword.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.customTextboxPassword.PasswordChar = true;
-            this.customTextboxPassword.Size = new System.Drawing.Size(328, 48);
-            this.customTextboxPassword.TabIndex = 19;
-            this.customTextboxPassword.Texts = "PASSWORD";
-            this.customTextboxPassword.UnderlinedStyle = false;
-            this.customTextboxPassword.Click += new System.EventHandler(this.customTextboxPassword_Click);
+            this.customTextBoxPassword.BackColor = System.Drawing.Color.PeachPuff;
+            this.customTextBoxPassword.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.customTextBoxPassword.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBoxPassword.BorderSize = 2;
+            this.customTextBoxPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBoxPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.customTextBoxPassword.Location = new System.Drawing.Point(338, 686);
+            this.customTextBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBoxPassword.Multiline = false;
+            this.customTextBoxPassword.Name = "customTextBoxPassword";
+            this.customTextBoxPassword.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.customTextBoxPassword.PasswordChar = true;
+            this.customTextBoxPassword.Size = new System.Drawing.Size(328, 48);
+            this.customTextBoxPassword.TabIndex = 19;
+            this.customTextBoxPassword.Texts = "PASSWORD";
+            this.customTextBoxPassword.UnderlinedStyle = false;
+            this.customTextBoxPassword.Click += new System.EventHandler(this.customTextboxPassword_Click);
             // 
-            // customTextboxUsername
+            // customTextBoxUsername
             // 
-            this.customTextboxUsername.BackColor = System.Drawing.Color.PeachPuff;
-            this.customTextboxUsername.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.customTextboxUsername.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextboxUsername.BorderSize = 2;
-            this.customTextboxUsername.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextboxUsername.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxUsername.Location = new System.Drawing.Point(338, 565);
-            this.customTextboxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.customTextboxUsername.Multiline = false;
-            this.customTextboxUsername.Name = "customTextboxUsername";
-            this.customTextboxUsername.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.customTextboxUsername.PasswordChar = false;
-            this.customTextboxUsername.Size = new System.Drawing.Size(328, 48);
-            this.customTextboxUsername.TabIndex = 18;
-            this.customTextboxUsername.Texts = "USERNAME";
-            this.customTextboxUsername.UnderlinedStyle = false;
-            this.customTextboxUsername.Click += new System.EventHandler(this.customTextboxUsername_Click);
+            this.customTextBoxUsername.BackColor = System.Drawing.Color.PeachPuff;
+            this.customTextBoxUsername.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.customTextBoxUsername.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBoxUsername.BorderSize = 2;
+            this.customTextBoxUsername.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBoxUsername.ForeColor = System.Drawing.Color.DimGray;
+            this.customTextBoxUsername.Location = new System.Drawing.Point(338, 565);
+            this.customTextBoxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBoxUsername.Multiline = false;
+            this.customTextBoxUsername.Name = "customTextBoxUsername";
+            this.customTextBoxUsername.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.customTextBoxUsername.PasswordChar = false;
+            this.customTextBoxUsername.Size = new System.Drawing.Size(328, 48);
+            this.customTextBoxUsername.TabIndex = 18;
+            this.customTextBoxUsername.Texts = "USERNAME";
+            this.customTextBoxUsername.UnderlinedStyle = false;
+            this.customTextBoxUsername.Click += new System.EventHandler(this.customTextboxUsername_Click);
             // 
-            // customTextboxName
+            // customTextBoxNama
             // 
-            this.customTextboxName.BackColor = System.Drawing.Color.PeachPuff;
-            this.customTextboxName.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.customTextboxName.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextboxName.BorderSize = 2;
-            this.customTextboxName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextboxName.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextboxName.Location = new System.Drawing.Point(338, 441);
-            this.customTextboxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.customTextboxName.Multiline = false;
-            this.customTextboxName.Name = "customTextboxName";
-            this.customTextboxName.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.customTextboxName.PasswordChar = false;
-            this.customTextboxName.Size = new System.Drawing.Size(328, 48);
-            this.customTextboxName.TabIndex = 17;
-            this.customTextboxName.Texts = "NAME";
-            this.customTextboxName.UnderlinedStyle = false;
-            this.customTextboxName.Click += new System.EventHandler(this.customTextboxName_Click);
+            this.customTextBoxNama.BackColor = System.Drawing.Color.PeachPuff;
+            this.customTextBoxNama.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.customTextBoxNama.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextBoxNama.BorderSize = 2;
+            this.customTextBoxNama.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextBoxNama.ForeColor = System.Drawing.Color.DimGray;
+            this.customTextBoxNama.Location = new System.Drawing.Point(338, 441);
+            this.customTextBoxNama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextBoxNama.Multiline = false;
+            this.customTextBoxNama.Name = "customTextBoxNama";
+            this.customTextBoxNama.Padding = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.customTextBoxNama.PasswordChar = false;
+            this.customTextBoxNama.Size = new System.Drawing.Size(328, 48);
+            this.customTextBoxNama.TabIndex = 17;
+            this.customTextBoxNama.Texts = "NAME";
+            this.customTextBoxNama.UnderlinedStyle = false;
+            this.customTextBoxNama.Click += new System.EventHandler(this.customTextboxName_Click);
             // 
             // labelBirthDate
             // 
@@ -374,6 +377,19 @@
             this.pictureBoxFotoPtofil.TabIndex = 9;
             this.pictureBoxFotoPtofil.TabStop = false;
             // 
+            // labelHello
+            // 
+            this.labelHello.AutoSize = true;
+            this.labelHello.BackColor = System.Drawing.Color.PeachPuff;
+            this.labelHello.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelHello.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHello.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelHello.Location = new System.Drawing.Point(693, 147);
+            this.labelHello.Name = "labelHello";
+            this.labelHello.Size = new System.Drawing.Size(138, 40);
+            this.labelHello.TabIndex = 25;
+            this.labelHello.Text = "HELLO";
+            // 
             // FormProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -398,7 +414,7 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelNoTelp;
-        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonUpdateChanges;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Panel panelFotoProfile;
         private System.Windows.Forms.Label labelBalance;
@@ -406,13 +422,14 @@
         private System.Windows.Forms.Label labelBalanceValue;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelBirthDate;
-        private CustomTextbox customTextboxBirthDate;
-        private CustomTextbox customTextboxPhoneNumber;
-        private CustomTextbox customTextboxEmail;
-        private CustomTextbox customTextboxPassword;
-        private CustomTextbox customTextboxUsername;
-        private CustomTextbox customTextboxName;
+        private CustomTextbox customTextBoxTglLahir;
+        private CustomTextbox customTextBoxNoHp;
+        private CustomTextbox customTextBoxEmail;
+        private CustomTextbox customTextBoxPassword;
+        private CustomTextbox customTextBoxUsername;
+        private CustomTextbox customTextBoxNama;
         private System.Windows.Forms.Button buttonEditProfilePicture;
-        private System.Windows.Forms.Label labelNameUser;
+        private System.Windows.Forms.Label labelNamaUser;
+        private System.Windows.Forms.Label labelHello;
     }
 }

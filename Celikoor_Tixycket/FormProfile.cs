@@ -25,43 +25,53 @@ namespace Celikoor_Tixycket
 
         private void FormProfile_Load(object sender, EventArgs e)
         {
-            
+            if (konsumenLogin is Konsumen)
+            {
+                List<Konsumen> listDataKonsumen = Konsumen.BacaData();
+                labelNamaUser.Text = listDataKonsumen[konsumenLogin.Id].Username;
+                customTextBoxNama.Texts = listDataKonsumen[konsumenLogin.Id].Nama;
+                customTextBoxUsername.Texts = listDataKonsumen[konsumenLogin.Id].Username;
+                customTextBoxPassword.Texts = listDataKonsumen[konsumenLogin.Id].Password;
+                customTextBoxEmail.Texts = listDataKonsumen[konsumenLogin.Id].Email;
+                customTextBoxNoHp.Texts = listDataKonsumen[konsumenLogin.Id].NoHp;
+                customTextBoxTglLahir.Texts = listDataKonsumen[konsumenLogin.Id].TglLahir.ToString("MM/dd/yyyy");
+            }
         }
 
         private void customTextboxName_Click(object sender, EventArgs e)
         {
             DisableUnderlineStyle();
-            customTextboxName.UnderlinedStyle = true;
+            customTextBoxNama.UnderlinedStyle = true;
         }
 
         private void customTextboxEmail_Click(object sender, EventArgs e)
         {
             DisableUnderlineStyle();
-            customTextboxEmail.UnderlinedStyle = true;
+            customTextBoxEmail.UnderlinedStyle = true;
         }
 
         private void customTextboxUsername_Click(object sender, EventArgs e)
         {
             DisableUnderlineStyle();
-            customTextboxUsername.UnderlinedStyle = true;
+            customTextBoxUsername.UnderlinedStyle = true;
         }
 
         private void customTextboxPhoneNumber_Click(object sender, EventArgs e)
         {
             DisableUnderlineStyle();
-            customTextboxPhoneNumber.UnderlinedStyle = true;
+            customTextBoxNoHp.UnderlinedStyle = true;
         }
 
         private void customTextboxPassword_Click(object sender, EventArgs e)
         {
             DisableUnderlineStyle();
-            customTextboxPassword.UnderlinedStyle = true;
+            customTextBoxPassword.UnderlinedStyle = true;
         }
 
         private void customTextboxBirthDate_Click(object sender, EventArgs e)
         {
             DisableUnderlineStyle();
-            customTextboxBirthDate.UnderlinedStyle = true;
+            customTextBoxTglLahir.UnderlinedStyle = true;
         }
         private void DisableUnderlineStyle()
         {
@@ -88,7 +98,30 @@ namespace Celikoor_Tixycket
 
         private void buttonEditProfilePicture_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void buttonUpdateChanges_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Konsumen konsumen = new Konsumen();
+                konsumen.Nama = customTextBoxNama.Texts;
+                konsumen.Username = customTextBoxUsername.Texts;
+                konsumen.Password = customTextBoxPassword.Texts;
+                konsumen.Email = customTextBoxEmail.Texts;
+                konsumen.NoHp = customTextBoxNoHp.Texts;
+                konsumen.TglLahir = DateTime.Parse(customTextBoxTglLahir.Texts);
+
+                Konsumen.UbahData(konsumen);
+
+                MessageBox.Show("Success to update your profile changes!");
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to update your profile changes! Error: " + ex.Message);
+            }
         }
     }
 }

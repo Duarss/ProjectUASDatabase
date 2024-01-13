@@ -23,6 +23,7 @@ namespace Celikoor_Tixycket
             FormTambahStudio frmTambahStudio = new FormTambahStudio();
             frmTambahStudio.Owner = this;
             frmTambahStudio.ShowDialog();
+
             FormMasterStudio_Load(this, e);
         }
 
@@ -94,19 +95,30 @@ namespace Celikoor_Tixycket
 
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string kode = dgvData.CurrentRow.Cells["Id"].Value.ToString();
+            string id = dgvData.CurrentRow.Cells["Id"].Value.ToString();
+
+            if (e.ColumnIndex == dgvData.Columns["buttonUpdateGrid"].Index)
+            {
+                MessageBox.Show("Update Id: " + id);
+                FormUpdateFilm formUpdateFilm = new FormUpdateFilm();
+                formUpdateFilm.Owner = this;
+                formUpdateFilm.idUpdate = id;
+                formUpdateFilm.ShowDialog();
+
+                FormMasterStudio_Load(this, e);
+            }
 
             if (e.ColumnIndex == dgvData.Columns["buttonHapusGrid"].Index)
             {
                 //konfirmasi penghapusan ke user
-                DialogResult dr = MessageBox.Show("Delete data " + kode + "?", "Delete Process",
+                DialogResult dr = MessageBox.Show("Delete data " + id + "?", "Delete Process",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes) //jika user setuju hapus data
                 {
                     try
                     {
                         //hapus data dari database
-                        Studio.HapusData(kode);
+                        Studio.HapusData(id);
                         //refresh form master
                         FormMasterStudio_Load(this, e);
                     }

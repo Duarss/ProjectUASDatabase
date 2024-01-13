@@ -11,12 +11,11 @@ using System.Windows.Forms;
 
 namespace Celikoor_Tixycket
 {
-    public partial class FormMasterAktor : Form
+    public partial class FormMasterFilm : Form
     {
-        public FormMasterAktor()
+        public FormMasterFilm()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -24,21 +23,12 @@ namespace Celikoor_Tixycket
             this.Close();
         }
 
-        private void buttonTambah_Click(object sender, EventArgs e)
+        private void FormMasterFilm_Load(object sender, EventArgs e)
         {
-            FormTambahAktor formTambahAktor = new FormTambahAktor();
-            formTambahAktor.Owner = this;
-            formTambahAktor.ShowDialog();
+            List<Film> listDataFilm = Film.BacaData();
+            dgvData.DataSource = listDataFilm;
 
-            FormMasterAktor_Load(this, e);
-        }
-
-        private void FormMasterAktor_Load(object sender, EventArgs e)
-        {
-            List<Aktor> listDataAktor = Aktor.BacaData();
-            dgvData.DataSource = listDataAktor;
-
-            if (dgvData.ColumnCount == 5)
+            if (dgvData.ColumnCount == 10)
             {
                 DataGridViewButtonColumn btnUpdate = new DataGridViewButtonColumn();
                 btnUpdate.Text = "Update"; //judul button
@@ -64,31 +54,6 @@ namespace Celikoor_Tixycket
             }
         }
 
-        private void buttonCari_Click(object sender, EventArgs e)
-        {
-            string filter;
-
-            if (comboBoxCari.SelectedIndex == 0)
-            {
-                filter = "Nama";
-            }
-
-            else if (comboBoxCari.SelectedIndex == 1)
-            {
-                filter = "Gender";
-            }
-
-            else
-            {
-                filter = "Negara_Asal";
-            }
-
-            string nilai = textBoxCari.Text;
-
-            List<Aktor> listDataAktor = Aktor.BacaData(filter, nilai);
-            dgvData.DataSource = listDataAktor;
-        }
-
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string id = dgvData.CurrentRow.Cells["Id"].Value.ToString();
@@ -96,14 +61,14 @@ namespace Celikoor_Tixycket
             if (e.ColumnIndex == dgvData.Columns["buttonUpdateGrid"].Index)
             {
                 MessageBox.Show("Update Id: " + id);
-                FormUpdateAktor formUpdateAktor = new FormUpdateAktor();
-                formUpdateAktor.Owner = this;
-                formUpdateAktor.idUpdate = id;
-                formUpdateAktor.ShowDialog();
+                FormUpdateFilm formUpdateFilm = new FormUpdateFilm();
+                formUpdateFilm.Owner = this;
+                formUpdateFilm.idUpdate = id;
+                formUpdateFilm.ShowDialog();
 
-                FormMasterAktor_Load(this, e);
+                FormMasterFilm_Load(this, e);
             }
-            
+
             if (e.ColumnIndex == dgvData.Columns["buttonHapusGrid"].Index)
             {
                 //konfirmasi penghapusan ke user
@@ -114,9 +79,9 @@ namespace Celikoor_Tixycket
                     try
                     {
                         //hapus data dari database
-                        Aktor.HapusData(id);
+                        Film.HapusData(id);
                         //refresh form master
-                        FormMasterAktor_Load(this, e);
+                        FormMasterFilm_Load(this, e);
                     }
                     catch (Exception ex)
                     {
@@ -124,6 +89,15 @@ namespace Celikoor_Tixycket
                     }
                 }
             }
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormTambahFilm formTambahFilm = new FormTambahFilm();
+            formTambahFilm.Owner = this;
+            formTambahFilm.ShowDialog();
+
+            FormMasterFilm_Load(this, e);
         }
     }
 }

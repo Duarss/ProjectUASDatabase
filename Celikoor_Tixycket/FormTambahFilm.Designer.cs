@@ -38,7 +38,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelTambahFilm = new System.Windows.Forms.Label();
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.textBoxDurasi = new System.Windows.Forms.TextBox();
@@ -149,19 +149,19 @@
             this.pictureBox1.TabIndex = 64;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // labelTambahFilm
             // 
-            this.label3.BackColor = System.Drawing.Color.Tan;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(33, 38);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(968, 62);
-            this.label3.TabIndex = 63;
-            this.label3.Text = "ADD FILM";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTambahFilm.BackColor = System.Drawing.Color.Tan;
+            this.labelTambahFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelTambahFilm.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTambahFilm.ForeColor = System.Drawing.Color.Transparent;
+            this.labelTambahFilm.Location = new System.Drawing.Point(33, 38);
+            this.labelTambahFilm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTambahFilm.Name = "labelTambahFilm";
+            this.labelTambahFilm.Size = new System.Drawing.Size(968, 62);
+            this.labelTambahFilm.TabIndex = 63;
+            this.labelTambahFilm.Text = "ADD FILM";
+            this.labelTambahFilm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonKeluar
             // 
@@ -315,7 +315,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelTambahFilm);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonSimpan);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -341,7 +341,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelTambahFilm;
         private System.Windows.Forms.Button buttonKeluar;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.TextBox textBoxDurasi;

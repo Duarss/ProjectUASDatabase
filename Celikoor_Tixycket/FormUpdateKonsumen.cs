@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Celikoor_Tixycket
 {
-    public partial class FormUpdateKonsumen : Form
+    public partial class w : Form
     {
-        public FormUpdateKonsumen()
+        public w()
         {
             InitializeComponent();
         }

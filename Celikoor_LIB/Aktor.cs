@@ -51,8 +51,7 @@ namespace Celikoor_LIB
         //! METHOD UPDATE U
         public static void UbahData(Aktor aktor)
         {
-            string perintah = $"UPDATE aktors SET nama='{aktor.Nama}', tgl_lahir='{aktor.TglLahir}'" +
-                $", gender='{aktor.Gender}', negara_asal='{aktor.NegaraAsal}');";
+            string perintah = $"UPDATE aktors SET nama='{aktor.Nama}', tgl_lahir='{aktor.TglLahir}' WHERE id='{aktor.Id}';";
 
             Koneksi.JalankanPerintahQuery(perintah);
         }
