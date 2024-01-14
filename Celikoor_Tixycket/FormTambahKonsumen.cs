@@ -33,7 +33,7 @@ namespace Celikoor_Tixycket
                 {
                     k.Gender = "P";
                 }
-                k.TglLahir = dateTimePickerTglLahirKonsumen.Value;
+                k.TglLahir = dateTimePickerTglLahirKonsumen.Value.ToString("yyyy-MM-dd");
                 k.Saldo = double.Parse(textBoxSaldoKonsumen.Text);
                 k.Username = textBoxUsernameKonsumen.Text;
                 k.Password = textBoxPasswordKonsumen.Text;

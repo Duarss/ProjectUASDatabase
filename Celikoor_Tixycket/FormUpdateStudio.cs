@@ -27,21 +27,22 @@ namespace Celikoor_Tixycket
 
         private void FormUpdateStudio_Load(object sender, EventArgs e)
         {
+            List<Studio> listDataStudio = Studio.BacaData("id", idUpdate);
+            textBoxNamaStudio.Text = listDataStudio[0].Nama;
+            textBoxCapacity.Text = listDataStudio[0].Kapasitas.ToString();
+            comboBoxJenisStudio.SelectedItem = listDataStudio[0].JenisStudio.Nama;
+            comboBoxCinema.SelectedItem = listDataStudio[0].Cinema.Nama_cabang;
+            textBoxWeekday.Text = listDataStudio[0].Harga_weekday.ToString();
+            textBoxWeekend.Text = listDataStudio[0].Harga_weekend.ToString();
+
             List<Jenis_Studio> listDataJenisStudio = Jenis_Studio.BacaData();
             comboBoxJenisStudio.DataSource = listDataJenisStudio;
             comboBoxJenisStudio.DisplayMember = "Nama";
-
+            comboBoxJenisStudio.Text = listDataStudio[0].JenisStudio.Nama;
             List<Cinema> listDataCinema = Cinema.BacaData();
             comboBoxCinema.DataSource = listDataCinema;
             comboBoxCinema.DisplayMember = "Nama_cabang";
-
-            List<Studio> listDataStudio = Studio.BacaData();
-            textBoxNamaStudio.Text = listDataStudio[int.Parse(idUpdate)].Nama;
-            numericUpDownKapasitas.Value = listDataStudio[int.Parse(idUpdate)].Kapasitas;
-            comboBoxJenisStudio.SelectedItem = listDataStudio[int.Parse(idUpdate)].JenisStudio.Nama;
-            comboBoxCinema.SelectedItem = listDataStudio[int.Parse(idUpdate)].Cinema.Nama_cabang;
-            numericUpDownWeekday.Value = listDataStudio[int.Parse(idUpdate)].Harga_weekday;
-            numericUpDownWeekend.Value = listDataStudio[int.Parse(idUpdate)].Harga_weekend;
+            comboBoxCinema.Text = listDataStudio[0].Cinema.Nama_cabang;
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -49,12 +50,13 @@ namespace Celikoor_Tixycket
             try
             {
                 Studio studio = new Studio();
+                studio.Id = int.Parse(idUpdate);
                 studio.Nama = textBoxNamaStudio.Text;
-                studio.Kapasitas = (int)numericUpDownKapasitas.Value;
+                studio.Kapasitas = int.Parse(textBoxCapacity.Text);
                 studio.JenisStudio = (Jenis_Studio)comboBoxJenisStudio.SelectedItem;
                 studio.Cinema = (Cinema)comboBoxCinema.SelectedItem;
-                studio.Harga_weekday = (int)numericUpDownWeekday.Value;
-                studio.Harga_weekend = (int)numericUpDownWeekend.Value;
+                studio.Harga_weekday = int.Parse(textBoxWeekday.Text);
+                studio.Harga_weekend = int.Parse(textBoxWeekend.Text);
 
                 Studio.UbahData(studio);
 

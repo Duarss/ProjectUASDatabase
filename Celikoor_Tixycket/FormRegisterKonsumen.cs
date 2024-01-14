@@ -29,7 +29,14 @@ namespace Celikoor_Tixycket
 
         private void linkLabelAlreadyHaveAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formUtama.OpenForm(new FormLogin());
+            if(formUtama.loginStatus != true)
+            {
+                formUtama.OpenForm(new FormLogin());
+            }
+            else
+            {
+                MessageBox.Show("Please logout first!");
+            }
         }
 
         public void FormRegisterKonsumen_FormClosing(object sender, FormClosingEventArgs e)
@@ -58,7 +65,7 @@ namespace Celikoor_Tixycket
                     konsumen.Gender = "P";
                 }
 
-                konsumen.TglLahir = DateTime.Parse(dateTimePickerBirthDate.Value.ToString());
+                konsumen.TglLahir = dateTimePickerBirthDate.Value.ToString("yyyy-MM-dd");
                 konsumen.Username = textBoxUsernameRegistration.Text;
                 konsumen.Password = textBoxPasswordRegistration.Text;
                 
@@ -71,6 +78,7 @@ namespace Celikoor_Tixycket
                 {
                     Konsumen.TambahData(konsumen);
                     MessageBox.Show("Registration success, you may proceed!");
+                    formUtama.OpenForm(new FormMain());
                     this.Close();
                 }
             }

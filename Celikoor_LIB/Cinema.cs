@@ -43,39 +43,42 @@ namespace Celikoor_LIB
             string perintah = $"INSERT INTO cinemas (nama_cabang, alamat, tgl_dibuka, kota) " +
                 $"VALUES ('{cinema.Nama_cabang}', '{cinema.Alamat}', '{cinema.TglDibuka.ToString("yyyy-MM-dd")}'" +
                 $", '{cinema.Kota}');";
-
-            Koneksi.JalankanPerintahQuery(perintah);
+            
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD DELETE D
         public static void HapusData(string idHapus)
         {
-            string perintah = $"DELETE FROM cinemas WHERE id='{idHapus}'";
+            string perintah = $"DELETE FROM cinemas WHERE filter='{idHapus}'";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD RETRIEVE R
-        public static List<Cinema> BacaData(string id="")
+        public static List<Cinema> BacaData(string filter="", string nilai="")
         {
             //susun perintah query
             string perintah;
 
-            if (id == "")
+            if (filter == "")
             {
                 perintah = $"SELECT * FROM cinemas";
             }
             else
             {
-                perintah = $"SELECT * FROM cinemas WHERE id='{id}'";
+                perintah = $"SELECT * FROM cinemas WHERE {filter} like '%{nilai}%'";
             }
 
             List<Cinema> listCinema = new List<Cinema>();
 
             Koneksi conn = new Koneksi();
-            MySqlCommand cmd = new MySqlCommand(perintah, conn.KoneksiDB);
-            MySqlDataReader dr = cmd.ExecuteReader();
-            //MySqlDataReader dr = Koneksi.JalankanPerintahSelect(perintah);
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+
             while (dr.Read() == true)
             {
                 Cinema tampung = new Cinema();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,10 @@ namespace Celikoor_LIB
         int is_sub_indo;
         string coverImage;
         double diskon;
+        List<Genre_film> listGenreFilm;
         List<Aktor_film> listAktorFilm;
+        List<Film_studio> listFilmStudio = new List<Film_studio>();
+        List<Sesi_film> listSesiFilm;
         #endregion
 
         #region CONSTRUCTORS
@@ -37,6 +41,9 @@ namespace Celikoor_LIB
             CoverImage = "";
             Diskon = 0;
             ListAktorFilm = new List<Aktor_film>();
+            ListGenreFilm = new List<Genre_film>();
+            ListSesiFilm = new List<Sesi_film>();
+            ListFilmStudio = new List<Film_studio>();
         }
         #endregion
 
@@ -53,38 +60,125 @@ namespace Celikoor_LIB
         public int Is_sub_indo { get => is_sub_indo; set => is_sub_indo = value; }
         public string CoverImage { get => coverImage; set => coverImage = value; }
         public List<Aktor_film> ListAktorFilm { get => listAktorFilm; set => listAktorFilm = value; }
+        public List<Genre_film> ListGenreFilm { get => listGenreFilm; set => listGenreFilm = value; }
+        public List<Sesi_film> ListSesiFilm { get => listSesiFilm; set => listSesiFilm = value; }
+        public List<Film_studio> ListFilmStudio { get => listFilmStudio; set => listFilmStudio = value; }
         #endregion
 
         #region METHODS
-        
+
+        public void TambahGenreFilm(Genre genre)
+        {
+            Genre_film genre_film = new Genre_film();
+            genre_film.Genre = genre;
+
+            ListGenreFilm.Add(genre_film);
+        }
+        public void TambahAktorFilm(Aktor aktor, string peran)
+        {
+            Aktor_film aktor_film = new Aktor_film();
+            aktor_film.Aktor = aktor;
+            aktor_film.Peran = peran;
+
+            ListAktorFilm.Add(aktor_film);
+        }
+        public void TambahFilmStudio(Studio s, Film f)
+        {
+            Film_studio film_studio = new Film_studio();
+            film_studio.Film = f;
+            Console.WriteLine(film_studio.Film.Id);
+            film_studio.Studio = s;
+
+            ListFilmStudio.Add(film_studio);
+        }
+        public void TambahSesiFilm(Jadwal_film jf, Film_studio fs)
+        {
+            Sesi_film sesi_Film = new Sesi_film();
+            sesi_Film.JadwalFilm = jf;
+            sesi_Film.FilmStudio = fs;
+
+            ListSesiFilm.Add(sesi_Film);
+        }
         //! METHOD CREATE C
         public static void TambahData(Film film)
         {
-            string perintah = $"INSERT INTO films (judul, sinopsis, tahun, durasi, kelompoks_id, bahasa, is_sub_indo, coverimage, diskon_nominal)" +
+            string perintah = $"INSERT INTO films (judul, sinopsis, tahun, durasi, kelompoks_id, bahasa, is_sub_indo, cover_image, diskon_nominal)" +
                 $"VALUES ('{film.Judul}', '{film.Sinopsis}', '{film.Tahun}', '{film.Durasi}', '{film.KelompokUsia.Id}', '{film.Bahasa}', '{film.Is_sub_indo}', '{film.CoverImage}', '{film.Diskon}');";
-
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
+        public static void TambahDataDetailFilm(Film film)
+        {
+            string perintah;
+            for (int i = 0; i < film.ListGenreFilm.Count; i++)
+            {
+                perintah = "INSERT INTO `genre_film`(`films_id`, `genres_id`) VALUES ('" + film.Id + "','" + film.ListGenreFilm[i].Genre.Id + "')";
+                Koneksi conn = new Koneksi();
+                conn.JalankanPerintahQuery(perintah);
+                conn.KoneksiDB.Close();
+            }
+            for (int i = 0; i < film.ListAktorFilm.Count; i++)
+            {
+                perintah = $"INSERT INTO `aktor_film`(`aktors_id`, `films_id`, `peran`) VALUES ('{film.ListAktorFilm[i].Aktor.Id}','{film.Id}','{film.ListAktorFilm[i].Peran}')";
+                Koneksi conn = new Koneksi();
+                conn.JalankanPerintahQuery(perintah);
+                conn.KoneksiDB.Close();
+            }
+        }
+        public static void TambahDataStudioFilm(Film film)
+        {
+            string perintah = $"INSERT IGNORE INTO `film_studio`(`studios_id`, `films_id`) VALUES ('{film.ListFilmStudio[0].Studio.Id}','{film.ListFilmStudio[0].Film.Id}')";
 
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
+        }
+        public static void TambahDataSesiFilm(Film film)
+        {
+            string perintah = "";
+            for(int i = 0; i < film.ListSesiFilm.Count; i++)
+            {
+                perintah = $"INSERT INTO `sesi_films`(`jadwal_film_id`, `studios_id`, `films_id`) VALUES ('{film.ListSesiFilm[i].JadwalFilm.Id}','{film.ListSesiFilm[i].FilmStudio.Studio.Id}','{film.ListSesiFilm[i].FilmStudio.Film.Id}')";
+                Koneksi conn = new Koneksi();
+                conn.JalankanPerintahQuery(perintah);
+                conn.KoneksiDB.Close();
+            }
+        }
         //! METHOD UPDATE U
         public static void UbahData(Film film)
         {
-            string perintah = $"UPDATE films SET judul= '{film.Judul}', sinopsis='{film.Sinopsis}', tahun='{film.Tahun}', " +
-                $"durasi='{film.Durasi}', kelompoks_id='{film.KelompokUsia.Id}', bahasa='{film.Bahasa}', " +
-                $"is_sub_indo='{film.Is_sub_indo}', cover_image='{film.CoverImage}', diskon_nominal='{film.Diskon}' " +
-                $"WHERE id = '{film.Id}'";
-
-            Koneksi.JalankanPerintahQuery(perintah);
+            string perintah = "UPDATE films SET judul= '"+film.Judul+"', sinopsis=\""+film.Sinopsis+"\", tahun='"+film.Tahun+"', durasi="+film.Durasi+", kelompoks_id="+film.KelompokUsia.Id+", bahasa='"+film.Bahasa+"', is_sub_indo="+film.Is_sub_indo+", diskon_nominal="+film.Diskon+" WHERE id = "+film.Id+";";
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD DELETE D
         public static void HapusData(string idHapus)
         {
-            string perintah = $"DELETE FROM films WHERE id = '{idHapus}';";
+            Koneksi conn = new Koneksi();
+            string perintah;
+            perintah = $"DELETE FROM genre_film WHERE films_id= '{idHapus}';";
+            conn.JalankanPerintahQuery(perintah);
+            perintah = $"DELETE FROM aktor_film WHERE films_id= '{idHapus}';";
+            conn.JalankanPerintahQuery(perintah);
+            perintah = $"DELETE FROM films WHERE id = '{idHapus}';";
+            conn.JalankanPerintahQuery(perintah);
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
+        public static void HapusDataDetail(string idHapus)
+        {
+            Koneksi conn = new Koneksi();
+            string perintah;
+            perintah = $"DELETE FROM genre_film WHERE films_id= '{idHapus}';";
+            conn.JalankanPerintahQuery(perintah);
+            perintah = $"DELETE FROM aktor_film WHERE films_id= '{idHapus}';";
+            conn.JalankanPerintahQuery(perintah);
 
+            conn.KoneksiDB.Close();
+        }
         //! METHOD RETRIEVE R dan FILTER F
         public static List<Film> BacaData(string filter="", string nilai="")
         {
@@ -94,7 +188,10 @@ namespace Celikoor_LIB
             {
                 perintah = $"SELECT * FROM films";
             }
-
+            else if (filter == "getLastIndex")
+            {
+                perintah = $"SELECT * FROM films ORDER BY id DESC LIMIT 1";
+            }
             else
             {
                 perintah = $"SELECT * FROM films WHERE {filter} like '%{nilai}%'";
@@ -104,12 +201,11 @@ namespace Celikoor_LIB
 
             List<Film> listFilm = new List<Film>();
             Koneksi conn = new Koneksi();
-            MySqlCommand cmd = new MySqlCommand(perintah, conn.KoneksiDB);
-            MySqlDataReader dr = cmd.ExecuteReader();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
             while (dr.Read() == true)
             {
                 Film tampung = new Film();
-                tampung.Id = dr.GetInt32(0);
+                tampung.Id = int.Parse(dr.GetValue(0).ToString());
                 tampung.Judul = dr.GetValue(1).ToString();
                 tampung.Sinopsis = dr.GetValue(2).ToString();
                 tampung.Tahun = int.Parse(dr.GetValue(3).ToString());
@@ -132,6 +228,140 @@ namespace Celikoor_LIB
             }
             conn.KoneksiDB.Close();
             return listFilm;
+        }
+        public static List<Genre_film> BacaDataDetailGenreFilm(string filter = "", string nilai = "")
+        {
+            string perintah;
+
+            if (filter == "")
+            {
+                perintah = $"SELECT * FROM genre_film";
+            }
+            else
+            {
+                perintah = $"SELECT * FROM genre_film WHERE {filter} = '{nilai}'";
+            }
+
+            //MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            List<Genre_film> listGenreFilm = new List<Genre_film>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            while (dr.Read() == true)
+            {
+                Genre_film tampung = new Genre_film();
+                tampung.Genre = Genre.BacaData("id", dr.GetValue(1).ToString())[0];
+
+                listGenreFilm.Add(tampung);
+            }
+            conn.KoneksiDB.Close();
+            return listGenreFilm;
+        }
+        public static List<Aktor_film> BacaDataDetailAktorFilm(string filter = "", string nilai = "")
+        {
+            string perintah;
+
+            if (filter == "")
+            {
+                perintah = $"SELECT * FROM aktor_film";
+            }
+            else
+            {
+                perintah = $"SELECT * FROM aktor_film WHERE {filter} = '{nilai}'";
+            }
+
+            //MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            List<Aktor_film> listAktorFilm = new List<Aktor_film>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            while (dr.Read() == true)
+            {
+                Aktor_film tampung = new Aktor_film();
+                tampung.Aktor = Aktor.BacaData("id", dr.GetValue(0).ToString())[0];
+                tampung.Peran = dr.GetValue(2).ToString();
+
+                listAktorFilm.Add(tampung);
+            }
+            conn.KoneksiDB.Close();
+            return listAktorFilm;
+        }
+        public static List<Film_studio> BacaDataDetailFilmStudio(string filter = "", string nilai = "")
+        {
+            string perintah;
+
+            if (filter == "")
+            {
+                perintah = $"SELECT * FROM film_studio";
+            }
+            else if(filter == "getLastIndex")
+            {
+                perintah = $"SELECT * FROM film_studio order by id DESC LIMIT 1";
+            }
+            else
+            {
+                perintah = $"SELECT * FROM film_studio WHERE {filter} = '{nilai}'";
+            }
+
+            //MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            List<Film_studio> listFilmStudio = new List<Film_studio>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            while (dr.Read() == true)
+            {
+                Film_studio tampung = new Film_studio();
+                tampung.Studio = Studio.BacaData("id", dr.GetValue(0).ToString())[0];
+
+                listFilmStudio.Add(tampung);
+            }
+            conn.KoneksiDB.Close();
+            return listFilmStudio;
+        }
+        public static List<Film_studio> BacaDataDetailSesiFilm(string filter = "", string nilai = "")
+        {
+            string perintah;
+
+            if (filter == "")
+            {
+                perintah = $"SELECT * FROM sesi_film";
+            }
+            else if (filter == "getLastIndex")
+            {
+                perintah = $"SELECT * FROM sesi_film order by id DESC LIMIT 1";
+            }
+            else
+            {
+                perintah = $"SELECT * FROM sesi_film WHERE {filter} = '{nilai}'";
+            }
+
+            //MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            List<Film_studio> listFilmStudio = new List<Film_studio>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            while (dr.Read() == true)
+            {
+                Film_studio tampung = new Film_studio();
+                tampung.Studio = Studio.BacaData("id", dr.GetValue(0).ToString())[0];
+
+                listFilmStudio.Add(tampung);
+            }
+            conn.KoneksiDB.Close();
+            return listFilmStudio;
+        }
+        public static string GetCoverImageLastIndex()
+        {
+            int lastIndex = 0;
+            string perintah = "SELECT CAST(SUBSTRING(cover_image FROM 2) AS UNSIGNED) AS modified_id FROM films ORDER BY id DESC LIMIT 1;";
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            if (dr.Read())
+            {
+                lastIndex = int.Parse(dr.GetValue(0).ToString()) + 1;
+            }
+            conn.KoneksiDB.Close();
+            return "p"+lastIndex.ToString();
         }
         public override string ToString()
         {

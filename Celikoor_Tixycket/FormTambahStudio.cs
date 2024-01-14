@@ -22,17 +22,24 @@ namespace Celikoor_Tixycket
         {
             try
             {
-                Studio s = new Studio();
-                s.Nama = textBoxNamaStudio.Text;
-                s.Kapasitas = (int)numericUpDownKapasitas.Value;
-                s.JenisStudio = (Jenis_Studio)comboBoxStudio.SelectedItem;
-                s.Cinema = (Cinema)comboBoxCinema.SelectedItem;
-                s.Harga_weekday = (int)numericUpDownWeekday.Value;
-                s.Harga_weekend = (int)numericUpDownWeekend.Value;
+                if(int.Parse(labelCapacity.Text) >= 12 && int.Parse(labelCapacity.Text) % 3 == 0)
+                {
+                    Studio s = new Studio();
+                    s.Nama = textBoxNamaStudio.Text;
+                    s.Kapasitas = int.Parse(textBoxCapacity.Text);
+                    s.JenisStudio = (Jenis_Studio)comboBoxStudio.SelectedItem;
+                    s.Cinema = (Cinema)comboBoxCinema.SelectedItem;
+                    s.Harga_weekday = int.Parse(textBoxWeekday.Text);
+                    s.Harga_weekend = int.Parse(textBoxWeekend.Text);
 
-                Studio.TambahData(s);
-                MessageBox.Show("Success to add data!");
-                this.Close();
+                    Studio.TambahData(s);
+                    MessageBox.Show("Success to add data!");
+                    this.Close();
+                }
+                else
+                {
+                    throw new Exception("Capacity must be above 12 and can be divided by 3!");
+                }
             }
             catch (Exception x)
             {

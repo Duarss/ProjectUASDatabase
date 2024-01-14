@@ -56,7 +56,9 @@ namespace Celikoor_LIB
                 $"VALUES ('{pegawai.Nama}', '{pegawai.Email}', '{pegawai.Username}', '{pegawai.Password}'" +
                 $", '{pegawai.Role}');";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD DELETE D
@@ -64,7 +66,9 @@ namespace Celikoor_LIB
         {
             string perintah = $"DELETE FROM pegawais WHERE id='{idHapus}';";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD RETRIEVE R dan FILTER F
@@ -82,22 +86,22 @@ namespace Celikoor_LIB
                 perintah = $"SELECT id, nama, email, username, roles FROM pegawais WHERE {filter} like '%{nilai}%'";
             }
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-
             List<Pegawai> listPegawai = new List<Pegawai>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
 
-            while (hasil.Read() == true)
+            while (dr.Read() == true)
             {   
                 Pegawai tampung = new Pegawai();
-                tampung.Id = hasil.GetInt32(0);
-                tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.Email = hasil.GetValue(2).ToString();
-                tampung.Username = hasil.GetValue(3).ToString();
-                tampung.Role = hasil.GetValue(4).ToString();
+                tampung.Id = dr.GetInt32(0);
+                tampung.Nama = dr.GetValue(1).ToString();
+                tampung.Email = dr.GetValue(2).ToString();
+                tampung.Username = dr.GetValue(3).ToString();
+                tampung.Role = dr.GetValue(4).ToString();
 
                 listPegawai.Add(tampung);
             }
-
+            conn.KoneksiDB.Close();
             return listPegawai;
         }
 
@@ -106,20 +110,24 @@ namespace Celikoor_LIB
         {
             string perintah = $"SELECT * FROM pegawais p WHERE p.username='{username}' and p.password = '{pswd}'";
             //eksekusi perintah di atas
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+             //kirim ke command
             //selama masih ada data yang dapat dibaca dari datareader
-            if (hasil.Read() == true)
+            if (dr.Read() == true)
             {
-                int id = int.Parse(hasil.GetValue(0).ToString());
-                string nama = hasil.GetValue(1).ToString();
-                string email = hasil.GetValue(2).ToString();
-                string usernamePegawai = hasil.GetValue(3).ToString();
-                string role = hasil.GetValue(5).ToString();
+                int id = int.Parse(dr.GetValue(0).ToString());
+                string nama = dr.GetValue(1).ToString();
+                string email = dr.GetValue(2).ToString();
+                string usernamePegawai = dr.GetValue(3).ToString();
+                string role = dr.GetValue(5).ToString();
                 Pegawai tampung = new Pegawai(id, nama, email, usernamePegawai, role);
+
+                conn.KoneksiDB.Close();
                 return tampung;
             }
-
-            else return null;
+            
+            else conn.KoneksiDB.Close(); return null;
         }
         public override string ToString()
         {

@@ -100,10 +100,10 @@ namespace Celikoor_Tixycket
             if (e.ColumnIndex == dgvData.Columns["buttonUpdateGrid"].Index)
             {
                 MessageBox.Show("Update Id: " + id);
-                FormUpdateFilm formUpdateFilm = new FormUpdateFilm();
-                formUpdateFilm.Owner = this;
-                formUpdateFilm.idUpdate = id;
-                formUpdateFilm.ShowDialog();
+                FormUpdateStudio formUpdateStudio = new FormUpdateStudio();
+                formUpdateStudio.Owner = this;
+                formUpdateStudio.idUpdate = id;
+                formUpdateStudio.ShowDialog();
 
                 FormMasterStudio_Load(this, e);
             }

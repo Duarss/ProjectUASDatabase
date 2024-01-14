@@ -56,7 +56,9 @@ namespace Celikoor_LIB
                 $"VALUES ('{ticket.NoInvoice}', '{ticket.NoKursi}', 'FALSE', '{ticket.Operators.Id}', '{ticket.Harga}'" +
                 $", '{ticket.JadwalFilm.Id}', '{ticket.Studio.Id}', '{ticket.Film.Id}');";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD UBAH U
@@ -64,7 +66,9 @@ namespace Celikoor_LIB
         {
             string perintah = $"UPDATE tikets SET status_hadir='TRUE' WHERE invoices_id='{ticket.NoInvoice.Id}';";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD RETRIEVE R
@@ -77,17 +81,55 @@ namespace Celikoor_LIB
                 $"\norder by invoices desc " +
                 $"\nlimit 1;";
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
 
-            if (hasil.Read() == true)
+            if (dr.Read() == true)
             {
-                string noBarcodeAkhir = hasil.GetValue(0).ToString().Substring(3);
+                string noBarcodeAkhir = dr.GetValue(0).ToString().Substring(3);
                 int noBarcodeBaru = int.Parse(noBarcodeAkhir) + 1;
 
                 barcodeBaru = noBarcodeBaru.ToString().PadLeft(3, '0') + ticket.NoKursi;
             }
 
             return barcodeBaru;
+        }
+        public static List<Studio> BacaData(string nomorKursi, Sesi_film sesiFilm)
+        {
+            string perintah = $"SELECT * FROM tikets WHERE nomor_kursi = '{nomorKursi}'films_id = '{sesiFilm.FilmStudio.Film.Id}', studios_id = '{sesiFilm.FilmStudio.Studio.Id}";
+
+            List<Studio> listStudio = new List<Studio>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+
+            while (dr.Read() == true)
+            {
+                Studio tampung = new Studio();
+
+                tampung.Id = int.Parse(dr.GetValue(0).ToString());
+                tampung.Nama = dr.GetValue(1).ToString();
+                tampung.Kapasitas = int.Parse(dr.GetValue(2).ToString());
+                Jenis_Studio tampungJenisStudio = new Jenis_Studio();
+                if (dr.GetValue(3).ToString() != "")
+                {
+                    tampung.JenisStudio.Id = int.Parse(dr.GetValue(3).ToString());
+                    List<Jenis_Studio> listItem = Jenis_Studio.BacaData(tampung.JenisStudio.Id.ToString());
+                    tampung.JenisStudio = listItem[0];
+                }
+                Cinema tampungCinema = new Cinema();
+                if (dr.GetValue(4).ToString() != "")
+                {
+                    tampung.Cinema.Id = int.Parse(dr.GetValue(4).ToString());
+                    List<Cinema> listItem = Cinema.BacaData(tampung.Cinema.Id.ToString());
+                    tampung.Cinema = listItem[0];
+                }
+                tampung.Harga_weekday = int.Parse(dr.GetValue(5).ToString());
+                tampung.Harga_weekend = int.Parse(dr.GetValue(6).ToString());
+                listStudio.Add(tampung);
+            }
+            conn.KoneksiDB.Close();
+            return listStudio;
         }
         #endregion
     }

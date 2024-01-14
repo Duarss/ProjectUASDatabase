@@ -22,10 +22,10 @@ namespace Celikoor_Tixycket
 
         private void FormUpdateAktor_Load(object sender, EventArgs e)
         {
-            List<Aktor> listDataAktor = Aktor.BacaData();
-            textBoxNama.Text = listDataAktor[int.Parse(idUpdate)].Nama;
+            List<Aktor> listDataAktor = Aktor.BacaData("id", idUpdate);
+            textBoxNama.Text = listDataAktor[0].Nama;
 
-            string dateString = listDataAktor[int.Parse(idUpdate)].TglLahir;
+            string dateString = listDataAktor[0].TglLahir;
 
             if (DateTime.TryParse(dateString, out DateTime parsedDate))
             {
@@ -37,8 +37,8 @@ namespace Celikoor_Tixycket
                 MessageBox.Show("Invalid date format");
             }
 
-            labelGenderValue.Text = listDataAktor[int.Parse(idUpdate)].Gender;
-            labelNegaraAsalValue.Text = listDataAktor[int.Parse(idUpdate)].NegaraAsal;
+            labelGenderValue.Text = listDataAktor[0].Gender;
+            labelNegaraAsalValue.Text = listDataAktor[0].NegaraAsal;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -51,6 +51,7 @@ namespace Celikoor_Tixycket
             try
             {
                 Aktor aktor = new Aktor();
+                aktor.Id = int.Parse(idUpdate);
                 aktor.Nama = textBoxNama.Text;
                 aktor.TglLahir = dateTimePickerTglLahir.Value.ToString("yyyy-MM-dd");
 

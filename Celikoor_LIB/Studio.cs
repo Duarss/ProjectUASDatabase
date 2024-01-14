@@ -49,17 +49,21 @@ namespace Celikoor_LIB
                 $"VALUES ('{studio.Nama}', '{studio.Kapasitas}', '{studio.JenisStudio.Id}', '{studio.Cinema.Id}'" +
                 $", '{studio.Harga_weekday}', '{studio.Harga_weekend}');";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD UPDATE U
         public static void UbahData(Studio studio)
         {
             string perintah = $"UPDATE studios SET nama='{studio.Nama}', kapasitas='{studio.Kapasitas}'" +
-                $", jenis_studio_id='{studio.JenisStudio.Id}', cinemas_id='{studio.Cinema.Id}'" +
+                $", jenis_studios_id='{studio.JenisStudio.Id}', cinemas_id='{studio.Cinema.Id}'" +
                 $", harga_weekday='{studio.Harga_weekday}', harga_weekend='{studio.Harga_weekend}' WHERE id='{studio.Id}';";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD DELETE D
@@ -67,7 +71,9 @@ namespace Celikoor_LIB
         {
             string perintah = $"DELETE FROM studios WHERE id='{idHapus}';";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD RETRIEVE R dan FILTER F
@@ -85,36 +91,36 @@ namespace Celikoor_LIB
                 perintah = $"SELECT * FROM studios WHERE {filter} like '%{nilai}%'";
             }
             List<Studio> listStudio = new List<Studio>();
-            using (MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah))
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+
+            while (dr.Read() == true)
             {
-                while (hasil.Read() == true)
+                Studio tampung = new Studio();
+
+                tampung.Id = int.Parse(dr.GetValue(0).ToString());
+                tampung.Nama = dr.GetValue(1).ToString();
+                tampung.Kapasitas = int.Parse(dr.GetValue(2).ToString());
+                Jenis_Studio tampungJenisStudio = new Jenis_Studio();
+                if (dr.GetValue(3).ToString() != "")
                 {
-                    Studio tampung = new Studio();
-
-                    tampung.Id = int.Parse(hasil.GetValue(0).ToString());
-                    tampung.Nama = hasil.GetValue(1).ToString();
-                    tampung.Kapasitas = int.Parse(hasil.GetValue(2).ToString());
-                    Jenis_Studio tampungJenisStudio = new Jenis_Studio();
-                    if (hasil.GetValue(3).ToString() != "")
-                    {
-                        tampung.JenisStudio.Id = int.Parse(hasil.GetValue(3).ToString());
-                        List<Jenis_Studio> listItem = Jenis_Studio.BacaData(tampung.JenisStudio.Id.ToString());
-                        tampung.JenisStudio = listItem[0];
-                    }
-                    Cinema tampungCinema = new Cinema();
-                    if (hasil.GetValue(4).ToString() != "")
-                    {
-                        tampung.Cinema.Id = int.Parse(hasil.GetValue(4).ToString());
-                        List<Cinema> listItem = Cinema.BacaData(tampung.Cinema.Id.ToString());
-                        tampung.Cinema = listItem[0];
-                    }
-                    tampung.Harga_weekday = int.Parse(hasil.GetValue(5).ToString());
-                    tampung.Harga_weekend = int.Parse(hasil.GetValue(6).ToString());
-                    listStudio.Add(tampung);
+                    tampung.JenisStudio.Id = int.Parse(dr.GetValue(3).ToString());
+                    List<Jenis_Studio> listItem = Jenis_Studio.BacaData(tampung.JenisStudio.Id.ToString());
+                    tampung.JenisStudio = listItem[0];
                 }
-
-                return listStudio;
+                Cinema tampungCinema = new Cinema();
+                if (dr.GetValue(4).ToString() != "")
+                {
+                    tampung.Cinema.Id = int.Parse(dr.GetValue(4).ToString());
+                    List<Cinema> listItem = Cinema.BacaData(tampung.Cinema.Id.ToString());
+                    tampung.Cinema = listItem[0];
+                }
+                tampung.Harga_weekday = int.Parse(dr.GetValue(5).ToString());
+                tampung.Harga_weekend = int.Parse(dr.GetValue(6).ToString());
+                listStudio.Add(tampung);
             }
+            conn.KoneksiDB.Close();
+            return listStudio;
         }
         public override string ToString()
         {

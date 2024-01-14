@@ -15,7 +15,7 @@ namespace Celikoor_LIB
         private string email;
         private string noHp;
         private string gender;
-        private DateTime tglLahir;
+        private string tglLahir;
         private double saldo;
         private string username;
         private string password;
@@ -29,7 +29,7 @@ namespace Celikoor_LIB
             Email = "";
             NoHp = "";
             Gender = "";
-            TglLahir = DateTime.Now;
+            TglLahir = "";
             Saldo = 0;
             Username = "";
             Password = "";
@@ -42,7 +42,7 @@ namespace Celikoor_LIB
         public string Email { get => email; set => email = value; }
         public string NoHp { get => noHp; set => noHp = value; }
         public string Gender { get => gender; set => gender = value; }
-        public DateTime TglLahir { get => tglLahir; set => tglLahir = value; }
+        public string TglLahir { get => tglLahir; set => tglLahir = value; }
         public double Saldo { get => saldo; set => saldo = value; }
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
@@ -54,19 +54,23 @@ namespace Celikoor_LIB
         {
             string perintah = $"INSERT INTO konsumens (nama, email, no_hp, gender, tgl_lahir, saldo, username, password) " +
                 $"VALUES ('{konsumen.Nama}', '{konsumen.Email}', '{konsumen.NoHp}', '{konsumen.Gender}'" +
-                $", '{konsumen.TglLahir.ToShortDateString()}', '{konsumen.Saldo}', '{konsumen.Username}', '{konsumen.Password}');";
+                $", '{konsumen.TglLahir}', '{konsumen.Saldo}', '{konsumen.Username}', '{konsumen.Password}');";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD UPDATE U
         public static void UbahData(Konsumen konsumen)
         {
             string perintah = $"UPDATE konsumens SET nama='{konsumen.Nama}', email='{konsumen.Email}', no_hp='{konsumen.NoHp}'" +
-                $", gender='{konsumen.Gender}', tgl_lahir='{konsumen.TglLahir.ToShortDateString()}', saldo='{konsumen.Saldo}'" +
+                $", gender='{konsumen.Gender}', tgl_lahir='{konsumen.TglLahir}', saldo='{konsumen.Saldo}'" +
                 $", username='{konsumen.Username}', password='{konsumen.Password}' WHERE id='{konsumen.Id}'";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD DELETE D
@@ -74,7 +78,9 @@ namespace Celikoor_LIB
         {
             string perintah = $"DELETE FROM konsumens WHERE id='{idHapus}';";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD RETRIEVE R dan FILTER F
@@ -92,26 +98,26 @@ namespace Celikoor_LIB
                 perintah = $"SELECT id, nama, email, no_hp, gender, tgl_lahir, saldo, username FROM konsumens WHERE {filter} like '%{nilai}%'";
             }
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-
             List<Konsumen> listKonsumen = new List<Konsumen>();
-
-            while (hasil.Read() == true)
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            
+            while (dr.Read() == true)
             {
                 Konsumen tampung = new Konsumen();
 
-                tampung.Id = hasil.GetInt32(0);
-                tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.Email = hasil.GetValue(2).ToString();
-                tampung.NoHp = hasil.GetValue(3).ToString();
-                tampung.Gender = hasil.GetValue(4).ToString();
-                tampung.TglLahir = (DateTime)hasil.GetValue(5);
-                tampung.Saldo = double.Parse(hasil.GetValue(6).ToString());
-                tampung.Username = hasil.GetValue(7).ToString();
+                tampung.Id = dr.GetInt32(0);
+                tampung.Nama = dr.GetValue(1).ToString();
+                tampung.Email = dr.GetValue(2).ToString();
+                tampung.NoHp = dr.GetValue(3).ToString();
+                tampung.Gender = dr.GetValue(4).ToString();
+                tampung.TglLahir = dr.GetValue(5).ToString();
+                tampung.Saldo = double.Parse(dr.GetValue(6).ToString());
+                tampung.Username = dr.GetValue(7).ToString();
 
                 listKonsumen.Add(tampung);
             }
-
+            conn.KoneksiDB.Close();
             return listKonsumen;
         }
 
@@ -120,26 +126,28 @@ namespace Celikoor_LIB
         {
             string perintah = $"SELECT * FROM konsumens k WHERE k.username='{username}' and k.password = '{pswd}'";
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
 
-            if (hasil.Read() == true)
+            if (dr.Read() == true)
             {
                 Konsumen tampung = new Konsumen();
 
-                tampung.Id= int.Parse(hasil.GetValue(0).ToString());
-                tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.Email = hasil.GetValue(2).ToString();
-                tampung.NoHp = hasil.GetValue(3).ToString();
-                tampung.Gender = hasil.GetValue(5).ToString(); //password tidak boleh diakses oleh siapapun kecuali pemiliknya
-                tampung.TglLahir = (DateTime)hasil.GetValue(5);
-                tampung.Saldo = double.Parse(hasil.GetValue(6).ToString());
-                tampung.Username = hasil.GetValue(7).ToString();
-                tampung.Password = hasil.GetValue(8).ToString();
+                tampung.Id= int.Parse(dr.GetValue(0).ToString());
+                tampung.Nama = dr.GetValue(1).ToString();
+                tampung.Email = dr.GetValue(2).ToString();
+                tampung.NoHp = dr.GetValue(3).ToString();
+                tampung.Gender = dr.GetValue(5).ToString(); //password tidak boleh diakses oleh siapapun kecuali pemiliknya
+                tampung.TglLahir = dr.GetValue(5).ToString();
+                tampung.Saldo = double.Parse(dr.GetValue(6).ToString());
+                tampung.Username = dr.GetValue(7).ToString();
+                tampung.Password = dr.GetValue(8).ToString();
 
+                conn.KoneksiDB.Close();
                 return tampung;
             }
 
-            else return null;
+            else conn.KoneksiDB.Close(); return null;
         }
         public override string ToString()
         {

@@ -32,9 +32,11 @@ namespace Celikoor_LIB
         public static void TambahData(Kelompok kelompok)
         {
             //susun perintah query
-            string perintah = $"INSERT INTO kelompoks (nama) VALUES ('{kelompok.Nama}');"; 
+            string perintah = $"INSERT INTO kelompoks (nama) VALUES ('{kelompok.Nama}');";
 
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD DELETE D
@@ -43,7 +45,9 @@ namespace Celikoor_LIB
             //susun perintah query
             string perintah = $"DELETE FROM kelompoks WHERE id='{idHapus}';";
 
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD RETRIEVE R

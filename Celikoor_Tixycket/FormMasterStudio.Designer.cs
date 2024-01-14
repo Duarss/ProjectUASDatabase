@@ -49,10 +49,10 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(1229, 970);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(1092, 776);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(166, 62);
+            this.buttonKeluar.Size = new System.Drawing.Size(148, 50);
             this.buttonKeluar.TabIndex = 84;
             this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -66,19 +66,19 @@
             this.panel1.Controls.Add(this.comboboxCari);
             this.panel1.Controls.Add(this.labelCariBerdasarkan);
             this.panel1.Controls.Add(this.buttonCari);
-            this.panel1.Location = new System.Drawing.Point(28, 91);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(25, 73);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1367, 110);
+            this.panel1.Size = new System.Drawing.Size(1215, 88);
             this.panel1.TabIndex = 82;
             // 
             // textboxCari
             // 
             this.textboxCari.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textboxCari.Location = new System.Drawing.Point(669, 36);
-            this.textboxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textboxCari.Location = new System.Drawing.Point(595, 29);
+            this.textboxCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textboxCari.Name = "textboxCari";
-            this.textboxCari.Size = new System.Drawing.Size(468, 42);
+            this.textboxCari.Size = new System.Drawing.Size(416, 36);
             this.textboxCari.TabIndex = 2;
             // 
             // comboboxCari
@@ -90,10 +90,10 @@
             "Nama",
             "Kapasitas",
             "Jenis Studio"});
-            this.comboboxCari.Location = new System.Drawing.Point(289, 36);
-            this.comboboxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboboxCari.Location = new System.Drawing.Point(257, 29);
+            this.comboboxCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboboxCari.Name = "comboboxCari";
-            this.comboboxCari.Size = new System.Drawing.Size(283, 42);
+            this.comboboxCari.Size = new System.Drawing.Size(252, 36);
             this.comboboxCari.TabIndex = 1;
             // 
             // labelCariBerdasarkan
@@ -101,10 +101,10 @@
             this.labelCariBerdasarkan.AutoSize = true;
             this.labelCariBerdasarkan.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCariBerdasarkan.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelCariBerdasarkan.Location = new System.Drawing.Point(32, 42);
+            this.labelCariBerdasarkan.Location = new System.Drawing.Point(28, 34);
             this.labelCariBerdasarkan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCariBerdasarkan.Name = "labelCariBerdasarkan";
-            this.labelCariBerdasarkan.Size = new System.Drawing.Size(249, 29);
+            this.labelCariBerdasarkan.Size = new System.Drawing.Size(208, 25);
             this.labelCariBerdasarkan.TabIndex = 1;
             this.labelCariBerdasarkan.Text = "Search Based On:";
             // 
@@ -113,10 +113,10 @@
             this.buttonCari.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonCari.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCari.ForeColor = System.Drawing.Color.White;
-            this.buttonCari.Location = new System.Drawing.Point(1171, 24);
-            this.buttonCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonCari.Location = new System.Drawing.Point(1041, 19);
+            this.buttonCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCari.Name = "buttonCari";
-            this.buttonCari.Size = new System.Drawing.Size(166, 62);
+            this.buttonCari.Size = new System.Drawing.Size(148, 50);
             this.buttonCari.TabIndex = 77;
             this.buttonCari.Text = "SEARCH";
             this.buttonCari.UseVisualStyleBackColor = false;
@@ -127,16 +127,20 @@
             this.labelMasterStudio.BackColor = System.Drawing.Color.Tan;
             this.labelMasterStudio.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMasterStudio.ForeColor = System.Drawing.Color.White;
-            this.labelMasterStudio.Location = new System.Drawing.Point(27, 20);
+            this.labelMasterStudio.Location = new System.Drawing.Point(24, 16);
             this.labelMasterStudio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMasterStudio.Name = "labelMasterStudio";
-            this.labelMasterStudio.Size = new System.Drawing.Size(1368, 55);
+            this.labelMasterStudio.Size = new System.Drawing.Size(1216, 44);
             this.labelMasterStudio.TabIndex = 85;
             this.labelMasterStudio.Text = "MASTER STUDIO";
             this.labelMasterStudio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvData
             // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.AllowUserToResizeColumns = false;
+            this.dgvData.AllowUserToResizeRows = false;
             this.dgvData.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -147,8 +151,8 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(28, 222);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvData.Location = new System.Drawing.Point(25, 178);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -160,7 +164,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.RowHeadersWidth = 62;
-            this.dgvData.Size = new System.Drawing.Size(1367, 726);
+            this.dgvData.Size = new System.Drawing.Size(1215, 581);
             this.dgvData.TabIndex = 86;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
@@ -169,10 +173,10 @@
             this.buttonTambah.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
-            this.buttonTambah.Location = new System.Drawing.Point(28, 970);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonTambah.Location = new System.Drawing.Point(25, 776);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(166, 62);
+            this.buttonTambah.Size = new System.Drawing.Size(148, 50);
             this.buttonTambah.TabIndex = 83;
             this.buttonTambah.Text = "&ADD";
             this.buttonTambah.UseVisualStyleBackColor = false;
@@ -180,9 +184,9 @@
             // 
             // FormMasterStudio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1418, 1055);
+            this.ClientSize = new System.Drawing.Size(1260, 844);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelMasterStudio);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,7 +50,7 @@ namespace Celikoor_Tixycket
             {
                 if (column.Name != "Id" && column.Name != "buttonUpdateGrid" && column.Name != "buttonHapusGrid")
                 {
-                    column.Width = 212;
+                    column.Width = 94;
                 }
             }
         }
@@ -71,6 +72,7 @@ namespace Celikoor_Tixycket
 
             if (e.ColumnIndex == dgvData.Columns["buttonHapusGrid"].Index)
             {
+
                 //konfirmasi penghapusan ke user
                 DialogResult dr = MessageBox.Show("Delete data " + id + "?", "Delete Process",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -78,6 +80,12 @@ namespace Celikoor_Tixycket
                 {
                     try
                     {
+                        List<Film> listFilm = Film.BacaData("id", id);
+                        string newFileName = listFilm[0].CoverImage + ".jpg";
+                        string dir = Environment.CurrentDirectory;
+                        dir = Path.Combine(dir.Substring(0, dir.Length - 9), "Resources");
+                        string destPath = Path.Combine(dir, newFileName);
+                        File.Delete(destPath);
                         //hapus data dari database
                         Film.HapusData(id);
                         //refresh form master
@@ -98,6 +106,31 @@ namespace Celikoor_Tixycket
             formTambahFilm.ShowDialog();
 
             FormMasterFilm_Load(this, e);
+        }
+
+        private void labelMasterFilm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            string filter;
+
+            if (comboBoxCari.SelectedIndex == 0)
+            {
+                filter = "judul";
+            }
+
+            else
+            {
+                filter = "tahun";
+            }
+
+            string nilai = textBoxCari.Text;
+
+            List<Film> listDataPegawai = Film.BacaData(filter, nilai);
+            dgvData.DataSource = listDataPegawai;
         }
     }
 }

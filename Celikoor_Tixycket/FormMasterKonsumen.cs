@@ -94,6 +94,17 @@ namespace Celikoor_Tixycket
         {
             string kode = dgvData.CurrentRow.Cells["Id"].Value.ToString();
 
+            if (e.ColumnIndex == dgvData.Columns["buttonUpdateGrid"].Index)
+            {
+                MessageBox.Show("Update Id: " + kode);
+                FormUpdateAktor formUpdateAktor = new FormUpdateAktor();
+                formUpdateAktor.Owner = this;
+                formUpdateAktor.idUpdate = kode;
+                formUpdateAktor.ShowDialog();
+
+                FormMasterKonsumen_Load(this, e);
+            }
+
             if (e.ColumnIndex == dgvData.Columns["buttonHapusGrid"].Index)
             {
                 //konfirmasi penghapusan ke user

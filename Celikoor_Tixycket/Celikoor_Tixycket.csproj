@@ -291,6 +291,9 @@
     <EmbeddedResource Include="FormPemesananTiket.resx">
       <DependentUpon>FormPemesananTiket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPenjadwalanFilm.resx">
+      <DependentUpon>FormPenjadwalanFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,6 +443,7 @@
     <None Include="Resources\Discount_Banner_2.png" />
     <None Include="Resources\Discount_Banner_3.png" />
     <None Include="Resources\Discount_Banner_4.png" />
+    <None Include="Resources\movie.png" />
     <Content Include="Resources\p11.jpg" />
     <Content Include="Resources\p12.jpg" />
     <Content Include="Resources\schedule.png" />

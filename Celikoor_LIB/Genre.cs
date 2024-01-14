@@ -37,7 +37,9 @@ namespace Celikoor_LIB
         {
             string perintah = $"INSERT INTO genres (nama, deskripsi) VALUES ('{genre.Nama}', '{genre.Deskripsi}');";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD DELETE D
@@ -45,39 +47,41 @@ namespace Celikoor_LIB
         {
             string perintah = $"DELETE FROM genres WHERE id='{idHapus}';";
 
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD RETRIEVE R
-        public static List<Genre> BacaData(string id="")
+        public static List<Genre> BacaData(string filter = "", string id="")
         {
             string perintah;
 
-            if (id == "")
+            if (filter == "")
             {
                 perintah = $"SELECT * FROM genres";
             }
 
             else
             {
-                perintah = $"SELECT * FROM genres WHERE id='{id}'";
+                perintah = $"SELECT * FROM genres WHERE {filter} like '%{id}%'";
             }
-            //eksekusi perintah di atas
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
 
             List<Genre> listGenre = new List<Genre>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
 
             //selama masih ada data yang dapat dibaca dari datareader
-            while (hasil.Read() == true)
+            while (dr.Read() == true)
             {
                 Genre tampung = new Genre();
-                tampung.Id = hasil.GetInt32(0);
-                tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.Deskripsi = hasil.GetValue(2).ToString();
+                tampung.Id = dr.GetInt32(0);
+                tampung.Nama = dr.GetValue(1).ToString();
+                tampung.Deskripsi = dr.GetValue(2).ToString();
 
                 listGenre.Add(tampung);
             }
-
+            conn.KoneksiDB.Close();
             return listGenre;
         }
         public override string ToString()

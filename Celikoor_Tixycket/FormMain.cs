@@ -89,6 +89,9 @@ namespace Celikoor_Tixycket
                 {
                     labelFilmName.Text = pictureBox.Tag.ToString();
                     labelFilmName.TextAlign = ContentAlignment.MiddleCenter;
+                    int x = labelFilmName.Location.X + (639 - labelFilmName.Location.X);
+                    x -= labelFilmName.Width / 2;
+                    labelFilmName.Location = new Point(x, labelFilmName.Location.Y);
                 }
             }
         }
@@ -402,6 +405,11 @@ namespace Celikoor_Tixycket
 
                 labelFilmName.Text = pictureBoxPosterMiddle.Tag.ToString();
                 labelFilmName.TextAlign = ContentAlignment.MiddleCenter;
+
+                if(formUtama.loginStatus == true)
+                {
+                    buttonLogIn.Text = "Logout";
+                }
             }
         }
 
@@ -440,24 +448,34 @@ namespace Celikoor_Tixycket
 
         private void PictureBox_Click(object sender, EventArgs e)
         {
-            Film chosenFilm = new Film();
-            if (sender is PictureBox clickedPictureBox)
+            if (formUtama.loginStatus == true)
             {
-                string pictureBoxName = clickedPictureBox.Tag.ToString();
-                MessageBox.Show($"Clicked on PictureBox with Name: {pictureBoxName}");
-
-                foreach (Film film in listFilms)
+                if (formUtama.pegawaiLogin == null)
                 {
-                    if (film.Judul == clickedPictureBox.Tag.ToString())
+                    Film chosenFilm = new Film();
+                    if (sender is PictureBox clickedPictureBox)
                     {
-                        chosenFilm = film;
+                        string pictureBoxName = clickedPictureBox.Tag.ToString();
+                        //MessageBox.Show($"Clicked on PictureBox with Name: {pictureBoxName}");
+
+                        foreach (Film film in listFilms)
+                        {
+                            if (film.Judul == clickedPictureBox.Tag.ToString())
+                            {
+                                chosenFilm = film;
+                            }
+                        }
                     }
+                    formUtama.film = chosenFilm;
+                    formUtama.OpenForm(new FormPemesananTiket());
+                    this.Close();
                 }
+                else MessageBox.Show("You must be customer to access this!");
             }
-            //
-            formUtama.film = chosenFilm;
-            formUtama.buttonTransaction_Click(sender, e);
-            this.Close();
+            else
+            {
+                MessageBox.Show("You must login first!");
+            }
         }
 
         private void PictureBox_MouseEnter(object sender, EventArgs e)

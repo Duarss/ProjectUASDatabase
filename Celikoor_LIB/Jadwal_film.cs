@@ -11,7 +11,7 @@ namespace Celikoor_LIB
     {
         #region FIELDS
         int id;
-        DateTime tanggal;
+        string tanggal;
         string jam_pemutaran;
         #endregion
 
@@ -19,14 +19,14 @@ namespace Celikoor_LIB
         public Jadwal_film()
         {
             Id = 0;
-            Tanggal = DateTime.Now;
+            Tanggal = "";
             Jam_pemutaran = "";
         }
         #endregion
 
         #region PROPERTIES
         public int Id { get => id; set => id = value; }
-        public DateTime Tanggal { get => tanggal; set => tanggal = value; }
+        public string Tanggal { get => tanggal; set => tanggal = value; }
         public string Jam_pemutaran { get => jam_pemutaran; set => jam_pemutaran = value; }
         #endregion
 
@@ -34,17 +34,21 @@ namespace Celikoor_LIB
         //! METHOD CREATE C
         public static void TambahData(Jadwal_film jadwalFilm)
         {
-            string perintah = $"INSERT INTO jadwal_films (tanggal, jam_pemutaran) VALUES ('{jadwalFilm.Tanggal.ToShortDateString()}', '{jadwalFilm.Jam_pemutaran}');";
+            string perintah = $"INSERT INTO jadwal_films (tanggal, jam_pemutaran) VALUES ('{jadwalFilm.Tanggal}', '{jadwalFilm.Jam_pemutaran}');";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD UPDATE U
         public static void UbahData(Jadwal_film jadwalFilm)
         {
-            string perintah = $"UPDATE jadwal_films SET tanggal='{jadwalFilm.Tanggal.ToShortDateString()}', jam_pemutaran='{jadwalFilm.Jam_pemutaran}' WHERE id='{jadwalFilm.Id}';";
+            string perintah = $"UPDATE jadwal_films SET tanggal='{jadwalFilm.Tanggal}', jam_pemutaran='{jadwalFilm.Jam_pemutaran}' WHERE id='{jadwalFilm.Id}';";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD DELETE D
@@ -52,7 +56,9 @@ namespace Celikoor_LIB
         {
             string perintah = $"DELETE FROM jadwal_films WHERE id='{idHapus}'";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD RETRIEVE R dan FILTER F
@@ -64,26 +70,29 @@ namespace Celikoor_LIB
             {
                 perintah = $"SELECT * FROM jadwal_films";
             }
-
+            else if(filter == "getLastIndex")
+            {
+                perintah = $"SELECT * FROM jadwal_films order by id DESC LIMIT 1;";
+            }
             else
             {
                 perintah = $"SELECT * FROM jadwal_films WHERE {filter} like '%{nilai}%'";
             }
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-
             List<Jadwal_film> listJadwalFilm = new List<Jadwal_film>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
 
-            while (hasil.Read() == true)
+            while (dr.Read() == true)
             {
                 Jadwal_film tampung = new Jadwal_film();
-                tampung.Id = hasil.GetInt32(0);
-                tampung.Tanggal = (DateTime)hasil.GetValue(1);
-                tampung.Jam_pemutaran = hasil.GetValue(2).ToString();
+                tampung.Id = dr.GetInt32(0);
+                tampung.Tanggal = dr.GetValue(1).ToString();
+                tampung.Jam_pemutaran = dr.GetValue(2).ToString();
 
                 listJadwalFilm.Add(tampung);
             }
-
+            conn.KoneksiDB.Close();
             return listJadwalFilm;
         }
         #endregion

@@ -25,8 +25,6 @@ namespace Celikoor_Tixycket
         public FormLogin formLogin;
         public Film film; // untuk transaksi
         public FormPemesananTiket formPemesananTiket;
-        Koneksi koneksi;
-
         public bool loginStatus = false;
 
         bool sidebarExpand = true;
@@ -95,21 +93,18 @@ namespace Celikoor_Tixycket
         }
         private void buttonProfile_Click(object sender, EventArgs e)
         {
-            try
+            if(loginStatus == true)
             {
                 OpenForm(new FormProfile());
             }
-
-            catch (Exception x) 
+            else
             {
-                MessageBox.Show("Please log in first!" + x.Message);
+                MessageBox.Show("Please log in first!");
             }
         }
         public void buttonTransaction_Click(object sender, EventArgs e)
         {
-
-            formPemesananTiket.BringToFront();
-            formPemesananTiket.Show();
+            OpenForm(new FormPemesananTiket());
         }
         #endregion
 
@@ -121,6 +116,7 @@ namespace Celikoor_Tixycket
 
         private void buttonPenjadwalanFilm_Click(object sender, EventArgs e)
         {
+            OpenForm(new FormPenjadwalanFilm());
         }
 
         private void buttonPencatatanKedatangan_Click(object sender, EventArgs e)
@@ -168,14 +164,12 @@ namespace Celikoor_Tixycket
             buttonLogInOut.Text = text;
             panelButtonMaster.Enabled = status;
             panelButtonSystem.Enabled = status;
-            panelButtonTransaction.Enabled = status;
         }
 
         private void AturMenu()
         {
             if (pegawaiLogin != null)
             {
-                panelHome.Visible = false;
                 if (pegawaiLogin.Role == "ADMIN")
                 {
                     panelButtonMaster.Visible = true;
@@ -199,11 +193,8 @@ namespace Celikoor_Tixycket
             }
             else if (konsumenLogin != null)
             {
-                panelButtonMaster.Enabled = false;
-                panelMaster.Enabled = false;
-                panelButtonSystem.Enabled = false;
-                panelSystem.Enabled = false;
                 panelButtonTransaction.Enabled = true;
+                panelButtonTransaction.Visible = true;
             }
         }
         #endregion
@@ -214,14 +205,7 @@ namespace Celikoor_Tixycket
             panelMaster.Height = 0;
             panelButtonSystem.Visible = false;
             panelSystem.Height = 0;
-            //lButtonTransaction.Visible = false;
-            formPemesananTiket = new FormPemesananTiket();
-            formPemesananTiket.Owner = this;
-            formPemesananTiket.TopLevel = false;
-            formPemesananTiket.FormBorderStyle = FormBorderStyle.None;
-            formPemesananTiket.Dock = DockStyle.Fill;
-            panelForm.Controls.Add(formPemesananTiket);
-            formPemesananTiket.Hide();
+            panelButtonTransaction.Visible = false;
             OpenForm(new FormMain());
         }
 
@@ -253,6 +237,7 @@ namespace Celikoor_Tixycket
                 buttonLogInOut.Text = "Log in";
                 konsumenLogin = null;
                 pegawaiLogin = null;
+                panelLogoApp.Visible = true;
                 panelForm.Controls.Clear();
                 FormUtama1_Load(sender, e);
                 buttonProfile.Text = "                 Not logged in";
@@ -271,6 +256,7 @@ namespace Celikoor_Tixycket
             else if (pegawaiLogin != null)
             {
                 buttonProfile.Text = "                 " + pegawaiLogin.Nama;
+                panelLogoApp.Visible = false;
             }
 
             AturMenu();
@@ -394,6 +380,11 @@ namespace Celikoor_Tixycket
         private void panelForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonFilm_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormMasterFilm());
         }
     }
 }

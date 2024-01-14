@@ -331,13 +331,17 @@
             // 
             // labelFilmName
             // 
+            this.labelFilmName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFilmName.AutoSize = true;
-            this.labelFilmName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFilmName.Location = new System.Drawing.Point(555, 584);
+            this.labelFilmName.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFilmName.Location = new System.Drawing.Point(544, 583);
             this.labelFilmName.Name = "labelFilmName";
-            this.labelFilmName.Size = new System.Drawing.Size(114, 32);
+            this.labelFilmName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelFilmName.Size = new System.Drawing.Size(82, 33);
             this.labelFilmName.TabIndex = 43;
-            this.labelFilmName.Text = "filmText";
+            this.labelFilmName.Text = "judul";
             this.labelFilmName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelDiscountBanner

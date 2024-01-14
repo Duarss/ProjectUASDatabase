@@ -43,10 +43,10 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(1210, 956);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(1076, 765);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(177, 62);
+            this.buttonKeluar.Size = new System.Drawing.Size(157, 50);
             this.buttonKeluar.TabIndex = 86;
             this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -57,16 +57,20 @@
             this.labelMasterKelompok.BackColor = System.Drawing.Color.Tan;
             this.labelMasterKelompok.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMasterKelompok.ForeColor = System.Drawing.Color.White;
-            this.labelMasterKelompok.Location = new System.Drawing.Point(30, 19);
+            this.labelMasterKelompok.Location = new System.Drawing.Point(27, 15);
             this.labelMasterKelompok.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMasterKelompok.Name = "labelMasterKelompok";
-            this.labelMasterKelompok.Size = new System.Drawing.Size(1358, 55);
+            this.labelMasterKelompok.Size = new System.Drawing.Size(1207, 44);
             this.labelMasterKelompok.TabIndex = 87;
             this.labelMasterKelompok.Text = "MASTER AGE RATED";
             this.labelMasterKelompok.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvData
             // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.AllowUserToResizeColumns = false;
+            this.dgvData.AllowUserToResizeRows = false;
             this.dgvData.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -77,8 +81,8 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(30, 92);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvData.Location = new System.Drawing.Point(27, 74);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -90,7 +94,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.RowHeadersWidth = 62;
-            this.dgvData.Size = new System.Drawing.Size(1358, 839);
+            this.dgvData.Size = new System.Drawing.Size(1207, 671);
             this.dgvData.TabIndex = 88;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
@@ -99,10 +103,10 @@
             this.buttonTambah.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
-            this.buttonTambah.Location = new System.Drawing.Point(30, 956);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonTambah.Location = new System.Drawing.Point(27, 765);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(166, 62);
+            this.buttonTambah.Size = new System.Drawing.Size(148, 50);
             this.buttonTambah.TabIndex = 85;
             this.buttonTambah.Text = "&ADD";
             this.buttonTambah.UseVisualStyleBackColor = false;
@@ -110,9 +114,9 @@
             // 
             // FormMasterKelompok
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1418, 1034);
+            this.ClientSize = new System.Drawing.Size(1260, 827);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.labelMasterKelompok);
             this.Controls.Add(this.dgvData);

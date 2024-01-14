@@ -45,7 +45,9 @@ namespace Celikoor_LIB
             string perintah = $"INSERT INTO aktors (nama, tgl_lahir, gender, negara_asal) " +
                 $"VALUES ('{aktor.Nama}', '{aktor.TglLahir}', '{aktor.Gender}', '{aktor.NegaraAsal}');";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD UPDATE U
@@ -53,7 +55,9 @@ namespace Celikoor_LIB
         {
             string perintah = $"UPDATE aktors SET nama='{aktor.Nama}', tgl_lahir='{aktor.TglLahir}' WHERE id='{aktor.Id}';";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD DELETE D
@@ -61,7 +65,9 @@ namespace Celikoor_LIB
         {
             string perintah = $"DELETE FROM aktors WHERE id='{idHapus}';";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD RETRIEVE R dan FILTER F
@@ -79,22 +85,22 @@ namespace Celikoor_LIB
                 perintah = $"SELECT * FROM aktors WHERE {filter} like '%{nilai}%'";
             }
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-
             List<Aktor> listAktor = new List<Aktor>();
-
-            while (hasil.Read() == true)
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            while (dr.Read() == true)
             {   
                 Aktor tampung = new Aktor();
 
-                tampung.Id = hasil.GetInt32(0);
-                tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.TglLahir = hasil.GetValue(2).ToString();
-                tampung.Gender = hasil.GetValue(3).ToString();
-                tampung.NegaraAsal = hasil.GetValue(4).ToString();
+                tampung.Id = dr.GetInt32(0);
+                tampung.Nama = dr.GetValue(1).ToString();
+                tampung.TglLahir = dr.GetValue(2).ToString();
+                tampung.Gender = dr.GetValue(3).ToString();
+                tampung.NegaraAsal = dr.GetValue(4).ToString();
 
                 listAktor.Add(tampung);
             }
+            conn.KoneksiDB.Close();
             //kirim list ke pemanggilnya
             return listAktor;
         }

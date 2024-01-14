@@ -93,18 +93,16 @@ namespace Celikoor_LIB
         }
 
 
-        public static void JalankanPerintahQuery(string perintah)
+        public void JalankanPerintahQuery(string perintah)
         {
-            Koneksi k = new Koneksi();
-            MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
+            MySqlCommand cmd = new MySqlCommand(perintah, KoneksiDB);
             cmd.ExecuteNonQuery(); // untuk insert update delete
         }
         
-        public static MySqlDataReader JalankanPerintahSelect(string perintah)
+        public MySqlDataReader JalankanPerintahSelect(string perintah)
         {
-            Koneksi k = new Koneksi();
-            MySqlCommand cmd = new MySqlCommand(perintah, k.KoneksiDB);
-            MySqlDataReader dr = cmd.ExecuteReader(); //untuk insert update delete
+            MySqlCommand cmd = new MySqlCommand(perintah, KoneksiDB);
+            MySqlDataReader dr = cmd.ExecuteReader();
             return dr;
         }
     }

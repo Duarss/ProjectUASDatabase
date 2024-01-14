@@ -66,9 +66,9 @@
             this.labelPassword.BackColor = System.Drawing.Color.White;
             this.labelPassword.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPassword.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelPassword.Location = new System.Drawing.Point(986, 522);
+            this.labelPassword.Location = new System.Drawing.Point(876, 418);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(125, 25);
+            this.labelPassword.Size = new System.Drawing.Size(101, 20);
             this.labelPassword.TabIndex = 8;
             this.labelPassword.Text = "Password";
             this.labelPassword.Click += new System.EventHandler(this.labelPINPassword_Click);
@@ -79,9 +79,9 @@
             this.labelUsername.BackColor = System.Drawing.Color.White;
             this.labelUsername.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelUsername.Location = new System.Drawing.Point(986, 430);
+            this.labelUsername.Location = new System.Drawing.Point(876, 344);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(130, 25);
+            this.labelUsername.Size = new System.Drawing.Size(104, 20);
             this.labelUsername.TabIndex = 7;
             this.labelUsername.Text = "Username";
             // 
@@ -91,9 +91,9 @@
             this.labelTglLahir.BackColor = System.Drawing.Color.White;
             this.labelTglLahir.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTglLahir.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelTglLahir.Location = new System.Drawing.Point(986, 341);
+            this.labelTglLahir.Location = new System.Drawing.Point(876, 273);
             this.labelTglLahir.Name = "labelTglLahir";
-            this.labelTglLahir.Size = new System.Drawing.Size(166, 25);
+            this.labelTglLahir.Size = new System.Drawing.Size(133, 20);
             this.labelTglLahir.TabIndex = 12;
             this.labelTglLahir.Text = "Date Of Birth";
             // 
@@ -103,9 +103,9 @@
             this.linkLabelAlreadyHaveAnAccount.BackColor = System.Drawing.Color.White;
             this.linkLabelAlreadyHaveAnAccount.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelAlreadyHaveAnAccount.LinkColor = System.Drawing.Color.Peru;
-            this.linkLabelAlreadyHaveAnAccount.Location = new System.Drawing.Point(1069, 864);
+            this.linkLabelAlreadyHaveAnAccount.Location = new System.Drawing.Point(950, 691);
             this.linkLabelAlreadyHaveAnAccount.Name = "linkLabelAlreadyHaveAnAccount";
-            this.linkLabelAlreadyHaveAnAccount.Size = new System.Drawing.Size(111, 24);
+            this.linkLabelAlreadyHaveAnAccount.Size = new System.Drawing.Size(89, 19);
             this.linkLabelAlreadyHaveAnAccount.TabIndex = 15;
             this.linkLabelAlreadyHaveAnAccount.TabStop = true;
             this.linkLabelAlreadyHaveAnAccount.Text = "Click Here";
@@ -117,9 +117,9 @@
             this.labelEmail.BackColor = System.Drawing.Color.White;
             this.labelEmail.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmail.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelEmail.Location = new System.Drawing.Point(544, 430);
+            this.labelEmail.Location = new System.Drawing.Point(484, 344);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(177, 25);
+            this.labelEmail.Size = new System.Drawing.Size(144, 20);
             this.labelEmail.TabIndex = 16;
             this.labelEmail.Text = "Email Address";
             // 
@@ -129,10 +129,10 @@
             this.dateTimePickerBirthDate.CalendarMonthBackground = System.Drawing.Color.White;
             this.dateTimePickerBirthDate.CalendarTitleBackColor = System.Drawing.Color.SeaShell;
             this.dateTimePickerBirthDate.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerBirthDate.Location = new System.Drawing.Point(990, 376);
+            this.dateTimePickerBirthDate.Location = new System.Drawing.Point(880, 301);
             this.dateTimePickerBirthDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
-            this.dateTimePickerBirthDate.Size = new System.Drawing.Size(379, 26);
+            this.dateTimePickerBirthDate.Size = new System.Drawing.Size(337, 23);
             this.dateTimePickerBirthDate.TabIndex = 18;
             // 
             // labelNama
@@ -141,9 +141,9 @@
             this.labelNama.BackColor = System.Drawing.Color.White;
             this.labelNama.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNama.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelNama.Location = new System.Drawing.Point(544, 346);
+            this.labelNama.Location = new System.Drawing.Point(484, 277);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(80, 25);
+            this.labelNama.Size = new System.Drawing.Size(63, 20);
             this.labelNama.TabIndex = 19;
             this.labelNama.Text = "Name";
             // 
@@ -153,10 +153,10 @@
             this.labelSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelSignUp.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSignUp.ForeColor = System.Drawing.Color.Azure;
-            this.labelSignUp.Location = new System.Drawing.Point(772, 780);
-            this.labelSignUp.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.labelSignUp.Location = new System.Drawing.Point(686, 624);
+            this.labelSignUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelSignUp.Name = "labelSignUp";
-            this.labelSignUp.Size = new System.Drawing.Size(434, 58);
+            this.labelSignUp.Size = new System.Drawing.Size(386, 46);
             this.labelSignUp.TabIndex = 33;
             this.labelSignUp.Text = "Sign Up";
             this.labelSignUp.UseVisualStyleBackColor = false;
@@ -168,9 +168,9 @@
             this.labelNoHp.BackColor = System.Drawing.Color.White;
             this.labelNoHp.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNoHp.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelNoHp.Location = new System.Drawing.Point(544, 522);
+            this.labelNoHp.Location = new System.Drawing.Point(484, 418);
             this.labelNoHp.Name = "labelNoHp";
-            this.labelNoHp.Size = new System.Drawing.Size(186, 25);
+            this.labelNoHp.Size = new System.Drawing.Size(149, 20);
             this.labelNoHp.TabIndex = 34;
             this.labelNoHp.Text = "Phone Number";
             // 
@@ -180,9 +180,9 @@
             this.labelGenre.BackColor = System.Drawing.Color.White;
             this.labelGenre.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGenre.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelGenre.Location = new System.Drawing.Point(544, 705);
+            this.labelGenre.Location = new System.Drawing.Point(484, 564);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(102, 26);
+            this.labelGenre.Size = new System.Drawing.Size(84, 22);
             this.labelGenre.TabIndex = 35;
             this.labelGenre.Text = "Gender";
             // 
@@ -192,9 +192,9 @@
             this.labelConfirmPassword.BackColor = System.Drawing.Color.White;
             this.labelConfirmPassword.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConfirmPassword.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelConfirmPassword.Location = new System.Drawing.Point(986, 606);
+            this.labelConfirmPassword.Location = new System.Drawing.Point(876, 485);
             this.labelConfirmPassword.Name = "labelConfirmPassword";
-            this.labelConfirmPassword.Size = new System.Drawing.Size(224, 25);
+            this.labelConfirmPassword.Size = new System.Drawing.Size(182, 20);
             this.labelConfirmPassword.TabIndex = 36;
             this.labelConfirmPassword.Text = "Confirm Password";
             this.labelConfirmPassword.Click += new System.EventHandler(this.label3_Click);
@@ -204,10 +204,10 @@
             this.textBoxNameRegistration.BackColor = System.Drawing.Color.White;
             this.textBoxNameRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNameRegistration.ForeColor = System.Drawing.Color.Black;
-            this.textBoxNameRegistration.Location = new System.Drawing.Point(549, 376);
-            this.textBoxNameRegistration.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBoxNameRegistration.Location = new System.Drawing.Point(488, 301);
+            this.textBoxNameRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNameRegistration.Name = "textBoxNameRegistration";
-            this.textBoxNameRegistration.Size = new System.Drawing.Size(379, 35);
+            this.textBoxNameRegistration.Size = new System.Drawing.Size(337, 30);
             this.textBoxNameRegistration.TabIndex = 37;
             // 
             // textBoxEmailAddressRegistration
@@ -215,10 +215,10 @@
             this.textBoxEmailAddressRegistration.BackColor = System.Drawing.Color.White;
             this.textBoxEmailAddressRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmailAddressRegistration.ForeColor = System.Drawing.Color.Black;
-            this.textBoxEmailAddressRegistration.Location = new System.Drawing.Point(549, 460);
-            this.textBoxEmailAddressRegistration.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBoxEmailAddressRegistration.Location = new System.Drawing.Point(488, 368);
+            this.textBoxEmailAddressRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxEmailAddressRegistration.Name = "textBoxEmailAddressRegistration";
-            this.textBoxEmailAddressRegistration.Size = new System.Drawing.Size(379, 35);
+            this.textBoxEmailAddressRegistration.Size = new System.Drawing.Size(337, 30);
             this.textBoxEmailAddressRegistration.TabIndex = 38;
             // 
             // textBoxPasswordRegistrationConfirmation
@@ -226,10 +226,10 @@
             this.textBoxPasswordRegistrationConfirmation.BackColor = System.Drawing.Color.White;
             this.textBoxPasswordRegistrationConfirmation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPasswordRegistrationConfirmation.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPasswordRegistrationConfirmation.Location = new System.Drawing.Point(990, 636);
-            this.textBoxPasswordRegistrationConfirmation.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBoxPasswordRegistrationConfirmation.Location = new System.Drawing.Point(880, 509);
+            this.textBoxPasswordRegistrationConfirmation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordRegistrationConfirmation.Name = "textBoxPasswordRegistrationConfirmation";
-            this.textBoxPasswordRegistrationConfirmation.Size = new System.Drawing.Size(379, 35);
+            this.textBoxPasswordRegistrationConfirmation.Size = new System.Drawing.Size(337, 30);
             this.textBoxPasswordRegistrationConfirmation.TabIndex = 43;
             // 
             // textBoxPasswordRegistration
@@ -237,10 +237,10 @@
             this.textBoxPasswordRegistration.BackColor = System.Drawing.Color.White;
             this.textBoxPasswordRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPasswordRegistration.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPasswordRegistration.Location = new System.Drawing.Point(990, 552);
-            this.textBoxPasswordRegistration.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBoxPasswordRegistration.Location = new System.Drawing.Point(880, 442);
+            this.textBoxPasswordRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPasswordRegistration.Name = "textBoxPasswordRegistration";
-            this.textBoxPasswordRegistration.Size = new System.Drawing.Size(379, 35);
+            this.textBoxPasswordRegistration.Size = new System.Drawing.Size(337, 30);
             this.textBoxPasswordRegistration.TabIndex = 44;
             // 
             // textBoxUsernameRegistration
@@ -248,10 +248,10 @@
             this.textBoxUsernameRegistration.BackColor = System.Drawing.Color.White;
             this.textBoxUsernameRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsernameRegistration.ForeColor = System.Drawing.Color.Black;
-            this.textBoxUsernameRegistration.Location = new System.Drawing.Point(990, 460);
-            this.textBoxUsernameRegistration.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBoxUsernameRegistration.Location = new System.Drawing.Point(880, 368);
+            this.textBoxUsernameRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxUsernameRegistration.Name = "textBoxUsernameRegistration";
-            this.textBoxUsernameRegistration.Size = new System.Drawing.Size(379, 35);
+            this.textBoxUsernameRegistration.Size = new System.Drawing.Size(337, 30);
             this.textBoxUsernameRegistration.TabIndex = 45;
             // 
             // textBoxPhoneNumberRegistration
@@ -259,10 +259,10 @@
             this.textBoxPhoneNumberRegistration.BackColor = System.Drawing.Color.White;
             this.textBoxPhoneNumberRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPhoneNumberRegistration.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPhoneNumberRegistration.Location = new System.Drawing.Point(549, 552);
-            this.textBoxPhoneNumberRegistration.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBoxPhoneNumberRegistration.Location = new System.Drawing.Point(488, 442);
+            this.textBoxPhoneNumberRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxPhoneNumberRegistration.Name = "textBoxPhoneNumberRegistration";
-            this.textBoxPhoneNumberRegistration.Size = new System.Drawing.Size(379, 35);
+            this.textBoxPhoneNumberRegistration.Size = new System.Drawing.Size(337, 30);
             this.textBoxPhoneNumberRegistration.TabIndex = 46;
             // 
             // labelAlreadyHaveAccount
@@ -271,9 +271,9 @@
             this.labelAlreadyHaveAccount.BackColor = System.Drawing.Color.White;
             this.labelAlreadyHaveAccount.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAlreadyHaveAccount.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelAlreadyHaveAccount.Location = new System.Drawing.Point(786, 864);
+            this.labelAlreadyHaveAccount.Location = new System.Drawing.Point(699, 691);
             this.labelAlreadyHaveAccount.Name = "labelAlreadyHaveAccount";
-            this.labelAlreadyHaveAccount.Size = new System.Drawing.Size(277, 24);
+            this.labelAlreadyHaveAccount.Size = new System.Drawing.Size(215, 19);
             this.labelAlreadyHaveAccount.TabIndex = 47;
             this.labelAlreadyHaveAccount.Text = "Already Have an Account?";
             // 
@@ -283,10 +283,9 @@
             this.radioButtonMale.BackColor = System.Drawing.Color.White;
             this.radioButtonMale.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMale.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.radioButtonMale.Location = new System.Drawing.Point(677, 704);
-            this.radioButtonMale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButtonMale.Location = new System.Drawing.Point(602, 563);
             this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(83, 30);
+            this.radioButtonMale.Size = new System.Drawing.Size(72, 25);
             this.radioButtonMale.TabIndex = 48;
             this.radioButtonMale.TabStop = true;
             this.radioButtonMale.Text = "Male";
@@ -298,10 +297,9 @@
             this.radioButtonFemale.BackColor = System.Drawing.Color.White;
             this.radioButtonFemale.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFemale.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.radioButtonFemale.Location = new System.Drawing.Point(806, 704);
-            this.radioButtonFemale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButtonFemale.Location = new System.Drawing.Point(716, 563);
             this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(110, 30);
+            this.radioButtonFemale.Size = new System.Drawing.Size(96, 25);
             this.radioButtonFemale.TabIndex = 49;
             this.radioButtonFemale.TabStop = true;
             this.radioButtonFemale.Text = "Female";
@@ -313,10 +311,10 @@
             this.pictureBox3.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.title_verti;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Enabled = false;
-            this.pictureBox3.Location = new System.Drawing.Point(124, 65);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(110, 52);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(205, 654);
+            this.pictureBox3.Size = new System.Drawing.Size(182, 523);
             this.pictureBox3.TabIndex = 52;
             this.pictureBox3.TabStop = false;
             // 
@@ -324,10 +322,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.templateRegistration;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(262, -184);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(233, -147);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1488, 1312);
+            this.pictureBox1.Size = new System.Drawing.Size(1323, 1050);
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -338,9 +335,9 @@
             this.label5.BackColor = System.Drawing.Color.AntiqueWhite;
             this.label5.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label5.Location = new System.Drawing.Point(668, 79);
+            this.label5.Location = new System.Drawing.Point(594, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(666, 59);
+            this.label5.Size = new System.Drawing.Size(556, 48);
             this.label5.TabIndex = 53;
             this.label5.Text = "Welcome to Celikoor21!";
             // 
@@ -350,9 +347,9 @@
             this.label6.BackColor = System.Drawing.Color.AntiqueWhite;
             this.label6.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label6.Location = new System.Drawing.Point(633, 159);
+            this.label6.Location = new System.Drawing.Point(563, 127);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(749, 59);
+            this.label6.Size = new System.Drawing.Size(628, 48);
             this.label6.TabIndex = 54;
             this.label6.Text = "Let\'s begin your adventure";
             // 
@@ -362,27 +359,31 @@
             this.labelSaldo.BackColor = System.Drawing.Color.White;
             this.labelSaldo.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSaldo.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.labelSaldo.Location = new System.Drawing.Point(544, 606);
+            this.labelSaldo.Location = new System.Drawing.Point(484, 485);
             this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.Size = new System.Drawing.Size(104, 25);
+            this.labelSaldo.Size = new System.Drawing.Size(83, 20);
             this.labelSaldo.TabIndex = 55;
             this.labelSaldo.Text = "Balance";
             // 
             // numericUpDownBalance
             // 
             this.numericUpDownBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownBalance.Location = new System.Drawing.Point(549, 638);
-            this.numericUpDownBalance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numericUpDownBalance.Location = new System.Drawing.Point(488, 510);
+            this.numericUpDownBalance.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.numericUpDownBalance.Name = "numericUpDownBalance";
-            this.numericUpDownBalance.Size = new System.Drawing.Size(379, 35);
+            this.numericUpDownBalance.Size = new System.Drawing.Size(337, 30);
             this.numericUpDownBalance.TabIndex = 56;
             // 
             // FormRegisterKonsumen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1642, 1055);
+            this.ClientSize = new System.Drawing.Size(1460, 844);
             this.Controls.Add(this.numericUpDownBalance);
             this.Controls.Add(this.labelSaldo);
             this.Controls.Add(this.label6);

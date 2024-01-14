@@ -36,7 +36,9 @@ namespace Celikoor_LIB
         {
             string perintah = $"INSERT INTO jenis_studios (nama, deskripsi) VALUES ('{jenisStudio.Nama}', '{jenisStudio.Deskripsi}');";
 
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD DELETE D
@@ -44,7 +46,10 @@ namespace Celikoor_LIB
         {
             //susun perintah query
             string perintah = $"DELETE FROM jenis_studios WHERE id='{idHapus}';";
-            Koneksi.JalankanPerintahQuery(perintah); //kirim ke command
+            
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
         }
 
         //! METHOD RETRIEVE R
@@ -62,20 +67,20 @@ namespace Celikoor_LIB
                 perintah = $"SELECT * FROM jenis_studios WHERE id='{id}'";
             }
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
-
             List<Jenis_Studio> listJenisStudio = new List<Jenis_Studio>();
-
-            while (hasil.Read() == true)
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            
+            while (dr.Read() == true)
             {   
                 Jenis_Studio tampung = new Jenis_Studio();
-                tampung.Id = hasil.GetInt32(0);
-                tampung.Nama = hasil.GetValue(1).ToString();
-                tampung.Deskripsi = hasil.GetValue(2).ToString();
+                tampung.Id = dr.GetInt32(0);
+                tampung.Nama = dr.GetValue(1).ToString();
+                tampung.Deskripsi = dr.GetValue(2).ToString();
 
                 listJenisStudio.Add(tampung);
             }
-
+            conn.KoneksiDB.Close();
             return listJenisStudio;
         }
         public override string ToString()

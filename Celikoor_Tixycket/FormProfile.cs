@@ -34,7 +34,7 @@ namespace Celikoor_Tixycket
                 customTextBoxPassword.Texts = listDataKonsumen[konsumenLogin.Id].Password;
                 customTextBoxEmail.Texts = listDataKonsumen[konsumenLogin.Id].Email;
                 customTextBoxNoHp.Texts = listDataKonsumen[konsumenLogin.Id].NoHp;
-                customTextBoxTglLahir.Texts = listDataKonsumen[konsumenLogin.Id].TglLahir.ToString("MM/dd/yyyy");
+                customTextBoxTglLahir.Texts = listDataKonsumen[konsumenLogin.Id].TglLahir.ToString();
             }
         }
 
@@ -111,7 +111,7 @@ namespace Celikoor_Tixycket
                 konsumen.Password = customTextBoxPassword.Texts;
                 konsumen.Email = customTextBoxEmail.Texts;
                 konsumen.NoHp = customTextBoxNoHp.Texts;
-                konsumen.TglLahir = DateTime.Parse(customTextBoxTglLahir.Texts);
+                konsumen.TglLahir = customTextBoxTglLahir.Texts;
 
                 Konsumen.UbahData(konsumen);
 

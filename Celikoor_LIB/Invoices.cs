@@ -49,7 +49,9 @@ namespace Celikoor_LIB
                 $"VALUES ('{invoice.Tanggal.ToString("dd-MM-yyyy")}', '{invoice.Grand_total}'" +
                 $", '{invoice.Diskon_nominal}', '{invoice.Penonton.Id}', '{invoice.Kasir.Id}','PENDING');";
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD UPDATE U
@@ -65,9 +67,11 @@ namespace Celikoor_LIB
             else
             {
                 perintah = $"UPDATE invoices SET status='TERBAYAR' WHERE id='{invoice.Id}';";
-            }      
+            }
 
-            Koneksi.JalankanPerintahQuery(perintah);
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close();
         }
 
         //! METHOD RETRIEVE R
@@ -80,16 +84,17 @@ namespace Celikoor_LIB
                 $"\norder by invoices desc " +
                 $"\nlimit 1;";
 
-            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
 
-            if (hasil.Read() == true)
+            if (dr.Read() == true)
             {
-                string noInvoiceAkhir = hasil.GetValue(0).ToString().Substring(3);
+                string noInvoiceAkhir = dr.GetValue(0).ToString().Substring(3);
                 int noInvoiceBaru = int.Parse(noInvoiceAkhir) + 1;
 
                 invoiceBaru = noInvoiceBaru.ToString().PadLeft(3, '0');
             }
-
+            conn.KoneksiDB.Close();
             return invoiceBaru;
         }
         #endregion

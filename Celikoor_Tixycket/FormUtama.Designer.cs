@@ -40,6 +40,8 @@
             this.pictureBoxMaster = new System.Windows.Forms.PictureBox();
             this.buttonMaster = new System.Windows.Forms.Button();
             this.panelMaster = new System.Windows.Forms.Panel();
+            this.pictureBoxFilm = new System.Windows.Forms.PictureBox();
+            this.buttonFilm = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.buttonCustomer = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -87,6 +89,7 @@
             this.panelButtonMaster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMaster)).BeginInit();
             this.panelMaster.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).BeginInit();
@@ -225,6 +228,8 @@
             // panelMaster
             // 
             this.panelMaster.BackColor = System.Drawing.Color.SandyBrown;
+            this.panelMaster.Controls.Add(this.pictureBoxFilm);
+            this.panelMaster.Controls.Add(this.buttonFilm);
             this.panelMaster.Controls.Add(this.pictureBox5);
             this.panelMaster.Controls.Add(this.buttonCustomer);
             this.panelMaster.Controls.Add(this.pictureBox6);
@@ -243,10 +248,35 @@
             this.panelMaster.Controls.Add(this.buttonCinema);
             this.panelMaster.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMaster.Location = new System.Drawing.Point(3, 135);
-            this.panelMaster.MaximumSize = new System.Drawing.Size(250, 359);
+            this.panelMaster.MaximumSize = new System.Drawing.Size(250, 400);
             this.panelMaster.Name = "panelMaster";
-            this.panelMaster.Size = new System.Drawing.Size(250, 359);
+            this.panelMaster.Size = new System.Drawing.Size(250, 400);
             this.panelMaster.TabIndex = 13;
+            // 
+            // pictureBoxFilm
+            // 
+            this.pictureBoxFilm.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.movie;
+            this.pictureBoxFilm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxFilm.Location = new System.Drawing.Point(16, 348);
+            this.pictureBoxFilm.Name = "pictureBoxFilm";
+            this.pictureBoxFilm.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxFilm.TabIndex = 15;
+            this.pictureBoxFilm.TabStop = false;
+            // 
+            // buttonFilm
+            // 
+            this.buttonFilm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonFilm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFilm.ForeColor = System.Drawing.Color.White;
+            this.buttonFilm.Location = new System.Drawing.Point(0, 344);
+            this.buttonFilm.Name = "buttonFilm";
+            this.buttonFilm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonFilm.Size = new System.Drawing.Size(250, 43);
+            this.buttonFilm.TabIndex = 14;
+            this.buttonFilm.Text = "        Film";
+            this.buttonFilm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonFilm.UseVisualStyleBackColor = true;
+            this.buttonFilm.Click += new System.EventHandler(this.buttonFilm_Click);
             // 
             // pictureBox5
             // 
@@ -465,7 +495,7 @@
             this.panelButtonSystem.Controls.Add(this.buttonSystem);
             this.panelButtonSystem.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButtonSystem.ForeColor = System.Drawing.Color.Transparent;
-            this.panelButtonSystem.Location = new System.Drawing.Point(3, 500);
+            this.panelButtonSystem.Location = new System.Drawing.Point(3, 541);
             this.panelButtonSystem.Name = "panelButtonSystem";
             this.panelButtonSystem.Size = new System.Drawing.Size(250, 45);
             this.panelButtonSystem.TabIndex = 18;
@@ -505,7 +535,7 @@
             this.panelSystem.Controls.Add(this.buttonPencatatanKedatangan);
             this.panelSystem.Controls.Add(this.buttonPenjadwalanFilm);
             this.panelSystem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSystem.Location = new System.Drawing.Point(3, 551);
+            this.panelSystem.Location = new System.Drawing.Point(3, 592);
             this.panelSystem.MaximumSize = new System.Drawing.Size(250, 141);
             this.panelSystem.Name = "panelSystem";
             this.panelSystem.Size = new System.Drawing.Size(250, 141);
@@ -593,7 +623,7 @@
             this.panelButtonTransaction.Controls.Add(this.buttonTransaction);
             this.panelButtonTransaction.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButtonTransaction.ForeColor = System.Drawing.Color.Transparent;
-            this.panelButtonTransaction.Location = new System.Drawing.Point(3, 698);
+            this.panelButtonTransaction.Location = new System.Drawing.Point(3, 739);
             this.panelButtonTransaction.Name = "panelButtonTransaction";
             this.panelButtonTransaction.Size = new System.Drawing.Size(250, 45);
             this.panelButtonTransaction.TabIndex = 18;
@@ -629,7 +659,7 @@
             this.panelHome.Controls.Add(this.pictureBoxHome);
             this.panelHome.Controls.Add(this.buttonHome);
             this.panelHome.ForeColor = System.Drawing.Color.Transparent;
-            this.panelHome.Location = new System.Drawing.Point(3, 749);
+            this.panelHome.Location = new System.Drawing.Point(3, 790);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(250, 45);
             this.panelHome.TabIndex = 19;
@@ -762,6 +792,7 @@
             this.panelButtonMaster.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMaster)).EndInit();
             this.panelMaster.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmployee)).EndInit();
@@ -838,5 +869,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button buttonCustomer;
+        private System.Windows.Forms.PictureBox pictureBoxFilm;
+        private System.Windows.Forms.Button buttonFilm;
     }
 }
