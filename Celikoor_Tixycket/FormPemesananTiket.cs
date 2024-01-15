@@ -23,11 +23,20 @@ namespace Celikoor_Tixycket
         FormUtama formUtama;
         Film selectedFilm;
         Studio selectedStudio;
+        List<Jadwal_film> listJadwalFilm;
+        Jadwal_film jadwal_film = new Jadwal_film();
         private void LayoutTempatDuduk()
         {
+            foreach (Control control in new ArrayList(panelTempatDuduk.Controls))
+            {
+                if (control is Label label && label.Name == "labelError")
+                {
+                    label.Dispose();
+                }
+            }
             string[] seatType = { "A", "B", "C" };
             int capacity = selectedStudio.Kapasitas;
-            
+            int currentCapacity = capacity;
             for (int i = 0; i < 3; i++)
             {
                 string sectionSeat = seatType[i];
@@ -41,6 +50,15 @@ namespace Celikoor_Tixycket
                     newCheckBox.Size = new System.Drawing.Size(45, 22);
                     newCheckBox.Text = seatNumber.ToString();
                     newCheckBox.Name = sectionSeat + seatNumber.ToString();
+                    listJadwalFilm = Jadwal_film.CekKetersediaanJadwal(jadwal_film, selectedFilm, selectedStudio, "spesifik");
+                    List<Ticket> listTiket = Ticket.BacaData(newCheckBox.Name, selectedFilm, selectedStudio, listJadwalFilm[0]);
+                    
+                    if(listTiket.Count > 0)
+                    {
+                        newCheckBox.CheckState = CheckState.Checked;
+                        newCheckBox.Enabled = false;
+                        currentCapacity--;
+                    }
                     seatNumber++;
                     pointX += 46;
 
@@ -53,6 +71,10 @@ namespace Celikoor_Tixycket
                     
                 }
             }
+            SetupCheckBoxEvents();
+            labelSisaKursi.Text = "sisa " + currentCapacity.ToString() + " kursi";
+            labelJumlahKursi.Text = capacity + " kursi";
+            labelNominalSaldo.Text = "Rp. " + formUtama.konsumenLogin.Saldo.ToString();
         }
         private void DeleteAllSeat()
         {
@@ -63,21 +85,41 @@ namespace Celikoor_Tixycket
                     checkBox.Dispose();
                 }
             }
+            Label newLabel = new Label();
+            newLabel.Location = new Point(220, 220);
+            newLabel.Name = "labelError";
+            newLabel.Font = new Font("Arial Narrow", 15, FontStyle.Bold);
+            newLabel.ForeColor = Color.Black;
+            newLabel.Size = new Size(390, 35);
+            newLabel.Text = "No Session Added Yet. Stay Tuned!";
+            panelTempatDuduk.Controls.Add(newLabel);
+            newLabel.BringToFront();
+            labelJumlahKursi.Text = "-";
+            labelSisaKursi.Text = "(-)";
+        }
+        private void SetUpSeat()
+        {
+            if (selectedStudio != null && jadwal_film.Tanggal != null && jadwal_film.Jam_pemutaran != null)
+            {
+                DeleteAllSeat();
+                LayoutTempatDuduk();
+            }
         }
         private void FormPemesananTiket_Load(object sender, EventArgs e)
         {
-            CheckBox newCheckBox = new CheckBox();
-            panelTempatDuduk.Controls.Add(newCheckBox);
             formUtama = (FormUtama)this.Owner;
+            labelNominalSaldo.Text = formUtama.konsumenLogin.Saldo.ToString();
+
             List<Film> listFilm = Film.BacaData();
             comboBoxJudulFilm.DataSource = listFilm;
             comboBoxJudulFilm.DisplayMember = "Judul";
+
             List<Cinema> listCinema = Cinema.BacaData();
             comboBoxCinema.DataSource = listCinema;
             comboBoxCinema.DisplayMember = "Nama_cabang";
-            selectedFilm = formUtama.film;
-            if (selectedFilm != null)
+            if (formUtama.film != null)
             {
+                selectedFilm = formUtama.film;
                 List<Genre_film> listGenreFilm = Film.BacaDataDetailGenreFilm("films_id", selectedFilm.Id.ToString());
                 List<Aktor_film> listAktorFilm = Film.BacaDataDetailAktorFilm("films_id", selectedFilm.Id.ToString());
 
@@ -118,25 +160,44 @@ namespace Celikoor_Tixycket
                 labelKelompok.Text = "Kelompok: " + selectedFilm.KelompokUsia;
 
                 comboBoxJudulFilm.Text = selectedFilm.Judul;
+                comboBoxStudio_SelectedIndexChanged(sender, e);
             }
+            
         }
 
         private void comboBoxStudio_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedStudio = (Studio)comboBoxStudio.SelectedItem;
-            labelJenisStudio.Text = ((Studio)comboBoxStudio.SelectedItem).JenisStudio.ToString();
-            DateTime selectedDate = dateTimePicker.Value;
-            if (selectedDate.DayOfWeek >= DayOfWeek.Monday && selectedDate.DayOfWeek <= DayOfWeek.Friday)
+            labelJenisStudio.Text = selectedStudio.JenisStudio.ToString();
+
+            listJadwalFilm = Jadwal_film.CekKetersediaanJadwal(jadwal_film, selectedFilm, selectedStudio);
+            if (listJadwalFilm.Count != 0)
             {
-                labelNominalHarga.Text = ((Studio)comboBoxStudio.SelectedItem).Harga_weekday.ToString();
+                comboBoxJam.Enabled = true;
+                List<string> uniqueDates = listJadwalFilm.Select(j => j.Tanggal).Distinct().ToList();
+                comboBoxTanggal.DataSource = uniqueDates;
+                comboBoxTanggal.DisplayMember = "Tanggal";
+                DateTime selectedDate = DateTime.Parse(comboBoxTanggal.Text);
+                if (selectedDate.DayOfWeek >= DayOfWeek.Monday && selectedDate.DayOfWeek <= DayOfWeek.Friday)
+                {
+                    labelNominalHarga.Text = ((Studio)comboBoxStudio.SelectedItem).Harga_weekday.ToString();
+                }
+                else
+                {
+                    labelNominalHarga.Text = ((Studio)comboBoxStudio.SelectedItem).Harga_weekend.ToString();
+                }
+                labelJumlahKursi.Text = ((Studio)comboBoxStudio.SelectedItem).Kapasitas.ToString() + " kursi";
+                if (selectedStudio != null && jadwal_film.Tanggal != "" && jadwal_film.Jam_pemutaran != "" && listJadwalFilm.Count != 0)
+                {
+                    SetUpSeat();
+                }
+                else DeleteAllSeat();
             }
-            else
-            {
-                labelNominalHarga.Text = ((Studio)comboBoxStudio.SelectedItem).Harga_weekend.ToString();
+            else{
+                comboBoxJam.Enabled = false;
+                DeleteAllSeat();
             }
-            labelJumlahKursi.Text = ((Studio)comboBoxStudio.SelectedItem).Kapasitas.ToString() + " kursi";
-            DeleteAllSeat();
-            LayoutTempatDuduk();
+            
         }
 
         private void comboBoxJudulFilm_SelectedIndexChanged(object sender, EventArgs e)
@@ -179,6 +240,17 @@ namespace Celikoor_Tixycket
                 }
             }
             labelKelompok.Text = "Kelompok: " + selectedFilm.KelompokUsia;
+
+            if (selectedStudio != null && jadwal_film.Tanggal != "" && jadwal_film.Jam_pemutaran != "")
+            {
+                listJadwalFilm = Jadwal_film.CekKetersediaanJadwal(jadwal_film, selectedFilm, selectedStudio, "spesifik");
+                if (listJadwalFilm.Count != 0)
+                {
+                    SetUpSeat();
+                }
+                else DeleteAllSeat();
+            }
+            labelNominalDiskon.Text = selectedFilm.Diskon.ToString() + "%";
         }
 
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
@@ -191,7 +263,105 @@ namespace Celikoor_Tixycket
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
+            if (int.Parse(labelNominalSaldo.Text) >= int.Parse(labelNominalTotalAkhir.Text))
+            {
+                formUtama.konsumenLogin.Saldo -= int.Parse(labelNominalTotalAkhir.Text);
+                Konsumen.UbahNominalSaldo(formUtama.konsumenLogin);
 
+                Invoices invoice = new Invoices();
+                invoice.Grand_total = int.Parse(labelNominalTotalAkhir.Text);
+                invoice.Diskon_nominal = selectedFilm.Diskon;
+                invoice.Penonton = formUtama.konsumenLogin;
+
+                Invoices.TambahData(invoice);
+                List<Invoices> listInvoice = Invoices.BacaData("getLastIndex");
+                listJadwalFilm = Jadwal_film.CekKetersediaanJadwal(jadwal_film, selectedFilm, selectedStudio, "spesifik");
+                foreach (Control control in panelTempatDuduk.Controls)
+                {
+                    if(control is CheckBox clickedCheckBox && clickedCheckBox.Checked == true && clickedCheckBox.Enabled == true)
+                    {
+                        Ticket tiket = new Ticket();
+                        tiket.NoInvoice = listInvoice[0];
+                        tiket.NoKursi = clickedCheckBox.Name;
+                        tiket.Harga = int.Parse(labelNominalHarga.Text);
+                        tiket.JadwalFilm = listJadwalFilm[0];
+                        tiket.Film = selectedFilm;
+                        tiket.Studio = selectedStudio;
+
+                        Ticket.TambahData(tiket);
+                    }
+                }
+                MessageBox.Show("Transaction success!");
+                SetUpSeat();
+            }
+            else
+            {
+                MessageBox.Show("Your balance is insufficient");
+            }
+            //input ke invoice
+
+            //input ke tiket
+        }
+
+        private void comboBoxJam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            jadwal_film.Jam_pemutaran = comboBoxJam.Text;
+            listJadwalFilm = Jadwal_film.CekKetersediaanJadwal(jadwal_film, selectedFilm, selectedStudio, "spesifik");
+            if(listJadwalFilm.Count != 0)
+            {
+                if (selectedStudio != null && jadwal_film.Tanggal != "" && jadwal_film.Jam_pemutaran != "" && listJadwalFilm.Count != 0)
+                {
+                    SetUpSeat();
+                }
+                else DeleteAllSeat();
+            }
+            else
+            {
+                DeleteAllSeat();
+            }
+        }
+
+        private void comboBoxTanggal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            jadwal_film.Tanggal = comboBoxTanggal.Text;
+            listJadwalFilm = Jadwal_film.CekKetersediaanJadwal(jadwal_film, selectedFilm, selectedStudio, "spesifik");
+            if (listJadwalFilm.Count != 0)
+            {
+                if (selectedStudio != null && jadwal_film.Tanggal != "" && jadwal_film.Jam_pemutaran != "" && listJadwalFilm.Count != 0)
+                {
+                    SetUpSeat();
+                }
+                else DeleteAllSeat();
+            }
+        }
+        private void SetupCheckBoxEvents()
+        {
+            foreach (Control control in panelTempatDuduk.Controls)
+            {
+                if (control is CheckBox checkBox)
+                    checkBox.CheckedChanged += CheckBox_CheckedChanged;
+            }
+        }
+        private void CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            labelKursi.Text = "Kursi:";
+            labelNominalTotal.Text = "0";
+            foreach (Control control in panelTempatDuduk.Controls)
+            {
+                if (control is CheckBox clickedCheckBox && clickedCheckBox.Checked && clickedCheckBox.Enabled == true)
+                {
+                    if (labelKursi.Text == "Kursi:")
+                    {
+                        labelKursi.Text += " " + clickedCheckBox.Name;
+                    }
+                    else
+                    {
+                        labelKursi.Text += ", " + clickedCheckBox.Name;
+                    }
+                    labelNominalTotal.Text = (int.Parse(labelNominalTotal.Text) + int.Parse(labelNominalHarga.Text)).ToString();
+                    labelNominalTotalAkhir.Text = (int.Parse(labelNominalTotal.Text) * (100 - selectedFilm.Diskon) / 100).ToString();
+                }
+            }
         }
     }
 }

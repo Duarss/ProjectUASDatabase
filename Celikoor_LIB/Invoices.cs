@@ -11,7 +11,7 @@ namespace Celikoor_LIB
     {
         #region FIELDS
         private int id;
-        private DateTime tanggal;
+        private string tanggal;
         private double grand_total;
         private double diskon_nominal;
         private Konsumen penonton;
@@ -23,7 +23,7 @@ namespace Celikoor_LIB
         public Invoices()
         {
             Id = 0;
-            Tanggal = DateTime.Now;
+            Tanggal = "";
             Grand_total = 0;
             Diskon_nominal = 0;
             Penonton = new Konsumen();
@@ -33,7 +33,7 @@ namespace Celikoor_LIB
 
         #region PROPERTIES
         public int Id { get => id; set => id = value; }
-        public DateTime Tanggal { get => tanggal; set => tanggal = value; }
+        public string Tanggal { get => tanggal; set => tanggal = value; }
         public double Grand_total { get => grand_total; set => grand_total = value; }
         public double Diskon_nominal { get => diskon_nominal; set => diskon_nominal = value; }
         public Konsumen Penonton { get => penonton; set => penonton = value; }
@@ -45,9 +45,9 @@ namespace Celikoor_LIB
         //! METHOD CREATE C
         public static void TambahData(Invoices invoice)
         {
-            string perintah = $"INSERT INTO invoices (tanggal, grand_total, diskon_nominal, konsumens_id, kasir_id, status) " +
-                $"VALUES ('{invoice.Tanggal.ToString("dd-MM-yyyy")}', '{invoice.Grand_total}'" +
-                $", '{invoice.Diskon_nominal}', '{invoice.Penonton.Id}', '{invoice.Kasir.Id}','PENDING');";
+            string perintah = $"INSERT INTO invoices (tanggal, grand_total, diskon_nominal, konsumens_id, status) " +
+                $"VALUES (now(), '{invoice.Grand_total}'" +
+                $", '{invoice.Diskon_nominal}', '{invoice.Penonton.Id}', 'PENDING');";
 
             Koneksi conn = new Koneksi();
             conn.JalankanPerintahQuery(perintah);
@@ -96,6 +96,41 @@ namespace Celikoor_LIB
             }
             conn.KoneksiDB.Close();
             return invoiceBaru;
+        }
+        public static List<Invoices> BacaData(string filter="", string nilai = "")
+        {
+            string perintah;
+            if(filter == "")
+            {
+                perintah = $"SELECT * FROM invoices";
+            }else if (filter == "getLastIndex")
+            {
+                perintah = $"select * from invoices order by id DESC limit 1";
+            }
+            else
+            {
+                perintah = $"SELECT * FROM invoices where {filter} = '{nilai}'";
+            }
+
+            List<Invoices> listInvoices = new List<Invoices>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+
+            while (dr.Read() == true)
+            {
+                Invoices tampung = new Invoices();
+
+                tampung.Id = int.Parse(dr.GetValue(0).ToString());
+                tampung.Tanggal = dr.GetValue(1).ToString();
+                tampung.Grand_total = int.Parse(dr.GetValue(2).ToString());
+                tampung.Diskon_nominal = int.Parse(dr.GetValue(3).ToString());
+                tampung.Penonton = Konsumen.BacaData("id", dr.GetValue(4).ToString())[0];
+                //tampung.Kasir = Pegawai.BacaData("id", dr.GetValue(5).ToString())[0];
+                tampung.Status = dr.GetValue(6).ToString();
+                listInvoices.Add(tampung);
+            }
+            conn.KoneksiDB.Close();
+            return listInvoices;
         }
         #endregion
     }

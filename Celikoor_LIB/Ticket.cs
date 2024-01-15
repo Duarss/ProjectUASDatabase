@@ -13,7 +13,7 @@ namespace Celikoor_LIB
         #region FIELDS
         private Invoices noInvoice;
         private string noKursi;
-        private bool statusHadir;
+        private int statusHadir;
         private Pegawai operators;
         private double harga;
         private Jadwal_film jadwalFilm;
@@ -28,7 +28,7 @@ namespace Celikoor_LIB
         {
             NoInvoice = new Invoices();
             NoKursi = "";
-            StatusHadir = false;
+            StatusHadir = 0;
             Operators = new Pegawai();
             Harga = 0;
             JadwalFilm = new Jadwal_film();
@@ -40,7 +40,7 @@ namespace Celikoor_LIB
         #region PROPERTIES
         public Invoices NoInvoice { get => noInvoice; set => noInvoice = value; }
         public string NoKursi { get => noKursi; set => noKursi = value; }
-        public bool StatusHadir { get => statusHadir; set => statusHadir = value; }
+        public int StatusHadir { get => statusHadir; set => statusHadir = value; }
         public Pegawai Operators { get => operators; set => operators = value; }
         public double Harga { get => harga; set => harga = value; }
         public Jadwal_film JadwalFilm { get => jadwalFilm; set => jadwalFilm = value; }
@@ -53,7 +53,7 @@ namespace Celikoor_LIB
         public static void TambahData(Ticket ticket)
         {
             string perintah = $"INSERT INTO tikets (invoices_id, nomor_kursi, status_hadir, operator_id, harga, jadwal_film_id, studios_id, films_id) " +
-                $"VALUES ('{ticket.NoInvoice}', '{ticket.NoKursi}', 'FALSE', '{ticket.Operators.Id}', '{ticket.Harga}'" +
+                $"VALUES ('{ticket.NoInvoice.Id}', '{ticket.NoKursi}', '0', '1', '{ticket.Harga}'" +
                 $", '{ticket.JadwalFilm.Id}', '{ticket.Studio.Id}', '{ticket.Film.Id}');";
 
             Koneksi conn = new Koneksi();
@@ -95,41 +95,30 @@ namespace Celikoor_LIB
 
             return barcodeBaru;
         }
-        public static List<Studio> BacaData(string nomorKursi, Sesi_film sesiFilm)
+        public static List<Ticket> BacaData(string nomorKursi, Film film, Studio studio, Jadwal_film jadwal_film)
         {
-            string perintah = $"SELECT * FROM tikets WHERE nomor_kursi = '{nomorKursi}'films_id = '{sesiFilm.FilmStudio.Film.Id}', studios_id = '{sesiFilm.FilmStudio.Studio.Id}";
+            string perintah = $"SELECT * FROM tikets WHERE nomor_kursi = '{nomorKursi}' and films_id = '{film.Id}' and studios_id = '{studio.Id}' and jadwal_film_id = '{jadwal_film.Id}'";
 
-            List<Studio> listStudio = new List<Studio>();
+            List<Ticket> listTiket = new List<Ticket>();
             Koneksi conn = new Koneksi();
             MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
 
             while (dr.Read() == true)
             {
-                Studio tampung = new Studio();
+                Ticket tampung = new Ticket();
 
-                tampung.Id = int.Parse(dr.GetValue(0).ToString());
-                tampung.Nama = dr.GetValue(1).ToString();
-                tampung.Kapasitas = int.Parse(dr.GetValue(2).ToString());
-                Jenis_Studio tampungJenisStudio = new Jenis_Studio();
-                if (dr.GetValue(3).ToString() != "")
-                {
-                    tampung.JenisStudio.Id = int.Parse(dr.GetValue(3).ToString());
-                    List<Jenis_Studio> listItem = Jenis_Studio.BacaData(tampung.JenisStudio.Id.ToString());
-                    tampung.JenisStudio = listItem[0];
-                }
-                Cinema tampungCinema = new Cinema();
-                if (dr.GetValue(4).ToString() != "")
-                {
-                    tampung.Cinema.Id = int.Parse(dr.GetValue(4).ToString());
-                    List<Cinema> listItem = Cinema.BacaData(tampung.Cinema.Id.ToString());
-                    tampung.Cinema = listItem[0];
-                }
-                tampung.Harga_weekday = int.Parse(dr.GetValue(5).ToString());
-                tampung.Harga_weekend = int.Parse(dr.GetValue(6).ToString());
-                listStudio.Add(tampung);
+                tampung.NoInvoice = Invoices.BacaData("id", dr.GetValue(0).ToString())[0];
+                tampung.NoKursi = dr.GetValue(1).ToString();
+                tampung.StatusHadir = int.Parse(dr.GetValue(2).ToString());
+                //tampung.Operators = Pegawai.BacaData("id", dr.GetValue(3).ToString())[0];
+                tampung.Harga = int.Parse(dr.GetValue(4).ToString());
+                tampung.JadwalFilm = Jadwal_film.BacaData("id", dr.GetValue(5).ToString())[0];
+                tampung.Studio = Studio.BacaData("id", dr.GetValue(6).ToString())[0];
+                tampung.Film = Film.BacaData("id", dr.GetValue(7).ToString())[0];
+                listTiket.Add(tampung);
             }
             conn.KoneksiDB.Close();
-            return listStudio;
+            return listTiket;
         }
         #endregion
     }

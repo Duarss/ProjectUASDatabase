@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelNominalHarga = new System.Windows.Forms.Label();
+            this.comboBoxTanggal = new System.Windows.Forms.ComboBox();
+            this.comboBoxJam = new System.Windows.Forms.ComboBox();
             this.labelSisaKursi = new System.Windows.Forms.Label();
             this.comboBoxStudio = new System.Windows.Forms.ComboBox();
             this.comboBoxCinema = new System.Windows.Forms.ComboBox();
             this.comboBoxJudulFilm = new System.Windows.Forms.ComboBox();
-            this.labelNominalHarga = new System.Windows.Forms.Label();
             this.labelHarga = new System.Windows.Forms.Label();
             this.labelJumlahKursi = new System.Windows.Forms.Label();
             this.labelJenisStudio = new System.Windows.Forms.Label();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,13 +52,16 @@
             this.labelDurasi = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.labelNominalSaldo = new System.Windows.Forms.Label();
+            this.labelNominalTotalAkhir = new System.Windows.Forms.Label();
+            this.labelNominalDiskon = new System.Windows.Forms.Label();
+            this.labelNominalTotal = new System.Windows.Forms.Label();
             this.labelSaldo = new System.Windows.Forms.Label();
             this.labelTotalAkhir = new System.Windows.Forms.Label();
             this.labelDIskon = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.labelKursi = new System.Windows.Forms.Label();
             this.buttonEdit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelTempatDuduk = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -73,15 +77,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel1.Controls.Add(this.labelNominalHarga);
+            this.panel1.Controls.Add(this.comboBoxTanggal);
+            this.panel1.Controls.Add(this.comboBoxJam);
             this.panel1.Controls.Add(this.labelSisaKursi);
             this.panel1.Controls.Add(this.comboBoxStudio);
             this.panel1.Controls.Add(this.comboBoxCinema);
             this.panel1.Controls.Add(this.comboBoxJudulFilm);
-            this.panel1.Controls.Add(this.labelNominalHarga);
             this.panel1.Controls.Add(this.labelHarga);
             this.panel1.Controls.Add(this.labelJumlahKursi);
             this.panel1.Controls.Add(this.labelJenisStudio);
-            this.panel1.Controls.Add(this.dateTimePicker);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -92,6 +97,53 @@
             this.panel1.Size = new System.Drawing.Size(390, 381);
             this.panel1.TabIndex = 0;
             // 
+            // labelNominalHarga
+            // 
+            this.labelNominalHarga.AutoSize = true;
+            this.labelNominalHarga.BackColor = System.Drawing.Color.NavajoWhite;
+            this.labelNominalHarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNominalHarga.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNominalHarga.ForeColor = System.Drawing.Color.Black;
+            this.labelNominalHarga.Location = new System.Drawing.Point(159, 305);
+            this.labelNominalHarga.Name = "labelNominalHarga";
+            this.labelNominalHarga.Size = new System.Drawing.Size(17, 20);
+            this.labelNominalHarga.TabIndex = 58;
+            this.labelNominalHarga.Text = "-";
+            this.labelNominalHarga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBoxTanggal
+            // 
+            this.comboBoxTanggal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTanggal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTanggal.FormattingEnabled = true;
+            this.comboBoxTanggal.Items.AddRange(new object[] {
+            "I",
+            "II",
+            "III",
+            "IV"});
+            this.comboBoxTanggal.Location = new System.Drawing.Point(115, 88);
+            this.comboBoxTanggal.Name = "comboBoxTanggal";
+            this.comboBoxTanggal.Size = new System.Drawing.Size(182, 26);
+            this.comboBoxTanggal.TabIndex = 57;
+            this.comboBoxTanggal.SelectedIndexChanged += new System.EventHandler(this.comboBoxTanggal_SelectedIndexChanged);
+            // 
+            // comboBoxJam
+            // 
+            this.comboBoxJam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJam.Enabled = false;
+            this.comboBoxJam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxJam.FormattingEnabled = true;
+            this.comboBoxJam.Items.AddRange(new object[] {
+            "I",
+            "II",
+            "III",
+            "IV"});
+            this.comboBoxJam.Location = new System.Drawing.Point(303, 87);
+            this.comboBoxJam.Name = "comboBoxJam";
+            this.comboBoxJam.Size = new System.Drawing.Size(51, 26);
+            this.comboBoxJam.TabIndex = 56;
+            this.comboBoxJam.SelectedIndexChanged += new System.EventHandler(this.comboBoxJam_SelectedIndexChanged);
+            // 
             // labelSisaKursi
             // 
             this.labelSisaKursi.AutoSize = true;
@@ -99,7 +151,7 @@
             this.labelSisaKursi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelSisaKursi.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSisaKursi.ForeColor = System.Drawing.Color.Red;
-            this.labelSisaKursi.Location = new System.Drawing.Point(288, 272);
+            this.labelSisaKursi.Location = new System.Drawing.Point(252, 263);
             this.labelSisaKursi.Name = "labelSisaKursi";
             this.labelSisaKursi.Size = new System.Drawing.Size(35, 20);
             this.labelSisaKursi.TabIndex = 54;
@@ -112,9 +164,9 @@
             this.comboBoxStudio.Enabled = false;
             this.comboBoxStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStudio.FormattingEnabled = true;
-            this.comboBoxStudio.Location = new System.Drawing.Point(133, 193);
+            this.comboBoxStudio.Location = new System.Drawing.Point(114, 196);
             this.comboBoxStudio.Name = "comboBoxStudio";
-            this.comboBoxStudio.Size = new System.Drawing.Size(79, 26);
+            this.comboBoxStudio.Size = new System.Drawing.Size(83, 26);
             this.comboBoxStudio.TabIndex = 53;
             this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
             // 
@@ -123,9 +175,9 @@
             this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Location = new System.Drawing.Point(133, 142);
+            this.comboBoxCinema.Location = new System.Drawing.Point(115, 146);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(216, 26);
+            this.comboBoxCinema.Size = new System.Drawing.Size(239, 26);
             this.comboBoxCinema.TabIndex = 52;
             this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
@@ -134,25 +186,11 @@
             this.comboBoxJudulFilm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxJudulFilm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxJudulFilm.FormattingEnabled = true;
-            this.comboBoxJudulFilm.Location = new System.Drawing.Point(133, 30);
+            this.comboBoxJudulFilm.Location = new System.Drawing.Point(115, 34);
             this.comboBoxJudulFilm.Name = "comboBoxJudulFilm";
-            this.comboBoxJudulFilm.Size = new System.Drawing.Size(216, 26);
+            this.comboBoxJudulFilm.Size = new System.Drawing.Size(239, 26);
             this.comboBoxJudulFilm.TabIndex = 51;
             this.comboBoxJudulFilm.SelectedIndexChanged += new System.EventHandler(this.comboBoxJudulFilm_SelectedIndexChanged);
-            // 
-            // labelNominalHarga
-            // 
-            this.labelNominalHarga.AutoSize = true;
-            this.labelNominalHarga.BackColor = System.Drawing.Color.NavajoWhite;
-            this.labelNominalHarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelNominalHarga.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNominalHarga.ForeColor = System.Drawing.Color.Black;
-            this.labelNominalHarga.Location = new System.Drawing.Point(195, 314);
-            this.labelNominalHarga.Name = "labelNominalHarga";
-            this.labelNominalHarga.Size = new System.Drawing.Size(17, 20);
-            this.labelNominalHarga.TabIndex = 50;
-            this.labelNominalHarga.Text = "-";
-            this.labelNominalHarga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelHarga
             // 
@@ -161,7 +199,7 @@
             this.labelHarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelHarga.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHarga.ForeColor = System.Drawing.Color.Black;
-            this.labelHarga.Location = new System.Drawing.Point(101, 314);
+            this.labelHarga.Location = new System.Drawing.Point(65, 305);
             this.labelHarga.Name = "labelHarga";
             this.labelHarga.Size = new System.Drawing.Size(65, 20);
             this.labelHarga.TabIndex = 49;
@@ -175,7 +213,7 @@
             this.labelJumlahKursi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelJumlahKursi.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJumlahKursi.ForeColor = System.Drawing.Color.Black;
-            this.labelJumlahKursi.Location = new System.Drawing.Point(195, 272);
+            this.labelJumlahKursi.Location = new System.Drawing.Point(159, 263);
             this.labelJumlahKursi.Name = "labelJumlahKursi";
             this.labelJumlahKursi.Size = new System.Drawing.Size(17, 20);
             this.labelJumlahKursi.TabIndex = 48;
@@ -189,31 +227,23 @@
             this.labelJenisStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelJenisStudio.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJenisStudio.ForeColor = System.Drawing.Color.Black;
-            this.labelJenisStudio.Location = new System.Drawing.Point(95, 272);
+            this.labelJenisStudio.Location = new System.Drawing.Point(59, 263);
             this.labelJenisStudio.Name = "labelJenisStudio";
             this.labelJenisStudio.Size = new System.Drawing.Size(117, 20);
             this.labelJenisStudio.TabIndex = 47;
             this.labelJenisStudio.Text = "jenisStudio";
             this.labelJenisStudio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(133, 83);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(216, 27);
-            this.dateTimePicker.TabIndex = 44;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.NavajoWhite;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(49, 195);
+            this.label3.Location = new System.Drawing.Point(42, 199);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 43;
             this.label3.Text = "Studio:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,11 +253,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.NavajoWhite;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(41, 142);
+            this.label2.Location = new System.Drawing.Point(34, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 42;
             this.label2.Text = "Cinema:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,11 +267,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.NavajoWhite;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(19, 87);
+            this.label1.Location = new System.Drawing.Point(12, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 20);
+            this.label1.Size = new System.Drawing.Size(95, 18);
             this.label1.TabIndex = 41;
             this.label1.Text = "Day/Date:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,11 +281,11 @@
             this.labelJudul.AutoSize = true;
             this.labelJudul.BackColor = System.Drawing.Color.NavajoWhite;
             this.labelJudul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelJudul.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJudul.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJudul.ForeColor = System.Drawing.Color.Black;
-            this.labelJudul.Location = new System.Drawing.Point(68, 34);
+            this.labelJudul.Location = new System.Drawing.Point(61, 38);
             this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(59, 20);
+            this.labelJudul.Size = new System.Drawing.Size(49, 18);
             this.labelJudul.TabIndex = 40;
             this.labelJudul.Text = "Title:";
             this.labelJudul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -368,6 +398,10 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel3.Controls.Add(this.labelNominalSaldo);
+            this.panel3.Controls.Add(this.labelNominalTotalAkhir);
+            this.panel3.Controls.Add(this.labelNominalDiskon);
+            this.panel3.Controls.Add(this.labelNominalTotal);
             this.panel3.Controls.Add(this.labelSaldo);
             this.panel3.Controls.Add(this.labelTotalAkhir);
             this.panel3.Controls.Add(this.labelDIskon);
@@ -378,6 +412,62 @@
             this.panel3.Size = new System.Drawing.Size(502, 378);
             this.panel3.TabIndex = 2;
             // 
+            // labelNominalSaldo
+            // 
+            this.labelNominalSaldo.AutoSize = true;
+            this.labelNominalSaldo.BackColor = System.Drawing.Color.NavajoWhite;
+            this.labelNominalSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNominalSaldo.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNominalSaldo.ForeColor = System.Drawing.Color.Black;
+            this.labelNominalSaldo.Location = new System.Drawing.Point(162, 264);
+            this.labelNominalSaldo.Name = "labelNominalSaldo";
+            this.labelNominalSaldo.Size = new System.Drawing.Size(21, 20);
+            this.labelNominalSaldo.TabIndex = 68;
+            this.labelNominalSaldo.Text = "0";
+            this.labelNominalSaldo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelNominalTotalAkhir
+            // 
+            this.labelNominalTotalAkhir.AutoSize = true;
+            this.labelNominalTotalAkhir.BackColor = System.Drawing.Color.NavajoWhite;
+            this.labelNominalTotalAkhir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNominalTotalAkhir.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNominalTotalAkhir.ForeColor = System.Drawing.Color.Black;
+            this.labelNominalTotalAkhir.Location = new System.Drawing.Point(162, 223);
+            this.labelNominalTotalAkhir.Name = "labelNominalTotalAkhir";
+            this.labelNominalTotalAkhir.Size = new System.Drawing.Size(21, 20);
+            this.labelNominalTotalAkhir.TabIndex = 67;
+            this.labelNominalTotalAkhir.Text = "0";
+            this.labelNominalTotalAkhir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelNominalDiskon
+            // 
+            this.labelNominalDiskon.AutoSize = true;
+            this.labelNominalDiskon.BackColor = System.Drawing.Color.NavajoWhite;
+            this.labelNominalDiskon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNominalDiskon.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNominalDiskon.ForeColor = System.Drawing.Color.Black;
+            this.labelNominalDiskon.Location = new System.Drawing.Point(141, 180);
+            this.labelNominalDiskon.Name = "labelNominalDiskon";
+            this.labelNominalDiskon.Size = new System.Drawing.Size(17, 20);
+            this.labelNominalDiskon.TabIndex = 66;
+            this.labelNominalDiskon.Text = "-";
+            this.labelNominalDiskon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelNominalTotal
+            // 
+            this.labelNominalTotal.AutoSize = true;
+            this.labelNominalTotal.BackColor = System.Drawing.Color.NavajoWhite;
+            this.labelNominalTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNominalTotal.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNominalTotal.ForeColor = System.Drawing.Color.Black;
+            this.labelNominalTotal.Location = new System.Drawing.Point(162, 140);
+            this.labelNominalTotal.Name = "labelNominalTotal";
+            this.labelNominalTotal.Size = new System.Drawing.Size(21, 20);
+            this.labelNominalTotal.TabIndex = 66;
+            this.labelNominalTotal.Text = "0";
+            this.labelNominalTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // labelSaldo
             // 
             this.labelSaldo.AutoSize = true;
@@ -385,11 +475,11 @@
             this.labelSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelSaldo.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSaldo.ForeColor = System.Drawing.Color.Black;
-            this.labelSaldo.Location = new System.Drawing.Point(128, 265);
+            this.labelSaldo.Location = new System.Drawing.Point(66, 264);
             this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.Size = new System.Drawing.Size(69, 20);
+            this.labelSaldo.Size = new System.Drawing.Size(106, 20);
             this.labelSaldo.TabIndex = 64;
-            this.labelSaldo.Text = "Saldo:";
+            this.labelSaldo.Text = "Saldo: Rp.";
             this.labelSaldo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelTotalAkhir
@@ -399,11 +489,11 @@
             this.labelTotalAkhir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelTotalAkhir.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalAkhir.ForeColor = System.Drawing.Color.Black;
-            this.labelTotalAkhir.Location = new System.Drawing.Point(76, 224);
+            this.labelTotalAkhir.Location = new System.Drawing.Point(29, 223);
             this.labelTotalAkhir.Name = "labelTotalAkhir";
-            this.labelTotalAkhir.Size = new System.Drawing.Size(121, 20);
+            this.labelTotalAkhir.Size = new System.Drawing.Size(158, 20);
             this.labelTotalAkhir.TabIndex = 63;
-            this.labelTotalAkhir.Text = "Total Akhir:";
+            this.labelTotalAkhir.Text = "Total Akhir: Rp.";
             this.labelTotalAkhir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDIskon
@@ -413,7 +503,7 @@
             this.labelDIskon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelDIskon.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDIskon.ForeColor = System.Drawing.Color.Black;
-            this.labelDIskon.Location = new System.Drawing.Point(116, 181);
+            this.labelDIskon.Location = new System.Drawing.Point(54, 180);
             this.labelDIskon.Name = "labelDIskon";
             this.labelDIskon.Size = new System.Drawing.Size(81, 20);
             this.labelDIskon.TabIndex = 62;
@@ -427,11 +517,11 @@
             this.labelTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelTotal.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotal.ForeColor = System.Drawing.Color.Black;
-            this.labelTotal.Location = new System.Drawing.Point(132, 141);
+            this.labelTotal.Location = new System.Drawing.Point(70, 140);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(65, 20);
+            this.labelTotal.Size = new System.Drawing.Size(102, 20);
             this.labelTotal.TabIndex = 61;
-            this.labelTotal.Text = "Total:";
+            this.labelTotal.Text = "Total: Rp.";
             this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelKursi
@@ -441,7 +531,7 @@
             this.labelKursi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelKursi.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKursi.ForeColor = System.Drawing.Color.Black;
-            this.labelKursi.Location = new System.Drawing.Point(132, 100);
+            this.labelKursi.Location = new System.Drawing.Point(70, 99);
             this.labelKursi.Name = "labelKursi";
             this.labelKursi.Size = new System.Drawing.Size(65, 20);
             this.labelKursi.TabIndex = 60;
@@ -454,28 +544,14 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(772, 788);
+            this.buttonEdit.Location = new System.Drawing.Point(754, 788);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(323, 39);
+            this.buttonEdit.Size = new System.Drawing.Size(502, 39);
             this.buttonEdit.TabIndex = 38;
             this.buttonEdit.Text = "KONFIRMASI PEMBAYARAN";
             this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1113, 788);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 39);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "KELUAR";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // panelTempatDuduk
             // 
@@ -549,7 +625,6 @@
             this.ClientSize = new System.Drawing.Size(1260, 844);
             this.Controls.Add(this.panelTempatDuduk);
             this.Controls.Add(this.pictureBoxCoverImage);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -576,13 +651,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button buttonEdit;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelJudul;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.Label labelNominalHarga;
         private System.Windows.Forms.Label labelHarga;
         private System.Windows.Forms.Label labelJenisStudio;
         private System.Windows.Forms.ComboBox comboBoxStudio;
@@ -606,5 +678,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelLayar;
         private System.Windows.Forms.Label labelJumlahKursi;
+        private System.Windows.Forms.ComboBox comboBoxJam;
+        private System.Windows.Forms.ComboBox comboBoxTanggal;
+        private System.Windows.Forms.Label labelNominalTotal;
+        private System.Windows.Forms.Label labelNominalSaldo;
+        private System.Windows.Forms.Label labelNominalTotalAkhir;
+        private System.Windows.Forms.Label labelNominalDiskon;
+        private System.Windows.Forms.Label labelNominalHarga;
     }
 }

@@ -444,6 +444,7 @@
     <None Include="Resources\Discount_Banner_3.png" />
     <None Include="Resources\Discount_Banner_4.png" />
     <None Include="Resources\movie.png" />
+    <None Include="Resources\eye.png" />
     <Content Include="Resources\p11.jpg" />
     <Content Include="Resources\p12.jpg" />
     <Content Include="Resources\schedule.png" />

@@ -182,28 +182,41 @@ namespace Celikoor_Tixycket
             try
             {
                 Film film = new Film();
+
                 for (int i = 0; i < dataGridViewPenjadwalanFilm.Rows.Count; i++)
                 {
                     Jadwal_film newJadwal = new Jadwal_film();
                     newJadwal.Tanggal = dataGridViewPenjadwalanFilm.Rows[i].Cells["tanggal"].Value.ToString();
                     newJadwal.Jam_pemutaran = dataGridViewPenjadwalanFilm.Rows[i].Cells["jam"].Value.ToString();
-                    Jadwal_film.TambahData(newJadwal);
-                    List<Jadwal_film> listJadwalFilm = Jadwal_film.BacaData("getLastIndex");
-
+                    
                     string judulFilm = dataGridViewPenjadwalanFilm.Rows[i].Cells["judulFilm"].Value.ToString();
                     List<Film> listFilm = Film.BacaData("judul", judulFilm);
 
                     string namaStudio = dataGridViewPenjadwalanFilm.Rows[i].Cells["studio"].Value.ToString();
-                    List<Studio> listStudio = Studio.BacaData("nama", namaStudio);
-                    film.TambahFilmStudio(listStudio[0], listFilm[0]);
-                    Film.TambahDataStudioFilm(film);
+                    List<Studio> listStudio = Studio.BacaData("fromCinema", Cinema.BacaData("nama_cabang", dataGridViewPenjadwalanFilm.Rows[i].Cells["cinema"].Value.ToString())[0].Id.ToString(), namaStudio);
+                    List<Jadwal_film> listJadwal = Jadwal_film.CekKetersediaanJadwal(newJadwal, listFilm[0], listStudio[0], "spesifik");
 
-                    film.TambahSesiFilm(listJadwalFilm[0], film.ListFilmStudio[i]);
+
+                    if (listJadwal.Count == 0)
+                    {
+                        Jadwal_film.TambahData(newJadwal);
+                        List<Jadwal_film> listJadwalFilm = Jadwal_film.BacaData("getLastIndex");
+
+                        
+                        film.TambahFilmStudio(listStudio[0], listFilm[0]);
+                        Film.TambahDataStudioFilm(film);
+
+                        film.TambahSesiFilm(listJadwalFilm[0], film.ListFilmStudio[i]);
+                        MessageBox.Show($"Add data success for film {selectedFilm.Judul}, cinema {selectedCinema.Nama_cabang} in studio {selectedStudio.Nama}!");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Schedule for film {selectedFilm.Judul}, cinema {selectedCinema.Nama_cabang} in studio {selectedStudio.Nama} has been set by another film");
+                    }
+                    
                 }
                 Film.TambahDataSesiFilm(film);
-                MessageBox.Show("Add data success!");
                 dataGridViewPenjadwalanFilm.Rows.Clear();
-                FormPenjadwalanFilm_Load(sender, e);
             }
             catch (Exception x)
             {

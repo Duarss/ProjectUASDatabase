@@ -192,6 +192,10 @@ namespace Celikoor_LIB
             {
                 perintah = $"SELECT * FROM films ORDER BY id DESC LIMIT 1";
             }
+            else if(filter == "id")
+            {
+                perintah = $"SELECT * FROM films where id = '{nilai}'";
+            }
             else
             {
                 perintah = $"SELECT * FROM films WHERE {filter} like '%{nilai}%'";

@@ -50,6 +50,10 @@
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelData = new System.Windows.Forms.Panel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSesi3 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSesi1 = new System.Windows.Forms.CheckBox();
             this.labelJumlahKursi = new System.Windows.Forms.Label();
             this.labelJam = new System.Windows.Forms.Label();
             this.labelNominalHargaWeekend = new System.Windows.Forms.Label();
@@ -61,10 +65,6 @@
             this.tanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonTambah = new System.Windows.Forms.Button();
-            this.checkBoxSesi1 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxSesi3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverImage)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelData.SuspendLayout();
@@ -322,7 +322,7 @@
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(939, 788);
+            this.buttonSimpan.Location = new System.Drawing.Point(940, 788);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(148, 39);
@@ -372,6 +372,54 @@
             this.panelData.Name = "panelData";
             this.panelData.Size = new System.Drawing.Size(390, 365);
             this.panelData.TabIndex = 40;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.checkBox2.ForeColor = System.Drawing.Color.Black;
+            this.checkBox2.Location = new System.Drawing.Point(286, 315);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(46, 23);
+            this.checkBox2.TabIndex = 65;
+            this.checkBox2.Text = "IV";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSesi3
+            // 
+            this.checkBoxSesi3.AutoSize = true;
+            this.checkBoxSesi3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.checkBoxSesi3.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxSesi3.Location = new System.Drawing.Point(237, 315);
+            this.checkBoxSesi3.Name = "checkBoxSesi3";
+            this.checkBoxSesi3.Size = new System.Drawing.Size(43, 23);
+            this.checkBoxSesi3.TabIndex = 64;
+            this.checkBoxSesi3.Text = "III";
+            this.checkBoxSesi3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
+            this.checkBox1.Location = new System.Drawing.Point(192, 315);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(39, 23);
+            this.checkBox1.TabIndex = 63;
+            this.checkBox1.Text = "II";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSesi1
+            // 
+            this.checkBoxSesi1.AutoSize = true;
+            this.checkBoxSesi1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
+            this.checkBoxSesi1.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxSesi1.Location = new System.Drawing.Point(148, 315);
+            this.checkBoxSesi1.Name = "checkBoxSesi1";
+            this.checkBoxSesi1.Size = new System.Drawing.Size(35, 23);
+            this.checkBoxSesi1.TabIndex = 49;
+            this.checkBoxSesi1.Text = "I";
+            this.checkBoxSesi1.UseVisualStyleBackColor = true;
             // 
             // labelJumlahKursi
             // 
@@ -458,30 +506,35 @@
             this.judulFilm.HeaderText = "Film Title";
             this.judulFilm.MinimumWidth = 6;
             this.judulFilm.Name = "judulFilm";
+            this.judulFilm.ReadOnly = true;
             // 
             // cinema
             // 
             this.cinema.HeaderText = "Cinema";
             this.cinema.MinimumWidth = 6;
             this.cinema.Name = "cinema";
+            this.cinema.ReadOnly = true;
             // 
             // studio
             // 
             this.studio.HeaderText = "Studio";
             this.studio.MinimumWidth = 6;
             this.studio.Name = "studio";
+            this.studio.ReadOnly = true;
             // 
             // tanggal
             // 
             this.tanggal.HeaderText = "Date";
             this.tanggal.MinimumWidth = 6;
             this.tanggal.Name = "tanggal";
+            this.tanggal.ReadOnly = true;
             // 
             // jam
             // 
             this.jam.HeaderText = "time";
             this.jam.MinimumWidth = 6;
             this.jam.Name = "jam";
+            this.jam.ReadOnly = true;
             // 
             // buttonTambah
             // 
@@ -497,54 +550,6 @@
             this.buttonTambah.Text = "TAMBAH";
             this.buttonTambah.UseVisualStyleBackColor = false;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
-            // 
-            // checkBoxSesi1
-            // 
-            this.checkBoxSesi1.AutoSize = true;
-            this.checkBoxSesi1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
-            this.checkBoxSesi1.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxSesi1.Location = new System.Drawing.Point(148, 315);
-            this.checkBoxSesi1.Name = "checkBoxSesi1";
-            this.checkBoxSesi1.Size = new System.Drawing.Size(35, 23);
-            this.checkBoxSesi1.TabIndex = 49;
-            this.checkBoxSesi1.Text = "I";
-            this.checkBoxSesi1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkBox1.Location = new System.Drawing.Point(192, 315);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(39, 23);
-            this.checkBox1.TabIndex = 63;
-            this.checkBox1.Text = "II";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSesi3
-            // 
-            this.checkBoxSesi3.AutoSize = true;
-            this.checkBoxSesi3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
-            this.checkBoxSesi3.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxSesi3.Location = new System.Drawing.Point(237, 315);
-            this.checkBoxSesi3.Name = "checkBoxSesi3";
-            this.checkBoxSesi3.Size = new System.Drawing.Size(43, 23);
-            this.checkBoxSesi3.TabIndex = 64;
-            this.checkBoxSesi3.Text = "III";
-            this.checkBoxSesi3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
-            this.checkBox2.ForeColor = System.Drawing.Color.Black;
-            this.checkBox2.Location = new System.Drawing.Point(286, 315);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(46, 23);
-            this.checkBox2.TabIndex = 65;
-            this.checkBox2.Text = "IV";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // FormPenjadwalanFilm
             // 

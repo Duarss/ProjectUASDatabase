@@ -77,7 +77,7 @@ namespace Celikoor_LIB
         }
 
         //! METHOD RETRIEVE R dan FILTER F
-        public static List<Studio> BacaData(string filter="", string nilai="")
+        public static List<Studio> BacaData(string filter="", string nilai="", string additionParameter="")
         {
             string perintah;
 
@@ -85,7 +85,14 @@ namespace Celikoor_LIB
             {
                 perintah = $"SELECT * FROM studios";
             }
-
+            else if(filter == "id")
+            {
+                perintah = $"SELECT * FROM studios WHERE id = '{nilai}'";
+            }
+            else if(filter == "fromCinema")
+            {
+                perintah = $"SELECT * FROM studios WHERE cinemas_id = '{nilai}' and nama = '{additionParameter}'";
+            }
             else
             {
                 perintah = $"SELECT * FROM studios WHERE {filter} like '%{nilai}%'";

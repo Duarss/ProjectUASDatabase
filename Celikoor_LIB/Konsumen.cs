@@ -72,7 +72,14 @@ namespace Celikoor_LIB
             conn.JalankanPerintahQuery(perintah);
             conn.KoneksiDB.Close(); //kirim ke command
         }
+        public static void UbahNominalSaldo(Konsumen konsumen)
+        {
+            string perintah = $"UPDATE konsumens SET saldo='{konsumen.Saldo}' WHERE id='{konsumen.Id}'";
 
+            Koneksi conn = new Koneksi();
+            conn.JalankanPerintahQuery(perintah);
+            conn.KoneksiDB.Close(); //kirim ke command
+        }
         //! METHOD DELETE D
         public static void HapusData(string idHapus)
         {
@@ -92,7 +99,10 @@ namespace Celikoor_LIB
             {
                 perintah = $"SELECT id, nama, email, no_hp, gender, tgl_lahir, saldo, username FROM konsumens";
             }
-
+            else if(filter == "id")
+            {
+                perintah = $"SELECT id, nama, email, no_hp, gender, tgl_lahir, saldo, username FROM konsumens where id = '{nilai}'";
+            }
             else
             {
                 perintah = $"SELECT id, nama, email, no_hp, gender, tgl_lahir, saldo, username FROM konsumens WHERE {filter} like '%{nilai}%'";

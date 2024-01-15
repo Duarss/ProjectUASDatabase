@@ -19,22 +19,21 @@ namespace Celikoor_Tixycket
         {
             InitializeComponent();
         }
-
-        public Konsumen konsumenLogin;
-        public Pegawai pegawaiLogin;
+        FormUtama formUtama;
 
         private void FormProfile_Load(object sender, EventArgs e)
         {
-            if (konsumenLogin is Konsumen)
+            formUtama = (FormUtama)this.Owner;
+            if (formUtama.konsumenLogin is Konsumen)
             {
-                List<Konsumen> listDataKonsumen = Konsumen.BacaData();
-                labelNamaUser.Text = listDataKonsumen[konsumenLogin.Id].Username;
-                customTextBoxNama.Texts = listDataKonsumen[konsumenLogin.Id].Nama;
-                customTextBoxUsername.Texts = listDataKonsumen[konsumenLogin.Id].Username;
-                customTextBoxPassword.Texts = listDataKonsumen[konsumenLogin.Id].Password;
-                customTextBoxEmail.Texts = listDataKonsumen[konsumenLogin.Id].Email;
-                customTextBoxNoHp.Texts = listDataKonsumen[konsumenLogin.Id].NoHp;
-                customTextBoxTglLahir.Texts = listDataKonsumen[konsumenLogin.Id].TglLahir.ToString();
+                List<Konsumen> listDataKonsumen = Konsumen.BacaData("id", formUtama.konsumenLogin.Id.ToString());
+                labelNamaUser.Text = listDataKonsumen[0].Username;
+                customTextBoxNama.Texts = listDataKonsumen[0].Nama;
+                customTextBoxUsername.Texts = listDataKonsumen[0].Username;
+                customTextBoxPassword.Texts = listDataKonsumen[0].Password;
+                customTextBoxEmail.Texts = listDataKonsumen[0].Email;
+                customTextBoxNoHp.Texts = listDataKonsumen[0].NoHp;
+                customTextBoxTglLahir.Texts = listDataKonsumen[0].TglLahir.ToString();
             }
         }
 
@@ -106,6 +105,7 @@ namespace Celikoor_Tixycket
             try
             {
                 Konsumen konsumen = new Konsumen();
+                konsumen.Id = formUtama.konsumenLogin.Id;
                 konsumen.Nama = customTextBoxNama.Texts;
                 konsumen.Username = customTextBoxUsername.Texts;
                 konsumen.Password = customTextBoxPassword.Texts;
@@ -121,6 +121,18 @@ namespace Celikoor_Tixycket
             catch (Exception ex)
             {
                 MessageBox.Show("Failed to update your profile changes! Error: " + ex.Message);
+            }
+        }
+
+        private void buttonShowPasswork_Click(object sender, EventArgs e)
+        {
+            if (customTextBoxPassword.PasswordChar)
+            {
+                customTextBoxPassword.PasswordChar = false;
+            }
+            else
+            {
+                customTextBoxPassword.PasswordChar = true;
             }
         }
     }

@@ -80,7 +80,10 @@ namespace Celikoor_LIB
             {
                 perintah = $"SELECT id, nama, email, username, roles FROM pegawais";
             }
-
+            else if (filter == "id")
+            {
+                perintah = $"SELECT id, nama, email, username, roles FROM pegawais where id = '{nilai}'";
+            }
             else
             {
                 perintah = $"SELECT id, nama, email, username, roles FROM pegawais WHERE {filter} like '%{nilai}%'";
