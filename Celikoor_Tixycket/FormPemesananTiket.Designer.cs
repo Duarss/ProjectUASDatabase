@@ -533,9 +533,9 @@
             this.labelKursi.ForeColor = System.Drawing.Color.Black;
             this.labelKursi.Location = new System.Drawing.Point(70, 99);
             this.labelKursi.Name = "labelKursi";
-            this.labelKursi.Size = new System.Drawing.Size(65, 20);
+            this.labelKursi.Size = new System.Drawing.Size(58, 20);
             this.labelKursi.TabIndex = 60;
-            this.labelKursi.Text = "Kursi:";
+            this.labelKursi.Text = "Seat:";
             this.labelKursi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonEdit

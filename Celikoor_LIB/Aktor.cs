@@ -79,7 +79,10 @@ namespace Celikoor_LIB
             {
                 perintah = $"SELECT * FROM aktors";
             }
-
+            else if (filter == "id")
+            {
+                perintah = $"SELECT * FROM aktors WHERE id = '{nilai}'";
+            }
             else
             {
                 perintah = $"SELECT * FROM aktors WHERE {filter} like '%{nilai}%'";

@@ -231,6 +231,7 @@
             this.textBoxPasswordRegistrationConfirmation.Name = "textBoxPasswordRegistrationConfirmation";
             this.textBoxPasswordRegistrationConfirmation.Size = new System.Drawing.Size(337, 30);
             this.textBoxPasswordRegistrationConfirmation.TabIndex = 43;
+            this.textBoxPasswordRegistrationConfirmation.UseSystemPasswordChar = true;
             // 
             // textBoxPasswordRegistration
             // 
@@ -242,6 +243,7 @@
             this.textBoxPasswordRegistration.Name = "textBoxPasswordRegistration";
             this.textBoxPasswordRegistration.Size = new System.Drawing.Size(337, 30);
             this.textBoxPasswordRegistration.TabIndex = 44;
+            this.textBoxPasswordRegistration.UseSystemPasswordChar = true;
             // 
             // textBoxUsernameRegistration
             // 

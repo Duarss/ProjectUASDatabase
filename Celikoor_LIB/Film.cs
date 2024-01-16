@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -364,8 +365,69 @@ namespace Celikoor_LIB
             {
                 lastIndex = int.Parse(dr.GetValue(0).ToString()) + 1;
             }
+            else
+            {
+                lastIndex = 1;
+            }
             conn.KoneksiDB.Close();
             return "p"+lastIndex.ToString();
+        }
+        public static void BacaDataFilmTerlaris()
+        {
+            string perintah = $"SELECT films.judul as JudulFilm, SUM(films.id) as TotalDitonton, monthname(invoices.tanggal) as Bulan "
+                + $"FROM invoices INNER JOIN tikets on tikets.invoices_id = invoices.id "
+                + $"INNER JOIN sesi_films as sesifilms on sesifilms.films_id = tikets.films_id "
+                + $"INNER JOIN films on films.id = sesifilms.films_id "
+                + $"WHERE YEAR(invoices.tanggal) = '2023' "
+                + $"GROUP BY films.judul, Bulan "
+                + $"ORDER BY Bulan desc, TotalDitonton desc;";
+
+            //MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            string nama = "Laporan Film Terlaris";
+            StreamWriter NamaFile = new StreamWriter(nama);
+            NamaFile.WriteLine("Film Terlaris di tahun 2023");
+            NamaFile.WriteLine("Celikoor");
+            NamaFile.WriteLine("--------------------------------------------------------");
+            NamaFile.WriteLine("");
+            NamaFile.WriteLine("Judul Film"+"               "+"Total Ditonton"+"        "+"Bulan");
+            while (dr.Read() == true)
+            {
+                NamaFile.WriteLine(dr.GetValue(0) + "               " + dr.GetValue(1) + "      " + dr.GetValue(2));
+            }
+            conn.KoneksiDB.Close();
+            NamaFile.WriteLine("--------------------------------------------------------");
+            NamaFile.Close();
+
+            // proses mencetak ke printer
+            CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
+            p.KirimkePrinter();
+        }
+
+        public static void BacaDataFilmTidakHadir()
+        {
+            string perintah = $"SELECT films.judul, COUNT(tikets.status_hadir) as jumlah FROM tikets INNER JOIN sesi_films as sesifilms on sesifilms.films_id = tikets.films_id INNER JOIN films on films.id = sesifilms.films_id WHERE tikets.status_hadir = 0 GROUP BY films.judul ORDER BY jumlah DESC LIMIT 3;";
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            string nama = "Laporan 3 Film dengan banyak jumlah tidak hadir";
+            StreamWriter NamaFile = new StreamWriter(nama);
+            NamaFile.WriteLine("3 film dengan banyak jumlah penonton tidak hadir");
+            NamaFile.WriteLine("Celikoor");
+            NamaFile.WriteLine("--------------------------------------------------------------");
+            NamaFile.WriteLine("");
+            NamaFile.WriteLine("Judul Film"+"               "+"Total Ditonton");
+            while (dr.Read() == true)
+            {
+                NamaFile.WriteLine(dr.GetValue(0) + "        " + dr.GetValue(1));
+            }
+            conn.KoneksiDB.Close();
+            NamaFile.WriteLine("--------------------------------------------------------------");
+            NamaFile.Close();
+
+            // proses mencetak ke printer
+            CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
+            p.KirimkePrinter();
         }
         public override string ToString()
         {

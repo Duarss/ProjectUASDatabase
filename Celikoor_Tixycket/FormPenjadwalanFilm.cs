@@ -44,6 +44,7 @@ namespace Celikoor_Tixycket
 
         private void comboBoxJudulFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dataGridViewPenjadwalanFilm.Rows.Clear();
             selectedFilm = (Film)comboBoxJudulFilm.SelectedItem;
             string dir = Environment.CurrentDirectory;
             dir = dir.Substring(0, dir.Length - 9);
@@ -202,7 +203,6 @@ namespace Celikoor_Tixycket
                         Jadwal_film.TambahData(newJadwal);
                         List<Jadwal_film> listJadwalFilm = Jadwal_film.BacaData("getLastIndex");
 
-                        
                         film.TambahFilmStudio(listStudio[0], listFilm[0]);
                         Film.TambahDataStudioFilm(film);
 

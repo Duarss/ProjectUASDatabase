@@ -115,7 +115,7 @@
             this.label1.Location = new System.Drawing.Point(84, 451);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 44);
+            this.label1.Size = new System.Drawing.Size(268, 44);
             this.label1.TabIndex = 103;
             this.label1.Text = "Indonesian Subtitle:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,7 +135,7 @@
             this.labelBahasa.Location = new System.Drawing.Point(84, 392);
             this.labelBahasa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBahasa.Name = "labelBahasa";
-            this.labelBahasa.Size = new System.Drawing.Size(123, 44);
+            this.labelBahasa.Size = new System.Drawing.Size(202, 44);
             this.labelBahasa.TabIndex = 101;
             this.labelBahasa.Text = "Language:";
             this.labelBahasa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -63,7 +63,7 @@
             this.buttonSimpan.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
             this.buttonSimpan.Location = new System.Drawing.Point(26, 533);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(162, 44);
             this.buttonSimpan.TabIndex = 38;
@@ -78,7 +78,7 @@
             this.buttonKeluar.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
             this.buttonKeluar.Location = new System.Drawing.Point(746, 533);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(162, 44);
             this.buttonKeluar.TabIndex = 39;
@@ -142,7 +142,7 @@
             // 
             this.textBoxSaldoKonsumen.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSaldoKonsumen.Location = new System.Drawing.Point(462, 326);
-            this.textBoxSaldoKonsumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxSaldoKonsumen.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSaldoKonsumen.Name = "textBoxSaldoKonsumen";
             this.textBoxSaldoKonsumen.Size = new System.Drawing.Size(271, 28);
             this.textBoxSaldoKonsumen.TabIndex = 63;
@@ -173,7 +173,7 @@
             // 
             this.dateTimePickerTglLahirKonsumen.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerTglLahirKonsumen.Location = new System.Drawing.Point(420, 272);
-            this.dateTimePickerTglLahirKonsumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerTglLahirKonsumen.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerTglLahirKonsumen.Name = "dateTimePickerTglLahirKonsumen";
             this.dateTimePickerTglLahirKonsumen.Size = new System.Drawing.Size(313, 26);
             this.dateTimePickerTglLahirKonsumen.TabIndex = 60;
@@ -216,7 +216,7 @@
             // 
             this.textBoxNoHpKonsumen.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNoHpKonsumen.Location = new System.Drawing.Point(418, 171);
-            this.textBoxNoHpKonsumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNoHpKonsumen.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNoHpKonsumen.Name = "textBoxNoHpKonsumen";
             this.textBoxNoHpKonsumen.Size = new System.Drawing.Size(315, 28);
             this.textBoxNoHpKonsumen.TabIndex = 56;
@@ -225,7 +225,7 @@
             // 
             this.textBoxPasswordKonsumen.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPasswordKonsumen.Location = new System.Drawing.Point(420, 427);
-            this.textBoxPasswordKonsumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPasswordKonsumen.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPasswordKonsumen.Name = "textBoxPasswordKonsumen";
             this.textBoxPasswordKonsumen.Size = new System.Drawing.Size(313, 28);
             this.textBoxPasswordKonsumen.TabIndex = 55;
@@ -245,7 +245,7 @@
             // 
             this.textBoxUsernameKonsumen.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsernameKonsumen.Location = new System.Drawing.Point(420, 378);
-            this.textBoxUsernameKonsumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxUsernameKonsumen.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUsernameKonsumen.Name = "textBoxUsernameKonsumen";
             this.textBoxUsernameKonsumen.Size = new System.Drawing.Size(313, 28);
             this.textBoxUsernameKonsumen.TabIndex = 53;
@@ -267,7 +267,7 @@
             this.labelTanggalLahir.Location = new System.Drawing.Point(186, 161);
             this.labelTanggalLahir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTanggalLahir.Name = "labelTanggalLahir";
-            this.labelTanggalLahir.Size = new System.Drawing.Size(169, 44);
+            this.labelTanggalLahir.Size = new System.Drawing.Size(166, 44);
             this.labelTanggalLahir.TabIndex = 51;
             this.labelTanggalLahir.Text = "Phone Number:";
             this.labelTanggalLahir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -276,7 +276,7 @@
             // 
             this.textBoxNamaKonsumen.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNamaKonsumen.Location = new System.Drawing.Point(418, 121);
-            this.textBoxNamaKonsumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNamaKonsumen.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNamaKonsumen.Name = "textBoxNamaKonsumen";
             this.textBoxNamaKonsumen.Size = new System.Drawing.Size(315, 28);
             this.textBoxNamaKonsumen.TabIndex = 48;

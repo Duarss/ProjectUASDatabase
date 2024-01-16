@@ -125,6 +125,7 @@ namespace Celikoor_Tixycket
 
         private void buttonLaporan_Click(object sender, EventArgs e)
         {
+            OpenForm(new FormPrint());
         }
         #endregion
 
@@ -203,7 +204,7 @@ namespace Celikoor_Tixycket
         {
             panelButtonMaster.Visible = false;
             panelMaster.Height = 0;
-            panelButtonSystem.Visible = false;
+            panelButtonSystem.Visible = true;
             panelSystem.Height = 0;
             panelButtonTransaction.Visible = false;
             OpenForm(new FormMain());
@@ -385,6 +386,16 @@ namespace Celikoor_Tixycket
         private void buttonFilm_Click(object sender, EventArgs e)
         {
             OpenForm(new FormMasterFilm());
+        }
+
+        private void buttonKasir_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormKasir());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormOperator());
         }
     }
 }

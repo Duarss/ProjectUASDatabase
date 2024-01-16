@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -158,6 +159,33 @@ namespace Celikoor_LIB
             }
 
             else conn.KoneksiDB.Close(); return null;
+        }
+        public static void BacaDataNontonFilmComedy()
+        {
+            string perintah = $"SELECT konsumens.nama, COUNT(invoices.id) as jumlah\r\nFROM invoices\r\nINNER JOIN konsumens on konsumens.id = invoices.konsumens_id\r\nINNER JOIN tikets on tikets.invoices_id = invoices.id\r\nINNER JOIN sesi_films as sesifilms on sesifilms.films_id = tikets.films_id\r\nINNER JOIN film_studio on film_studio.films_id = sesifilms.films_id\r\nINNER JOIN films on films.id = sesifilms.films_id\r\nINNER JOIN genre_film on genre_film.films_id = films.id\r\nINNER JOIN genres on genres.id = genre_film.genres_id\r\nWHERE genres.nama = 'Comedy'\r\nGROUP BY konsumens.nama\r\nLIMIT 10;";
+
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            string nama = "Customer's Watching Comedy_" + DateTime.Now.ToString("yyyyMMddHHmm");
+
+            StreamWriter namaFile = new StreamWriter(nama);
+
+            namaFile.WriteLine("TEN CUSTOMER THAT WATCHED MOST COMEDY FILMS");
+            namaFile.WriteLine();
+            namaFile.WriteLine("ID        CUSTOMERS");
+            namaFile.WriteLine("--------------------------------------------------------------------------------------------");
+            while (dr.Read() == true)
+            {
+                namaFile.WriteLine(dr.GetValue(0) + "      " + dr.GetValue(1));
+            }
+            //kirim list ke pemanggilnya
+            conn.KoneksiDB.Close();
+            namaFile.WriteLine("--------------------------------------------------------------------------------------------");
+            namaFile.WriteLine("Printed On: " + DateTime.Now.ToString("dd-MM-yyyy HH:mm"));
+            namaFile.WriteLine("--------------------------------------------------------------------------------------------");
+            namaFile.Close();
+            CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
+            p.KirimkePrinter();
         }
         public override string ToString()
         {

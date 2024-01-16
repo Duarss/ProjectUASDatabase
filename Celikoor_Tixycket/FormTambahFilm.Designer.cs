@@ -83,7 +83,7 @@
             // textBoxSinopsis
             // 
             this.textBoxSinopsis.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSinopsis.Location = new System.Drawing.Point(324, 174);
+            this.textBoxSinopsis.Location = new System.Drawing.Point(340, 174);
             this.textBoxSinopsis.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSinopsis.Multiline = true;
             this.textBoxSinopsis.Name = "textBoxSinopsis";
@@ -126,7 +126,7 @@
             // textBoxJudul
             // 
             this.textBoxJudul.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJudul.Location = new System.Drawing.Point(324, 124);
+            this.textBoxJudul.Location = new System.Drawing.Point(340, 124);
             this.textBoxJudul.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxJudul.Name = "textBoxJudul";
             this.textBoxJudul.Size = new System.Drawing.Size(321, 32);
@@ -217,7 +217,7 @@
             // textBoxDurasi
             // 
             this.textBoxDurasi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDurasi.Location = new System.Drawing.Point(324, 283);
+            this.textBoxDurasi.Location = new System.Drawing.Point(340, 283);
             this.textBoxDurasi.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDurasi.Name = "textBoxDurasi";
             this.textBoxDurasi.Size = new System.Drawing.Size(321, 32);
@@ -228,7 +228,7 @@
             this.comboBoxKelompokUsia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxKelompokUsia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxKelompokUsia.FormattingEnabled = true;
-            this.comboBoxKelompokUsia.Location = new System.Drawing.Point(324, 336);
+            this.comboBoxKelompokUsia.Location = new System.Drawing.Point(340, 336);
             this.comboBoxKelompokUsia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxKelompokUsia.Name = "comboBoxKelompokUsia";
             this.comboBoxKelompokUsia.Size = new System.Drawing.Size(162, 33);
@@ -240,7 +240,7 @@
             this.labelBahasa.Location = new System.Drawing.Point(80, 384);
             this.labelBahasa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBahasa.Name = "labelBahasa";
-            this.labelBahasa.Size = new System.Drawing.Size(123, 44);
+            this.labelBahasa.Size = new System.Drawing.Size(151, 44);
             this.labelBahasa.TabIndex = 79;
             this.labelBahasa.Text = "Language:";
             this.labelBahasa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -248,7 +248,7 @@
             // textBoxBahasa
             // 
             this.textBoxBahasa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBahasa.Location = new System.Drawing.Point(324, 391);
+            this.textBoxBahasa.Location = new System.Drawing.Point(340, 391);
             this.textBoxBahasa.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBahasa.Name = "textBoxBahasa";
             this.textBoxBahasa.Size = new System.Drawing.Size(321, 32);
@@ -260,7 +260,7 @@
             this.label1.Location = new System.Drawing.Point(80, 433);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 44);
+            this.label1.Size = new System.Drawing.Size(253, 44);
             this.label1.TabIndex = 81;
             this.label1.Text = "Indonesian Subtitle:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -269,7 +269,7 @@
             // 
             this.checkBoxSubIndo.AutoSize = true;
             this.checkBoxSubIndo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxSubIndo.Location = new System.Drawing.Point(324, 447);
+            this.checkBoxSubIndo.Location = new System.Drawing.Point(340, 445);
             this.checkBoxSubIndo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxSubIndo.Name = "checkBoxSubIndo";
             this.checkBoxSubIndo.Size = new System.Drawing.Size(18, 17);
@@ -301,7 +301,7 @@
             // textBoxDiskon
             // 
             this.textBoxDiskon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiskon.Location = new System.Drawing.Point(324, 490);
+            this.textBoxDiskon.Location = new System.Drawing.Point(340, 490);
             this.textBoxDiskon.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDiskon.Name = "textBoxDiskon";
             this.textBoxDiskon.Size = new System.Drawing.Size(162, 32);
@@ -313,7 +313,7 @@
             this.buttonUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpload.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpload.ForeColor = System.Drawing.Color.White;
-            this.buttonUpload.Location = new System.Drawing.Point(336, 736);
+            this.buttonUpload.Location = new System.Drawing.Point(352, 736);
             this.buttonUpload.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUpload.Name = "buttonUpload";
             this.buttonUpload.Size = new System.Drawing.Size(136, 30);
@@ -326,7 +326,7 @@
             // 
             this.pictureBoxCoverImage.BackColor = System.Drawing.Color.NavajoWhite;
             this.pictureBoxCoverImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxCoverImage.Location = new System.Drawing.Point(324, 590);
+            this.pictureBoxCoverImage.Location = new System.Drawing.Point(340, 590);
             this.pictureBoxCoverImage.Name = "pictureBoxCoverImage";
             this.pictureBoxCoverImage.Size = new System.Drawing.Size(162, 185);
             this.pictureBoxCoverImage.TabIndex = 92;
@@ -335,7 +335,7 @@
             // textBoxTahun
             // 
             this.textBoxTahun.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTahun.Location = new System.Drawing.Point(324, 541);
+            this.textBoxTahun.Location = new System.Drawing.Point(340, 541);
             this.textBoxTahun.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTahun.Name = "textBoxTahun";
             this.textBoxTahun.Size = new System.Drawing.Size(162, 32);

@@ -50,7 +50,7 @@
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
             this.buttonKeluar.Location = new System.Drawing.Point(1092, 776);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(148, 50);
             this.buttonKeluar.TabIndex = 84;
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.labelCariBerdasarkan);
             this.panel1.Controls.Add(this.buttonCari);
             this.panel1.Location = new System.Drawing.Point(25, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1215, 88);
             this.panel1.TabIndex = 82;
@@ -76,7 +76,7 @@
             // 
             this.textboxCari.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxCari.Location = new System.Drawing.Point(595, 29);
-            this.textboxCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textboxCari.Margin = new System.Windows.Forms.Padding(4);
             this.textboxCari.Name = "textboxCari";
             this.textboxCari.Size = new System.Drawing.Size(416, 36);
             this.textboxCari.TabIndex = 2;
@@ -91,7 +91,7 @@
             "Kapasitas",
             "Jenis Studio"});
             this.comboboxCari.Location = new System.Drawing.Point(257, 29);
-            this.comboboxCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboboxCari.Margin = new System.Windows.Forms.Padding(4);
             this.comboboxCari.Name = "comboboxCari";
             this.comboboxCari.Size = new System.Drawing.Size(252, 36);
             this.comboboxCari.TabIndex = 1;
@@ -114,7 +114,7 @@
             this.buttonCari.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCari.ForeColor = System.Drawing.Color.White;
             this.buttonCari.Location = new System.Drawing.Point(1041, 19);
-            this.buttonCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCari.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCari.Name = "buttonCari";
             this.buttonCari.Size = new System.Drawing.Size(148, 50);
             this.buttonCari.TabIndex = 77;
@@ -141,6 +141,7 @@
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.AllowUserToResizeColumns = false;
             this.dgvData.AllowUserToResizeRows = false;
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvData.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -152,7 +153,7 @@
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Location = new System.Drawing.Point(25, 178);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -174,7 +175,7 @@
             this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
             this.buttonTambah.Location = new System.Drawing.Point(25, 776);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(148, 50);
             this.buttonTambah.TabIndex = 83;

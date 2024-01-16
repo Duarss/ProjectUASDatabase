@@ -1,4 +1,5 @@
 ﻿using Celikoor_LIB;
+using Celikoor_Tixycket.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,10 +52,11 @@ namespace Celikoor_Tixycket
                 string dir = Environment.CurrentDirectory;
                 dir = Path.Combine(dir.Substring(0, dir.Length - 9), "Resources");
                 string destPath = Path.Combine(dir, newFileName);
-                File.Copy(fileName, destPath);
-                
+                File.Copy(fileName, destPath); // Resources/p16.jpg
+
                 film.Diskon = double.Parse(textBoxDiskon.Text);
                 Film.TambahData(film);
+
                 for (int i = 0; i < dataGridViewGenre.Rows.Count; i++)
                 {
                     string kode = dataGridViewGenre.Rows[i].Cells["id1"].Value.ToString();

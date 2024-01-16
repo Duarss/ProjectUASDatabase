@@ -62,10 +62,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonSystem = new System.Windows.Forms.Button();
             this.panelSystem = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBoxPrint = new System.Windows.Forms.PictureBox();
             this.pictureBoxNote = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSchedule = new System.Windows.Forms.PictureBox();
+            this.buttonKasir = new System.Windows.Forms.Button();
             this.buttonLaporan = new System.Windows.Forms.Button();
+            this.pictureBoxSchedule = new System.Windows.Forms.PictureBox();
             this.buttonPencatatanKedatangan = new System.Windows.Forms.Button();
             this.buttonPenjadwalanFilm = new System.Windows.Forms.Button();
             this.panelButtonTransaction = new System.Windows.Forms.Panel();
@@ -101,6 +105,8 @@
             this.panelButtonSystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSystem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSchedule)).BeginInit();
@@ -495,7 +501,7 @@
             this.panelButtonSystem.Controls.Add(this.buttonSystem);
             this.panelButtonSystem.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButtonSystem.ForeColor = System.Drawing.Color.Transparent;
-            this.panelButtonSystem.Location = new System.Drawing.Point(3, 541);
+            this.panelButtonSystem.Location = new System.Drawing.Point(3, 381);
             this.panelButtonSystem.Name = "panelButtonSystem";
             this.panelButtonSystem.Size = new System.Drawing.Size(250, 45);
             this.panelButtonSystem.TabIndex = 18;
@@ -528,24 +534,63 @@
             // panelSystem
             // 
             this.panelSystem.BackColor = System.Drawing.Color.SandyBrown;
+            this.panelSystem.Controls.Add(this.pictureBox8);
+            this.panelSystem.Controls.Add(this.button1);
+            this.panelSystem.Controls.Add(this.pictureBox7);
             this.panelSystem.Controls.Add(this.pictureBoxPrint);
             this.panelSystem.Controls.Add(this.pictureBoxNote);
-            this.panelSystem.Controls.Add(this.pictureBoxSchedule);
+            this.panelSystem.Controls.Add(this.buttonKasir);
             this.panelSystem.Controls.Add(this.buttonLaporan);
+            this.panelSystem.Controls.Add(this.pictureBoxSchedule);
             this.panelSystem.Controls.Add(this.buttonPencatatanKedatangan);
             this.panelSystem.Controls.Add(this.buttonPenjadwalanFilm);
             this.panelSystem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSystem.Location = new System.Drawing.Point(3, 592);
-            this.panelSystem.MaximumSize = new System.Drawing.Size(250, 141);
+            this.panelSystem.Location = new System.Drawing.Point(3, 432);
+            this.panelSystem.MaximumSize = new System.Drawing.Size(250, 220);
             this.panelSystem.Name = "panelSystem";
-            this.panelSystem.Size = new System.Drawing.Size(250, 141);
+            this.panelSystem.Size = new System.Drawing.Size(250, 220);
             this.panelSystem.TabIndex = 15;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources._operator;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(16, 177);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox8.TabIndex = 23;
+            this.pictureBox8.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 172);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(250, 43);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "        Operator";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.cashier;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(15, 133);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox7.TabIndex = 21;
+            this.pictureBox7.TabStop = false;
             // 
             // pictureBoxPrint
             // 
             this.pictureBoxPrint.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.print;
             this.pictureBoxPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPrint.Location = new System.Drawing.Point(15, 87);
+            this.pictureBoxPrint.Location = new System.Drawing.Point(13, 89);
             this.pictureBoxPrint.Name = "pictureBoxPrint";
             this.pictureBoxPrint.Size = new System.Drawing.Size(40, 38);
             this.pictureBoxPrint.TabIndex = 19;
@@ -561,15 +606,20 @@
             this.pictureBoxNote.TabIndex = 18;
             this.pictureBoxNote.TabStop = false;
             // 
-            // pictureBoxSchedule
+            // buttonKasir
             // 
-            this.pictureBoxSchedule.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.schedule;
-            this.pictureBoxSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxSchedule.Location = new System.Drawing.Point(15, 3);
-            this.pictureBoxSchedule.Name = "pictureBoxSchedule";
-            this.pictureBoxSchedule.Size = new System.Drawing.Size(40, 38);
-            this.pictureBoxSchedule.TabIndex = 17;
-            this.pictureBoxSchedule.TabStop = false;
+            this.buttonKasir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonKasir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonKasir.ForeColor = System.Drawing.Color.White;
+            this.buttonKasir.Location = new System.Drawing.Point(0, 129);
+            this.buttonKasir.Name = "buttonKasir";
+            this.buttonKasir.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonKasir.Size = new System.Drawing.Size(250, 43);
+            this.buttonKasir.TabIndex = 20;
+            this.buttonKasir.Text = "        Cashier";
+            this.buttonKasir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonKasir.UseVisualStyleBackColor = true;
+            this.buttonKasir.Click += new System.EventHandler(this.buttonKasir_Click);
             // 
             // buttonLaporan
             // 
@@ -585,6 +635,16 @@
             this.buttonLaporan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonLaporan.UseVisualStyleBackColor = true;
             this.buttonLaporan.Click += new System.EventHandler(this.buttonLaporan_Click);
+            // 
+            // pictureBoxSchedule
+            // 
+            this.pictureBoxSchedule.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.schedule;
+            this.pictureBoxSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxSchedule.Location = new System.Drawing.Point(15, 3);
+            this.pictureBoxSchedule.Name = "pictureBoxSchedule";
+            this.pictureBoxSchedule.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxSchedule.TabIndex = 17;
+            this.pictureBoxSchedule.TabStop = false;
             // 
             // buttonPencatatanKedatangan
             // 
@@ -623,7 +683,7 @@
             this.panelButtonTransaction.Controls.Add(this.buttonTransaction);
             this.panelButtonTransaction.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButtonTransaction.ForeColor = System.Drawing.Color.Transparent;
-            this.panelButtonTransaction.Location = new System.Drawing.Point(3, 739);
+            this.panelButtonTransaction.Location = new System.Drawing.Point(3, 658);
             this.panelButtonTransaction.Name = "panelButtonTransaction";
             this.panelButtonTransaction.Size = new System.Drawing.Size(250, 45);
             this.panelButtonTransaction.TabIndex = 18;
@@ -659,7 +719,7 @@
             this.panelHome.Controls.Add(this.pictureBoxHome);
             this.panelHome.Controls.Add(this.buttonHome);
             this.panelHome.ForeColor = System.Drawing.Color.Transparent;
-            this.panelHome.Location = new System.Drawing.Point(3, 790);
+            this.panelHome.Location = new System.Drawing.Point(3, 709);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(250, 45);
             this.panelHome.TabIndex = 19;
@@ -804,6 +864,8 @@
             this.panelButtonSystem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelSystem.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSchedule)).EndInit();
@@ -871,5 +933,9 @@
         private System.Windows.Forms.Button buttonCustomer;
         private System.Windows.Forms.PictureBox pictureBoxFilm;
         private System.Windows.Forms.Button buttonFilm;
+        private System.Windows.Forms.Button buttonKasir;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

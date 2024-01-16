@@ -64,7 +64,7 @@ namespace Celikoor_LIB
         //! METHOD UBAH U
         public static void UbahData(Ticket ticket)
         {
-            string perintah = $"UPDATE tikets SET status_hadir='TRUE' WHERE invoices_id='{ticket.NoInvoice.Id}';";
+            string perintah = $"UPDATE tikets SET status_hadir='1' WHERE invoices_id='{ticket.NoInvoice.Id}' and nomor_kursi='{ticket.NoKursi}';";
 
             Koneksi conn = new Koneksi();
             conn.JalankanPerintahQuery(perintah);
@@ -95,7 +95,7 @@ namespace Celikoor_LIB
 
             return barcodeBaru;
         }
-        public static List<Ticket> BacaData(string nomorKursi, Film film, Studio studio, Jadwal_film jadwal_film)
+        public static List<Ticket> BacaDataSpesifik(string nomorKursi="", Film film = null, Studio studio = null, Jadwal_film jadwal_film = null)
         {
             string perintah = $"SELECT * FROM tikets WHERE nomor_kursi = '{nomorKursi}' and films_id = '{film.Id}' and studios_id = '{studio.Id}' and jadwal_film_id = '{jadwal_film.Id}'";
 
@@ -110,7 +110,32 @@ namespace Celikoor_LIB
                 tampung.NoInvoice = Invoices.BacaData("id", dr.GetValue(0).ToString())[0];
                 tampung.NoKursi = dr.GetValue(1).ToString();
                 tampung.StatusHadir = int.Parse(dr.GetValue(2).ToString());
-                //tampung.Operators = Pegawai.BacaData("id", dr.GetValue(3).ToString())[0];
+                //tampung.Operators = Pegawai.BacaDataSpesifik("id", dr.GetValue(3).ToString())[0];
+                tampung.Harga = int.Parse(dr.GetValue(4).ToString());
+                tampung.JadwalFilm = Jadwal_film.BacaData("id", dr.GetValue(5).ToString())[0];
+                tampung.Studio = Studio.BacaData("id", dr.GetValue(6).ToString())[0];
+                tampung.Film = Film.BacaData("id", dr.GetValue(7).ToString())[0];
+                listTiket.Add(tampung);
+            }
+            conn.KoneksiDB.Close();
+            return listTiket;
+        }
+        public static List<Ticket> BacaData(string nomorKursi="", string invoicesId="")
+        {
+            string perintah = $"SELECT * FROM tikets WHERE nomor_kursi = '{nomorKursi}' and invoices_id = '{invoicesId}'";
+
+            List<Ticket> listTiket = new List<Ticket>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+
+            while (dr.Read() == true)
+            {
+                Ticket tampung = new Ticket();
+
+                tampung.NoInvoice = Invoices.BacaData("id", dr.GetValue(0).ToString())[0];
+                tampung.NoKursi = dr.GetValue(1).ToString();
+                tampung.StatusHadir = int.Parse(dr.GetValue(2).ToString());
+                //tampung.Operators = Pegawai.BacaDataSpesifik("id", dr.GetValue(3).ToString())[0];
                 tampung.Harga = int.Parse(dr.GetValue(4).ToString());
                 tampung.JadwalFilm = Jadwal_film.BacaData("id", dr.GetValue(5).ToString())[0];
                 tampung.Studio = Studio.BacaData("id", dr.GetValue(6).ToString())[0];

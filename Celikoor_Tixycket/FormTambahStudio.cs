@@ -22,7 +22,7 @@ namespace Celikoor_Tixycket
         {
             try
             {
-                if(int.Parse(labelCapacity.Text) >= 12 && int.Parse(labelCapacity.Text) % 3 == 0)
+                if(int.Parse(textBoxCapacity.Text) >= 12 && int.Parse(textBoxCapacity.Text) % 3 == 0)
                 {
                     Studio s = new Studio();
                     s.Nama = textBoxNamaStudio.Text;

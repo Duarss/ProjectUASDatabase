@@ -44,7 +44,7 @@
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
             this.buttonKeluar.Location = new System.Drawing.Point(1076, 783);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(157, 50);
             this.buttonKeluar.TabIndex = 78;
@@ -71,6 +71,7 @@
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.AllowUserToResizeColumns = false;
             this.dgvData.AllowUserToResizeRows = false;
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvData.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -82,7 +83,7 @@
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Location = new System.Drawing.Point(31, 74);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -104,7 +105,7 @@
             this.buttonTambah.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
             this.buttonTambah.Location = new System.Drawing.Point(31, 783);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(4);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(148, 50);
             this.buttonTambah.TabIndex = 77;

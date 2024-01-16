@@ -49,10 +49,10 @@
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(554, 349);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(492, 279);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(182, 55);
+            this.buttonKeluar.Size = new System.Drawing.Size(162, 44);
             this.buttonKeluar.TabIndex = 39;
             this.buttonKeluar.Text = "CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -64,10 +64,10 @@
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(23, 349);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonSimpan.Location = new System.Drawing.Point(20, 279);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(182, 55);
+            this.buttonSimpan.Size = new System.Drawing.Size(162, 44);
             this.buttonSimpan.TabIndex = 38;
             this.buttonSimpan.Text = "SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
@@ -78,10 +78,10 @@
             this.labelTambahKelompokUsia.BackColor = System.Drawing.Color.Tan;
             this.labelTambahKelompokUsia.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTambahKelompokUsia.ForeColor = System.Drawing.Color.White;
-            this.labelTambahKelompokUsia.Location = new System.Drawing.Point(27, 27);
+            this.labelTambahKelompokUsia.Location = new System.Drawing.Point(24, 22);
             this.labelTambahKelompokUsia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTambahKelompokUsia.Name = "labelTambahKelompokUsia";
-            this.labelTambahKelompokUsia.Size = new System.Drawing.Size(710, 62);
+            this.labelTambahKelompokUsia.Size = new System.Drawing.Size(631, 50);
             this.labelTambahKelompokUsia.TabIndex = 36;
             this.labelTambahKelompokUsia.Text = "ADD AGE RATED";
             this.labelTambahKelompokUsia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,30 +89,27 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox3.Location = new System.Drawing.Point(23, 309);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(20, 247);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(713, 12);
+            this.pictureBox3.Size = new System.Drawing.Size(634, 10);
             this.pictureBox3.TabIndex = 49;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox2.Location = new System.Drawing.Point(725, 27);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(644, 22);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(12, 286);
+            this.pictureBox2.Size = new System.Drawing.Size(11, 229);
             this.pictureBox2.TabIndex = 48;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(11, 294);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 235);
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             // 
@@ -122,10 +119,10 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(80, -121);
+            this.label3.Location = new System.Drawing.Point(71, -97);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(860, 62);
+            this.label3.Size = new System.Drawing.Size(764, 50);
             this.label3.TabIndex = 46;
             this.label3.Text = "TAMBAH KONSUMEN";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,28 +130,28 @@
             // textBoxKelompokUsia
             // 
             this.textBoxKelompokUsia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxKelompokUsia.Location = new System.Drawing.Point(343, 178);
-            this.textBoxKelompokUsia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxKelompokUsia.Location = new System.Drawing.Point(288, 141);
+            this.textBoxKelompokUsia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxKelompokUsia.Name = "textBoxKelompokUsia";
-            this.textBoxKelompokUsia.Size = new System.Drawing.Size(247, 36);
+            this.textBoxKelompokUsia.Size = new System.Drawing.Size(220, 32);
             this.textBoxKelompokUsia.TabIndex = 51;
             // 
             // labelKelompokUsia
             // 
             this.labelKelompokUsia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKelompokUsia.Location = new System.Drawing.Point(169, 168);
+            this.labelKelompokUsia.Location = new System.Drawing.Point(73, 134);
             this.labelKelompokUsia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelKelompokUsia.Name = "labelKelompokUsia";
-            this.labelKelompokUsia.Size = new System.Drawing.Size(146, 55);
+            this.labelKelompokUsia.Size = new System.Drawing.Size(207, 44);
             this.labelKelompokUsia.TabIndex = 54;
             this.labelKelompokUsia.Text = "Age Rated:";
-            this.labelKelompokUsia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelKelompokUsia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormTambahKelompok
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 425);
+            this.ClientSize = new System.Drawing.Size(676, 340);
             this.Controls.Add(this.labelKelompokUsia);
             this.Controls.Add(this.textBoxKelompokUsia);
             this.Controls.Add(this.pictureBox3);
@@ -165,7 +162,6 @@
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.labelTambahKelompokUsia);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormTambahKelompok";
             this.Text = "TIXIE";
             this.Load += new System.EventHandler(this.FormTambahKelompok_Load);

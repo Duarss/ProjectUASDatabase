@@ -51,6 +51,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customization\CustomComboBox.cs">
@@ -67,6 +70,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
     </Compile>
+    <Compile Include="FormKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKasir.Designer.cs">
+      <DependentUpon>FormKasir.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +88,12 @@
     <Compile Include="FormMasterFilm.Designer.cs">
       <DependentUpon>FormMasterFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOperator.Designer.cs">
+      <DependentUpon>FormOperator.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPemesananTiket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +105,12 @@
     </Compile>
     <Compile Include="FormPenjadwalanFilm.Designer.cs">
       <DependentUpon>FormPenjadwalanFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrint.Designer.cs">
+      <DependentUpon>FormPrint.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProfile.cs">
       <SubType>Form</SubType>
@@ -255,6 +276,9 @@
     <EmbeddedResource Include="Customization\CustomTextbox.resx">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormKasir.resx">
+      <DependentUpon>FormKasir.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,11 +312,17 @@
     <EmbeddedResource Include="FormMasterStudio.resx">
       <DependentUpon>FormMasterStudio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOperator.resx">
+      <DependentUpon>FormOperator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPemesananTiket.resx">
       <DependentUpon>FormPemesananTiket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPenjadwalanFilm.resx">
       <DependentUpon>FormPenjadwalanFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrint.resx">
+      <DependentUpon>FormPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
@@ -354,6 +384,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>db.Designer.cs</LastGenOutput>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -445,6 +476,8 @@
     <None Include="Resources\Discount_Banner_4.png" />
     <None Include="Resources\movie.png" />
     <None Include="Resources\eye.png" />
+    <None Include="Resources\cashier.png" />
+    <None Include="Resources\operator.png" />
     <Content Include="Resources\p11.jpg" />
     <Content Include="Resources\p12.jpg" />
     <Content Include="Resources\schedule.png" />

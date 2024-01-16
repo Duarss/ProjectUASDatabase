@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,7 +53,7 @@ namespace Celikoor_LIB
         //! METHOD DELETE D
         public static void HapusData(string idHapus)
         {
-            string perintah = $"DELETE FROM cinemas WHERE filter='{idHapus}'";
+            string perintah = $"DELETE FROM cinemas WHERE id='{idHapus}'";
 
             Koneksi conn = new Koneksi();
             conn.JalankanPerintahQuery(perintah);
@@ -71,7 +72,7 @@ namespace Celikoor_LIB
             }
             else
             {
-                perintah = $"SELECT * FROM cinemas WHERE {filter} like '%{nilai}%'";
+                perintah = $"SELECT * FROM cinemas WHERE {filter} = '{nilai}'";
             }
 
             List<Cinema> listCinema = new List<Cinema>();
@@ -93,6 +94,34 @@ namespace Celikoor_LIB
             //kirim list ke pemanggilnya
             conn.KoneksiDB.Close();
             return listCinema;
+        }
+        public static void BacaTigaPeringkatAtas()
+        {
+            string perintah = $"SELECT cinemas.nama_cabang as 'Nama Cabang' , SUM(tikets.harga) as 'Total'\r\nFROM tikets\r\nINNER JOIN sesi_films on sesi_films.films_id = tikets.films_id\r\nINNER JOIN film_studio on film_studio.films_id = sesi_films.films_id\r\nINNER JOIN studios on studios.id = film_studio.studios_id\r\nINNER JOIN cinemas on cinemas.id = studios.cinemas_id\r\nGROUP BY cinemas.nama_cabang\r\nORDER BY SUM(tikets.harga) desc;";
+
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            string nama = "Omzet Penjualan Tiket_" + DateTime.Now.ToString("yyyyMMddHHmm");
+
+            StreamWriter namaFile = new StreamWriter(nama);
+
+            namaFile.WriteLine("LAPORAN OMZET PENJUALAN TIKET TERTINGGI BERDASARKAN CABANG CINEMA");
+            namaFile.WriteLine();
+            namaFile.WriteLine("NAMA CABANG      TOTAL");
+            namaFile.WriteLine("---------------------------------------------------------------------");
+            while (dr.Read() == true)
+            {
+                namaFile.WriteLine(dr.GetValue(0) + "   " + dr.GetValue(1));
+            }
+            //kirim list ke pemanggilnya
+            conn.KoneksiDB.Close();
+            namaFile.WriteLine("---------------------------------------------------------------------");
+            namaFile.WriteLine("Tanggal cetak: " + DateTime.Now.ToString("dd-MM-yyyy HH:mm"));
+            namaFile.WriteLine("---------------------------------------------------------------------");
+            namaFile.Close();
+
+            CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
+            p.KirimkePrinter();
         }
         public override string ToString()
         {

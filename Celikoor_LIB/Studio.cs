@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -119,7 +120,7 @@ namespace Celikoor_LIB
                 if (dr.GetValue(4).ToString() != "")
                 {
                     tampung.Cinema.Id = int.Parse(dr.GetValue(4).ToString());
-                    List<Cinema> listItem = Cinema.BacaData(tampung.Cinema.Id.ToString());
+                    List<Cinema> listItem = Cinema.BacaData("id", tampung.Cinema.Id.ToString());
                     tampung.Cinema = listItem[0];
                 }
                 tampung.Harga_weekday = int.Parse(dr.GetValue(5).ToString());
@@ -128,6 +129,48 @@ namespace Celikoor_LIB
             }
             conn.KoneksiDB.Close();
             return listStudio;
+        }
+        public static void BacaDataUtilitasTerendah()
+        {
+            string perintah = $"SELECT cinemas.nama_cabang as 'Nama Cabang', studios.id as 'Studio Id', Monthname(invoices.tanggal) as Month, " +
+                $"(SELECT SUM(studios.kapasitas)) - COUNT(tikets.status_hadir) as Jumlah FROM invoices " +
+                $"INNER JOIN tikets on tikets.invoices_id = invoices_id " +
+                $"INNER JOIN sesi_films on sesi_films.films_id = tikets.films_id " +
+                $"INNER JOIN film_studio on film_studio.films_id = sesi_films.films_id " +
+                $"INNER JOIN studios on studios.id = film_studio.studios_id " +
+                $"INNER JOIN cinemas on cinemas.id = studios.cinemas_id " +
+                $"WHERE tikets.status_hadir = '0' " +
+                $"GROUP BY cinemas.nama_cabang, studios.id, Month " +
+                $"order by Month desc;";
+
+            Koneksi conn = new Koneksi();
+
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            string nama = "Studio Lowest Utilities_" + DateTime.Now.ToString("yyyyMMddHHmm");
+
+            StreamWriter namaFile = new StreamWriter(nama);
+
+
+            namaFile.WriteLine("THREE STUDIOS WITH THE LOWEST UTILITIES ALONG WITH THE CINEMA's NAME");
+            namaFile.WriteLine();
+            namaFile.WriteLine("CINEMA       STUDIO        MONTH        JUMLAH");
+            namaFile.WriteLine("--------------------------------------------------------------------------------------------");
+            while (dr.Read())
+            {
+                namaFile.WriteLine(dr.GetValue(0) + "      " + Studio.BacaData("id", dr.GetValue(1).ToString())[0].Nama + "          " + dr.GetValue(2) + "       " + dr.GetValue(3));
+            }
+            namaFile.WriteLine("--------------------------------------------------------------------------------------------");
+            namaFile.WriteLine("Printed On: " + DateTime.Now.ToString("dd-MM-yyyy HH:mm"));
+            namaFile.WriteLine("--------------------------------------------------------------------------------------------");
+            namaFile.Close();
+
+            CustomPrint p = new CustomPrint(new System.Drawing.Font("courier new", 12), nama);
+            p.KirimkePrinter();
+            conn.KoneksiDB.Close();
+        }
+        public static void CetakStudioLowUtilities()
+        {
+            
         }
         public override string ToString()
         {

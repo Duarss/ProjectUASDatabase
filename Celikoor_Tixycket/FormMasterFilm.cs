@@ -45,14 +45,6 @@ namespace Celikoor_Tixycket
                 btnHapus.Name = "buttonHapusGrid"; //nama objek button
                 dgvData.Columns.Add(btnHapus); //tambahkan button ke grid              
             }
-
-            foreach (DataGridViewColumn column in dgvData.Columns)
-            {
-                if (column.Name != "Id" && column.Name != "buttonUpdateGrid" && column.Name != "buttonHapusGrid")
-                {
-                    column.Width = 94;
-                }
-            }
         }
 
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -47,30 +47,27 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox3.Location = new System.Drawing.Point(61, 416);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(54, 333);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(879, 12);
+            this.pictureBox3.Size = new System.Drawing.Size(781, 10);
             this.pictureBox3.TabIndex = 59;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox2.Location = new System.Drawing.Point(931, 37);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(828, 30);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(11, 391);
+            this.pictureBox2.Size = new System.Drawing.Size(10, 313);
             this.pictureBox2.TabIndex = 58;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(11, 391);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 313);
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
             // 
@@ -79,10 +76,10 @@
             this.labelTambahJenisStudio.BackColor = System.Drawing.Color.Tan;
             this.labelTambahJenisStudio.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTambahJenisStudio.ForeColor = System.Drawing.Color.White;
-            this.labelTambahJenisStudio.Location = new System.Drawing.Point(54, 37);
+            this.labelTambahJenisStudio.Location = new System.Drawing.Point(48, 30);
             this.labelTambahJenisStudio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTambahJenisStudio.Name = "labelTambahJenisStudio";
-            this.labelTambahJenisStudio.Size = new System.Drawing.Size(885, 62);
+            this.labelTambahJenisStudio.Size = new System.Drawing.Size(787, 50);
             this.labelTambahJenisStudio.TabIndex = 56;
             this.labelTambahJenisStudio.Text = "ADD STUDIO TYPE";
             this.labelTambahJenisStudio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,10 +90,10 @@
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(760, 457);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(676, 366);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(182, 55);
+            this.buttonKeluar.Size = new System.Drawing.Size(162, 44);
             this.buttonKeluar.TabIndex = 55;
             this.buttonKeluar.Text = "CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -108,10 +105,10 @@
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(54, 457);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonSimpan.Location = new System.Drawing.Point(48, 366);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(182, 55);
+            this.buttonSimpan.Size = new System.Drawing.Size(162, 44);
             this.buttonSimpan.TabIndex = 54;
             this.buttonSimpan.Text = "SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
@@ -120,60 +117,61 @@
             // textBoxDeskripsi
             // 
             this.textBoxDeskripsi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDeskripsi.Location = new System.Drawing.Point(476, 217);
-            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxDeskripsi.Location = new System.Drawing.Point(423, 174);
+            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxDeskripsi.Multiline = true;
             this.textBoxDeskripsi.Name = "textBoxDeskripsi";
-            this.textBoxDeskripsi.Size = new System.Drawing.Size(398, 136);
+            this.textBoxDeskripsi.Size = new System.Drawing.Size(354, 110);
             this.textBoxDeskripsi.TabIndex = 63;
             // 
             // labelDeskripsi
             // 
             this.labelDeskripsi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeskripsi.Location = new System.Drawing.Point(471, 157);
+            this.labelDeskripsi.Location = new System.Drawing.Point(331, 126);
             this.labelDeskripsi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDeskripsi.Name = "labelDeskripsi";
-            this.labelDeskripsi.Size = new System.Drawing.Size(161, 55);
+            this.labelDeskripsi.Size = new System.Drawing.Size(219, 44);
             this.labelDeskripsi.TabIndex = 62;
             this.labelDeskripsi.Text = "Description:";
-            this.labelDeskripsi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelDeskripsi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBoxJenisStudio
             // 
             this.textBoxJenisStudio.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxJenisStudio.Location = new System.Drawing.Point(127, 217);
-            this.textBoxJenisStudio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxJenisStudio.Location = new System.Drawing.Point(113, 174);
+            this.textBoxJenisStudio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxJenisStudio.Name = "textBoxJenisStudio";
-            this.textBoxJenisStudio.Size = new System.Drawing.Size(256, 36);
+            this.textBoxJenisStudio.Size = new System.Drawing.Size(228, 32);
             this.textBoxJenisStudio.TabIndex = 61;
             // 
             // labelJenisStudio
             // 
             this.labelJenisStudio.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJenisStudio.Location = new System.Drawing.Point(122, 157);
+            this.labelJenisStudio.Location = new System.Drawing.Point(55, 126);
             this.labelJenisStudio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelJenisStudio.Name = "labelJenisStudio";
-            this.labelJenisStudio.Size = new System.Drawing.Size(166, 55);
+            this.labelJenisStudio.Size = new System.Drawing.Size(191, 44);
             this.labelJenisStudio.TabIndex = 60;
             this.labelJenisStudio.Text = "Studio Type:";
-            this.labelJenisStudio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelJenisStudio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormTambahJenisStudio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 548);
+            this.ClientSize = new System.Drawing.Size(885, 438);
             this.Controls.Add(this.textBoxDeskripsi);
             this.Controls.Add(this.labelDeskripsi);
             this.Controls.Add(this.textBoxJenisStudio);
-            this.Controls.Add(this.labelJenisStudio);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelTambahJenisStudio);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonSimpan);
+            this.Controls.Add(this.labelJenisStudio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormTambahJenisStudio";
             this.Text = "TIXIE";
             this.Load += new System.EventHandler(this.FormTambahJenisStudio_Load);

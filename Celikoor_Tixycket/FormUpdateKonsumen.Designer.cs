@@ -56,10 +56,10 @@
             // labelTglLahir
             // 
             this.labelTglLahir.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTglLahir.Location = new System.Drawing.Point(213, 288);
+            this.labelTglLahir.Location = new System.Drawing.Point(195, 290);
             this.labelTglLahir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTglLahir.Name = "labelTglLahir";
-            this.labelTglLahir.Size = new System.Drawing.Size(148, 44);
+            this.labelTglLahir.Size = new System.Drawing.Size(183, 44);
             this.labelTglLahir.TabIndex = 83;
             this.labelTglLahir.Text = "Date Of Birth:";
             this.labelTglLahir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -68,7 +68,7 @@
             // 
             this.dateTimePickerTglLahirKonsumen.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerTglLahirKonsumen.Location = new System.Drawing.Point(426, 298);
-            this.dateTimePickerTglLahirKonsumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerTglLahirKonsumen.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerTglLahirKonsumen.Name = "dateTimePickerTglLahirKonsumen";
             this.dateTimePickerTglLahirKonsumen.Size = new System.Drawing.Size(313, 26);
             this.dateTimePickerTglLahirKonsumen.TabIndex = 82;
@@ -76,10 +76,10 @@
             // labelGender
             // 
             this.labelGender.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGender.Location = new System.Drawing.Point(213, 231);
+            this.labelGender.Location = new System.Drawing.Point(195, 233);
             this.labelGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(89, 44);
+            this.labelGender.Size = new System.Drawing.Size(124, 44);
             this.labelGender.TabIndex = 79;
             this.labelGender.Text = "Gender:";
             this.labelGender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,7 +88,7 @@
             // 
             this.textBoxNoHpKonsumen.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNoHpKonsumen.Location = new System.Drawing.Point(426, 187);
-            this.textBoxNoHpKonsumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNoHpKonsumen.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNoHpKonsumen.Name = "textBoxNoHpKonsumen";
             this.textBoxNoHpKonsumen.Size = new System.Drawing.Size(315, 28);
             this.textBoxNoHpKonsumen.TabIndex = 78;
@@ -96,10 +96,10 @@
             // labelNoHp
             // 
             this.labelNoHp.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoHp.Location = new System.Drawing.Point(213, 177);
+            this.labelNoHp.Location = new System.Drawing.Point(195, 179);
             this.labelNoHp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNoHp.Name = "labelNoHp";
-            this.labelNoHp.Size = new System.Drawing.Size(169, 44);
+            this.labelNoHp.Size = new System.Drawing.Size(204, 44);
             this.labelNoHp.TabIndex = 73;
             this.labelNoHp.Text = "Phone Number:";
             this.labelNoHp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,7 +108,7 @@
             // 
             this.textBoxNamaKonsumen.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNamaKonsumen.Location = new System.Drawing.Point(426, 137);
-            this.textBoxNamaKonsumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNamaKonsumen.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNamaKonsumen.Name = "textBoxNamaKonsumen";
             this.textBoxNamaKonsumen.Size = new System.Drawing.Size(315, 28);
             this.textBoxNamaKonsumen.TabIndex = 72;
@@ -116,10 +116,10 @@
             // labelNama
             // 
             this.labelNama.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNama.Location = new System.Drawing.Point(213, 128);
+            this.labelNama.Location = new System.Drawing.Point(195, 130);
             this.labelNama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(75, 44);
+            this.labelNama.Size = new System.Drawing.Size(110, 44);
             this.labelNama.TabIndex = 71;
             this.labelNama.Text = "Name:";
             this.labelNama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,7 +172,7 @@
             this.buttonSimpan.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
             this.buttonSimpan.Location = new System.Drawing.Point(26, 526);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(162, 44);
             this.buttonSimpan.TabIndex = 65;
@@ -187,7 +187,7 @@
             this.buttonKeluar.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
             this.buttonKeluar.Location = new System.Drawing.Point(746, 526);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(162, 44);
             this.buttonKeluar.TabIndex = 66;
@@ -209,10 +209,10 @@
             // labelSaldo
             // 
             this.labelSaldo.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaldo.Location = new System.Drawing.Point(213, 341);
+            this.labelSaldo.Location = new System.Drawing.Point(195, 343);
             this.labelSaldo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.Size = new System.Drawing.Size(95, 44);
+            this.labelSaldo.Size = new System.Drawing.Size(130, 44);
             this.labelSaldo.TabIndex = 84;
             this.labelSaldo.Text = "Balance:";
             this.labelSaldo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,10 +231,10 @@
             // labelUsername
             // 
             this.labelUsername.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(213, 393);
+            this.labelUsername.Location = new System.Drawing.Point(195, 395);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(118, 44);
+            this.labelUsername.Size = new System.Drawing.Size(153, 44);
             this.labelUsername.TabIndex = 74;
             this.labelUsername.Text = "Username:";
             this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

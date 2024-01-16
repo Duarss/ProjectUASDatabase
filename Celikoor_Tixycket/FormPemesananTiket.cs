@@ -51,7 +51,7 @@ namespace Celikoor_Tixycket
                     newCheckBox.Text = seatNumber.ToString();
                     newCheckBox.Name = sectionSeat + seatNumber.ToString();
                     listJadwalFilm = Jadwal_film.CekKetersediaanJadwal(jadwal_film, selectedFilm, selectedStudio, "spesifik");
-                    List<Ticket> listTiket = Ticket.BacaData(newCheckBox.Name, selectedFilm, selectedStudio, listJadwalFilm[0]);
+                    List<Ticket> listTiket = Ticket.BacaDataSpesifik(newCheckBox.Name, selectedFilm, selectedStudio, listJadwalFilm[0]);
                     
                     if(listTiket.Count > 0)
                     {
@@ -74,7 +74,7 @@ namespace Celikoor_Tixycket
             SetupCheckBoxEvents();
             labelSisaKursi.Text = "sisa " + currentCapacity.ToString() + " kursi";
             labelJumlahKursi.Text = capacity + " kursi";
-            labelNominalSaldo.Text = "Rp. " + formUtama.konsumenLogin.Saldo.ToString();
+            labelNominalSaldo.Text = formUtama.konsumenLogin.Saldo.ToString();
         }
         private void DeleteAllSeat()
         {
@@ -103,6 +103,10 @@ namespace Celikoor_Tixycket
             {
                 DeleteAllSeat();
                 LayoutTempatDuduk();
+                labelKursi.Text = "Kursi:";
+                labelNominalTotal.Text = "0";
+                labelNominalTotalAkhir.Text = "0";
+                labelNominalDiskon.Text = "0";
             }
         }
         private void FormPemesananTiket_Load(object sender, EventArgs e)

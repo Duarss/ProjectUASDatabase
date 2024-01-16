@@ -55,18 +55,18 @@ namespace Celikoor_LIB
         }
 
         //! METHOD UPDATE U
-        public static void UbahData(Invoices invoice, bool isPaid)
+        public static void UbahData(string id, bool isPaid)
         {
             string perintah;
 
             if (!isPaid)
             {
-                perintah = $"UPDATE invoices SET status='VALIDASI' WHERE id='{invoice.Id}';";
+                perintah = $"UPDATE invoices SET status='VALIDASI' WHERE id='{id}';";
             }
 
             else
             {
-                perintah = $"UPDATE invoices SET status='TERBAYAR' WHERE id='{invoice.Id}';";
+                perintah = $"UPDATE invoices SET status='TERBAYAR' WHERE id='{id}';";
             }
 
             Koneksi conn = new Koneksi();
@@ -80,7 +80,6 @@ namespace Celikoor_LIB
             string invoiceBaru = "001";
 
             string perintah = $"SELECT * FROM invoices " +
-                $"\nWHERE tanggal=current_date " +
                 $"\norder by invoices desc " +
                 $"\nlimit 1;";
 
@@ -125,7 +124,13 @@ namespace Celikoor_LIB
                 tampung.Grand_total = int.Parse(dr.GetValue(2).ToString());
                 tampung.Diskon_nominal = int.Parse(dr.GetValue(3).ToString());
                 tampung.Penonton = Konsumen.BacaData("id", dr.GetValue(4).ToString())[0];
-                //tampung.Kasir = Pegawai.BacaData("id", dr.GetValue(5).ToString())[0];
+                Pegawai kasir = new Pegawai();
+                if (dr.GetValue(5).ToString() != "")
+                {
+                    tampung.Kasir.Id = int.Parse(dr.GetValue(5).ToString());
+                    List<Pegawai> listItem = Pegawai.BacaData(tampung.Kasir.Id.ToString());
+                    tampung.Kasir = listItem[0];
+                }
                 tampung.Status = dr.GetValue(6).ToString();
                 listInvoices.Add(tampung);
             }
