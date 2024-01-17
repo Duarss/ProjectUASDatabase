@@ -234,6 +234,42 @@ namespace Celikoor_LIB
             conn.KoneksiDB.Close();
             return listFilm;
         }
+        public static List<Film> BacaDataFilmAdaSesi(string filter = "", string nilai = "")
+        {
+            string perintah = $"SELECT DISTINCT f.id, f.judul, f.sinopsis, f.tahun, f.durasi, f.kelompoks_id, f.bahasa, f.is_sub_indo, f.cover_image, f.diskon_nominal FROM sesi_films sf inner join films f on sf.films_id = f.id";
+            
+            //MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            List<Film> listFilm = new List<Film>();
+            Koneksi conn = new Koneksi();
+            MySqlDataReader dr = conn.JalankanPerintahSelect(perintah);
+            while (dr.Read() == true)
+            {
+                Film tampung = new Film();
+                tampung.Id = int.Parse(dr.GetValue(0).ToString());
+                tampung.Judul = dr.GetValue(1).ToString();
+                tampung.Sinopsis = dr.GetValue(2).ToString();
+                tampung.Tahun = int.Parse(dr.GetValue(3).ToString());
+                tampung.Durasi = int.Parse(dr.GetValue(4).ToString());
+
+                tampung.KelompokUsia = new Kelompok();
+                if (dr.GetValue(5).ToString() != "")
+                {
+                    tampung.KelompokUsia.Id = int.Parse(dr.GetValue(5).ToString());
+                    int num = tampung.KelompokUsia.Id;
+                    List<Kelompok> listKel = Kelompok.BacaData(tampung.KelompokUsia.Id.ToString());
+                    tampung.KelompokUsia = listKel[0];
+                }
+                tampung.Bahasa = dr.GetValue(6).ToString();
+                tampung.Is_sub_indo = int.Parse(dr.GetValue(7).ToString());
+                tampung.CoverImage = dr.GetValue(8).ToString();
+                tampung.Diskon = double.Parse(dr.GetValue(9).ToString());
+
+                listFilm.Add(tampung);
+            }
+            conn.KoneksiDB.Close();
+            return listFilm;
+        }
         public static List<Genre_film> BacaDataDetailGenreFilm(string filter = "", string nilai = "")
         {
             string perintah;

@@ -365,7 +365,7 @@ namespace Celikoor_Tixycket
         private void FormMain_Load(object sender, EventArgs e)
         {
             formUtama = (FormUtama)this.Owner;
-            listFilms = Film.BacaData();
+            listFilms = Film.BacaData(); //diganti
             maxIndex = listFilms.Count;
 
             if(listFilms.Count() < 5)

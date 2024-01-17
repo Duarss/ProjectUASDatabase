@@ -33,7 +33,14 @@ namespace Celikoor_Tixycket
 
         private void save()
         {
-            
+            PrintDialog pd = new PrintDialog();
+            PrintDocument pDoc = new PrintDocument();
+            pDoc.PrintPage += printBarcode;
+            pd.Document = pDoc;
+            if (pd.ShowDialog() == DialogResult.OK)
+            {
+                pDoc.Print();
+            }
         }
 
         private void printBarcode(object sender, PrintPageEventArgs e)
@@ -146,14 +153,7 @@ namespace Celikoor_Tixycket
                                 barcodeString = listTiket[i].NoInvoice.Id.ToString().PadLeft(3, '0') + $"{listTiket[i].NoKursi}";
                                 Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
                                 pictureBox1.Image = barcode.Draw(barcodeString, 50);
-                                PrintDialog pd = new PrintDialog();
-                                PrintDocument pDoc = new PrintDocument();
-                                pDoc.PrintPage += printBarcode;
-                                pd.Document = pDoc;
-                                if (pd.ShowDialog() == DialogResult.OK)
-                                {
-                                    pDoc.Print();
-                                }
+                                save();
                             }
                             //refresh form master
                             FormKasir_Load(this, e);
