@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPenjadwalanFilm));
             this.pictureBoxCoverImage = new System.Windows.Forms.PictureBox();
             this.comboBoxStudio = new System.Windows.Forms.ComboBox();
             this.comboBoxCinema = new System.Windows.Forms.ComboBox();
@@ -59,12 +60,12 @@
             this.labelNominalHargaWeekend = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewPenjadwalanFilm = new System.Windows.Forms.DataGridView();
+            this.buttonTambah = new System.Windows.Forms.Button();
             this.judulFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cinema = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonTambah = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverImage)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelData.SuspendLayout();
@@ -75,9 +76,10 @@
             // 
             this.pictureBoxCoverImage.BackColor = System.Drawing.Color.NavajoWhite;
             this.pictureBoxCoverImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxCoverImage.Location = new System.Drawing.Point(407, 12);
+            this.pictureBoxCoverImage.Location = new System.Drawing.Point(458, 15);
+            this.pictureBoxCoverImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxCoverImage.Name = "pictureBoxCoverImage";
-            this.pictureBoxCoverImage.Size = new System.Drawing.Size(315, 420);
+            this.pictureBoxCoverImage.Size = new System.Drawing.Size(354, 525);
             this.pictureBoxCoverImage.TabIndex = 44;
             this.pictureBoxCoverImage.TabStop = false;
             // 
@@ -87,9 +89,10 @@
             this.comboBoxStudio.Enabled = false;
             this.comboBoxStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStudio.FormattingEnabled = true;
-            this.comboBoxStudio.Location = new System.Drawing.Point(133, 64);
+            this.comboBoxStudio.Location = new System.Drawing.Point(150, 80);
+            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxStudio.Name = "comboBoxStudio";
-            this.comboBoxStudio.Size = new System.Drawing.Size(79, 26);
+            this.comboBoxStudio.Size = new System.Drawing.Size(88, 30);
             this.comboBoxStudio.TabIndex = 53;
             this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
             // 
@@ -98,9 +101,10 @@
             this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Location = new System.Drawing.Point(133, 28);
+            this.comboBoxCinema.Location = new System.Drawing.Point(150, 35);
+            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(216, 26);
+            this.comboBoxCinema.Size = new System.Drawing.Size(242, 30);
             this.comboBoxCinema.TabIndex = 52;
             this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
@@ -109,9 +113,10 @@
             this.comboBoxJudulFilm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxJudulFilm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxJudulFilm.FormattingEnabled = true;
-            this.comboBoxJudulFilm.Location = new System.Drawing.Point(133, 230);
+            this.comboBoxJudulFilm.Location = new System.Drawing.Point(150, 288);
+            this.comboBoxJudulFilm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxJudulFilm.Name = "comboBoxJudulFilm";
-            this.comboBoxJudulFilm.Size = new System.Drawing.Size(216, 26);
+            this.comboBoxJudulFilm.Size = new System.Drawing.Size(242, 30);
             this.comboBoxJudulFilm.TabIndex = 51;
             this.comboBoxJudulFilm.SelectedIndexChanged += new System.EventHandler(this.comboBoxJudulFilm_SelectedIndexChanged);
             // 
@@ -122,9 +127,9 @@
             this.labelNominalHargaWeekday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNominalHargaWeekday.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNominalHargaWeekday.ForeColor = System.Drawing.Color.Black;
-            this.labelNominalHargaWeekday.Location = new System.Drawing.Point(229, 151);
+            this.labelNominalHargaWeekday.Location = new System.Drawing.Point(258, 189);
             this.labelNominalHargaWeekday.Name = "labelNominalHargaWeekday";
-            this.labelNominalHargaWeekday.Size = new System.Drawing.Size(17, 20);
+            this.labelNominalHargaWeekday.Size = new System.Drawing.Size(22, 25);
             this.labelNominalHargaWeekday.TabIndex = 50;
             this.labelNominalHargaWeekday.Text = "-";
             this.labelNominalHargaWeekday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,9 +141,9 @@
             this.labelHarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelHarga.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHarga.ForeColor = System.Drawing.Color.Black;
-            this.labelHarga.Location = new System.Drawing.Point(41, 151);
+            this.labelHarga.Location = new System.Drawing.Point(46, 189);
             this.labelHarga.Name = "labelHarga";
-            this.labelHarga.Size = new System.Drawing.Size(148, 20);
+            this.labelHarga.Size = new System.Drawing.Size(186, 25);
             this.labelHarga.TabIndex = 49;
             this.labelHarga.Text = "Weekday Price";
             this.labelHarga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,19 +155,20 @@
             this.labelJenisStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelJenisStudio.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJenisStudio.ForeColor = System.Drawing.Color.Black;
-            this.labelJenisStudio.Location = new System.Drawing.Point(95, 120);
+            this.labelJenisStudio.Location = new System.Drawing.Point(81, 150);
             this.labelJenisStudio.Name = "labelJenisStudio";
-            this.labelJenisStudio.Size = new System.Drawing.Size(117, 20);
+            this.labelJenisStudio.Size = new System.Drawing.Size(152, 25);
             this.labelJenisStudio.TabIndex = 47;
-            this.labelJenisStudio.Text = "jenisStudio";
+            this.labelJenisStudio.Text = "Studio Type";
             this.labelJenisStudio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dateTimePicker
             // 
             this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(133, 271);
+            this.dateTimePicker.Location = new System.Drawing.Point(150, 339);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(216, 27);
+            this.dateTimePicker.Size = new System.Drawing.Size(242, 31);
             this.dateTimePicker.TabIndex = 44;
             // 
             // label3
@@ -172,9 +178,9 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(49, 66);
+            this.label3.Location = new System.Drawing.Point(55, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(96, 25);
             this.label3.TabIndex = 43;
             this.label3.Text = "Studio:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,9 +192,9 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(41, 28);
+            this.label2.Location = new System.Drawing.Point(46, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(107, 25);
             this.label2.TabIndex = 42;
             this.label2.Text = "Cinema:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,9 +206,9 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(19, 275);
+            this.label1.Location = new System.Drawing.Point(21, 344);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 20);
+            this.label1.Size = new System.Drawing.Size(134, 25);
             this.label1.TabIndex = 41;
             this.label1.Text = "Day/Date:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -214,9 +220,9 @@
             this.labelJudul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelJudul.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJudul.ForeColor = System.Drawing.Color.Black;
-            this.labelJudul.Location = new System.Drawing.Point(68, 234);
+            this.labelJudul.Location = new System.Drawing.Point(76, 292);
             this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(59, 20);
+            this.labelJudul.Size = new System.Drawing.Size(72, 25);
             this.labelJudul.TabIndex = 40;
             this.labelJudul.Text = "Title:";
             this.labelJudul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,12 +233,12 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1104, 788);
+            this.button1.Location = new System.Drawing.Point(1242, 985);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 39);
+            this.button1.Size = new System.Drawing.Size(161, 49);
             this.button1.TabIndex = 46;
-            this.button1.Text = "KELUAR";
+            this.button1.Text = "&CLOSE";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // richTextBoxSinopsis
@@ -240,9 +246,10 @@
             this.richTextBoxSinopsis.BackColor = System.Drawing.Color.NavajoWhite;
             this.richTextBoxSinopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxSinopsis.Location = new System.Drawing.Point(29, 88);
+            this.richTextBoxSinopsis.Location = new System.Drawing.Point(33, 110);
+            this.richTextBoxSinopsis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBoxSinopsis.Name = "richTextBoxSinopsis";
-            this.richTextBoxSinopsis.Size = new System.Drawing.Size(460, 168);
+            this.richTextBoxSinopsis.Size = new System.Drawing.Size(518, 210);
             this.richTextBoxSinopsis.TabIndex = 59;
             this.richTextBoxSinopsis.Text = "-";
             // 
@@ -253,11 +260,11 @@
             this.labelKelompok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelKelompok.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKelompok.ForeColor = System.Drawing.Color.Black;
-            this.labelKelompok.Location = new System.Drawing.Point(25, 358);
+            this.labelKelompok.Location = new System.Drawing.Point(28, 448);
             this.labelKelompok.Name = "labelKelompok";
-            this.labelKelompok.Size = new System.Drawing.Size(111, 20);
+            this.labelKelompok.Size = new System.Drawing.Size(141, 25);
             this.labelKelompok.TabIndex = 58;
-            this.labelKelompok.Text = "Kelompok:";
+            this.labelKelompok.Text = "Age Rated:";
             this.labelKelompok.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelGenre
@@ -267,9 +274,9 @@
             this.labelGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelGenre.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGenre.ForeColor = System.Drawing.Color.Black;
-            this.labelGenre.Location = new System.Drawing.Point(25, 331);
+            this.labelGenre.Location = new System.Drawing.Point(28, 414);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(72, 20);
+            this.labelGenre.Size = new System.Drawing.Size(90, 25);
             this.labelGenre.TabIndex = 57;
             this.labelGenre.Text = "Genre:";
             this.labelGenre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -281,11 +288,11 @@
             this.labelAktorUtama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelAktorUtama.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAktorUtama.ForeColor = System.Drawing.Color.Black;
-            this.labelAktorUtama.Location = new System.Drawing.Point(25, 304);
+            this.labelAktorUtama.Location = new System.Drawing.Point(28, 380);
             this.labelAktorUtama.Name = "labelAktorUtama";
-            this.labelAktorUtama.Size = new System.Drawing.Size(136, 20);
+            this.labelAktorUtama.Size = new System.Drawing.Size(157, 25);
             this.labelAktorUtama.TabIndex = 56;
-            this.labelAktorUtama.Text = "Aktor Utama:";
+            this.labelAktorUtama.Text = "Main Actors:";
             this.labelAktorUtama.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDurasi
@@ -295,11 +302,11 @@
             this.labelDurasi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelDurasi.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDurasi.ForeColor = System.Drawing.Color.Black;
-            this.labelDurasi.Location = new System.Drawing.Point(25, 277);
+            this.labelDurasi.Location = new System.Drawing.Point(28, 346);
             this.labelDurasi.Name = "labelDurasi";
-            this.labelDurasi.Size = new System.Drawing.Size(77, 20);
+            this.labelDurasi.Size = new System.Drawing.Size(122, 25);
             this.labelDurasi.TabIndex = 54;
-            this.labelDurasi.Text = "Durasi:";
+            this.labelDurasi.Text = "Duration:";
             this.labelDurasi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label
@@ -309,11 +316,11 @@
             this.label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.Black;
-            this.label.Location = new System.Drawing.Point(24, 45);
+            this.label.Location = new System.Drawing.Point(27, 56);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(120, 28);
+            this.label.Size = new System.Drawing.Size(156, 34);
             this.label.TabIndex = 54;
-            this.label.Text = "Sinopsis";
+            this.label.Text = "Synopsis";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSimpan
@@ -322,12 +329,12 @@
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(940, 788);
+            this.buttonSimpan.Location = new System.Drawing.Point(1058, 985);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(148, 39);
+            this.buttonSimpan.Size = new System.Drawing.Size(166, 49);
             this.buttonSimpan.TabIndex = 45;
-            this.buttonSimpan.Text = "SIMPAN";
+            this.buttonSimpan.Text = "&SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
@@ -340,9 +347,10 @@
             this.panel2.Controls.Add(this.labelAktorUtama);
             this.panel2.Controls.Add(this.labelDurasi);
             this.panel2.Controls.Add(this.label);
-            this.panel2.Location = new System.Drawing.Point(728, 12);
+            this.panel2.Location = new System.Drawing.Point(819, 15);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(519, 420);
+            this.panel2.Size = new System.Drawing.Size(584, 525);
             this.panel2.TabIndex = 41;
             // 
             // panelData
@@ -368,9 +376,10 @@
             this.panelData.Controls.Add(this.label1);
             this.panelData.Controls.Add(this.labelJudul);
             this.panelData.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.panelData.Location = new System.Drawing.Point(11, 12);
+            this.panelData.Location = new System.Drawing.Point(12, 15);
+            this.panelData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelData.Name = "panelData";
-            this.panelData.Size = new System.Drawing.Size(390, 365);
+            this.panelData.Size = new System.Drawing.Size(439, 456);
             this.panelData.TabIndex = 40;
             // 
             // checkBox2
@@ -378,9 +387,10 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.checkBox2.ForeColor = System.Drawing.Color.Black;
-            this.checkBox2.Location = new System.Drawing.Point(286, 315);
+            this.checkBox2.Location = new System.Drawing.Point(322, 394);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(46, 23);
+            this.checkBox2.Size = new System.Drawing.Size(54, 28);
             this.checkBox2.TabIndex = 65;
             this.checkBox2.Text = "IV";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -390,9 +400,10 @@
             this.checkBoxSesi3.AutoSize = true;
             this.checkBoxSesi3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.checkBoxSesi3.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxSesi3.Location = new System.Drawing.Point(237, 315);
+            this.checkBoxSesi3.Location = new System.Drawing.Point(267, 394);
+            this.checkBoxSesi3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBoxSesi3.Name = "checkBoxSesi3";
-            this.checkBoxSesi3.Size = new System.Drawing.Size(43, 23);
+            this.checkBoxSesi3.Size = new System.Drawing.Size(51, 28);
             this.checkBoxSesi3.TabIndex = 64;
             this.checkBoxSesi3.Text = "III";
             this.checkBoxSesi3.UseVisualStyleBackColor = true;
@@ -402,9 +413,10 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.checkBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkBox1.Location = new System.Drawing.Point(192, 315);
+            this.checkBox1.Location = new System.Drawing.Point(216, 394);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(39, 23);
+            this.checkBox1.Size = new System.Drawing.Size(46, 28);
             this.checkBox1.TabIndex = 63;
             this.checkBox1.Text = "II";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -414,9 +426,10 @@
             this.checkBoxSesi1.AutoSize = true;
             this.checkBoxSesi1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.checkBoxSesi1.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxSesi1.Location = new System.Drawing.Point(148, 315);
+            this.checkBoxSesi1.Location = new System.Drawing.Point(166, 394);
+            this.checkBoxSesi1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBoxSesi1.Name = "checkBoxSesi1";
-            this.checkBoxSesi1.Size = new System.Drawing.Size(35, 23);
+            this.checkBoxSesi1.Size = new System.Drawing.Size(41, 28);
             this.checkBoxSesi1.TabIndex = 49;
             this.checkBoxSesi1.Text = "I";
             this.checkBoxSesi1.UseVisualStyleBackColor = true;
@@ -428,9 +441,9 @@
             this.labelJumlahKursi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelJumlahKursi.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJumlahKursi.ForeColor = System.Drawing.Color.Black;
-            this.labelJumlahKursi.Location = new System.Drawing.Point(229, 120);
+            this.labelJumlahKursi.Location = new System.Drawing.Point(258, 150);
             this.labelJumlahKursi.Name = "labelJumlahKursi";
-            this.labelJumlahKursi.Size = new System.Drawing.Size(17, 20);
+            this.labelJumlahKursi.Size = new System.Drawing.Size(22, 25);
             this.labelJumlahKursi.TabIndex = 62;
             this.labelJumlahKursi.Text = "-";
             this.labelJumlahKursi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -442,9 +455,9 @@
             this.labelJam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelJam.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJam.ForeColor = System.Drawing.Color.Black;
-            this.labelJam.Location = new System.Drawing.Point(38, 314);
+            this.labelJam.Location = new System.Drawing.Point(43, 392);
             this.labelJam.Name = "labelJam";
-            this.labelJam.Size = new System.Drawing.Size(89, 20);
+            this.labelJam.Size = new System.Drawing.Size(109, 25);
             this.labelJam.TabIndex = 57;
             this.labelJam.Text = "Session:";
             this.labelJam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -456,9 +469,9 @@
             this.labelNominalHargaWeekend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNominalHargaWeekend.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNominalHargaWeekend.ForeColor = System.Drawing.Color.Black;
-            this.labelNominalHargaWeekend.Location = new System.Drawing.Point(229, 182);
+            this.labelNominalHargaWeekend.Location = new System.Drawing.Point(258, 228);
             this.labelNominalHargaWeekend.Name = "labelNominalHargaWeekend";
-            this.labelNominalHargaWeekend.Size = new System.Drawing.Size(17, 20);
+            this.labelNominalHargaWeekend.Size = new System.Drawing.Size(22, 25);
             this.labelNominalHargaWeekend.TabIndex = 56;
             this.labelNominalHargaWeekend.Text = "-";
             this.labelNominalHargaWeekend.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -470,9 +483,9 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(41, 182);
+            this.label4.Location = new System.Drawing.Point(46, 228);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 20);
+            this.label4.Size = new System.Drawing.Size(187, 25);
             this.label4.TabIndex = 55;
             this.label4.Text = "Weekend Price";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -492,18 +505,34 @@
             this.studio,
             this.tanggal,
             this.jam});
-            this.dataGridViewPenjadwalanFilm.Location = new System.Drawing.Point(11, 438);
+            this.dataGridViewPenjadwalanFilm.Location = new System.Drawing.Point(12, 548);
+            this.dataGridViewPenjadwalanFilm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewPenjadwalanFilm.Name = "dataGridViewPenjadwalanFilm";
             this.dataGridViewPenjadwalanFilm.ReadOnly = true;
             this.dataGridViewPenjadwalanFilm.RowHeadersWidth = 51;
             this.dataGridViewPenjadwalanFilm.RowTemplate.Height = 24;
-            this.dataGridViewPenjadwalanFilm.Size = new System.Drawing.Size(1236, 333);
+            this.dataGridViewPenjadwalanFilm.Size = new System.Drawing.Size(1390, 416);
             this.dataGridViewPenjadwalanFilm.TabIndex = 47;
             this.dataGridViewPenjadwalanFilm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPenjadwalanFilm_CellContentClick);
             // 
+            // buttonTambah
+            // 
+            this.buttonTambah.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTambah.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTambah.ForeColor = System.Drawing.Color.White;
+            this.buttonTambah.Location = new System.Drawing.Point(14, 484);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonTambah.Name = "buttonTambah";
+            this.buttonTambah.Size = new System.Drawing.Size(438, 49);
+            this.buttonTambah.TabIndex = 48;
+            this.buttonTambah.Text = "&ADD";
+            this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
+            // 
             // judulFilm
             // 
-            this.judulFilm.HeaderText = "Film Title";
+            this.judulFilm.HeaderText = "Title";
             this.judulFilm.MinimumWidth = 6;
             this.judulFilm.Name = "judulFilm";
             this.judulFilm.ReadOnly = true;
@@ -531,32 +560,17 @@
             // 
             // jam
             // 
-            this.jam.HeaderText = "time";
+            this.jam.HeaderText = "Time";
             this.jam.MinimumWidth = 6;
             this.jam.Name = "jam";
             this.jam.ReadOnly = true;
             // 
-            // buttonTambah
-            // 
-            this.buttonTambah.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTambah.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.ForeColor = System.Drawing.Color.White;
-            this.buttonTambah.Location = new System.Drawing.Point(12, 387);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(389, 39);
-            this.buttonTambah.TabIndex = 48;
-            this.buttonTambah.Text = "TAMBAH";
-            this.buttonTambah.UseVisualStyleBackColor = false;
-            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
-            // 
             // FormPenjadwalanFilm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1266, 839);
+            this.ClientSize = new System.Drawing.Size(1424, 1049);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.dataGridViewPenjadwalanFilm);
             this.Controls.Add(this.pictureBoxCoverImage);
@@ -564,8 +578,10 @@
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelData);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormPenjadwalanFilm";
-            this.Text = "FormPenjadwalanFilm";
+            this.Text = "TIXIE";
             this.Load += new System.EventHandler(this.FormPenjadwalanFilm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverImage)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -606,15 +622,15 @@
         private System.Windows.Forms.Label labelNominalHargaWeekend;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelJam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn judulFilm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cinema;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tanggal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jam;
         private System.Windows.Forms.Label labelJumlahKursi;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBoxSesi3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBoxSesi1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn judulFilm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cinema;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tanggal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jam;
     }
 }

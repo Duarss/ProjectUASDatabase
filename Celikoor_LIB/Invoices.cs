@@ -124,7 +124,7 @@ namespace Celikoor_LIB
                 tampung.Grand_total = int.Parse(dr.GetValue(2).ToString());
                 tampung.Diskon_nominal = int.Parse(dr.GetValue(3).ToString());
                 tampung.Penonton = Konsumen.BacaData("id", dr.GetValue(4).ToString())[0];
-                Pegawai kasir = new Pegawai();
+                //Pegawai kasir = new Pegawai();
                 if (dr.GetValue(5).ToString() != "")
                 {
                     tampung.Kasir.Id = int.Parse(dr.GetValue(5).ToString());

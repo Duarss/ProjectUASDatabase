@@ -24,7 +24,7 @@ namespace Celikoor_Tixycket
             {
                 Genre g = new Genre();
                 g.Nama = textBoxGenre.Text;
-                g.Deskripsi = textBoxDeskripsi.Text;
+                g.Deskripsi = richTextBoxDeskripsi.Text;
 
                 Genre.TambahData(g);
                 MessageBox.Show("Success to add data!");

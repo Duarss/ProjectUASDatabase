@@ -184,12 +184,6 @@
     <Compile Include="FormRegisterKonsumen.Designer.cs">
       <DependentUpon>FormRegisterKonsumen.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormStudio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormStudio.Designer.cs">
-      <DependentUpon>FormStudio.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTambahAktor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,9 +323,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterKonsumen.resx">
       <DependentUpon>FormRegisterKonsumen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormStudio.resx">
-      <DependentUpon>FormStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahAktor.resx">
       <DependentUpon>FormTambahAktor.cs</DependentUpon>

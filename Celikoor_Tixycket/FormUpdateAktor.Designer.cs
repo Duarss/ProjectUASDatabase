@@ -165,7 +165,7 @@
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(182, 55);
             this.buttonKeluar.TabIndex = 65;
-            this.buttonKeluar.Text = "CLOSE";
+            this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
@@ -180,7 +180,7 @@
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(182, 55);
             this.buttonUpdate.TabIndex = 64;
-            this.buttonUpdate.Text = "UPDATE";
+            this.buttonUpdate.Text = "&UPDATE";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 

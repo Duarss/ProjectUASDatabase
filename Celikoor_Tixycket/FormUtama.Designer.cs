@@ -176,7 +176,7 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(80, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 18);
+            this.label1.Size = new System.Drawing.Size(65, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Menu";
             // 
@@ -426,7 +426,7 @@
             this.buttonAktors.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.buttonAktors.Size = new System.Drawing.Size(250, 43);
             this.buttonAktors.TabIndex = 4;
-            this.buttonAktors.Text = "        Actors";
+            this.buttonAktors.Text = "        Actor";
             this.buttonAktors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAktors.UseVisualStyleBackColor = true;
             this.buttonAktors.Click += new System.EventHandler(this.buttonAktors_Click);
@@ -501,7 +501,7 @@
             this.panelButtonSystem.Controls.Add(this.buttonSystem);
             this.panelButtonSystem.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButtonSystem.ForeColor = System.Drawing.Color.Transparent;
-            this.panelButtonSystem.Location = new System.Drawing.Point(3, 381);
+            this.panelButtonSystem.Location = new System.Drawing.Point(3, 541);
             this.panelButtonSystem.Name = "panelButtonSystem";
             this.panelButtonSystem.Size = new System.Drawing.Size(250, 45);
             this.panelButtonSystem.TabIndex = 18;
@@ -545,7 +545,7 @@
             this.panelSystem.Controls.Add(this.buttonPencatatanKedatangan);
             this.panelSystem.Controls.Add(this.buttonPenjadwalanFilm);
             this.panelSystem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSystem.Location = new System.Drawing.Point(3, 432);
+            this.panelSystem.Location = new System.Drawing.Point(3, 592);
             this.panelSystem.MaximumSize = new System.Drawing.Size(250, 220);
             this.panelSystem.Name = "panelSystem";
             this.panelSystem.Size = new System.Drawing.Size(250, 220);
@@ -683,7 +683,7 @@
             this.panelButtonTransaction.Controls.Add(this.buttonTransaction);
             this.panelButtonTransaction.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButtonTransaction.ForeColor = System.Drawing.Color.Transparent;
-            this.panelButtonTransaction.Location = new System.Drawing.Point(3, 658);
+            this.panelButtonTransaction.Location = new System.Drawing.Point(3, 818);
             this.panelButtonTransaction.Name = "panelButtonTransaction";
             this.panelButtonTransaction.Size = new System.Drawing.Size(250, 45);
             this.panelButtonTransaction.TabIndex = 18;
@@ -719,7 +719,7 @@
             this.panelHome.Controls.Add(this.pictureBoxHome);
             this.panelHome.Controls.Add(this.buttonHome);
             this.panelHome.ForeColor = System.Drawing.Color.Transparent;
-            this.panelHome.Location = new System.Drawing.Point(3, 709);
+            this.panelHome.Location = new System.Drawing.Point(3, 869);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(250, 45);
             this.panelHome.TabIndex = 19;
@@ -831,7 +831,7 @@
             // 
             // FormUtama
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FloralWhite;

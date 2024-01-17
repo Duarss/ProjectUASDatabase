@@ -54,7 +54,7 @@ namespace Celikoor_Tixycket
             }
             catch (Exception x)
             {
-                MessageBox.Show($"Ticket with ID {textBoxCari.Text} not found");
+                MessageBox.Show($"Ticket with ID {textBoxCari.Text} not found" + x.Message);
             }
         }
 

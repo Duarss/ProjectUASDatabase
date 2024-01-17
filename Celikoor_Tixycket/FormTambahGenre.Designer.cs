@@ -35,10 +35,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTambahGenre = new System.Windows.Forms.Label();
-            this.textBoxDeskripsi = new System.Windows.Forms.TextBox();
             this.labelDeskripsi = new System.Windows.Forms.Label();
             this.textBoxGenre = new System.Windows.Forms.TextBox();
             this.labelNamaGenre = new System.Windows.Forms.Label();
+            this.richTextBoxDeskripsi = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +55,7 @@
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(182, 55);
             this.buttonKeluar.TabIndex = 44;
-            this.buttonKeluar.Text = "CLOSE";
+            this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
@@ -70,7 +70,7 @@
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(182, 55);
             this.buttonSimpan.TabIndex = 43;
-            this.buttonSimpan.Text = "SAVE";
+            this.buttonSimpan.Text = "&SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
@@ -117,16 +117,6 @@
             this.labelTambahGenre.Text = "ADD GENRE";
             this.labelTambahGenre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxDeskripsi
-            // 
-            this.textBoxDeskripsi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDeskripsi.Location = new System.Drawing.Point(477, 216);
-            this.textBoxDeskripsi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxDeskripsi.Multiline = true;
-            this.textBoxDeskripsi.Name = "textBoxDeskripsi";
-            this.textBoxDeskripsi.Size = new System.Drawing.Size(398, 136);
-            this.textBoxDeskripsi.TabIndex = 59;
-            // 
             // labelDeskripsi
             // 
             this.labelDeskripsi.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,12 +148,20 @@
             this.labelNamaGenre.Text = "Genre:";
             this.labelNamaGenre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // richTextBoxDeskripsi
+            // 
+            this.richTextBoxDeskripsi.Location = new System.Drawing.Point(486, 216);
+            this.richTextBoxDeskripsi.Name = "richTextBoxDeskripsi";
+            this.richTextBoxDeskripsi.Size = new System.Drawing.Size(398, 138);
+            this.richTextBoxDeskripsi.TabIndex = 60;
+            this.richTextBoxDeskripsi.Text = "";
+            // 
             // FormTambahGenre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 548);
-            this.Controls.Add(this.textBoxDeskripsi);
+            this.Controls.Add(this.richTextBoxDeskripsi);
             this.Controls.Add(this.labelDeskripsi);
             this.Controls.Add(this.textBoxGenre);
             this.Controls.Add(this.labelNamaGenre);
@@ -194,9 +192,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelTambahGenre;
-        private System.Windows.Forms.TextBox textBoxDeskripsi;
         private System.Windows.Forms.Label labelDeskripsi;
         private System.Windows.Forms.TextBox textBoxGenre;
         private System.Windows.Forms.Label labelNamaGenre;
+        private System.Windows.Forms.RichTextBox richTextBoxDeskripsi;
     }
 }

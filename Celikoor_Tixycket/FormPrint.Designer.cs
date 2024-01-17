@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrint));
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonPrint1 = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonPrint2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonPrint3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonPrint4 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,9 +65,10 @@
             this.panel2.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel2.Controls.Add(this.buttonPrint1);
             this.panel2.Controls.Add(this.label);
-            this.panel2.Location = new System.Drawing.Point(12, 71);
+            this.panel2.Location = new System.Drawing.Point(14, 89);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(991, 58);
+            this.panel2.Size = new System.Drawing.Size(1115, 72);
             this.panel2.TabIndex = 42;
             // 
             // buttonPrint1
@@ -75,10 +77,10 @@
             this.buttonPrint1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint1.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint1.Location = new System.Drawing.Point(822, 10);
+            this.buttonPrint1.Location = new System.Drawing.Point(925, 12);
             this.buttonPrint1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint1.Name = "buttonPrint1";
-            this.buttonPrint1.Size = new System.Drawing.Size(153, 39);
+            this.buttonPrint1.Size = new System.Drawing.Size(172, 49);
             this.buttonPrint1.TabIndex = 49;
             this.buttonPrint1.Text = "PRINT";
             this.buttonPrint1.UseVisualStyleBackColor = false;
@@ -91,9 +93,9 @@
             this.label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.Black;
-            this.label.Location = new System.Drawing.Point(16, 15);
+            this.label.Location = new System.Drawing.Point(18, 19);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(526, 28);
+            this.label.Size = new System.Drawing.Size(652, 34);
             this.label.TabIndex = 54;
             this.label.Text = "Highest Grossing Film in 2023 by Month";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,9 +105,10 @@
             this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel1.Controls.Add(this.buttonPrint2);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 135);
+            this.panel1.Location = new System.Drawing.Point(14, 169);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(991, 58);
+            this.panel1.Size = new System.Drawing.Size(1115, 72);
             this.panel1.TabIndex = 55;
             // 
             // buttonPrint2
@@ -114,14 +117,28 @@
             this.buttonPrint2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint2.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint2.Location = new System.Drawing.Point(822, 10);
+            this.buttonPrint2.Location = new System.Drawing.Point(925, 12);
             this.buttonPrint2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint2.Name = "buttonPrint2";
-            this.buttonPrint2.Size = new System.Drawing.Size(153, 39);
+            this.buttonPrint2.Size = new System.Drawing.Size(172, 49);
             this.buttonPrint2.TabIndex = 49;
             this.buttonPrint2.Text = "PRINT";
             this.buttonPrint2.UseVisualStyleBackColor = false;
             this.buttonPrint2.Click += new System.EventHandler(this.buttonPrint2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(18, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(649, 34);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Top 3 Cinema With Highest Ticket Sales";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -130,9 +147,9 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(16, 15);
+            this.label1.Location = new System.Drawing.Point(18, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(469, 28);
+            this.label1.Size = new System.Drawing.Size(580, 34);
             this.label1.TabIndex = 54;
             this.label1.Text = "Top 3 Film With Lowest Attendance";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,9 +159,10 @@
             this.panel3.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel3.Controls.Add(this.buttonPrint3);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(12, 199);
+            this.panel3.Location = new System.Drawing.Point(14, 249);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(991, 58);
+            this.panel3.Size = new System.Drawing.Size(1115, 72);
             this.panel3.TabIndex = 55;
             // 
             // buttonPrint3
@@ -153,37 +171,24 @@
             this.buttonPrint3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint3.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint3.Location = new System.Drawing.Point(822, 10);
+            this.buttonPrint3.Location = new System.Drawing.Point(925, 12);
             this.buttonPrint3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint3.Name = "buttonPrint3";
-            this.buttonPrint3.Size = new System.Drawing.Size(153, 39);
+            this.buttonPrint3.Size = new System.Drawing.Size(172, 49);
             this.buttonPrint3.TabIndex = 49;
             this.buttonPrint3.Text = "PRINT";
             this.buttonPrint3.UseVisualStyleBackColor = false;
             this.buttonPrint3.Click += new System.EventHandler(this.buttonPrint3_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.NavajoWhite;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(16, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(523, 28);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "Top 3 Cinema With Highest Ticket Sales";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel4.Controls.Add(this.buttonPrint4);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(12, 263);
+            this.panel4.Location = new System.Drawing.Point(14, 329);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(991, 58);
+            this.panel4.Size = new System.Drawing.Size(1115, 72);
             this.panel4.TabIndex = 55;
             // 
             // buttonPrint4
@@ -192,10 +197,10 @@
             this.buttonPrint4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint4.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint4.Location = new System.Drawing.Point(822, 10);
+            this.buttonPrint4.Location = new System.Drawing.Point(925, 12);
             this.buttonPrint4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint4.Name = "buttonPrint4";
-            this.buttonPrint4.Size = new System.Drawing.Size(153, 39);
+            this.buttonPrint4.Size = new System.Drawing.Size(172, 49);
             this.buttonPrint4.TabIndex = 49;
             this.buttonPrint4.Text = "PRINT";
             this.buttonPrint4.UseVisualStyleBackColor = false;
@@ -208,9 +213,9 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(16, 15);
+            this.label3.Location = new System.Drawing.Point(18, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(660, 28);
+            this.label3.Size = new System.Drawing.Size(819, 34);
             this.label3.TabIndex = 54;
             this.label3.Text = "Reports of 3 studios that have lowest utility levels";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,9 +225,10 @@
             this.panel5.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel5.Controls.Add(this.buttonPrint5);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(12, 327);
+            this.panel5.Location = new System.Drawing.Point(14, 409);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(991, 58);
+            this.panel5.Size = new System.Drawing.Size(1115, 72);
             this.panel5.TabIndex = 55;
             // 
             // buttonPrint5
@@ -231,10 +237,10 @@
             this.buttonPrint5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint5.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint5.Location = new System.Drawing.Point(822, 10);
+            this.buttonPrint5.Location = new System.Drawing.Point(925, 12);
             this.buttonPrint5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint5.Name = "buttonPrint5";
-            this.buttonPrint5.Size = new System.Drawing.Size(153, 39);
+            this.buttonPrint5.Size = new System.Drawing.Size(172, 49);
             this.buttonPrint5.TabIndex = 49;
             this.buttonPrint5.Text = "PRINT";
             this.buttonPrint5.UseVisualStyleBackColor = false;
@@ -247,9 +253,9 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(16, 15);
+            this.label4.Location = new System.Drawing.Point(18, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(559, 28);
+            this.label4.Size = new System.Drawing.Size(690, 34);
             this.label4.TabIndex = 54;
             this.label4.Text = "Top 10 Customer That Watch Comedy Film";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -259,9 +265,10 @@
             this.panel6.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel6.Controls.Add(this.buttonPrint6);
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(12, 391);
+            this.panel6.Location = new System.Drawing.Point(14, 489);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(991, 58);
+            this.panel6.Size = new System.Drawing.Size(1115, 72);
             this.panel6.TabIndex = 55;
             // 
             // buttonPrint6
@@ -270,10 +277,10 @@
             this.buttonPrint6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint6.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint6.Location = new System.Drawing.Point(822, 10);
+            this.buttonPrint6.Location = new System.Drawing.Point(925, 12);
             this.buttonPrint6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint6.Name = "buttonPrint6";
-            this.buttonPrint6.Size = new System.Drawing.Size(153, 39);
+            this.buttonPrint6.Size = new System.Drawing.Size(172, 49);
             this.buttonPrint6.TabIndex = 49;
             this.buttonPrint6.Text = "PRINT";
             this.buttonPrint6.UseVisualStyleBackColor = false;
@@ -286,9 +293,9 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(16, 15);
+            this.label5.Location = new System.Drawing.Point(18, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(300, 28);
+            this.label5.Size = new System.Drawing.Size(368, 34);
             this.label5.TabIndex = 54;
             this.label5.Text = "Actor with Most Movie";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -298,9 +305,10 @@
             this.panel7.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel7.Controls.Add(this.buttonPrint7);
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(12, 455);
+            this.panel7.Location = new System.Drawing.Point(14, 569);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(991, 58);
+            this.panel7.Size = new System.Drawing.Size(1115, 72);
             this.panel7.TabIndex = 56;
             // 
             // buttonPrint7
@@ -309,10 +317,10 @@
             this.buttonPrint7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrint7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint7.ForeColor = System.Drawing.Color.White;
-            this.buttonPrint7.Location = new System.Drawing.Point(822, 10);
+            this.buttonPrint7.Location = new System.Drawing.Point(925, 12);
             this.buttonPrint7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrint7.Name = "buttonPrint7";
-            this.buttonPrint7.Size = new System.Drawing.Size(153, 39);
+            this.buttonPrint7.Size = new System.Drawing.Size(172, 49);
             this.buttonPrint7.TabIndex = 49;
             this.buttonPrint7.Text = "PRINT";
             this.buttonPrint7.UseVisualStyleBackColor = false;
@@ -324,9 +332,9 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(16, 15);
+            this.label6.Location = new System.Drawing.Point(18, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 28);
+            this.label6.Size = new System.Drawing.Size(149, 34);
             this.label6.TabIndex = 54;
             this.label6.Text = "Invoices";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -338,19 +346,19 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(459, 22);
+            this.label7.Location = new System.Drawing.Point(423, 28);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 28);
+            this.label7.Size = new System.Drawing.Size(253, 34);
             this.label7.TabIndex = 55;
-            this.label7.Text = "PRINT";
+            this.label7.Text = "PRINT REPORT";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormPrint
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1015, 552);
+            this.ClientSize = new System.Drawing.Size(1142, 690);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -359,8 +367,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormPrint";
-            this.Text = "FormPrint";
+            this.Text = "TIXIE";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

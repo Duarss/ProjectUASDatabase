@@ -34,7 +34,7 @@ namespace Celikoor_Tixycket
             {
                 Jenis_Studio jenisStudio = new Jenis_Studio();
                 jenisStudio.Nama = textBoxJenisStudio.Text;
-                jenisStudio.Deskripsi = textBoxDeskripsi.Text;
+                jenisStudio.Deskripsi = richTextBoxDeskripsi.Text;
 
                 Jenis_Studio.TambahData(jenisStudio);
                 MessageBox.Show("Success to add data!");

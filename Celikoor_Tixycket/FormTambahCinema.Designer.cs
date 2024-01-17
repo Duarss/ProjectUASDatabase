@@ -59,7 +59,7 @@
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(182, 55);
             this.buttonKeluar.TabIndex = 39;
-            this.buttonKeluar.Text = "CLOSE";
+            this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
@@ -74,7 +74,7 @@
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(182, 55);
             this.buttonSimpan.TabIndex = 38;
-            this.buttonSimpan.Text = "SAVE";
+            this.buttonSimpan.Text = "&SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
