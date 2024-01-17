@@ -28,12 +28,13 @@ namespace Celikoor_Tixycket
             {
                 List<Konsumen> listDataKonsumen = Konsumen.BacaData("id", formUtama.konsumenLogin.Id.ToString());
                 labelNamaUser.Text = listDataKonsumen[0].Username;
+                labelNominalSaldo.Text = listDataKonsumen[0].Saldo.ToString();
                 customTextBoxNama.Texts = listDataKonsumen[0].Nama;
                 customTextBoxUsername.Texts = listDataKonsumen[0].Username;
                 customTextBoxPassword.Texts = listDataKonsumen[0].Password;
                 customTextBoxEmail.Texts = listDataKonsumen[0].Email;
                 customTextBoxNoHp.Texts = listDataKonsumen[0].NoHp;
-                customTextBoxTglLahir.Texts = listDataKonsumen[0].TglLahir.ToString();
+                dateTimePickerTglLahir.Value = DateTime.Parse(listDataKonsumen[0].TglLahir);
             }
         }
 
@@ -70,7 +71,6 @@ namespace Celikoor_Tixycket
         private void customTextboxBirthDate_Click(object sender, EventArgs e)
         {
             DisableUnderlineStyle();
-            customTextBoxTglLahir.UnderlinedStyle = true;
         }
         private void DisableUnderlineStyle()
         {
@@ -111,11 +111,12 @@ namespace Celikoor_Tixycket
                 konsumen.Password = customTextBoxPassword.Texts;
                 konsumen.Email = customTextBoxEmail.Texts;
                 konsumen.NoHp = customTextBoxNoHp.Texts;
-                konsumen.TglLahir = customTextBoxTglLahir.Texts;
+                konsumen.TglLahir = dateTimePickerTglLahir.Value.ToString("yyyy-MM-dd");
 
                 Konsumen.UbahData(konsumen);
 
                 MessageBox.Show("Success to update your profile changes!");
+                FormProfile_Load(this, e);
             }
 
             catch (Exception ex)
@@ -134,6 +135,11 @@ namespace Celikoor_Tixycket
             {
                 customTextBoxPassword.PasswordChar = true;
             }
+        }
+
+        private void panelFotoProfile_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
 
 namespace Celikoor_Tixycket
 {
@@ -17,24 +19,49 @@ namespace Celikoor_Tixycket
         {
             InitializeComponent();
         }
-
+        FormUtama formUtama;
+        string barcodeString;
         private void buttonTambah_Click(object sender, EventArgs e)
         {
 
         }
+        private void buttonGenerate_Click(object sender, EventArgs e)
+        {
+            //Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+            //pictureBox1.Image = barcode.Draw(textBoxGenerate.Text, 50);
+        }
 
+        private void save()
+        {
+            
+        }
+
+        private void printBarcode(object sender, PrintPageEventArgs e)
+        {
+            Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            pictureBox1.DrawToBitmap(bmp, new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
+            float x = e.MarginBounds.Left + (e.MarginBounds.Width - bmp.Width) / 2;
+            float y = e.MarginBounds.Top + (e.MarginBounds.Height - bmp.Height) / 40;
+            e.Graphics.DrawImage(bmp, x, y);
+
+            // Draw text above the barcode
+            Font textFont = new Font("Arial", 24, FontStyle.Bold); // You can adjust the font and size
+            float textX = x + (bmp.Width - e.Graphics.MeasureString(barcodeString, textFont).Width) / 2;
+            float textY = y + 140; // Adjust the vertical position as needed
+            e.Graphics.DrawString(barcodeString, textFont, Brushes.Black, textX, textY);
+            bmp.Dispose();
+        }
         private void FormKasir_Load(object sender, EventArgs e)
         {
+            formUtama = (FormUtama)this.Owner;
             List<Invoices> listInvoices = Invoices.BacaData();
             dgvData.DataSource = listInvoices;
-
-            int statusColumnIndex = 6;
-            int actionColumnIndex = 7;
-        
-            foreach (DataGridViewRow row in dgvData.Rows)
+            if(formUtama.pegawaiLogin.Role == "KASIR")
             {
-               
-                if (row.Cells[statusColumnIndex].Value.ToString() == "PENDING")
+                int statusColumnIndex = 6;
+                int actionColumnIndex = 7;
+
+                foreach (DataGridViewRow row in dgvData.Rows)
                 {
                     DataGridViewButtonColumn btnValidasi = new DataGridViewButtonColumn();
                     btnValidasi.Text = "Validasi";
@@ -45,9 +72,7 @@ namespace Celikoor_Tixycket
                     {
                         dgvData.Columns.Insert(actionColumnIndex, btnValidasi);
                     }
-                }
-                if(row.Cells[statusColumnIndex].Value.ToString() == "VALIDASI")
-                {
+                    
                     DataGridViewButtonColumn btnSelesai = new DataGridViewButtonColumn();
                     btnSelesai.Text = "Selesai";
                     btnSelesai.HeaderText = "Action";
@@ -58,6 +83,7 @@ namespace Celikoor_Tixycket
                     {
                         dgvData.Columns.Insert(actionColumnIndex, btnSelesai);
                     }
+                    
                 }
             }
         }
@@ -65,7 +91,9 @@ namespace Celikoor_Tixycket
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string kode = dgvData.CurrentRow.Cells["Id"].Value.ToString();
-
+            Invoices invoice = new Invoices();
+            invoice.Id = int.Parse(kode);
+            invoice.Kasir = formUtama.pegawaiLogin;
             if (e.ColumnIndex == dgvData.Columns["buttonValidasiGrid"].Index)
             {
                 if(dgvData.Rows[e.RowIndex].Cells["Status"].Value.ToString() == "PENDING")
@@ -77,7 +105,7 @@ namespace Celikoor_Tixycket
                         try
                         {
                             //hapus data dari database
-                            Invoices.UbahData(kode.ToString(), false);
+                            Invoices.UbahData(invoice, false);
                             //refresh form master
                             FormKasir_Load(this, e);
                         }
@@ -109,7 +137,24 @@ namespace Celikoor_Tixycket
                         try
                         {
                             //hapus data dari database
-                            Invoices.UbahData(kode.ToString(), true);
+                            Invoices.UbahData(invoice, true);
+                            List<Ticket> listTiket = Ticket.BacaData("", invoice.Id.ToString());
+                            //print
+
+                            for(int i = 0; i < listTiket.Count(); i++)
+                            {
+                                barcodeString = listTiket[i].NoInvoice.Id.ToString().PadLeft(3, '0') + $"{listTiket[i].NoKursi}";
+                                Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+                                pictureBox1.Image = barcode.Draw(barcodeString, 50);
+                                PrintDialog pd = new PrintDialog();
+                                PrintDocument pDoc = new PrintDocument();
+                                pDoc.PrintPage += printBarcode;
+                                pd.Document = pDoc;
+                                if (pd.ShowDialog() == DialogResult.OK)
+                                {
+                                    pDoc.Print();
+                                }
+                            }
                             //refresh form master
                             FormKasir_Load(this, e);
                         }

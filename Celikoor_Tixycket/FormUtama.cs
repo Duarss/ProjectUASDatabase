@@ -121,6 +121,7 @@ namespace Celikoor_Tixycket
 
         private void buttonPencatatanKedatangan_Click(object sender, EventArgs e)
         {
+            OpenForm(new FormOperator());
         }
 
         private void buttonLaporan_Click(object sender, EventArgs e)
@@ -175,27 +176,43 @@ namespace Celikoor_Tixycket
                 {
                     panelButtonMaster.Visible = true;
                     panelButtonSystem.Visible = true;
-                    panelButtonTransaction.Visible = true; // +-+
+                    panelButtonTransaction.Visible = false; // +-+
                     panelButtonTransaction.Enabled = false;
+                    buttonPencatatanKedatangan.Enabled = false;
                 }
                 else if (pegawaiLogin.Role == "OPERATOR")
                 {
+                    panelButtonMaster.Visible = false;
                     panelButtonSystem.Visible = true;
-                    buttonPenjadwalanFilm.Visible = false;
-                    buttonLaporan.Visible = false;
-
+                    buttonKasir.Enabled = false;
+                    buttonPenjadwalanFilm.Enabled = false;
+                    buttonLaporan.Enabled = false;
+                    panelButtonTransaction.Visible = false; // +-+
                 }
                 else if (pegawaiLogin.Role == "KASIR")
                 {
+                    panelButtonMaster.Visible = false;
                     panelButtonSystem.Visible = true;
-                    buttonPencatatanKedatangan.Visible = false;
-                    buttonPenjadwalanFilm.Visible = false;
+                    buttonPencatatanKedatangan.Enabled = false;
+                    buttonPenjadwalanFilm.Enabled = false;
+                    buttonLaporan.Enabled = false;
+                    panelButtonTransaction.Visible = false; // +-+
                 }
             }
             else if (konsumenLogin != null)
             {
                 panelButtonTransaction.Enabled = true;
                 panelButtonTransaction.Visible = true;
+            }
+            else
+            {
+                panelButtonMaster.Enabled = true;
+                panelSystem.Enabled = true;
+                panelButtonTransaction.Enabled = true;
+                buttonPencatatanKedatangan.Enabled = true;
+                buttonPenjadwalanFilm.Enabled = true;
+                buttonLaporan.Enabled = true;
+                buttonKasir.Enabled = true;
             }
         }
         #endregion
@@ -204,7 +221,7 @@ namespace Celikoor_Tixycket
         {
             panelButtonMaster.Visible = false;
             panelMaster.Height = 0;
-            panelButtonSystem.Visible = true;
+            panelButtonSystem.Visible = false;
             panelSystem.Height = 0;
             panelButtonTransaction.Visible = false;
             OpenForm(new FormMain());
@@ -395,7 +412,7 @@ namespace Celikoor_Tixycket
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenForm(new FormOperator());
+           
         }
     }
 }

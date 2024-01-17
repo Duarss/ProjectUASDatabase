@@ -55,18 +55,18 @@ namespace Celikoor_LIB
         }
 
         //! METHOD UPDATE U
-        public static void UbahData(string id, bool isPaid)
+        public static void UbahData(Invoices invoice, bool isPaid)
         {
             string perintah;
 
             if (!isPaid)
             {
-                perintah = $"UPDATE invoices SET status='VALIDASI' WHERE id='{id}';";
+                perintah = $"UPDATE invoices SET status='VALIDASI', kasir_id = '{invoice.Kasir.Id}' WHERE id='{invoice.id}';";
             }
 
             else
             {
-                perintah = $"UPDATE invoices SET status='TERBAYAR' WHERE id='{id}';";
+                perintah = $"UPDATE invoices SET status='TERBAYAR' WHERE id='{invoice.Id}';";
             }
 
             Koneksi conn = new Koneksi();
@@ -128,7 +128,7 @@ namespace Celikoor_LIB
                 if (dr.GetValue(5).ToString() != "")
                 {
                     tampung.Kasir.Id = int.Parse(dr.GetValue(5).ToString());
-                    List<Pegawai> listItem = Pegawai.BacaData(tampung.Kasir.Id.ToString());
+                    List<Pegawai> listItem = Pegawai.BacaData("id", tampung.Kasir.Id.ToString());
                     tampung.Kasir = listItem[0];
                 }
                 tampung.Status = dr.GetValue(6).ToString();

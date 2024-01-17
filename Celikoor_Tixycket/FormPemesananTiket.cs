@@ -75,6 +75,7 @@ namespace Celikoor_Tixycket
             labelSisaKursi.Text = "sisa " + currentCapacity.ToString() + " kursi";
             labelJumlahKursi.Text = capacity + " kursi";
             labelNominalSaldo.Text = formUtama.konsumenLogin.Saldo.ToString();
+            buttonTransaksi.Enabled = true;
         }
         private void DeleteAllSeat()
         {
@@ -96,6 +97,7 @@ namespace Celikoor_Tixycket
             newLabel.BringToFront();
             labelJumlahKursi.Text = "-";
             labelSisaKursi.Text = "(-)";
+            buttonTransaksi.Enabled = false;
         }
         private void SetUpSeat()
         {
@@ -267,41 +269,49 @@ namespace Celikoor_Tixycket
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if (int.Parse(labelNominalSaldo.Text) >= int.Parse(labelNominalTotalAkhir.Text))
+            try
             {
-                formUtama.konsumenLogin.Saldo -= int.Parse(labelNominalTotalAkhir.Text);
-                Konsumen.UbahNominalSaldo(formUtama.konsumenLogin);
-
-                Invoices invoice = new Invoices();
-                invoice.Grand_total = int.Parse(labelNominalTotalAkhir.Text);
-                invoice.Diskon_nominal = selectedFilm.Diskon;
-                invoice.Penonton = formUtama.konsumenLogin;
-
-                Invoices.TambahData(invoice);
-                List<Invoices> listInvoice = Invoices.BacaData("getLastIndex");
-                listJadwalFilm = Jadwal_film.CekKetersediaanJadwal(jadwal_film, selectedFilm, selectedStudio, "spesifik");
-                foreach (Control control in panelTempatDuduk.Controls)
+                if (int.Parse(labelNominalSaldo.Text) >= int.Parse(labelNominalTotalAkhir.Text))
                 {
-                    if(control is CheckBox clickedCheckBox && clickedCheckBox.Checked == true && clickedCheckBox.Enabled == true)
-                    {
-                        Ticket tiket = new Ticket();
-                        tiket.NoInvoice = listInvoice[0];
-                        tiket.NoKursi = clickedCheckBox.Name;
-                        tiket.Harga = int.Parse(labelNominalHarga.Text);
-                        tiket.JadwalFilm = listJadwalFilm[0];
-                        tiket.Film = selectedFilm;
-                        tiket.Studio = selectedStudio;
+                    formUtama.konsumenLogin.Saldo -= int.Parse(labelNominalTotalAkhir.Text);
+                    Konsumen.UbahNominalSaldo(formUtama.konsumenLogin);
 
-                        Ticket.TambahData(tiket);
+                    Invoices invoice = new Invoices();
+                    invoice.Grand_total = int.Parse(labelNominalTotalAkhir.Text);
+                    invoice.Diskon_nominal = selectedFilm.Diskon;
+                    invoice.Penonton = formUtama.konsumenLogin;
+
+                    Invoices.TambahData(invoice);
+                    List<Invoices> listInvoice = Invoices.BacaData("getLastIndex");
+                    listJadwalFilm = Jadwal_film.CekKetersediaanJadwal(jadwal_film, selectedFilm, selectedStudio, "spesifik");
+                    foreach (Control control in panelTempatDuduk.Controls)
+                    {
+                        if (control is CheckBox clickedCheckBox && clickedCheckBox.Checked == true && clickedCheckBox.Enabled == true)
+                        {
+                            Ticket tiket = new Ticket();
+                            tiket.NoInvoice = listInvoice[0];
+                            tiket.NoKursi = clickedCheckBox.Name;
+                            tiket.Harga = int.Parse(labelNominalHarga.Text);
+                            tiket.JadwalFilm = listJadwalFilm[0];
+                            tiket.Film = selectedFilm;
+                            tiket.Studio = selectedStudio;
+
+                            Ticket.TambahData(tiket);
+                        }
                     }
+                    MessageBox.Show("Transaction success!");
+                    SetUpSeat();
                 }
-                MessageBox.Show("Transaction success!");
-                SetUpSeat();
+                else
+                {
+                    MessageBox.Show("Your balance is insufficient");
+                }
             }
-            else
+            catch (Exception x)
             {
-                MessageBox.Show("Your balance is insufficient");
+                MessageBox.Show("Please select your seat first");
             }
+            
             //input ke invoice
 
             //input ke tiket
@@ -340,6 +350,7 @@ namespace Celikoor_Tixycket
         }
         private void SetupCheckBoxEvents()
         {
+            
             foreach (Control control in panelTempatDuduk.Controls)
             {
                 if (control is CheckBox checkBox)

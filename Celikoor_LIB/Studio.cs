@@ -141,7 +141,7 @@ namespace Celikoor_LIB
                 $"INNER JOIN cinemas on cinemas.id = studios.cinemas_id " +
                 $"WHERE tikets.status_hadir = '0' " +
                 $"GROUP BY cinemas.nama_cabang, studios.id, Month " +
-                $"order by Month desc;";
+                $"order by Jumlah asc limit 3;";
 
             Koneksi conn = new Koneksi();
 

@@ -122,7 +122,16 @@ namespace Celikoor_LIB
         }
         public static List<Ticket> BacaData(string nomorKursi="", string invoicesId="")
         {
-            string perintah = $"SELECT * FROM tikets WHERE nomor_kursi = '{nomorKursi}' and invoices_id = '{invoicesId}'";
+            string perintah;
+            if(nomorKursi == "")
+            {
+                perintah = $"SELECT * FROM tikets WHERE invoices_id = '{invoicesId}'";
+            }
+            else
+            {
+                perintah = $"SELECT * FROM tikets WHERE nomor_kursi = '{nomorKursi}' and invoices_id = '{invoicesId}'";
+            }
+            
 
             List<Ticket> listTiket = new List<Ticket>();
             Koneksi conn = new Koneksi();

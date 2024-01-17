@@ -98,15 +98,15 @@ namespace Celikoor_LIB
 
             if (filter == "")
             {
-                perintah = $"SELECT id, nama, email, no_hp, gender, tgl_lahir, saldo, username FROM konsumens";
+                perintah = $"SELECT * FROM konsumens";
             }
             else if(filter == "id")
             {
-                perintah = $"SELECT id, nama, email, no_hp, gender, tgl_lahir, saldo, username FROM konsumens where id = '{nilai}'";
+                perintah = $"SELECT * FROM konsumens where id = '{nilai}'";
             }
             else
             {
-                perintah = $"SELECT id, nama, email, no_hp, gender, tgl_lahir, saldo, username FROM konsumens WHERE {filter} like '%{nilai}%'";
+                perintah = $"SELECT * FROM konsumens WHERE {filter} like '%{nilai}%'";
             }
 
             List<Konsumen> listKonsumen = new List<Konsumen>();
@@ -125,7 +125,7 @@ namespace Celikoor_LIB
                 tampung.TglLahir = dr.GetValue(5).ToString();
                 tampung.Saldo = double.Parse(dr.GetValue(6).ToString());
                 tampung.Username = dr.GetValue(7).ToString();
-
+                tampung.Password = dr.GetValue(8).ToString();
                 listKonsumen.Add(tampung);
             }
             conn.KoneksiDB.Close();
@@ -152,7 +152,6 @@ namespace Celikoor_LIB
                 tampung.TglLahir = dr.GetValue(5).ToString();
                 tampung.Saldo = double.Parse(dr.GetValue(6).ToString());
                 tampung.Username = dr.GetValue(7).ToString();
-                tampung.Password = dr.GetValue(8).ToString();
 
                 conn.KoneksiDB.Close();
                 return tampung;

@@ -27,6 +27,8 @@ namespace Celikoor_Tixycket
         string fileName;
         private void FormUpdateFilm_Load(object sender, EventArgs e)
         {
+            
+            this.Size = new Size(1170, 720);
             List<Film> listDataFilm = Film.BacaData("id", idUpdate);
             this.selectedFilm = listDataFilm[0];
             textBoxJudul.Text = this.selectedFilm.Judul;

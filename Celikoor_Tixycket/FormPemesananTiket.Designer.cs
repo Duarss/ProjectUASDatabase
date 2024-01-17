@@ -62,7 +62,7 @@
             this.labelDIskon = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.labelKursi = new System.Windows.Forms.Label();
-            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonTransaksi = new System.Windows.Forms.Button();
             this.panelTempatDuduk = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -93,10 +93,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelJudul);
             this.panel1.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.panel1.Location = new System.Drawing.Point(22, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(20, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(439, 476);
+            this.panel1.Size = new System.Drawing.Size(390, 381);
             this.panel1.TabIndex = 0;
             // 
             // labelNominalHarga
@@ -106,9 +105,9 @@
             this.labelNominalHarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNominalHarga.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNominalHarga.ForeColor = System.Drawing.Color.Black;
-            this.labelNominalHarga.Location = new System.Drawing.Point(188, 381);
+            this.labelNominalHarga.Location = new System.Drawing.Point(167, 305);
             this.labelNominalHarga.Name = "labelNominalHarga";
-            this.labelNominalHarga.Size = new System.Drawing.Size(22, 25);
+            this.labelNominalHarga.Size = new System.Drawing.Size(17, 20);
             this.labelNominalHarga.TabIndex = 58;
             this.labelNominalHarga.Text = "-";
             this.labelNominalHarga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,10 +122,9 @@
             "II",
             "III",
             "IV"});
-            this.comboBoxTanggal.Location = new System.Drawing.Point(129, 110);
-            this.comboBoxTanggal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxTanggal.Location = new System.Drawing.Point(115, 88);
             this.comboBoxTanggal.Name = "comboBoxTanggal";
-            this.comboBoxTanggal.Size = new System.Drawing.Size(204, 30);
+            this.comboBoxTanggal.Size = new System.Drawing.Size(182, 26);
             this.comboBoxTanggal.TabIndex = 57;
             this.comboBoxTanggal.SelectedIndexChanged += new System.EventHandler(this.comboBoxTanggal_SelectedIndexChanged);
             // 
@@ -141,10 +139,9 @@
             "II",
             "III",
             "IV"});
-            this.comboBoxJam.Location = new System.Drawing.Point(341, 109);
-            this.comboBoxJam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxJam.Location = new System.Drawing.Point(303, 87);
             this.comboBoxJam.Name = "comboBoxJam";
-            this.comboBoxJam.Size = new System.Drawing.Size(57, 30);
+            this.comboBoxJam.Size = new System.Drawing.Size(51, 26);
             this.comboBoxJam.TabIndex = 56;
             this.comboBoxJam.SelectedIndexChanged += new System.EventHandler(this.comboBoxJam_SelectedIndexChanged);
             // 
@@ -155,9 +152,9 @@
             this.labelSisaKursi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelSisaKursi.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSisaKursi.ForeColor = System.Drawing.Color.Red;
-            this.labelSisaKursi.Location = new System.Drawing.Point(292, 329);
+            this.labelSisaKursi.Location = new System.Drawing.Point(260, 263);
             this.labelSisaKursi.Name = "labelSisaKursi";
-            this.labelSisaKursi.Size = new System.Drawing.Size(44, 25);
+            this.labelSisaKursi.Size = new System.Drawing.Size(35, 20);
             this.labelSisaKursi.TabIndex = 54;
             this.labelSisaKursi.Text = "(-)";
             this.labelSisaKursi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,10 +165,9 @@
             this.comboBoxStudio.Enabled = false;
             this.comboBoxStudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStudio.FormattingEnabled = true;
-            this.comboBoxStudio.Location = new System.Drawing.Point(128, 245);
-            this.comboBoxStudio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxStudio.Location = new System.Drawing.Point(114, 196);
             this.comboBoxStudio.Name = "comboBoxStudio";
-            this.comboBoxStudio.Size = new System.Drawing.Size(93, 30);
+            this.comboBoxStudio.Size = new System.Drawing.Size(83, 26);
             this.comboBoxStudio.TabIndex = 53;
             this.comboBoxStudio.SelectedIndexChanged += new System.EventHandler(this.comboBoxStudio_SelectedIndexChanged);
             // 
@@ -180,10 +176,9 @@
             this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCinema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCinema.FormattingEnabled = true;
-            this.comboBoxCinema.Location = new System.Drawing.Point(129, 182);
-            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxCinema.Location = new System.Drawing.Point(115, 146);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(268, 30);
+            this.comboBoxCinema.Size = new System.Drawing.Size(239, 26);
             this.comboBoxCinema.TabIndex = 52;
             this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
@@ -192,10 +187,9 @@
             this.comboBoxJudulFilm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxJudulFilm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxJudulFilm.FormattingEnabled = true;
-            this.comboBoxJudulFilm.Location = new System.Drawing.Point(129, 42);
-            this.comboBoxJudulFilm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxJudulFilm.Location = new System.Drawing.Point(115, 34);
             this.comboBoxJudulFilm.Name = "comboBoxJudulFilm";
-            this.comboBoxJudulFilm.Size = new System.Drawing.Size(268, 30);
+            this.comboBoxJudulFilm.Size = new System.Drawing.Size(239, 26);
             this.comboBoxJudulFilm.TabIndex = 51;
             this.comboBoxJudulFilm.SelectedIndexChanged += new System.EventHandler(this.comboBoxJudulFilm_SelectedIndexChanged);
             // 
@@ -206,9 +200,9 @@
             this.labelHarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelHarga.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHarga.ForeColor = System.Drawing.Color.Black;
-            this.labelHarga.Location = new System.Drawing.Point(18, 381);
+            this.labelHarga.Location = new System.Drawing.Point(16, 305);
             this.labelHarga.Name = "labelHarga";
-            this.labelHarga.Size = new System.Drawing.Size(78, 25);
+            this.labelHarga.Size = new System.Drawing.Size(63, 20);
             this.labelHarga.TabIndex = 49;
             this.labelHarga.Text = "Price:";
             this.labelHarga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,9 +214,9 @@
             this.labelJumlahKursi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelJumlahKursi.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJumlahKursi.ForeColor = System.Drawing.Color.Black;
-            this.labelJumlahKursi.Location = new System.Drawing.Point(187, 329);
+            this.labelJumlahKursi.Location = new System.Drawing.Point(166, 263);
             this.labelJumlahKursi.Name = "labelJumlahKursi";
-            this.labelJumlahKursi.Size = new System.Drawing.Size(22, 25);
+            this.labelJumlahKursi.Size = new System.Drawing.Size(17, 20);
             this.labelJumlahKursi.TabIndex = 48;
             this.labelJumlahKursi.Text = "-";
             this.labelJumlahKursi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,9 +228,9 @@
             this.labelJenisStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelJenisStudio.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJenisStudio.ForeColor = System.Drawing.Color.Black;
-            this.labelJenisStudio.Location = new System.Drawing.Point(18, 329);
+            this.labelJenisStudio.Location = new System.Drawing.Point(16, 263);
             this.labelJenisStudio.Name = "labelJenisStudio";
-            this.labelJenisStudio.Size = new System.Drawing.Size(160, 25);
+            this.labelJenisStudio.Size = new System.Drawing.Size(130, 20);
             this.labelJenisStudio.TabIndex = 47;
             this.labelJenisStudio.Text = "Studio Type:";
             this.labelJenisStudio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -248,9 +242,9 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(47, 249);
+            this.label3.Location = new System.Drawing.Point(42, 199);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 22);
+            this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 43;
             this.label3.Text = "Studio:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,9 +256,9 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(38, 182);
+            this.label2.Location = new System.Drawing.Point(34, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 22);
+            this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 42;
             this.label2.Text = "Cinema:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -276,9 +270,9 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 114);
+            this.label1.Location = new System.Drawing.Point(12, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 22);
+            this.label1.Size = new System.Drawing.Size(95, 18);
             this.label1.TabIndex = 41;
             this.label1.Text = "Day/Date:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -290,9 +284,9 @@
             this.labelJudul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelJudul.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJudul.ForeColor = System.Drawing.Color.Black;
-            this.labelJudul.Location = new System.Drawing.Point(69, 48);
+            this.labelJudul.Location = new System.Drawing.Point(61, 38);
             this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(61, 22);
+            this.labelJudul.Size = new System.Drawing.Size(49, 18);
             this.labelJudul.TabIndex = 40;
             this.labelJudul.Text = "Title:";
             this.labelJudul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,10 +295,9 @@
             // 
             this.pictureBoxCoverImage.BackColor = System.Drawing.Color.NavajoWhite;
             this.pictureBoxCoverImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxCoverImage.Location = new System.Drawing.Point(468, 15);
-            this.pictureBoxCoverImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxCoverImage.Location = new System.Drawing.Point(416, 12);
             this.pictureBoxCoverImage.Name = "pictureBoxCoverImage";
-            this.pictureBoxCoverImage.Size = new System.Drawing.Size(327, 476);
+            this.pictureBoxCoverImage.Size = new System.Drawing.Size(291, 381);
             this.pictureBoxCoverImage.TabIndex = 37;
             this.pictureBoxCoverImage.TabStop = false;
             // 
@@ -317,10 +310,9 @@
             this.panel2.Controls.Add(this.labelAktorUtama);
             this.panel2.Controls.Add(this.labelDurasi);
             this.panel2.Controls.Add(this.label);
-            this.panel2.Location = new System.Drawing.Point(802, 15);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(713, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(611, 476);
+            this.panel2.Size = new System.Drawing.Size(543, 381);
             this.panel2.TabIndex = 1;
             // 
             // richTextBoxSinopsis
@@ -328,10 +320,9 @@
             this.richTextBoxSinopsis.BackColor = System.Drawing.Color.NavajoWhite;
             this.richTextBoxSinopsis.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxSinopsis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxSinopsis.Location = new System.Drawing.Point(33, 91);
-            this.richTextBoxSinopsis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.richTextBoxSinopsis.Location = new System.Drawing.Point(29, 73);
             this.richTextBoxSinopsis.Name = "richTextBoxSinopsis";
-            this.richTextBoxSinopsis.Size = new System.Drawing.Size(555, 210);
+            this.richTextBoxSinopsis.Size = new System.Drawing.Size(493, 168);
             this.richTextBoxSinopsis.TabIndex = 59;
             this.richTextBoxSinopsis.Text = "-";
             // 
@@ -342,9 +333,9 @@
             this.labelKelompok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelKelompok.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKelompok.ForeColor = System.Drawing.Color.Black;
-            this.labelKelompok.Location = new System.Drawing.Point(24, 419);
+            this.labelKelompok.Location = new System.Drawing.Point(21, 335);
             this.labelKelompok.Name = "labelKelompok";
-            this.labelKelompok.Size = new System.Drawing.Size(121, 22);
+            this.labelKelompok.Size = new System.Drawing.Size(100, 18);
             this.labelKelompok.TabIndex = 58;
             this.labelKelompok.Text = "Age Rated:";
             this.labelKelompok.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -356,9 +347,9 @@
             this.labelGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelGenre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGenre.ForeColor = System.Drawing.Color.Black;
-            this.labelGenre.Location = new System.Drawing.Point(24, 385);
+            this.labelGenre.Location = new System.Drawing.Point(21, 308);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(78, 22);
+            this.labelGenre.Size = new System.Drawing.Size(63, 18);
             this.labelGenre.TabIndex = 57;
             this.labelGenre.Text = "Genre:";
             this.labelGenre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -370,9 +361,9 @@
             this.labelAktorUtama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelAktorUtama.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAktorUtama.ForeColor = System.Drawing.Color.Black;
-            this.labelAktorUtama.Location = new System.Drawing.Point(24, 351);
+            this.labelAktorUtama.Location = new System.Drawing.Point(21, 281);
             this.labelAktorUtama.Name = "labelAktorUtama";
-            this.labelAktorUtama.Size = new System.Drawing.Size(136, 22);
+            this.labelAktorUtama.Size = new System.Drawing.Size(110, 18);
             this.labelAktorUtama.TabIndex = 56;
             this.labelAktorUtama.Text = "Main Actors:";
             this.labelAktorUtama.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -384,9 +375,9 @@
             this.labelDurasi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelDurasi.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDurasi.ForeColor = System.Drawing.Color.Black;
-            this.labelDurasi.Location = new System.Drawing.Point(24, 318);
+            this.labelDurasi.Location = new System.Drawing.Point(21, 254);
             this.labelDurasi.Name = "labelDurasi";
-            this.labelDurasi.Size = new System.Drawing.Size(105, 22);
+            this.labelDurasi.Size = new System.Drawing.Size(84, 18);
             this.labelDurasi.TabIndex = 54;
             this.labelDurasi.Text = "Duration:";
             this.labelDurasi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -398,9 +389,9 @@
             this.label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.Black;
-            this.label.Location = new System.Drawing.Point(27, 42);
+            this.label.Location = new System.Drawing.Point(24, 34);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(156, 34);
+            this.label.Size = new System.Drawing.Size(127, 28);
             this.label.TabIndex = 54;
             this.label.Text = "Synopsis";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -417,10 +408,9 @@
             this.panel3.Controls.Add(this.labelDIskon);
             this.panel3.Controls.Add(this.labelTotal);
             this.panel3.Controls.Add(this.labelKursi);
-            this.panel3.Location = new System.Drawing.Point(848, 499);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(754, 399);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(565, 472);
+            this.panel3.Size = new System.Drawing.Size(502, 378);
             this.panel3.TabIndex = 2;
             // 
             // labelNominalSaldo
@@ -430,9 +420,9 @@
             this.labelNominalSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNominalSaldo.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNominalSaldo.ForeColor = System.Drawing.Color.Black;
-            this.labelNominalSaldo.Location = new System.Drawing.Point(230, 330);
+            this.labelNominalSaldo.Location = new System.Drawing.Point(204, 264);
             this.labelNominalSaldo.Name = "labelNominalSaldo";
-            this.labelNominalSaldo.Size = new System.Drawing.Size(27, 25);
+            this.labelNominalSaldo.Size = new System.Drawing.Size(21, 20);
             this.labelNominalSaldo.TabIndex = 68;
             this.labelNominalSaldo.Text = "0";
             this.labelNominalSaldo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -444,9 +434,9 @@
             this.labelNominalTotalAkhir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNominalTotalAkhir.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNominalTotalAkhir.ForeColor = System.Drawing.Color.Black;
-            this.labelNominalTotalAkhir.Location = new System.Drawing.Point(267, 279);
+            this.labelNominalTotalAkhir.Location = new System.Drawing.Point(237, 223);
             this.labelNominalTotalAkhir.Name = "labelNominalTotalAkhir";
-            this.labelNominalTotalAkhir.Size = new System.Drawing.Size(27, 25);
+            this.labelNominalTotalAkhir.Size = new System.Drawing.Size(21, 20);
             this.labelNominalTotalAkhir.TabIndex = 67;
             this.labelNominalTotalAkhir.Text = "0";
             this.labelNominalTotalAkhir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -458,9 +448,9 @@
             this.labelNominalDiskon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNominalDiskon.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNominalDiskon.ForeColor = System.Drawing.Color.Black;
-            this.labelNominalDiskon.Location = new System.Drawing.Point(200, 225);
+            this.labelNominalDiskon.Location = new System.Drawing.Point(178, 180);
             this.labelNominalDiskon.Name = "labelNominalDiskon";
-            this.labelNominalDiskon.Size = new System.Drawing.Size(22, 25);
+            this.labelNominalDiskon.Size = new System.Drawing.Size(17, 20);
             this.labelNominalDiskon.TabIndex = 66;
             this.labelNominalDiskon.Text = "-";
             this.labelNominalDiskon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -472,9 +462,9 @@
             this.labelNominalTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNominalTotal.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNominalTotal.ForeColor = System.Drawing.Color.Black;
-            this.labelNominalTotal.Location = new System.Drawing.Point(241, 175);
+            this.labelNominalTotal.Location = new System.Drawing.Point(214, 140);
             this.labelNominalTotal.Name = "labelNominalTotal";
-            this.labelNominalTotal.Size = new System.Drawing.Size(27, 25);
+            this.labelNominalTotal.Size = new System.Drawing.Size(21, 20);
             this.labelNominalTotal.TabIndex = 66;
             this.labelNominalTotal.Text = "0";
             this.labelNominalTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -486,9 +476,9 @@
             this.labelSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelSaldo.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSaldo.ForeColor = System.Drawing.Color.Black;
-            this.labelSaldo.Location = new System.Drawing.Point(79, 330);
+            this.labelSaldo.Location = new System.Drawing.Point(70, 264);
             this.labelSaldo.Name = "labelSaldo";
-            this.labelSaldo.Size = new System.Drawing.Size(158, 25);
+            this.labelSaldo.Size = new System.Drawing.Size(127, 20);
             this.labelSaldo.TabIndex = 64;
             this.labelSaldo.Text = "Balance: Rp.";
             this.labelSaldo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -500,9 +490,9 @@
             this.labelTotalAkhir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelTotalAkhir.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalAkhir.ForeColor = System.Drawing.Color.Black;
-            this.labelTotalAkhir.Location = new System.Drawing.Point(78, 279);
+            this.labelTotalAkhir.Location = new System.Drawing.Point(69, 223);
             this.labelTotalAkhir.Name = "labelTotalAkhir";
-            this.labelTotalAkhir.Size = new System.Drawing.Size(196, 25);
+            this.labelTotalAkhir.Size = new System.Drawing.Size(159, 20);
             this.labelTotalAkhir.TabIndex = 63;
             this.labelTotalAkhir.Text = "GrandTotal: Rp.";
             this.labelTotalAkhir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -514,9 +504,9 @@
             this.labelDIskon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelDIskon.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDIskon.ForeColor = System.Drawing.Color.Black;
-            this.labelDIskon.Location = new System.Drawing.Point(78, 225);
+            this.labelDIskon.Location = new System.Drawing.Point(69, 180);
             this.labelDIskon.Name = "labelDIskon";
-            this.labelDIskon.Size = new System.Drawing.Size(122, 25);
+            this.labelDIskon.Size = new System.Drawing.Size(100, 20);
             this.labelDIskon.TabIndex = 62;
             this.labelDIskon.Text = "Discount:";
             this.labelDIskon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -528,9 +518,9 @@
             this.labelTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelTotal.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotal.ForeColor = System.Drawing.Color.Black;
-            this.labelTotal.Location = new System.Drawing.Point(77, 175);
+            this.labelTotal.Location = new System.Drawing.Point(68, 140);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(170, 25);
+            this.labelTotal.Size = new System.Drawing.Size(138, 20);
             this.labelTotal.TabIndex = 61;
             this.labelTotal.Text = "SubTotal: Rp.";
             this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -542,27 +532,27 @@
             this.labelKursi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelKursi.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKursi.ForeColor = System.Drawing.Color.Black;
-            this.labelKursi.Location = new System.Drawing.Point(76, 124);
+            this.labelKursi.Location = new System.Drawing.Point(68, 99);
             this.labelKursi.Name = "labelKursi";
-            this.labelKursi.Size = new System.Drawing.Size(73, 25);
+            this.labelKursi.Size = new System.Drawing.Size(58, 20);
             this.labelKursi.TabIndex = 60;
             this.labelKursi.Text = "Seat:";
             this.labelKursi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonEdit
+            // buttonTransaksi
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(848, 985);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(565, 49);
-            this.buttonEdit.TabIndex = 38;
-            this.buttonEdit.Text = "PAYMENT CONFIRMATION";
-            this.buttonEdit.UseVisualStyleBackColor = false;
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.buttonTransaksi.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.buttonTransaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTransaksi.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTransaksi.ForeColor = System.Drawing.Color.White;
+            this.buttonTransaksi.Location = new System.Drawing.Point(754, 788);
+            this.buttonTransaksi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonTransaksi.Name = "buttonTransaksi";
+            this.buttonTransaksi.Size = new System.Drawing.Size(502, 39);
+            this.buttonTransaksi.TabIndex = 38;
+            this.buttonTransaksi.Text = "PAYMENT CONFIRMATION";
+            this.buttonTransaksi.UseVisualStyleBackColor = false;
+            this.buttonTransaksi.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // panelTempatDuduk
             // 
@@ -571,10 +561,9 @@
             this.panelTempatDuduk.Controls.Add(this.label5);
             this.panelTempatDuduk.Controls.Add(this.label4);
             this.panelTempatDuduk.Controls.Add(this.labelLayar);
-            this.panelTempatDuduk.Location = new System.Drawing.Point(22, 499);
-            this.panelTempatDuduk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelTempatDuduk.Location = new System.Drawing.Point(20, 399);
             this.panelTempatDuduk.Name = "panelTempatDuduk";
-            this.panelTempatDuduk.Size = new System.Drawing.Size(819, 535);
+            this.panelTempatDuduk.Size = new System.Drawing.Size(728, 428);
             this.panelTempatDuduk.TabIndex = 3;
             // 
             // label6
@@ -582,10 +571,10 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(66)))));
             this.label6.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(304, 94);
+            this.label6.Location = new System.Drawing.Point(270, 75);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(212, 44);
+            this.label6.Size = new System.Drawing.Size(188, 35);
             this.label6.TabIndex = 147;
             this.label6.Text = "B";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -595,10 +584,10 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(66)))));
             this.label5.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(584, 94);
+            this.label5.Location = new System.Drawing.Point(519, 75);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(212, 44);
+            this.label5.Size = new System.Drawing.Size(188, 35);
             this.label5.TabIndex = 146;
             this.label5.Text = "C";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -608,10 +597,10 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(66)))));
             this.label4.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(27, 94);
+            this.label4.Location = new System.Drawing.Point(24, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 44);
+            this.label4.Size = new System.Drawing.Size(188, 35);
             this.label4.TabIndex = 87;
             this.label4.Text = "A";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -621,28 +610,27 @@
             this.labelLayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(66)))));
             this.labelLayar.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLayar.ForeColor = System.Drawing.Color.White;
-            this.labelLayar.Location = new System.Drawing.Point(27, 31);
+            this.labelLayar.Location = new System.Drawing.Point(24, 25);
             this.labelLayar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLayar.Name = "labelLayar";
-            this.labelLayar.Size = new System.Drawing.Size(768, 44);
+            this.labelLayar.Size = new System.Drawing.Size(683, 35);
             this.labelLayar.TabIndex = 86;
             this.labelLayar.Text = "Screen";
             this.labelLayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormPemesananTiket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(174)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1418, 1055);
+            this.ClientSize = new System.Drawing.Size(1260, 844);
             this.Controls.Add(this.panelTempatDuduk);
             this.Controls.Add(this.pictureBoxCoverImage);
-            this.Controls.Add(this.buttonEdit);
+            this.Controls.Add(this.buttonTransaksi);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormPemesananTiket";
             this.Text = "TIXIE";
             this.Load += new System.EventHandler(this.FormPemesananTiket_Load);
@@ -664,7 +652,7 @@
         private System.Windows.Forms.PictureBox pictureBoxCoverImage;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonTransaksi;
         private System.Windows.Forms.Label labelJudul;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

@@ -87,6 +87,8 @@ namespace Celikoor_Tixycket
 
         private void FormTambahFilm_Load(object sender, EventArgs e)
         {
+            
+            this.Size = new Size(1170, 720);
             List<Kelompok> listDataKelompokUsia = Kelompok.BacaData();
             comboBoxKelompokUsia.DataSource = listDataKelompokUsia;
             comboBoxKelompokUsia.DisplayMember = "Nama";
