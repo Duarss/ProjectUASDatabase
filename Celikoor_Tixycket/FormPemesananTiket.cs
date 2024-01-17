@@ -309,7 +309,7 @@ namespace Celikoor_Tixycket
             }
             catch (Exception x)
             {
-                MessageBox.Show("Please select your seat first");
+                MessageBox.Show("Please select your seat first" + x.Message);
             }
             
             //input ke invoice

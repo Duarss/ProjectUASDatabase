@@ -65,7 +65,8 @@ namespace Celikoor_Tixycket
             dgvData.DataSource = listInvoices;
             if(formUtama.pegawaiLogin.Role == "KASIR")
             {
-                int statusColumnIndex = 6;
+                //int statusColumnIndex = 6;
+                //! Ini buat apa ya?
                 int actionColumnIndex = 7;
 
                 foreach (DataGridViewRow row in dgvData.Rows)
@@ -112,7 +113,7 @@ namespace Celikoor_Tixycket
                         try
                         {
                             //hapus data dari database
-                            Invoices.UbahData(invoice, false);
+                            Invoices.UbahData(invoice.Id.ToString(), false);
                             //refresh form master
                             FormKasir_Load(this, e);
                         }
@@ -144,7 +145,7 @@ namespace Celikoor_Tixycket
                         try
                         {
                             //hapus data dari database
-                            Invoices.UbahData(invoice, true);
+                            Invoices.UbahData(invoice.Id.ToString(), true);
                             List<Ticket> listTiket = Ticket.BacaData("", invoice.Id.ToString());
                             //print
 

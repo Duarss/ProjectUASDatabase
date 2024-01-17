@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKasir));
             this.buttonKeluar = new System.Windows.Forms.Button();
-            this.labelMasterCinema = new System.Windows.Forms.Label();
+            this.labelMasterKasir = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -44,26 +44,26 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.BurlyWood;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(1062, 780);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonKeluar.Location = new System.Drawing.Point(1195, 975);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(157, 50);
+            this.buttonKeluar.Size = new System.Drawing.Size(177, 62);
             this.buttonKeluar.TabIndex = 78;
             this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             // 
-            // labelMasterCinema
+            // labelMasterKasir
             // 
-            this.labelMasterCinema.BackColor = System.Drawing.Color.Tan;
-            this.labelMasterCinema.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMasterCinema.ForeColor = System.Drawing.Color.White;
-            this.labelMasterCinema.Location = new System.Drawing.Point(38, 23);
-            this.labelMasterCinema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelMasterCinema.Name = "labelMasterCinema";
-            this.labelMasterCinema.Size = new System.Drawing.Size(1181, 44);
-            this.labelMasterCinema.TabIndex = 79;
-            this.labelMasterCinema.Text = "MASTER KASIR";
-            this.labelMasterCinema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelMasterKasir.BackColor = System.Drawing.Color.Tan;
+            this.labelMasterKasir.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMasterKasir.ForeColor = System.Drawing.Color.White;
+            this.labelMasterKasir.Location = new System.Drawing.Point(43, 29);
+            this.labelMasterKasir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMasterKasir.Name = "labelMasterKasir";
+            this.labelMasterKasir.Size = new System.Drawing.Size(1329, 55);
+            this.labelMasterKasir.TabIndex = 79;
+            this.labelMasterKasir.Text = "MASTER CASHIER";
+            this.labelMasterKasir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvData
             // 
@@ -82,8 +82,8 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(38, 92);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvData.Location = new System.Drawing.Point(43, 115);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -96,29 +96,31 @@
             this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvData.Size = new System.Drawing.Size(1181, 670);
+            this.dgvData.Size = new System.Drawing.Size(1329, 838);
             this.dgvData.TabIndex = 80;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(678, 868);
+            this.pictureBox1.Location = new System.Drawing.Point(763, 1085);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(343, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(386, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 81;
             this.pictureBox1.TabStop = false;
             // 
             // FormKasir
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 845);
+            this.ClientSize = new System.Drawing.Size(1418, 1056);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonKeluar);
-            this.Controls.Add(this.labelMasterCinema);
+            this.Controls.Add(this.labelMasterKasir);
             this.Controls.Add(this.dgvData);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormKasir";
             this.Text = "TIXIE";
             this.Load += new System.EventHandler(this.FormKasir_Load);
@@ -131,7 +133,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonKeluar;
-        private System.Windows.Forms.Label labelMasterCinema;
+        private System.Windows.Forms.Label labelMasterKasir;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

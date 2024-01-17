@@ -88,6 +88,12 @@
     <Compile Include="FormMasterFilm.Designer.cs">
       <DependentUpon>FormMasterFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMasterMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasterMenu.Designer.cs">
+      <DependentUpon>FormMasterMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOperator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,12 @@
     <Compile Include="FormTambahKonsumen.Designer.cs">
       <DependentUpon>FormTambahKonsumen.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahMenu.Designer.cs">
+      <DependentUpon>FormTambahMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahPegawai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +261,12 @@
     </Compile>
     <Compile Include="FormUpdateKonsumen.Designer.cs">
       <DependentUpon>FormUpdateKonsumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateMenu.Designer.cs">
+      <DependentUpon>FormUpdateMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUpdateStudio.cs">
       <SubType>Form</SubType>
@@ -300,6 +318,9 @@
     <EmbeddedResource Include="FormMasterKonsumen.resx">
       <DependentUpon>FormMasterKonsumen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterMenu.resx">
+      <DependentUpon>FormMasterMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMasterPegawai.resx">
       <DependentUpon>FormMasterPegawai.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +366,9 @@
     <EmbeddedResource Include="FormTambahKonsumen.resx">
       <DependentUpon>FormTambahKonsumen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahMenu.resx">
+      <DependentUpon>FormTambahMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTambahPegawai.resx">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +383,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateKonsumen.resx">
       <DependentUpon>FormUpdateKonsumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateMenu.resx">
+      <DependentUpon>FormUpdateMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateStudio.resx">
       <DependentUpon>FormUpdateStudio.cs</DependentUpon>
