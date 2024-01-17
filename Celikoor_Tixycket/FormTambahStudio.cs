@@ -16,6 +16,7 @@ namespace Celikoor_Tixycket
         public FormTambahStudio()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)

@@ -21,6 +21,7 @@ namespace Celikoor_Tixycket
         public FormTambahFilm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
         string fileName;
         Genre selectedGenre;

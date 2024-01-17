@@ -16,12 +16,6 @@ namespace Celikoor_Tixycket
         public FormMasterAktor()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
-        }
-
-        private void buttonKeluar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void buttonTambah_Click(object sender, EventArgs e)
@@ -116,6 +110,11 @@ namespace Celikoor_Tixycket
                     }
                 }
             }
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Celikoor_Tixycket
 {
-    public partial class w : Form
+    public partial class FormUpdateKonsumen : Form
     {
-        public w()
+        public FormUpdateKonsumen()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -23,6 +24,11 @@ namespace Celikoor_Tixycket
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormUpdateKonsumen_Load(object sender, EventArgs e)
         {
 
         }

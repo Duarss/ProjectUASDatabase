@@ -223,5 +223,10 @@ namespace Celikoor_Tixycket
                 MessageBox.Show(x.Message);
             }
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

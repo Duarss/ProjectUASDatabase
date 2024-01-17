@@ -1,6 +1,6 @@
 ﻿namespace Celikoor_Tixycket
 {
-    partial class w
+    partial class FormUpdateKonsumen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(w));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUpdateKonsumen));
             this.labelTglLahir = new System.Windows.Forms.Label();
             this.dateTimePickerTglLahirKonsumen = new System.Windows.Forms.DateTimePicker();
             this.labelGender = new System.Windows.Forms.Label();
@@ -264,7 +264,7 @@
             this.labelUsernameValue.Text = "Username";
             this.labelUsernameValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // w
+            // FormUpdateKonsumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -290,8 +290,9 @@
             this.Controls.Add(this.buttonKeluar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "w";
+            this.Name = "FormUpdateKonsumen";
             this.Text = "TIXIE";
+            this.Load += new System.EventHandler(this.FormUpdateKonsumen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

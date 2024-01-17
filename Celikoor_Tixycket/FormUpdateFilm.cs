@@ -17,6 +17,7 @@ namespace Celikoor_Tixycket
         public FormUpdateFilm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         public string idUpdate;

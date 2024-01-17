@@ -16,7 +16,6 @@ namespace Celikoor_Tixycket
         public FormMasterCinema()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
