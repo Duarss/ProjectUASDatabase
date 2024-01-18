@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Celikoor_Tixycket
 {
-    public partial class FormTambahMenu : Form
+    public partial class FormTambahJenisMenu : Form
     {
-        public FormTambahMenu()
+        public FormTambahJenisMenu()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
@@ -28,12 +28,11 @@ namespace Celikoor_Tixycket
         {
             try
             {
-                Menus menu = new Menus();
-                menu.Nama = textBoxNamaMenu.Text;
-                menu.JenisMenu = (Jenis_Menu)comboBoxJenisMenu.SelectedItem;
-                menu.Harga = double.Parse(textBoxHarga.Text);
+                Jenis_Menu jM = new Jenis_Menu();
+                jM.Nama = textBoxJenisMenu.Text;
+                jM.Deskripsi = textBoxJenisMenu.Text;
 
-                Menus.TambahData(menu);
+                Jenis_Menu.TambahData(jM);
 
                 MessageBox.Show("Success to add data!");
 

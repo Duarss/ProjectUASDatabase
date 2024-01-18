@@ -13,7 +13,7 @@ namespace Celikoor_LIB
         private string status_kirim;
         private Cinema cinema;
         private Pegawai pelayan;
-        private Menu menu;
+        private Menus menu;
         private Invoices invoices;
         private int jumlah;
 
@@ -24,7 +24,7 @@ namespace Celikoor_LIB
             Status_kirim = "0";
             Cinema = new Cinema();
             Pelayan = new Pegawai();
-            Menu = new Menu();
+            Menu = new Menus();
             Invoices = new Invoices();
             Jumlah = 0;
         }
@@ -34,7 +34,7 @@ namespace Celikoor_LIB
         public string Status_kirim { get => status_kirim; set => status_kirim = value; }
         public Cinema Cinema { get => cinema; set => cinema = value; }
         public Pegawai Pelayan { get => pelayan; set => pelayan = value; }
-        public Menu Menu { get => menu; set => menu = value; }
+        public Menus Menu { get => menu; set => menu = value; }
         public Invoices Invoices { get => invoices; set => invoices = value; }
         public int Jumlah { get => jumlah; set => jumlah = value; }
     }

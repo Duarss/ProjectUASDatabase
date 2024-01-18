@@ -208,6 +208,12 @@
     <Compile Include="FormTambahGenre.Designer.cs">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahJenisMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahJenisMenu.Designer.cs">
+      <DependentUpon>FormTambahJenisMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahJenisStudio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,12 @@
     </Compile>
     <Compile Include="FormUpdateFilm.Designer.cs">
       <DependentUpon>FormUpdateFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateJenisMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateJenisMenu.Designer.cs">
+      <DependentUpon>FormUpdateJenisMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUpdateKonsumen.cs">
       <SubType>Form</SubType>
@@ -357,6 +369,9 @@
     <EmbeddedResource Include="FormTambahGenre.resx">
       <DependentUpon>FormTambahGenre.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahJenisMenu.resx">
+      <DependentUpon>FormTambahJenisMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTambahJenisStudio.resx">
       <DependentUpon>FormTambahJenisStudio.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateFilm.resx">
       <DependentUpon>FormUpdateFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateJenisMenu.resx">
+      <DependentUpon>FormUpdateJenisMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateKonsumen.resx">
       <DependentUpon>FormUpdateKonsumen.cs</DependentUpon>

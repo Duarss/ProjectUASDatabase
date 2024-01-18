@@ -56,6 +56,7 @@
             this.buttonKeluar.TabIndex = 94;
             this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // panel1
             // 
@@ -86,8 +87,9 @@
             this.comboBoxCari.Font = new System.Drawing.Font("Verdana", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCari.FormattingEnabled = true;
             this.comboBoxCari.Items.AddRange(new object[] {
-            "Judul",
-            "Tahun"});
+            "Nama",
+            "Jenis Menu",
+            "Harga"});
             this.comboBoxCari.Location = new System.Drawing.Point(302, 35);
             this.comboBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxCari.Name = "comboBoxCari";
@@ -118,6 +120,7 @@
             this.buttonCari.TabIndex = 77;
             this.buttonCari.Text = "SEARCH";
             this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
             // labelMasterFilm
             // 
@@ -164,6 +167,7 @@
             this.dgvData.RowHeadersWidth = 62;
             this.dgvData.Size = new System.Drawing.Size(1365, 742);
             this.dgvData.TabIndex = 96;
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
             // buttonTambah
             // 
@@ -177,6 +181,7 @@
             this.buttonTambah.TabIndex = 93;
             this.buttonTambah.Text = "&ADD";
             this.buttonTambah.UseVisualStyleBackColor = false;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // FormMasterMenu
             // 
@@ -191,6 +196,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMasterMenu";
             this.Text = "TIXIE";
+            this.Load += new System.EventHandler(this.FormMasterMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
