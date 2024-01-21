@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2024 at 02:39 AM
+-- Generation Time: Jan 21, 2024 at 10:23 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -107,8 +107,16 @@ CREATE TABLE `detail_menu` (
   `total` double NOT NULL,
   `jadwal_film_id` int(11) NOT NULL,
   `studios_id` int(11) NOT NULL,
-  `films_id` int(11) NOT NULL
+  `films_id` int(11) NOT NULL,
+  `kuantitas` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `detail_menu`
+--
+
+INSERT INTO `detail_menu` (`invoices_id`, `menus_id`, `waiters_id`, `total`, `jadwal_film_id`, `studios_id`, `films_id`, `kuantitas`) VALUES
+(31, 3, 4, 20000, 37, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -261,7 +269,13 @@ INSERT INTO `invoices` (`id`, `tanggal`, `grand_total`, `diskon_nominal`, `konsu
 (22, '2024-01-17 13:23:45', 0, 20, 1, NULL, 'PENDING'),
 (23, '2024-01-17 13:41:37', 140000, 0, 1, NULL, 'PENDING'),
 (24, '2024-01-19 07:32:34', 200000, 20, 12, 2, 'VALIDASI'),
-(25, '2024-01-19 07:32:53', 120000, 20, 12, 2, 'TERBAYAR');
+(25, '2024-01-19 07:32:53', 120000, 20, 12, 2, 'TERBAYAR'),
+(26, '2024-01-21 15:51:45', 292000, 20, 1, NULL, 'PENDING'),
+(27, '2024-01-21 15:51:52', 292000, 20, 1, NULL, 'PENDING'),
+(28, '2024-01-21 15:52:31', 292000, 20, 1, NULL, 'PENDING'),
+(29, '2024-01-21 16:10:49', 164000, 20, 1, NULL, 'PENDING'),
+(30, '2024-01-21 16:11:45', 164000, 20, 1, NULL, 'PENDING'),
+(31, '2024-01-21 16:13:38', 92000, 20, 1, NULL, 'PENDING');
 
 -- --------------------------------------------------------
 
@@ -405,8 +419,8 @@ CREATE TABLE `konsumens` (
 --
 
 INSERT INTO `konsumens` (`id`, `nama`, `email`, `no_hp`, `gender`, `tgl_lahir`, `saldo`, `username`, `password`) VALUES
-(1, 'willy', 's160422011@student.ubaya.ac.id', '1234', '', '2023-11-09', 0, 'willy', '1'),
-(2, 'budi', 'wda', '013483279847234', 'P', '2023-11-09', 30000, 'budies', '2'),
+(1, 'willy', 's160422011@student.ubaya.ac.id', '1234', '', '2023-11-09', 123580000, 'willy', '1'),
+(2, 'budi', 'wda', '013483279847234', 'P', '0000-00-00', 30000, 'budies', '2'),
 (3, 'febri', 'cas', '23432432424234', 'L', '2023-11-01', 50000, '3ed', '3'),
 (4, 'oakle', 'wcve', '3243424', 'P', '2023-11-17', 10000000000, 'ooo', '4'),
 (5, 'stnk', 'wdaswwd', '23143234324', 'P', '2023-11-19', 24000, 'dwedq', '5'),
@@ -425,8 +439,18 @@ CREATE TABLE `menus` (
   `id` int(11) NOT NULL,
   `nama` varchar(45) NOT NULL,
   `harga` double NOT NULL,
-  `jenis_menu` varchar(45) NOT NULL
+  `jenis_menu` enum('FOOD','BEVERAGE') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `menus`
+--
+
+INSERT INTO `menus` (`id`, `nama`, `harga`, `jenis_menu`) VALUES
+(1, 'Popcorn', 100000, 'FOOD'),
+(2, 'Chiken Wings', 200000, 'FOOD'),
+(3, 'Pepsi', 20000, 'BEVERAGE'),
+(4, 'Lemon Tea', 25000, 'BEVERAGE');
 
 -- --------------------------------------------------------
 
@@ -583,7 +607,23 @@ INSERT INTO `tikets` (`invoices_id`, `nomor_kursi`, `status_hadir`, `operator_id
 (24, 'C3', 0, 1, 50000, 101, 5, 41),
 (25, 'A20', 0, 1, 50000, 99, 5, 41),
 (25, 'B18', 0, 1, 50000, 99, 5, 41),
-(25, 'C18', 1, 1, 50000, 99, 5, 41);
+(25, 'C18', 1, 1, 50000, 99, 5, 41),
+(26, 'B5', 0, 1, 45000, 37, 1, 1),
+(26, 'B8', 0, 1, 45000, 37, 1, 1),
+(27, 'B5', 0, 1, 45000, 37, 1, 1),
+(27, 'B8', 0, 1, 45000, 37, 1, 1),
+(28, 'B5', 0, 1, 45000, 37, 1, 1),
+(28, 'B8', 0, 1, 45000, 37, 1, 1),
+(29, 'C1', 0, 1, 45000, 37, 1, 1),
+(29, 'C10', 0, 1, 45000, 37, 1, 1),
+(29, 'C11', 0, 1, 45000, 37, 1, 1),
+(29, 'C5', 0, 1, 45000, 37, 1, 1),
+(30, 'C1', 0, 1, 45000, 37, 1, 1),
+(30, 'C10', 0, 1, 45000, 37, 1, 1),
+(30, 'C11', 0, 1, 45000, 37, 1, 1),
+(30, 'C5', 0, 1, 45000, 37, 1, 1),
+(31, 'C12', 0, 1, 45000, 37, 1, 1),
+(31, 'C8', 0, 1, 45000, 37, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -680,6 +720,12 @@ ALTER TABLE `konsumens`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `menus`
+--
+ALTER TABLE `menus`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pegawais`
 --
 ALTER TABLE `pegawais`
@@ -742,7 +788,7 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `jadwal_films`
@@ -767,6 +813,12 @@ ALTER TABLE `kelompoks`
 --
 ALTER TABLE `konsumens`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `menus`
+--
+ALTER TABLE `menus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pegawais`
