@@ -62,13 +62,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonSystem = new System.Windows.Forms.Button();
             this.panelSystem = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.buttonMenu = new System.Windows.Forms.Button();
             this.pictureBoxKasir = new System.Windows.Forms.PictureBox();
-            this.pictureBoxPrint = new System.Windows.Forms.PictureBox();
             this.pictureBoxNote = new System.Windows.Forms.PictureBox();
+            this.buttonPencatatanKedatangan = new System.Windows.Forms.Button();
+            this.pictureBoxPrint = new System.Windows.Forms.PictureBox();
             this.buttonKasir = new System.Windows.Forms.Button();
             this.buttonLaporan = new System.Windows.Forms.Button();
             this.pictureBoxSchedule = new System.Windows.Forms.PictureBox();
-            this.buttonPencatatanKedatangan = new System.Windows.Forms.Button();
             this.buttonPenjadwalanFilm = new System.Windows.Forms.Button();
             this.panelButtonTransaction = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -103,9 +105,10 @@
             this.panelButtonSystem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelSystem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKasir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSchedule)).BeginInit();
             this.panelButtonTransaction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -253,7 +256,7 @@
             this.panelMaster.Location = new System.Drawing.Point(3, 135);
             this.panelMaster.MaximumSize = new System.Drawing.Size(250, 400);
             this.panelMaster.Name = "panelMaster";
-            this.panelMaster.Size = new System.Drawing.Size(250, 289);
+            this.panelMaster.Size = new System.Drawing.Size(250, 400);
             this.panelMaster.TabIndex = 13;
             // 
             // pictureBoxFilm
@@ -498,7 +501,7 @@
             this.panelButtonSystem.Controls.Add(this.buttonSystem);
             this.panelButtonSystem.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButtonSystem.ForeColor = System.Drawing.Color.Transparent;
-            this.panelButtonSystem.Location = new System.Drawing.Point(3, 430);
+            this.panelButtonSystem.Location = new System.Drawing.Point(3, 394);
             this.panelButtonSystem.Name = "panelButtonSystem";
             this.panelButtonSystem.Size = new System.Drawing.Size(250, 45);
             this.panelButtonSystem.TabIndex = 18;
@@ -531,6 +534,8 @@
             // panelSystem
             // 
             this.panelSystem.BackColor = System.Drawing.Color.SandyBrown;
+            this.panelSystem.Controls.Add(this.pictureBox7);
+            this.panelSystem.Controls.Add(this.buttonMenu);
             this.panelSystem.Controls.Add(this.pictureBoxKasir);
             this.panelSystem.Controls.Add(this.pictureBoxNote);
             this.panelSystem.Controls.Add(this.buttonPencatatanKedatangan);
@@ -540,11 +545,36 @@
             this.panelSystem.Controls.Add(this.pictureBoxSchedule);
             this.panelSystem.Controls.Add(this.buttonPenjadwalanFilm);
             this.panelSystem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSystem.Location = new System.Drawing.Point(3, 481);
-            this.panelSystem.MaximumSize = new System.Drawing.Size(250, 173);
+            this.panelSystem.Location = new System.Drawing.Point(3, 445);
+            this.panelSystem.MaximumSize = new System.Drawing.Size(250, 215);
             this.panelSystem.Name = "panelSystem";
-            this.panelSystem.Size = new System.Drawing.Size(250, 172);
+            this.panelSystem.Size = new System.Drawing.Size(250, 215);
             this.panelSystem.TabIndex = 15;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.menu;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(15, 173);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(40, 35);
+            this.pictureBox7.TabIndex = 23;
+            this.pictureBox7.TabStop = false;
+            // 
+            // buttonMenu
+            // 
+            this.buttonMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMenu.ForeColor = System.Drawing.Color.White;
+            this.buttonMenu.Location = new System.Drawing.Point(0, 169);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonMenu.Size = new System.Drawing.Size(250, 40);
+            this.buttonMenu.TabIndex = 22;
+            this.buttonMenu.Text = "        Menu";
+            this.buttonMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBoxKasir
             // 
@@ -556,16 +586,6 @@
             this.pictureBoxKasir.TabIndex = 21;
             this.pictureBoxKasir.TabStop = false;
             // 
-            // pictureBoxPrint
-            // 
-            this.pictureBoxPrint.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.print;
-            this.pictureBoxPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPrint.Location = new System.Drawing.Point(13, 47);
-            this.pictureBoxPrint.Name = "pictureBoxPrint";
-            this.pictureBoxPrint.Size = new System.Drawing.Size(40, 38);
-            this.pictureBoxPrint.TabIndex = 19;
-            this.pictureBoxPrint.TabStop = false;
-            // 
             // pictureBoxNote
             // 
             this.pictureBoxNote.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.note;
@@ -575,6 +595,31 @@
             this.pictureBoxNote.Size = new System.Drawing.Size(38, 35);
             this.pictureBoxNote.TabIndex = 18;
             this.pictureBoxNote.TabStop = false;
+            // 
+            // buttonPencatatanKedatangan
+            // 
+            this.buttonPencatatanKedatangan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonPencatatanKedatangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPencatatanKedatangan.ForeColor = System.Drawing.Color.White;
+            this.buttonPencatatanKedatangan.Location = new System.Drawing.Point(0, 129);
+            this.buttonPencatatanKedatangan.Name = "buttonPencatatanKedatangan";
+            this.buttonPencatatanKedatangan.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.buttonPencatatanKedatangan.Size = new System.Drawing.Size(250, 40);
+            this.buttonPencatatanKedatangan.TabIndex = 6;
+            this.buttonPencatatanKedatangan.Text = "        Note Arrival";
+            this.buttonPencatatanKedatangan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPencatatanKedatangan.UseVisualStyleBackColor = true;
+            this.buttonPencatatanKedatangan.Click += new System.EventHandler(this.buttonPencatatanKedatangan_Click);
+            // 
+            // pictureBoxPrint
+            // 
+            this.pictureBoxPrint.BackgroundImage = global::Celikoor_Tixycket.Properties.Resources.print;
+            this.pictureBoxPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxPrint.Location = new System.Drawing.Point(13, 47);
+            this.pictureBoxPrint.Name = "pictureBoxPrint";
+            this.pictureBoxPrint.Size = new System.Drawing.Size(40, 38);
+            this.pictureBoxPrint.TabIndex = 19;
+            this.pictureBoxPrint.TabStop = false;
             // 
             // buttonKasir
             // 
@@ -616,21 +661,6 @@
             this.pictureBoxSchedule.TabIndex = 17;
             this.pictureBoxSchedule.TabStop = false;
             // 
-            // buttonPencatatanKedatangan
-            // 
-            this.buttonPencatatanKedatangan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPencatatanKedatangan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPencatatanKedatangan.ForeColor = System.Drawing.Color.White;
-            this.buttonPencatatanKedatangan.Location = new System.Drawing.Point(0, 129);
-            this.buttonPencatatanKedatangan.Name = "buttonPencatatanKedatangan";
-            this.buttonPencatatanKedatangan.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.buttonPencatatanKedatangan.Size = new System.Drawing.Size(250, 40);
-            this.buttonPencatatanKedatangan.TabIndex = 6;
-            this.buttonPencatatanKedatangan.Text = "        Note Arrival";
-            this.buttonPencatatanKedatangan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPencatatanKedatangan.UseVisualStyleBackColor = true;
-            this.buttonPencatatanKedatangan.Click += new System.EventHandler(this.buttonPencatatanKedatangan_Click);
-            // 
             // buttonPenjadwalanFilm
             // 
             this.buttonPenjadwalanFilm.Dock = System.Windows.Forms.DockStyle.Top;
@@ -653,7 +683,7 @@
             this.panelButtonTransaction.Controls.Add(this.buttonTransaction);
             this.panelButtonTransaction.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButtonTransaction.ForeColor = System.Drawing.Color.Transparent;
-            this.panelButtonTransaction.Location = new System.Drawing.Point(3, 659);
+            this.panelButtonTransaction.Location = new System.Drawing.Point(3, 666);
             this.panelButtonTransaction.Name = "panelButtonTransaction";
             this.panelButtonTransaction.Size = new System.Drawing.Size(250, 45);
             this.panelButtonTransaction.TabIndex = 18;
@@ -689,7 +719,7 @@
             this.panelHome.Controls.Add(this.pictureBoxHome);
             this.panelHome.Controls.Add(this.buttonHome);
             this.panelHome.ForeColor = System.Drawing.Color.Transparent;
-            this.panelHome.Location = new System.Drawing.Point(3, 710);
+            this.panelHome.Location = new System.Drawing.Point(3, 717);
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(250, 45);
             this.panelHome.TabIndex = 19;
@@ -834,9 +864,10 @@
             this.panelButtonSystem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelSystem.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKasir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPrint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSchedule)).EndInit();
             this.panelButtonTransaction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -904,5 +935,7 @@
         private System.Windows.Forms.Button buttonFilm;
         private System.Windows.Forms.Button buttonKasir;
         private System.Windows.Forms.PictureBox pictureBoxKasir;
+        private System.Windows.Forms.Button buttonMenu;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

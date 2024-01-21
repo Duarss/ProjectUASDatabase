@@ -28,7 +28,7 @@ namespace Celikoor_Tixycket
             List<Menus> listDataMenu = Menus.BacaData();
             dgvData.DataSource = listDataMenu;
 
-            if (dgvData.ColumnCount == 5)
+            if (dgvData.ColumnCount == 4)
             {
                 DataGridViewButtonColumn btnUpdate = new DataGridViewButtonColumn();
                 btnUpdate.Text = "Update"; //judul button

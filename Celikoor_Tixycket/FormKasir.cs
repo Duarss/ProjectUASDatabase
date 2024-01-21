@@ -113,7 +113,7 @@ namespace Celikoor_Tixycket
                         try
                         {
                             //hapus data dari database
-                            Invoices.UbahData(invoice.Id.ToString(), false);
+                            Invoices.UbahData(invoice, false);
                             //refresh form master
                             FormKasir_Load(this, e);
                         }
@@ -145,7 +145,7 @@ namespace Celikoor_Tixycket
                         try
                         {
                             //hapus data dari database
-                            Invoices.UbahData(invoice.Id.ToString(), true);
+                            Invoices.UbahData(invoice, true);
                             List<Ticket> listTiket = Ticket.BacaData("", invoice.Id.ToString());
                             //print
 

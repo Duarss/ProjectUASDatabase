@@ -25,6 +25,7 @@ namespace Celikoor_Tixycket
         Studio selectedStudio;
         List<Jadwal_film> listJadwalFilm;
         Jadwal_film jadwal_film = new Jadwal_film();
+        public Menus selectedMenu;
         private void LayoutTempatDuduk()
         {
             foreach (Control control in new ArrayList(panelTempatDuduk.Controls))
@@ -108,7 +109,6 @@ namespace Celikoor_Tixycket
                 labelKursi.Text = "Kursi:";
                 labelNominalTotal.Text = "0";
                 labelNominalTotalAkhir.Text = "0";
-                labelNominalDiskon.Text = "0";
             }
         }
         private void FormPemesananTiket_Load(object sender, EventArgs e)
@@ -299,6 +299,7 @@ namespace Celikoor_Tixycket
                             Ticket.TambahData(tiket);
                         }
                     }
+                    Menus.TambahDataDetilMenu(selectedMenu, listInvoice[0], listJadwalFilm[0], selectedStudio, selectedFilm);
                     MessageBox.Show("Transaction success!");
                     SetUpSeat();
                 }
@@ -374,9 +375,31 @@ namespace Celikoor_Tixycket
                         labelKursi.Text += ", " + clickedCheckBox.Name;
                     }
                     labelNominalTotal.Text = (int.Parse(labelNominalTotal.Text) + int.Parse(labelNominalHarga.Text)).ToString();
-                    labelNominalTotalAkhir.Text = (int.Parse(labelNominalTotal.Text) * (100 - selectedFilm.Diskon) / 100).ToString();
+                    labelNominalTotalAkhir.Text = ((int.Parse(labelNominalTotal.Text) * (100 - selectedFilm.Diskon) / 100) + int.Parse(labelTotalNominalMenu.Text)).ToString();
                 }
             }
+        }
+
+        private void buttonTambahMenu_Click(object sender, EventArgs e)
+        {
+            FormTransaksiMenu formTransaksiMenu = new FormTransaksiMenu();
+            formTransaksiMenu.Owner = this;
+            formTransaksiMenu.ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelTotalNominalMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTotalNominalMenu_TextChanged(object sender, EventArgs e)
+        {
+            CheckBox_CheckedChanged(this, e);
         }
     }
 }

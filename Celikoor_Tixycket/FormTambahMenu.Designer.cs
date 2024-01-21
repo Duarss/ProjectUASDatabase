@@ -50,30 +50,27 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox3.Location = new System.Drawing.Point(30, 464);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(27, 371);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(992, 12);
+            this.pictureBox3.Size = new System.Drawing.Size(882, 10);
             this.pictureBox3.TabIndex = 51;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox2.Location = new System.Drawing.Point(1010, 26);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(898, 21);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(11, 450);
+            this.pictureBox2.Size = new System.Drawing.Size(10, 360);
             this.pictureBox2.TabIndex = 50;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Tan;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 26);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(11, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 360);
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
             // 
@@ -83,10 +80,10 @@
             this.labelAddMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelAddMenu.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddMenu.ForeColor = System.Drawing.Color.Transparent;
-            this.labelAddMenu.Location = new System.Drawing.Point(30, 26);
+            this.labelAddMenu.Location = new System.Drawing.Point(27, 21);
             this.labelAddMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAddMenu.Name = "labelAddMenu";
-            this.labelAddMenu.Size = new System.Drawing.Size(991, 62);
+            this.labelAddMenu.Size = new System.Drawing.Size(881, 50);
             this.labelAddMenu.TabIndex = 48;
             this.labelAddMenu.Text = "ADD MENU";
             this.labelAddMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,10 +94,10 @@
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
-            this.buttonSimpan.Location = new System.Drawing.Point(30, 495);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonSimpan.Location = new System.Drawing.Point(27, 396);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(182, 55);
+            this.buttonSimpan.Size = new System.Drawing.Size(162, 44);
             this.buttonSimpan.TabIndex = 46;
             this.buttonSimpan.Text = "&SAVE";
             this.buttonSimpan.UseVisualStyleBackColor = false;
@@ -112,10 +109,10 @@
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
-            this.buttonKeluar.Location = new System.Drawing.Point(839, 495);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKeluar.Location = new System.Drawing.Point(746, 396);
+            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(182, 55);
+            this.buttonKeluar.Size = new System.Drawing.Size(162, 44);
             this.buttonKeluar.TabIndex = 47;
             this.buttonKeluar.Text = "&CLOSE";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -124,10 +121,10 @@
             // labelRp
             // 
             this.labelRp.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRp.Location = new System.Drawing.Point(474, 335);
+            this.labelRp.Location = new System.Drawing.Point(421, 268);
             this.labelRp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRp.Name = "labelRp";
-            this.labelRp.Size = new System.Drawing.Size(47, 55);
+            this.labelRp.Size = new System.Drawing.Size(42, 44);
             this.labelRp.TabIndex = 71;
             this.labelRp.Text = "Rp";
             this.labelRp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,19 +132,19 @@
             // textBoxHarga
             // 
             this.textBoxHarga.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHarga.Location = new System.Drawing.Point(529, 347);
-            this.textBoxHarga.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxHarga.Location = new System.Drawing.Point(470, 278);
+            this.textBoxHarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxHarga.Name = "textBoxHarga";
-            this.textBoxHarga.Size = new System.Drawing.Size(304, 32);
+            this.textBoxHarga.Size = new System.Drawing.Size(271, 28);
             this.textBoxHarga.TabIndex = 70;
             // 
             // labelHarga
             // 
             this.labelHarga.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHarga.Location = new System.Drawing.Point(218, 334);
+            this.labelHarga.Location = new System.Drawing.Point(194, 267);
             this.labelHarga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHarga.Name = "labelHarga";
-            this.labelHarga.Size = new System.Drawing.Size(107, 55);
+            this.labelHarga.Size = new System.Drawing.Size(95, 44);
             this.labelHarga.TabIndex = 69;
             this.labelHarga.Text = "Harga:";
             this.labelHarga.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,10 +152,10 @@
             // labelJenisMenu
             // 
             this.labelJenisMenu.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJenisMenu.Location = new System.Drawing.Point(218, 251);
+            this.labelJenisMenu.Location = new System.Drawing.Point(194, 201);
             this.labelJenisMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelJenisMenu.Name = "labelJenisMenu";
-            this.labelJenisMenu.Size = new System.Drawing.Size(187, 55);
+            this.labelJenisMenu.Size = new System.Drawing.Size(166, 44);
             this.labelJenisMenu.TabIndex = 67;
             this.labelJenisMenu.Text = "Menu Type:";
             this.labelJenisMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,19 +163,19 @@
             // textBoxNamaMenu
             // 
             this.textBoxNamaMenu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNamaMenu.Location = new System.Drawing.Point(479, 178);
-            this.textBoxNamaMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxNamaMenu.Location = new System.Drawing.Point(426, 142);
+            this.textBoxNamaMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNamaMenu.Name = "textBoxNamaMenu";
-            this.textBoxNamaMenu.Size = new System.Drawing.Size(354, 32);
+            this.textBoxNamaMenu.Size = new System.Drawing.Size(315, 28);
             this.textBoxNamaMenu.TabIndex = 66;
             // 
             // labelCari
             // 
             this.labelCari.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCari.Location = new System.Drawing.Point(218, 165);
+            this.labelCari.Location = new System.Drawing.Point(194, 132);
             this.labelCari.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCari.Name = "labelCari";
-            this.labelCari.Size = new System.Drawing.Size(84, 55);
+            this.labelCari.Size = new System.Drawing.Size(75, 44);
             this.labelCari.TabIndex = 65;
             this.labelCari.Text = "Name:";
             this.labelCari.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,16 +185,20 @@
             this.comboBoxJenisMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxJenisMenu.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxJenisMenu.FormattingEnabled = true;
-            this.comboBoxJenisMenu.Location = new System.Drawing.Point(479, 264);
+            this.comboBoxJenisMenu.Items.AddRange(new object[] {
+            "BEVERAGE",
+            "FOOD"});
+            this.comboBoxJenisMenu.Location = new System.Drawing.Point(426, 211);
+            this.comboBoxJenisMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxJenisMenu.Name = "comboBoxJenisMenu";
-            this.comboBoxJenisMenu.Size = new System.Drawing.Size(354, 32);
+            this.comboBoxJenisMenu.Size = new System.Drawing.Size(315, 29);
             this.comboBoxJenisMenu.TabIndex = 72;
             // 
             // FormTambahMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 566);
+            this.ClientSize = new System.Drawing.Size(934, 453);
             this.Controls.Add(this.comboBoxJenisMenu);
             this.Controls.Add(this.labelRp);
             this.Controls.Add(this.textBoxHarga);
@@ -212,6 +213,7 @@
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.buttonKeluar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormTambahMenu";
             this.Text = "TIXIE";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

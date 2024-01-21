@@ -30,7 +30,7 @@ namespace Celikoor_Tixycket
             {
                 Menus menu = new Menus();
                 menu.Nama = textBoxNamaMenu.Text;
-                menu.JenisMenu = (Jenis_Menu)comboBoxJenisMenu.SelectedItem;
+                menu.JenisMenu = (string)comboBoxJenisMenu.SelectedItem;
                 menu.Harga = double.Parse(textBoxHarga.Text);
 
                 Menus.TambahData(menu);

@@ -179,6 +179,7 @@ namespace Celikoor_Tixycket
                     panelButtonTransaction.Visible = false; // +-+
                     panelButtonTransaction.Enabled = false;
                     buttonPencatatanKedatangan.Enabled = false;
+                    buttonMenu.Enabled = false;
                 }
                 else if (pegawaiLogin.Role == "OPERATOR")
                 {
@@ -188,6 +189,7 @@ namespace Celikoor_Tixycket
                     buttonPenjadwalanFilm.Enabled = false;
                     buttonLaporan.Enabled = false;
                     panelButtonTransaction.Visible = false; // +-+
+                    buttonMenu.Enabled = false;
                 }
                 else if (pegawaiLogin.Role == "KASIR")
                 {
@@ -195,6 +197,17 @@ namespace Celikoor_Tixycket
                     panelButtonSystem.Visible = true;
                     buttonPencatatanKedatangan.Enabled = false;
                     buttonPenjadwalanFilm.Enabled = false;
+                    buttonLaporan.Enabled = false;
+                    panelButtonTransaction.Visible = false; // +-+
+                    buttonMenu.Enabled = false;
+                }
+                else
+                {
+                    panelButtonMaster.Visible = false;
+                    panelButtonSystem.Visible = true;
+                    buttonKasir.Enabled = false;
+                    buttonPenjadwalanFilm.Enabled = false;
+                    buttonPencatatanKedatangan.Enabled = false;
                     buttonLaporan.Enabled = false;
                     panelButtonTransaction.Visible = false; // +-+
                 }
@@ -213,6 +226,7 @@ namespace Celikoor_Tixycket
                 buttonPenjadwalanFilm.Enabled = true;
                 buttonLaporan.Enabled = true;
                 buttonKasir.Enabled = true;
+                buttonMenu.Enabled = true;
             }
         }
         #endregion
@@ -413,6 +427,11 @@ namespace Celikoor_Tixycket
         private void button1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenForm(new FormMasterMenu());
         }
     }
 }

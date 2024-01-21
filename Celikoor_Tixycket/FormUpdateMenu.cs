@@ -24,7 +24,7 @@ namespace Celikoor_Tixycket
         {
             List<Menus> listMenu = Menus.BacaData("id", idUpdate);
             textBoxNamaMenu.Text = listMenu[0].Nama;
-            comboBoxJenisMenu.SelectedItem = listMenu[0].JenisMenu.Nama;
+            comboBoxJenisMenu.SelectedItem = listMenu[0].JenisMenu;
             textBoxHarga.Text = listMenu[0].Harga.ToString();
         }
 
@@ -40,7 +40,7 @@ namespace Celikoor_Tixycket
                 Menus menu = new Menus();
                 menu.Id = int.Parse(idUpdate);
                 menu.Nama = textBoxNamaMenu.Text;
-                menu.JenisMenu = (Jenis_Menu)comboBoxJenisMenu.SelectedItem;
+                menu.JenisMenu = (string)comboBoxJenisMenu.SelectedItem;
                 menu.Harga = double.Parse(textBoxHarga.Text);
 
                 Menus.UbahData(menu);
